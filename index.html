@@ -6,73 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>EBS 프로젝트 가이드 맵</title>
 <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico">
+<link rel="stylesheet" href="styles.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-	$(function() {
-			$.each($("td.url > a"), function(i,v){
-				$(v).text($(v).attr("href"));
-			});
-
-			$(".kor").on('click', function() {
-				$.each($("td.url > a"), function(i,v){
-					$(v).html($(v).attr("href").replace('./en','./kr'));
-					$(this).prop('href', $(v).text());
-				});
-			});
-			
-			$(".en").on('click', function() {
-				$.each($("td.url > a"), function(i,v){
-					$(v).html($(v).attr("href").replace('./kr','./en'));
-					$(this).prop('href', $(v).text());
-				});
-			});
-	});
-</script>
+<script src="common.js"></script>
 </head>
-<style>
-  * {margin:0;padding:0;font-family:'Noto Sans KR','Malgun Gothic','맑은 고딕',Verdana,Tahoma,"돋움",Dotum,"굴림",Gulim,Geneva,sans-serif,Apple Gothic,AppleGothic;}
-  body {font-size:13px;}
-  li {list-style:none;}
-  a {color:#444;text-decoration:none;}
-  a:hover {color:#444;}
-  a:visited, a:focus, a:active {color:#444;}
-  #wrap {position:relative;width:1200px;margin:0 auto;padding:80px 20px 50px 20px;}
-  header {position: fixed;left:0;top:0;width:100%;height:80px;background:#fff;}
-  header .cont_area {position:relative;width:1200px;margin:0 auto;padding:0 20px;}
-
-  h1 {font-size:30px;margin:20px 0;font-weight:700;line-height:34px;letter-spacing:-1px; vertical-align:top;  padding-bottom: 20px; border-bottom: 1px solid #000;}
-  h1 img { vertical-align:top;}
-  .info {position:absolute;right:25px;bottom:5px;}
-  .guide {margin:10px 0 5px 0;text-align:right;}
-  h2 {padding:8px 15px;font-size:13px;font-weight:500;border:1px solid #444;border-bottom:none;background:#595959;color:#fff;}
-  h3 {position:relative;margin:-1px 0;padding:6px 15px;border:1px solid;border-color:#999 #ccc;background:#ccc;font-size:13px;font-weight:500;}
-  caption {display:none;}
-  div.cont {border-top:1px solid #444;}
-  table {border-collapse:collapse;width:100%;border-spacing:0;}
-  table thead th {padding:6px 3px;border:1px solid #ccc;background:#eee;font-size:13px;}
-  table tbody td {padding:5px 3px;border:1px solid #ccc;background:#e4e4e4;text-align:center;color:#898989;font-size:11px;}
-  table tbody td.left {padding:5px 10px;text-align:left;}
-  table tbody td.url {padding:5px 10px;text-align:center;}
-  table tbody tr.hidden td {background:#e4e4e4;color:#898989;text-decoration:line-through;}
-  table tbody tr.mod td {background:#fce9dc;color:#444;}
-  table tbody tr.add td {background:#e1f5fe;color:#444;}
-  table tbody tr.end td {background:#fff;color:#666;}
-  table tbody tr:hover td {background:#e2e6f4 !important;}
-  .red {color:#c00 !important;font-weight:bold}
-  .tab_nav {margin-bottom:5px;}
-  .tab_nav li {float:left;margin-right:5px;}
-  .tab_nav li a {display:block;padding:4px 10px 5px 10px;border:1px solid #444;border-radius:4px;background:#595959;color:#fff;font-size:14px;transition:all 0.4s;}
-  .tab_nav li a:hover {background:#009dff;border-color:#006fb5;}
-  .tab_nav:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
-  .table-form {margin-bottom: 20px;}
-  .btns {position: relative; top: 2px; display: inline-flex; gap: 10px; margin: 0 20px; font-size: 14px; font-weight: 400; vertical-align: bottom; }
-  .btns span { background-color: #818181; padding: 0px 10px; color: #fff; cursor: pointer; }
-</style>
 <body>
   <div id="wrap">
     <header>
       <div class="cont_area">
-        <h1>EBS 프로젝트 가이드 맵</h1>
+        <h1>🌟EBS 프로젝트 웹 가이드 맵</h1>
       </div>
     </header>
     <div class="table-form">

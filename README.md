@@ -1,9 +1,4 @@
-# Getting Started
+# 🌟EBS 프로젝트 웹 퍼블리셔 채널
 
-EBS Project, WebPulisher Channel
-<br/>
-
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.<br/>
-
-main : test
+안녕하세요, 웹 퍼블리셔 여러분  
+해당 작업이 시작됐을때, 프로젝트 이름으로 폴더 명 생성 후 작업 부탁드립니다.

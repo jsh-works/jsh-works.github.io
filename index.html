@@ -1,22 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CI/CD 페이지 테스트트</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1500">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>EBS 프로젝트 가이드 맵</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico">
+<script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(function() {
+			$.each($("td.url > a"), function(i,v){
+				$(v).text($(v).attr("href"));
+			});
+
+			$(".kor").on('click', function() {
+				$.each($("td.url > a"), function(i,v){
+					$(v).html($(v).attr("href").replace('./en','./kr'));
+					$(this).prop('href', $(v).text());
+				});
+			});
+			
+			$(".en").on('click', function() {
+				$.each($("td.url > a"), function(i,v){
+					$(v).html($(v).attr("href").replace('./kr','./en'));
+					$(this).prop('href', $(v).text());
+				});
+			});
+	});
+</script>
 </head>
+<style>
+  * {margin:0;padding:0;font-family:'Noto Sans KR','Malgun Gothic','맑은 고딕',Verdana,Tahoma,"돋움",Dotum,"굴림",Gulim,Geneva,sans-serif,Apple Gothic,AppleGothic;}
+  body {font-size:13px;}
+  li {list-style:none;}
+  a {color:#444;text-decoration:none;}
+  a:hover {color:#444;}
+  a:visited, a:focus, a:active {color:#444;}
+  #wrap {position:relative;width:1200px;margin:0 auto;padding:80px 20px 50px 20px;}
+  header {position: fixed;left:0;top:0;width:100%;height:80px;background:#fff;}
+  header .cont_area {position:relative;width:1200px;margin:0 auto;padding:0 20px;}
+
+  h1 {font-size:30px;margin:20px 0;font-weight:700;line-height:34px;letter-spacing:-1px; vertical-align:top;  padding-bottom: 20px; border-bottom: 1px solid #000;}
+  h1 img { vertical-align:top;}
+  .info {position:absolute;right:25px;bottom:5px;}
+  .guide {margin:10px 0 5px 0;text-align:right;}
+  h2 {padding:8px 15px;font-size:13px;font-weight:500;border:1px solid #444;border-bottom:none;background:#595959;color:#fff;}
+  h3 {position:relative;margin:-1px 0;padding:6px 15px;border:1px solid;border-color:#999 #ccc;background:#ccc;font-size:13px;font-weight:500;}
+  caption {display:none;}
+  div.cont {border-top:1px solid #444;}
+  table {border-collapse:collapse;width:100%;border-spacing:0;}
+  table thead th {padding:6px 3px;border:1px solid #ccc;background:#eee;font-size:13px;}
+  table tbody td {padding:5px 3px;border:1px solid #ccc;background:#e4e4e4;text-align:center;color:#898989;font-size:11px;}
+  table tbody td.left {padding:5px 10px;text-align:left;}
+  table tbody td.url {padding:5px 10px;text-align:center;}
+  table tbody tr.hidden td {background:#e4e4e4;color:#898989;text-decoration:line-through;}
+  table tbody tr.mod td {background:#fce9dc;color:#444;}
+  table tbody tr.add td {background:#e1f5fe;color:#444;}
+  table tbody tr.end td {background:#fff;color:#666;}
+  table tbody tr:hover td {background:#e2e6f4 !important;}
+  .red {color:#c00 !important;font-weight:bold}
+  .tab_nav {margin-bottom:5px;}
+  .tab_nav li {float:left;margin-right:5px;}
+  .tab_nav li a {display:block;padding:4px 10px 5px 10px;border:1px solid #444;border-radius:4px;background:#595959;color:#fff;font-size:14px;transition:all 0.4s;}
+  .tab_nav li a:hover {background:#009dff;border-color:#006fb5;}
+  .tab_nav:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+  .table-form {margin-bottom: 20px;}
+  .btns {position: relative; top: 2px; display: inline-flex; gap: 10px; margin: 0 20px; font-size: 14px; font-weight: 400; vertical-align: bottom; }
+  .btns span { background-color: #818181; padding: 0px 10px; color: #fff; cursor: pointer; }
+</style>
 <body>
-  <div class="wrapper">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus itaque, exercitationem odit accusantium iste voluptas cum quia quod nihil perferendis. Eveniet consequuntur doloribus eum vero obcaecati. Ipsum, adipisci quam?
-    Atque ad dolorem deleniti aliquam ipsa nulla quisquam ullam. Nobis quasi repellat vel explicabo error cupiditate ipsam modi reprehenderit perferendis molestiae, soluta laboriosam omnis sint sunt amet optio in. Provident!
-    Ipsa deleniti similique sed reiciendis atque natus quidem asperiores, voluptatibus sequi? Tempore, soluta ipsum. In voluptatibus eos deserunt ut provident commodi molestias magnam voluptate eum harum, quod quisquam nulla ducimus.
-    Recusandae excepturi non nostrum optio aliquid, asperiores sint corporis illum repellendus iure, minima, modi consectetur fugiat eaque autem ut officia voluptates. Assumenda rem consequatur dicta consequuntur dolores odio quasi reiciendis?
-    Quos veniam veritatis impedit enim aspernatur rem deleniti aperiam laboriosam nam? Officia aspernatur nam, animi numquam doloremque ipsa suscipit saepe quibusdam recusandae alias? Eos saepe exercitationem minus nemo sapiente veniam.
-    Expedita illum cum ad eius odio libero est quisquam, perferendis adipisci aspernatur! Quos nemo perspiciatis, iusto cum doloremque ex enim, amet vitae eaque natus laborum, magni error voluptas! Officiis, veniam?
-    Omnis laboriosam quos totam quas! Excepturi cupiditate saepe dignissimos pariatur dolorum odit similique libero esse ratione, nostrum incidunt, iure a nobis facere eveniet, neque ea eum quae natus. Autem, iste.
-    Perferendis ut earum nisi quidem optio dolorem veniam esse! Deserunt maiores iusto molestiae nemo accusamus, excepturi quidem temporibus reiciendis veritatis non sit voluptates architecto obcaecati et similique ea libero quos?
-    Recusandae aliquam, ut aspernatur excepturi tempora aperiam est maiores dolores! Sunt, nesciunt reiciendis cumque debitis hic rem illo modi dolores, optio veniam quas magnam. Vel adipisci cupiditate maiores ratione eum.
-    Eius commodi ullam dolorem architecto suscipit pariatur assumenda praesentium nesciunt voluptates. Reiciendis explicabo pariatur laudantium culpa in molestiae hic necessitatibus, fuga quam quae quis perferendis suscipit aspernatur fugiat incidunt ipsum!
+  <div id="wrap">
+    <header>
+      <div class="cont_area">
+        <h1>EBS 프로젝트 가이드 맵</h1>
+      </div>
+    </header>
+    <div class="table-form">
+      <h2>Book Story</h2>
+      <div class="cont">
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col span="1" style="width:9%;">
+            <col span="1" style="width:9%;">
+            <col span="1" style="width:9%;">
+            <col span="1" style="width:10%;">
+            <col span="1" style="width:15%;">
+            <col span="1" style="width:15%;">
+            <col span="1" style="width:5%;">
+            <col span="1" style="width:5%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">1 Depth</th>
+              <th scope="col">2 Depth</th>
+              <th scope="col">3 Depth</th>
+              <th scope="col">4 Depth</th>
+              <th scope="col">Dev URL</th>
+              <th scope="col">Main URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="end">
+              <td rowspan="7">Book Story</td>
+              <td>북스토리 메인</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="bookStory/index.html" target="_blank">bookStory/index.html</a></td>
+              <td class="real"><a href="https://book.ebs.co.kr/" target="_blank">https://book.ebs.co.kr/</a></td>
+              <td>2025.05.12</td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>ebook</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>고교</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>중학</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>유・초등 영어</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>이벤트</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="end">
+              <td>나의 교재방</td>
+              <td></td>
+              <td></td>
+              <td class="url"><a href="" target="_blank"></a></td>
+              <td class="real"><a href="" target="_blank"></a></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </body>
 </html>

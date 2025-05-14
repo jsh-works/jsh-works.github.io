@@ -1,0 +1,11 @@
+[
+  {
+    "id" : 1,
+    "menuName" : "BookStory",
+    "depth1" : "",
+    "depth2" : "",
+    "devUrl" : "bookStory/index.html",
+    "mainUrl" : "https://book.ebs.co.kr/",
+    "update" : "2025.05.12"
+  }
+]

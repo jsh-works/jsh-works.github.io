@@ -1,1600 +1,696 @@
-
 <!DOCTYPE html>
-<html lang="ko"> 
-	
-	    <head>
-	        <meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
-			<meta name="format-detection" content="telephone=no">
-			<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
-			<meta name="robots" content="noindex, nofollow" /> <!-- 2023-04-18 검색엔진 수집 거부 설정 추가 -->
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EBS 북스토리">
+	<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+	<meta property="og:image" content="/images/ebs_bookstory_sns.png">
+	<title>EBS 교재사이트</title>
+	<script type="text/javascript">
+		var timestamp = new Date().getTime();
+		var mainUrl = "https://book.ebs.co.kr/";
+		// var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
+		var ebsDateFormat = "YY.MM.DD";
+		var mediaPlayer = null;
+		var isLogin = false;
+		
+		document.write('<link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />');
+		document.write('<link rel="stylesheet" href="'+ mainUrl +'/css/base.css?v="'+ timestamp +'>');
+		document.write('<link rel="stylesheet" href="'+ mainUrl +'/css/pre-renewal-common.css?v="'+ timestamp +'>');
+		document.write('<link id="contextPathHolder" />');
+		
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/jquery.min.js");
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/slick.js");
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/swiper.min.js");
+		document.write('<script type="text/javascript" src="'+ mainUrl +'/js/jquery.cookie.js" />');
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/common.js?v=" + timestamp);
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/pre-renewal-common.js?v=" + timestamp);
+		document.write('<script type="text/javascript" src="'+ mainUrl + "/js/custom.js?v=" + timestamp);
+	 </script>
+</head>
 
-			<!--카카오 공유하기 용 메타 -->
-			
-			<!--기본 설정 -->
-			
-				<meta property="og:type" content="website">
-				<meta property="og:title" content="EBS 북스토리">
-				<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
-				<meta property="og:image" content="/images/ebs_bookstory_sns.png">
-			
+<body>
+	<div id="wrap">
 
-			<title>EBS 교재사이트</title>
-			<link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
-			<link rel="stylesheet" href="/css/base.css?v=20240312">
-			<link rel="stylesheet" href="/css/pre-renewal-common.css?v=230719"> <!-- 2022-02-03 리뉴얼 전 플로팅 배너 추가 -->
-			<!-- Context Path -->
-        	<link id="contextPathHolder"/>
 
-			<!-- daum postcode -->			
-			<script id="postCodeJs" src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>			
-			<!-- // daum postcode -->
-
-			<script type="text/javascript" src="/js/jquery.min.js"></script>
-			<script type="text/javascript" src="/js/jquery.cookie.js"></script>
-			<script type="text/javascript" src="/js/common.js?v=240405"></script>
-			<script type="text/javascript" src="/js/pre-renewal-common.js?v=230315"></script><!-- 2022-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
-			<script type="text/javascript" src="/js/custom.js?v=220405"></script>
-			<script type="text/javascript" src="/js/slick.js"></script>
-			<script type="text/javascript" src="/js/swiper.min.js"></script>
-
-			<script type="text/javascript">
-
-			// Global
-			var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
-			var ebsDateFormat = "YY.MM.DD";
-			var mediaPlayer = null;
-
-			</script>
-
-			
-			<script>
-				var isLogin = false;
-			</script>
-	    </head>
-	
-	<body>
-		<div id="wrap">
-			
-	
-	<!-- top-banner: 211124: 탑배너 슬라이드 추가 -->
-	<div class="top-bnr" style="background-color:#eef5f8">
-		<div class="top-bnr-wrapper">
-			<div class="btn"> <!-- 211124: 클래스 추가 -->
-				<button class="btn-dist" title="문해력 테스트" onclick="window.open('https://primary.ebs.co.kr/course/literacy')">문해력테스트 바로가기</button>
-			</div>
-			<!-- bnr-slide -->
-			<div class="tbnr-slide">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="https://book.ebs.co.kr/roadmap/english" class="pc" target="_self" data-bnnrMngId="1276"><img src="https://cbox.ebs.co.kr/portal/banner/2022/12/14/promotionImg_54042436662018312.jpg" alt="배너"></a>
-						<a href="https://book.ebs.co.kr/roadmap/english" class="mb" target="_self" data-bnnrMngId="1276"><img src="https://cbox.ebs.co.kr/portal/banner/2022/12/14/flashFile_54042436662018312.jpg" alt="배너"></a>
+		<!-- top-banner: 211124: 탑배너 슬라이드 추가 -->
+		<div class="top-bnr" style="background-color:#eef5f8">
+			<div class="top-bnr-wrapper">
+				<div class="btn"> <!-- 211124: 클래스 추가 -->
+					<button class="btn-dist" title="문해력 테스트"
+						onclick="window.open('https://primary.ebs.co.kr/course/literacy')">문해력테스트 바로가기</button>
+				</div>
+				<!-- bnr-slide -->
+				<div class="tbnr-slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="https://book.ebs.co.kr/roadmap/english" class="pc" target="_self" data-bnnrMngId="1276"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2022/12/14/promotionImg_54042436662018312.jpg" alt="배너"></a>
+							<a href="https://book.ebs.co.kr/roadmap/english" class="mb" target="_self" data-bnnrMngId="1276"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2022/12/14/flashFile_54042436662018312.jpg" alt="배너"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="https://book.ebs.co.kr/notice/view?pstId=60000457099" class="pc" target="_self"
+								data-bnnrMngId="2671"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2024/9/24/promotionImg_110216882116626890.jpg" alt="배너"></a>
+							<a href="https://book.ebs.co.kr/notice/view?pstId=60000457099" class="mb" target="_self"
+								data-bnnrMngId="2671"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2024/9/24/flashFile_110216882116626890.jpg" alt="배너"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="https://book.ebs.co.kr/roadmap/high" class="pc" target="_self" data-bnnrMngId="2899"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118829171820903284.jpg" alt="배너"></a>
+							<a href="https://book.ebs.co.kr/roadmap/high" class="mb" target="_self" data-bnnrMngId="2899"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118829171820903284.jpg" alt="배너"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="https://book.ebs.co.kr/roadmap/primary" class="pc" target="_self" data-bnnrMngId="2901"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118830188507515740.jpg" alt="배너"></a>
+							<a href="https://book.ebs.co.kr/roadmap/primary" class="mb" target="_self" data-bnnrMngId="2901"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118830188507515740.jpg" alt="배너"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="https://primary.ebs.co.kr/course/literacy" class="pc" target="_blank" data-bnnrMngId="1387"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2023/1/3/promotionImg_55777737160352107.jpg" alt="배너"></a>
+							<a href="https://primary.ebs.co.kr/course/literacy" class="mb" target="_blank" data-bnnrMngId="1387"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2023/1/3/flashFile_55777737160352107.jpg" alt="배너"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="https://book.ebs.co.kr/roadmap/middle" class="pc" target="_self" data-bnnrMngId="2900"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118830150698948277.jpg" alt="배너"></a>
+							<a href="https://book.ebs.co.kr/roadmap/middle" class="mb" target="_self" data-bnnrMngId="2900"><img
+									src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118830150698948277.jpg" alt="배너"></a>
+						</div>
 					</div>
-					<div class="swiper-slide">
-						<a href="https://primary.ebs.co.kr/course/literacy" class="pc" target="_blank" data-bnnrMngId="1387"><img src="https://cbox.ebs.co.kr/portal/banner/2023/1/3/promotionImg_55777737160352107.jpg" alt="배너"></a>
-						<a href="https://primary.ebs.co.kr/course/literacy" class="mb" target="_blank" data-bnnrMngId="1387"><img src="https://cbox.ebs.co.kr/portal/banner/2023/1/3/flashFile_55777737160352107.jpg" alt="배너"></a>
-					</div>
-					<div class="swiper-slide">
-						<a href="https://book.ebs.co.kr/notice/view?pstId=60000457099" class="pc" target="_self" data-bnnrMngId="2671"><img src="https://cbox.ebs.co.kr/portal/banner/2024/9/24/promotionImg_110216882116626890.jpg" alt="배너"></a>
-						<a href="https://book.ebs.co.kr/notice/view?pstId=60000457099" class="mb" target="_self" data-bnnrMngId="2671"><img src="https://cbox.ebs.co.kr/portal/banner/2024/9/24/flashFile_110216882116626890.jpg" alt="배너"></a>
-					</div>
-					<div class="swiper-slide">
-						<a href="https://book.ebs.co.kr/roadmap/middle" class="pc" target="_self" data-bnnrMngId="2900"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118830150698948277.jpg" alt="배너"></a>
-						<a href="https://book.ebs.co.kr/roadmap/middle" class="mb" target="_self" data-bnnrMngId="2900"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118830150698948277.jpg" alt="배너"></a>
-					</div>
-					<div class="swiper-slide">
-						<a href="https://book.ebs.co.kr/roadmap/high" class="pc" target="_self" data-bnnrMngId="2899"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118829171820903284.jpg" alt="배너"></a>
-						<a href="https://book.ebs.co.kr/roadmap/high" class="mb" target="_self" data-bnnrMngId="2899"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118829171820903284.jpg" alt="배너"></a>
-					</div>
-					<div class="swiper-slide">
-						<a href="https://book.ebs.co.kr/roadmap/primary" class="pc" target="_self" data-bnnrMngId="2901"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/promotionImg_118830188507515740.jpg" alt="배너"></a>
-						<a href="https://book.ebs.co.kr/roadmap/primary" class="mb" target="_self" data-bnnrMngId="2901"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/2/flashFile_118830188507515740.jpg" alt="배너"></a>
+					<div class="swiper-button-prev"></div><!-- 2022-08-31 추가 -->
+					<div class="swiper-button-next"></div><!-- 2022-08-31 추가 -->
+					<div class="paging">
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-				<div class="swiper-button-prev"></div><!-- 2022-08-31 추가 -->
-				<div class="swiper-button-next"></div><!-- 2022-08-31 추가 -->
-				<div class="paging">
-					<div class="swiper-pagination"></div>
-				</div>
-			</div>
-			<!-- //bnr-slide -->
+				<!-- //bnr-slide -->
 
-			<!-- 2022-05-02 새로 추가 -->
-			<div class="btn btn-right">
-				<button class="btn-elt" title="ELT" onclick="window.open('https://primary.ebs.co.kr/customer/notice#basic/view/143/60000279013/1')">ELT 바로가기</button>
+				<!-- 2022-05-02 새로 추가 -->
+				<div class="btn btn-right">
+					<button class="btn-elt" title="ELT"
+						onclick="window.open('https://primary.ebs.co.kr/customer/notice#basic/view/143/60000279013/1')">ELT
+						바로가기</button>
+				</div>
+				<!-- //2022-05-02 새로 추가 -->
 			</div>
-			<!-- //2022-05-02 새로 추가 -->
 		</div>
-	</div>
-	<!-- //top-banner -->
+		<!-- //top-banner -->
 
-	<!-- header -->
-	<div id="Header">
-		<div class="header-inner">
-			<h1><a href="/">EBS</a><a href="/">BookStory</a></h1>
-			<!-- header util -->
-			<form name="headerSearch" action="/search/main">
-				<input type="hidden" name="searchKeyword" value="">
-			</form>
+		<!-- header -->
+		<div id="Header">
+			<div class="header-inner">
+				<h1><a href="/">EBS</a><a href="/">BookStory</a></h1>
+				<!-- header util -->
+				<form name="headerSearch" action="/search/main">
+					<input type="hidden" name="searchKeyword" value="">
+				</form>
 
-			<div class="header-util">
-				<span class="header-sch">
-					<input type="text" name="headerSchSmall" class="sch-view pc" placeholder="검색" value="">
-					<input type="text" name="headerSchMob" class="sch-inp mb" placeholder="검색" value="">
-					<button class="btn-sch" onclick="document.headerSearch.submit();">검색</button>
-				</span>
+				<div class="header-util">
+					<span class="header-sch">
+						<input type="text" name="headerSchSmall" class="sch-view pc" placeholder="검색" value="">
+						<input type="text" name="headerSchMob" class="sch-inp mb" placeholder="검색" value="">
+						<button class="btn-sch" onclick="document.headerSearch.submit();">검색</button>
+					</span>
 
-				
-					
-						<a onclick="loginChk(&#39;intrst&#39;,&#39;&#39;)" href="javascript:;" class="wish-book" title="관심교재">관심 교재</a>
-						<a onclick="loginChk(&#39;bskt&#39;,&#39;&#39;)" href="javascript:;" class="shop-pocket" title="장바구니">장바구니</a> <!-- 230126 카트 영역-헤더 내 유틸들 순서 변경으로 위치 이동 -->
-						
-						
-							<a href="/notice/list">공지사항</a>
-						
-						<a href="https://www.ebs.co.kr/customer" target="_blank">고객센터</a>
-						<a href="javascript:fnLogin();">로그인</a>
-						<!-- <a href="javascript:_localmodeChk('join');">회원가입</a> -->
-						<a href="/agency/list">총판문의</a>
-					
-					
-				
-			</div>
-			<!--// header util -->
-			<!-- search -->
 
-			<div class="search">
-				<div>
-					<input type="text" name="headerSchPc" placeholder="검색어를 입력하세요." value="">
-					<button type="button" class="submit" onclick="document.headerSearch.submit();">검색</button>
-					<a href="javascript:;" class="search-close">검색창 닫기</a>
+
+					<a onclick="" href="javascript:;" class="wish-book" title="관심교재">관심
+						교재</a>
+					<a onclick="" href="javascript:;" class="shop-pocket" title="장바구니">장바구니</a>
+					<!-- 230126 카트 영역-헤더 내 유틸들 순서 변경으로 위치 이동 -->
+
+
+					<a href="/notice/list">공지사항</a>
+
+					<a href="https://www.ebs.co.kr/customer" target="_blank">고객센터</a>
+					<a href="javascript:fnLogin();">로그인</a>
+					<!-- <a href="javascript:_localmodeChk('join');">회원가입</a> -->
+					<a href="/agency/list">총판문의</a>
+
+
+
 				</div>
-			</div>
+				<!--// header util -->
+				<!-- search -->
 
-			<!-- //search -->
-			<div class="header-menu">
-				<button><span>전체메뉴</span></button>
+				<div class="search">
+					<div>
+						<input type="text" name="headerSchPc" placeholder="검색어를 입력하세요." value="">
+						<button type="button" class="submit" onclick="document.headerSearch.submit();">검색</button>
+						<a href="javascript:;" class="search-close">검색창 닫기</a>
+					</div>
+				</div>
+
+				<!-- //search -->
+				<div class="header-menu">
+					<button><span>전체메뉴</span></button>
+				</div>
+				<button class="wish-book" title="관심교재" onclick="location.href='/mypage/intrst'">관심 교재</button>
+				<button class="btn-dist" title="문해력 테스트"
+					onclick="window.open('https://primary.ebs.co.kr/course/literacy')">문해력테스트 바로가기</button>
+				<button class="btn-elt" title="ELT"
+					onclick="window.open('https://primary.ebs.co.kr/customer/notice#basic/view/143/60000279013/1')">ELT
+					바로가기</button>
 			</div>
-			<button class="wish-book" title="관심교재" onclick="location.href='/mypage/intrst'">관심 교재</button>
-			<button class="btn-dist" title="문해력 테스트" onclick="window.open('https://primary.ebs.co.kr/course/literacy')">문해력테스트 바로가기</button>
-			<button class="btn-elt" title="ELT" onclick="window.open('https://primary.ebs.co.kr/customer/notice#basic/view/143/60000279013/1')">ELT 바로가기</button>
-		</div>
-		<!-- Gnb -->
-		<div class="gnb-inner">
-			<!-- mb-gnb -->
-			<div class="mGnb">
-				<ul class="swiper-wrapper">
-					<li class="swiper-slide"><a href="/ebook/index" class="ebook "><span>eBook</span></a></li>
-					<li class="swiper-slide"><a href="/roadmap/high">고교</a></li>
-					<li class="swiper-slide"><a href="/roadmap/middle">중학</a></li>
-					<li class="swiper-slide"><a href="/roadmap/primary">초등</a></li>
-					<li class="swiper-slide"><a href="/roadmap/english" class="fr01 ">유・초등 영어</a></li><!-- 2022-05-02 새로 추가 모바일 -->
-					<li class="swiper-slide"><a href="/event/eventCurrent">이벤트</a></li>
-					
-						<li class="swiper-slide"><a href="/mypage/purchase" onclick="loginChk(&#39;purchase&#39;,&#39;&#39;)">나의 교재방</a></li>
-					
-					
-				</ul>
-			</div>
-			<!-- //mb-gnb -->
-			<!-- pc-gnb -->
-			
-			<div id="Gnb">
-				<ul class="gnb-dep01">
-					<li>
-						<a href="/ebook/index" class="ebook ">
-							<span>eBook</span>
-						</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02">
-								<li>
-									<ul>
-										<li><a href="/ebook/useInfo">eBook</a></li>
-										<li><a href="/sub/eHigh/csatLink">수능연계</a></li>
-									</ul>
-								</li>	
-								<li>
-									<ul>
-										<li><a href="/sub/eHigh/grade?schGradeArr=D300">고교</a></li>
-										<li><a href="/sub/eMiddle/grade?schGradeArr=M1">중학</a></li>
-										<li><a href="/sub/ePrimary/grade?schGradeArr=P1">초등</a></li>
-										<li><a href="/sub/eCommon/series?schSeriesArr=ALL">일반</a></li>
-									</ul>
-								</li>
-							</ul>
-							<a href="/ebook/tchrCpn" class="solo_link">
-								<span>교사 전용<br>eBook 신청</span>
+			<!-- Gnb -->
+			<div class="gnb-inner">
+				<!-- mb-gnb -->
+				<div class="mGnb">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="/ebook/index" class="ebook active"><span>eBook</span></a></li>
+						<li class="swiper-slide"><a href="/roadmap/high">고교</a></li>
+						<li class="swiper-slide"><a href="/roadmap/middle">중학</a></li>
+						<li class="swiper-slide"><a href="/roadmap/primary">초등</a></li>
+						<li class="swiper-slide"><a href="/roadmap/english" class="fr01 ">유・초등 영어</a></li>
+						<!-- 2022-05-02 새로 추가 모바일 -->
+						<li class="swiper-slide"><a href="/event/eventCurrent">이벤트</a></li>
+
+						<li class="swiper-slide"><a href="/mypage/purchase" onclick="">나의
+								교재방</a></li>
+
+
+					</ul>
+				</div>
+				<!-- //mb-gnb -->
+				<!-- pc-gnb -->
+
+				<div id="Gnb">
+					<ul class="gnb-dep01">
+						<li>
+							<a href="/ebook/index" class="ebook active">
+								<span>eBook</span>
 							</a>
-						</div>
-					</li>
-					<li>
-						<a href="/roadmap/high">고교</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02">
-								<li>
-									<ul>
-										<li><a href="/roadmap/high">로드맵</a></li>
-										<li><a href="/sub/high/series?schSeriesArr=ALL">시리즈</a></li>
-										<li><a href="/sub/high/csatLink">수능연계</a></li>
-									</ul>
-								</li>
-								<li>
-									<ul>
-										<li><a href="/sub/high/grade?schGradeArr=D100">1학년</a></li>
-										<li><a href="/sub/high/grade?schGradeArr=D200">2학년</a></li>
-										<li><a href="/sub/high/grade?schGradeArr=D300">3학년/N수</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="/roadmap/middle">중학</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02">
-							<li>
-								<ul>
-									<li><a href="/roadmap/middle">로드맵</a></li>
-									<li><a href="/sub/middle/series?schSeriesArr=ALL">시리즈</a></li>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02">
+									<li>
+										<ul>
+											<li><a href="/ebook/useInfo">eBook</a></li>
+											<li><a href="/sub/eHigh/csatLink">수능연계</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="/sub/eHigh/grade?schGradeArr=D300" class="active">고교</a></li>
+											<li><a href="/sub/eMiddle/grade?schGradeArr=M1">중학</a></li>
+											<li><a href="/sub/ePrimary/grade?schGradeArr=P1">초등</a></li>
+											<li><a href="/sub/eCommon/series?schSeriesArr=ALL">일반</a></li>
+										</ul>
+									</li>
 								</ul>
-							</li>	
-								<li>
-									<ul>
-										<li><a href="/sub/middle/grade?schGradeArr=MC">공통</a></li>
-										<li><a href="/sub/middle/grade?schGradeArr=M1">1학년</a></li>
-										<li><a href="/sub/middle/grade?schGradeArr=M2">2학년</a></li>
-										<li><a href="/sub/middle/grade?schGradeArr=M3">3학년</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="/roadmap/primary">초등</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02">
-								<li>
-									<ul>
-										<li><a href="/roadmap/primary">로드맵</a></li>
-										<li><a href="/sub/primary/series?schSeriesArr=ALL">시리즈</a></li>
-									</ul>
-								</li>
-								<li class="col-2">
-									<ul>
-										<li><a href="/sub/primary/grade?schGradeArr=PC">공통</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P1">1학년</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P2">2학년</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P3">3학년</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P4">4학년</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P5">5학년</a></li>
-										<li><a href="/sub/primary/grade?schGradeArr=P6">6학년</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="/roadmap/english" class="fr01 ">유・초등 영어</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02">
-								<li><a href="/roadmap/english">로드맵</a></li>
-								<li class="col-2">
-									<ul>
-										<li><a href="/sub/english/12488">READERS</a></li>
-										<li><a href="/sub/english/13182">SKILL BOOK</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="one-line-deps">
-						<a href="/event/eventCurrent">이벤트</a>
-						<div class="gnb-dep02-div" style="display: none;">
-							<ul class="gnb-dep02 col">
-								<li><a href="/event/eventCurrent">진행 이벤트</a></li>
-								<li><a href="/event/eventComplete">완료 이벤트</a></li>
-								<li><a href="/event/prize/list">당첨자 발표</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="one-line-deps last-deps">
-						
-							<a onclick="loginChk(&#39;purchase&#39;,&#39;&#39;)" href="javascript:;">나의 교재방</a>
+								<a href="/ebook/tchrCpn" class="solo_link">
+									<span>교사 전용<br>eBook 신청</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="/roadmap/high">고교</a>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02">
+									<li>
+										<ul>
+											<li><a href="/roadmap/high">로드맵</a></li>
+											<li><a href="/sub/high/series?schSeriesArr=ALL">시리즈</a></li>
+											<li><a href="/sub/high/csatLink">수능연계</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="/sub/high/grade?schGradeArr=D100">1학년</a></li>
+											<li><a href="/sub/high/grade?schGradeArr=D200">2학년</a></li>
+											<li><a href="/sub/high/grade?schGradeArr=D300">3학년/N수</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="/roadmap/middle">중학</a>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02">
+									<li>
+										<ul>
+											<li><a href="/roadmap/middle">로드맵</a></li>
+											<li><a href="/sub/middle/series?schSeriesArr=ALL">시리즈</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="/sub/middle/grade?schGradeArr=MC">공통</a></li>
+											<li><a href="/sub/middle/grade?schGradeArr=M1">1학년</a></li>
+											<li><a href="/sub/middle/grade?schGradeArr=M2">2학년</a></li>
+											<li><a href="/sub/middle/grade?schGradeArr=M3">3학년</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="/roadmap/primary">초등</a>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02">
+									<li>
+										<ul>
+											<li><a href="/roadmap/primary">로드맵</a></li>
+											<li><a href="/sub/primary/series?schSeriesArr=ALL">시리즈</a></li>
+										</ul>
+									</li>
+									<li class="col-2">
+										<ul>
+											<li><a href="/sub/primary/grade?schGradeArr=PC">공통</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P1">1학년</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P2">2학년</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P3">3학년</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P4">4학년</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P5">5학년</a></li>
+											<li><a href="/sub/primary/grade?schGradeArr=P6">6학년</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="/roadmap/english" class="fr01 ">유・초등 영어</a>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02">
+									<li><a href="/roadmap/english">로드맵</a></li>
+									<li class="col-2">
+										<ul>
+											<li><a href="/sub/english/12488">READERS</a></li>
+											<li><a href="/sub/english/13182">SKILL BOOK</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="one-line-deps">
+							<a href="/event/eventCurrent">이벤트</a>
 							<div class="gnb-dep02-div" style="display: none;">
 								<ul class="gnb-dep02 col">
-									<li><a onclick="loginChk(&#39;purchase&#39;,&#39;&#39;)" href="javascript:;">나의 교재</a></li>
-									<li><a onclick="loginChk(&#39;payhist&#39;,&#39;&#39;)" href="javascript:;">나의 구매정보</a></li>
-									<li><a onclick="loginChk(&#39;eCouponReg&#39;,&#39;&#39;)" href="javascript:;">eBook 쿠폰 등록</a></li>
-									<li><a onclick="loginChk(&#39;bskt&#39;,&#39;&#39;)" href="javascript:;">장바구니</a></li>
+									<li><a href="/event/eventCurrent">진행 이벤트</a></li>
+									<li><a href="/event/eventComplete">완료 이벤트</a></li>
+									<li><a href="/event/prize/list">당첨자 발표</a></li>
 								</ul>
 							</div>
-						
-						
-					</li>
-				</ul>
+						</li>
+						<li class="one-line-deps last-deps">
+
+							<a href="javascript:;">나의 교재방</a>
+							<div class="gnb-dep02-div" style="display: none;">
+								<ul class="gnb-dep02 col">
+									<li><a onclick="" href="javascript:;">나의 교재</a></li>
+									<li><a onclick="" href="javascript:;">나의 구매정보</a></li>
+									<li><a onclick="" href="javascript:;">eBook 쿠폰 등록</a></li>
+									<li><a onclick="" href="javascript:;">장바구니</a></li>
+								</ul>
+							</div>
+
+
+						</li>
+					</ul>
+				</div>
+
+				<!-- //pc-gnb -->
 			</div>
-			
-			<!-- //pc-gnb -->
+			<!--//Gnb -->
+			<div class="subGnbBack"></div>
 		</div>
-		<!--//Gnb -->
-		<div class="subGnbBack"></div>
-	</div>
-	<!-- //header -->
-	<!-- whole menu -->
-	<div id="totalGnb">
-		<div class="total-gnb-wrap">
-			<div class="total-top">
-				
-				
-					<button class="btn-darkB" onclick="javascript:_localmodeChk('join');">회원가입</button><button class="btn-dark" onclick="fnLogin();">로그인</button>
-				
-			</div>
-			<div class="total-gnb-tbl">
-				<div class="total-gnb-cell">
-					<h2>eBook</h2>
-					<ul class="dep01">
-						<li><a href="/ebook/index">eBook</a></li>
-						<li><a href="/sub/eHigh/grade?schGradeArr=D100">학년별 교재</a></li>
-					</ul>
+		<!-- //header -->
+		<!-- whole menu -->
+		<div id="totalGnb">
+			<div class="total-gnb-wrap">
+				<div class="total-top">
+
+
+					<button class="btn-darkB" onclick="javascript:_localmodeChk('join');">회원가입</button><button class="btn-dark"
+						onclick="fnLogin();">로그인</button>
+
 				</div>
-				<div class="total-gnb-cell">
-					<h2>고교</h2>
-					<ul class="dep01">
-						<li><a href="/roadmap/high">전체 로드맵</a></li>
-						<li><a href="/sub/high/grade?schGradeArr=D100">학년별 교재</a></li>
-					</ul>
-				</div>
-				<div class="total-gnb-cell">
-					<h2>중학</h2>
-					<ul class="dep01">
-						<li><a href="/roadmap/middle">전체 로드맵</a></li>
-						<li><a href="/sub/middle/grade?schGradeArr=M1">학년별 교재</a></li>
-					</ul>
-				</div>
-				<div class="total-gnb-cell">
-					<h2>초등</h2>
-					<ul class="dep01">
-						<li><a href="/roadmap/primary">전체 로드맵</a></li>
-						<li><a href="/sub/primary/grade?schGradeArr=P1">학년별 교재</a></li>
-					</ul>
-				</div>
-				<div class="total-gnb-cell">
-					<h2>유・초등 영어</h2>
-					<ul class="dep01">
-						<li><a href="/roadmap/english">전체 로드맵</a></li>
-						<li><a href="/sub/english/12488">EBS ELT</a></li>
-					</ul>
-				</div>
-				<div class="total-gnb-cell">
-					<h2>
-						<a href="/event/eventCurrent">이벤트</a>
-					</h2>
-				</div>
-				<div class="total-gnb-cell">
-					
-						<h2><a href="/mypage/purchase" onclick="loginChk(&#39;purchase&#39;,&#39;&#39;)">나의 교재방</a></h2>
+				<div class="total-gnb-tbl">
+					<div class="total-gnb-cell">
+						<h2>eBook</h2>
 						<ul class="dep01">
-							<li><a href="/mypage/purchase" onclick="loginChk(&#39;purchase&#39;,&#39;&#39;)">나의 교재</a></li>
-							<li><a href="/mypage/payhist" onclick="loginChk(&#39;payhist&#39;,&#39;&#39;)">나의 구매정보</a></li>
-							<li><a href="/mypage/bskt" onclick="loginChk(&#39;bskt&#39;,&#39;&#39;)">장바구니</a></li>
+							<li><a href="/ebook/index">eBook</a></li>
+							<li><a href="/sub/eHigh/grade?schGradeArr=D100">학년별 교재</a></li>
 						</ul>
-					
-					
+					</div>
+					<div class="total-gnb-cell">
+						<h2>고교</h2>
+						<ul class="dep01">
+							<li><a href="/roadmap/high">전체 로드맵</a></li>
+							<li><a href="/sub/high/grade?schGradeArr=D100">학년별 교재</a></li>
+						</ul>
+					</div>
+					<div class="total-gnb-cell">
+						<h2>중학</h2>
+						<ul class="dep01">
+							<li><a href="/roadmap/middle">전체 로드맵</a></li>
+							<li><a href="/sub/middle/grade?schGradeArr=M1">학년별 교재</a></li>
+						</ul>
+					</div>
+					<div class="total-gnb-cell">
+						<h2>초등</h2>
+						<ul class="dep01">
+							<li><a href="/roadmap/primary">전체 로드맵</a></li>
+							<li><a href="/sub/primary/grade?schGradeArr=P1">학년별 교재</a></li>
+						</ul>
+					</div>
+					<div class="total-gnb-cell">
+						<h2>유・초등 영어</h2>
+						<ul class="dep01">
+							<li><a href="/roadmap/english">전체 로드맵</a></li>
+							<li><a href="/sub/english/12488">EBS ELT</a></li>
+						</ul>
+					</div>
+					<div class="total-gnb-cell">
+						<h2>
+							<a href="/event/eventCurrent">이벤트</a>
+						</h2>
+					</div>
+					<div class="total-gnb-cell">
+
+						<h2><a href="/mypage/purchase" onclick="">나의 교재방</a></h2>
+						<ul class="dep01">
+							<li><a href="/mypage/purchase" onclick="">나의 교재</a></li>
+							<li><a href="/mypage/payhist" onclick="">나의 구매정보</a></li>
+							<li><a href="/mypage/bskt" onclick="">장바구니</a></li>
+						</ul>
+
+
+					</div>
+					<div class="total-bnr">
+						<a href="https://book.ebs.co.kr/ebook/tchrCpn">
+							<img
+								src="https://cbox.ebs.co.kr/portal/banner/2023/9/8/promotionImg_77187155046163322.jpg" alt="배너"></a>
+					</div>
 				</div>
-				<div class="total-bnr">
-					<a href="https://book.ebs.co.kr/ebook/tchrCpn"><img src="https://cbox.ebs.co.kr/portal/banner/2023/9/8/promotionImg_77187155046163322.jpg" alt="배너"></a>
-				</div>
+
+
+				<p class="total-cust">고객센터<em>1588-1580</em></p>
 			</div>
-			
-
-			<p class="total-cust">고객센터<em>1588-1580</em></p>
+			<button class="close">전체메뉴 닫기</button>
 		</div>
-		<button class="close">전체메뉴 닫기</button>
-	</div>
-	<div id="totalDim"></div>
-	
-	
-	<!-- //whole menu -->
+		<div id="totalDim"></div>
 
-	<script>
-		$(document).ready(function(){
-			//검색어 입력시 PC mob 모두 변경
-			$("input[name^=headerSch]").on("keyup", function(e){
-				$("input[name=searchKeyword]").val($(this).val());
-				$("input[name^=headerSch]").val($(this).val());
-				if(e.keyCode == 13)  document.headerSearch.submit();
-			});
 
-			//작은창 클릭시 팝업 검색 포커스
-			$('.header-sch .sch-view').on('click focus', function() {
-				$("input[name=headerSchPc]").focus();
-			});
+		<!-- //whole menu -->
 
-			
-		});
-
-		function setPopView(){
-			//모바일 햄버거 닫기
-			$('#totalGnb > .close, #totalDim').click();
-			var popData = $.cookie("mpi");
-			if(popData){
-				var popObj = JSON.parse(popData);
-				var chkScool = popObj.school;
-				var chkGrade = popObj.grade;
-				var chkSubject = popObj.subject;
-
-				if(chkScool < 1){ chkScool = 1;}
-
-				//쿠키 설정된 학년 클릭 이벤트
-				$("#pop_school input[type=radio]:eq(" + (chkScool-1) + ")").click();
-
-				//학년 세팅
-				chkGrade.map(function(v,i){
-					$("#pop_grade input[type=checkbox]").map(function(){
-						if(v == $(this).val()){
-							$(this).prop("checked",true);
-						}
-					});
+		<script>
+			$(document).ready(function () {
+				//검색어 입력시 PC mob 모두 변경
+				$("input[name^=headerSch]").on("keyup", function (e) {
+					$("input[name=searchKeyword]").val($(this).val());
+					$("input[name^=headerSch]").val($(this).val());
+					if (e.keyCode == 13) document.headerSearch.submit();
 				});
 
-				//과목 세팅
-				chkSubject.map(function(v,i){
-					$("#pop_subject input[type=checkbox]").map(function(){
-						if(v == $(this).val()){
-							$(this).prop("checked",true);
-						}
-					});
+				//작은창 클릭시 팝업 검색 포커스
+				$('.header-sch .sch-view').on('click focus', function () {
+					$("input[name=headerSchPc]").focus();
 				});
+
+
+			});
+
+			function setPopView() {
+				//모바일 햄버거 닫기
+				$('#totalGnb > .close, #totalDim').click();
+				var popData = $.cookie("mpi");
+				if (popData) {
+					var popObj = JSON.parse(popData);
+					var chkScool = popObj.school;
+					var chkGrade = popObj.grade;
+					var chkSubject = popObj.subject;
+
+					if (chkScool < 1) { chkScool = 1; }
+
+					//쿠키 설정된 학년 클릭 이벤트
+					$("#pop_school input[type=radio]:eq(" + (chkScool - 1) + ")").click();
+
+					//학년 세팅
+					chkGrade.map(function (v, i) {
+						$("#pop_grade input[type=checkbox]").map(function () {
+							if (v == $(this).val()) {
+								$(this).prop("checked", true);
+							}
+						});
+					});
+
+					//과목 세팅
+					chkSubject.map(function (v, i) {
+						$("#pop_subject input[type=checkbox]").map(function () {
+							if (v == $(this).val()) {
+								$(this).prop("checked", true);
+							}
+						});
+					});
+				}
+				$(".exp .btn-darkR").text("쿠키 재설정");
+				popView("div.popup.cookie");
 			}
-			$(".exp .btn-darkR").text("쿠키 재설정");
-			popView("div.popup.cookie");
-		}
-		
-		function loginChk(menu, userNm) {
-			if(userNm == null || userNm == "") {
-				alert("로그인 후 이용 가능합니다.");
-			}
-			
-			location.href = "/mypage/" + menu;
-			
-		}
-		
-		function bookSetting() {
-			location.href = "/ebook/bookSetting";
-			
-		}
 
-	</script>
-	
-	<!--  2023-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
-	<form name="modFrm" id="modFrm" method="POST">
-		<input type="hidden" name="userId" id="userId" />
-		<input type="hidden" name="returnUrl" id="returnUrl" />
-	</form>
-	
-	
-	<script type="text/javascript">
-		function fnModifyUser(){
-			modUser("U");
-
-			setTimeout(function(){
-				logOutTest();
-			},1000);
-		}
-		function logOutTest() {
-			location.href="/sso/logout?returnUrl=" + encodeURIComponent( location.href.indexOf("/mypage/") > 0 ? fnGetUrl() : location.href);
-		}
-		
-	</script>
-	<!--  //2023-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
-
-			
-
-	<!-- contents -->
-	<div id="contentsWrap" class="main">
-		<!-- visual -->
-		<div class="main-visual">
-			<div class="swiper-wrapper">
-				
-					<div class="swiper-slide" style="background-color:#ffae5d">
-						<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0333&amp;schSeriesDsCd=2" target="_self" data-bnnrMngId="2947"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/23/promotionImg_120667767546030964.jpg"></a>
-					</div>
-				
-					<div class="swiper-slide" style="background-color:#ffae5d">
-						<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0337" target="_self" data-bnnrMngId="3133"><img src="https://cbox.ebs.co.kr/portal/banner/2025/4/2/promotionImg_126622441929023979.jpg"></a>
-					</div>
-				
-					<div class="swiper-slide" style="background-color:#319be5">
-						<a href="https://book.ebs.co.kr/sub/middle/series?schSeriesArr=7330" target="_self" data-bnnrMngId="1922"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/21/promotionImg_120473409079060545.jpg"></a>
-					</div>
-				
-					<div class="swiper-slide" style="background-color:#85c950">
-						<a href="https://book.ebs.co.kr/sub/primary/series?schSeriesArr=7160" target="_self" data-bnnrMngId="2547"><img src="https://cbox.ebs.co.kr/portal/banner/2025/1/21/promotionImg_120473357939877319.jpg"></a>
-					</div>
-				
-					<div class="swiper-slide" style="background-color:#85c950">
-						<a href="https://book.ebs.co.kr/sub/primary/series?schSeriesArr=14324" target="_self" data-bnnrMngId="2348"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121963138176307198.jpg"></a>
-					</div>
-				
-					<div class="swiper-slide" style="background-color:#319be5">
-						<a href="https://book.ebs.co.kr/event/view?bnnrMngId=3141" target="_self" data-bnnrMngId="3146"><img src="https://cbox.ebs.co.kr/portal/banner/2025/4/29/promotionImg_1642117242878955.jpg"></a>
-					</div>
-				
-			</div>
-			<div class="paging">
-				<div class="swiper-pagination"></div>
-			</div>
-			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-		</div>
-		<!-- //visual -->
-
-		<!-- 교재 베스트 -->
-		<div class="main-inner pos-right">
-			<div class="main-best">
-				<strong>베스트 교재</strong>
-				<div class="best-slide">
-					<div class="paging">
-						<div class="swiper-pagination">
-							<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-							<span class="swiper-pagination-bullet"></span>
-							<span class="swiper-pagination-bullet"></span>
-						</div>
-					</div>
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"> <!-- 고교 -->
-							<ol>
-								<li>
-									<a href="/sub/high/view?txbkId=LB00000005587&amp;ebkId=EB100001897&amp;prodClsCd=24">EBS 2026학년도 수능특강 국어영역 문학</a>
-								</li>
-								<li>
-									<a href="/sub/high/view?txbkId=LB00000005588&amp;ebkId=EB100001898&amp;prodClsCd=24">EBS 2026학년도 수능특강 국어영역 독서</a>
-								</li>
-								<li>
-									<a href="/sub/high/view?txbkId=LB00000005592&amp;ebkId=EB100001902&amp;prodClsCd=24">EBS 2026학년도 수능특강 수학영역 수학Ⅱ</a>
-								</li>
-								<li>
-									<a href="/sub/high/view?txbkId=LB00000005591&amp;ebkId=EB100001901&amp;prodClsCd=24">EBS 2026학년도 수능특강 수학영역 수학Ⅰ</a>
-								</li>
-								<li>
-									<a href="/sub/high/view?txbkId=LB00000005598&amp;ebkId=EB100001908&amp;prodClsCd=24">EBS 2026학년도 수능특강 영어영역 영어독해연습</a>
-								</li>
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-							</ol>
-						</div>
-						<div class="swiper-slide"> <!-- 중학 -->
-							<ol>
-								
-								
-								
-								
-								
-								<li>
-									<a href="/sub/middle/view?txbkId=TB1000012107&amp;ebkId=EB100001990&amp;prodClsCd=24">중학 뉴런 과학 1</a>
-								</li>
-								<li>
-									<a href="/sub/middle/view?txbkId=TB1000011110&amp;ebkId=EB100001692&amp;prodClsCd=24">중학 뉴런 수학1(상) (22 개정)</a>
-								</li>
-								<li>
-									<a href="/sub/middle/view?txbkId=TB1000010434&amp;ebkId=EB100000253&amp;prodClsCd=24">중학 영어듣기능력평가 완벽대비 중1 (2025)</a>
-								</li>
-								<li>
-									<a href="/sub/middle/view?txbkId=TB1000012108&amp;ebkId=&amp;prodClsCd=24">중학 뉴런 국어 1</a>
-								</li>
-								<li>
-									<a href="/sub/middle/view?txbkId=TB1000012061&amp;ebkId=EB100001820&amp;prodClsCd=24">어휘가 독해다! 중학 국어 어휘 (2022개정)</a>
-								</li>
-								
-								
-								
-								
-								
-							</ol>
-						</div>
-						<div class="swiper-slide"> <!-- 초등 -->
-							<ol>
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								<li>
-									<a href="/sub/primary/view?txbkId=TB1000012127&amp;ebkId=&amp;prodClsCd=24">만점왕 국어 3-1 (2025)</a>
-								</li>
-								<li>
-									<a href="/sub/primary/view?txbkId=TB1000012094&amp;ebkId=EB100001949&amp;prodClsCd=24">만점왕 수학 3-1 (2025)</a>
-								</li>
-								<li>
-									<a href="/sub/primary/view?txbkId=TB1000010620&amp;ebkId=EB100001550&amp;prodClsCd=24">EBS랑 홈스쿨 초등 필수 영단어 LEVEL1</a>
-								</li>
-								<li>
-									<a href="/sub/primary/view?txbkId=TB1000012133&amp;ebkId=&amp;prodClsCd=24">만점왕 통합본 국어·사회·과학 3-1 (2025)</a>
-								</li>
-								<li>
-									<a href="/sub/primary/view?txbkId=TB1000012097&amp;ebkId=EB100001952&amp;prodClsCd=24">만점왕 수학 4-1 (2025)</a>
-								</li>
-							</ol>
-						</div>
-					</div>
-					<p>제공 : 인터넷 교보문고 (25.05.12 기준)</p>
-				</div>
-			</div>
-		</div>
-		<!-- //교재 베스트 -->
-
-		<div class="main-cnt-wrap">
-			<!-- 추천 교재 -->
-			<h2 class="tit-recom">추천 교재</h2>
-			<div class="main-recom">
-				<ul class="tab">
-					<li><a href="javascript:;" class="active">고교</a></li>
-					<li><a href="javascript:;">중학</a></li>
-					<li><a href="javascript:;">초등</a></li>
-				</ul>
-				<ul class="recom-cont">
-					<li class="active">  <!-- 고교 -->
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								
-									<li class="swiper-slide">
-										<a href="/sub/high/view?txbkId=LB00000005684&amp;ebkId=EB100002227&amp;prodClsCd=24" data-bnnrMngId="3149">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005684[20250327141851222].png" alt="">
-										</span>
-											<p class="tit">EBS 수학의 왕도 확률과 통계(2022 개정)</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005684">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/high/view?txbkId=LB00000005681&amp;ebkId=EB100002217&amp;prodClsCd=24" data-bnnrMngId="3119">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005681[20250310104805012].png" alt="">
-										</span>
-											<p class="tit">EBS 하루 3개 1등급 국어독서 - 전국연합학력평가 기출 고1</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005681">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/high/view?txbkId=LB00000005666&amp;ebkId=EB100002098&amp;prodClsCd=24" data-bnnrMngId="3046">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005666[20250203174823869].png" alt="">
-										</span>
-											<p class="tit">EBS 2026학년도 수능특강 문학 연계 기출 2 고전산문ㆍ현대소설</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005666">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/high/view?txbkId=LB00000005600&amp;ebkId=EB100001910&amp;prodClsCd=24" data-bnnrMngId="3122">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005600[20250109144612310].jpg" alt="">
-										</span>
-											<p class="tit">EBS 2026학년도 수능특강 사회탐구영역 생활과 윤리</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005600">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/high/view?txbkId=LB00000005659&amp;ebkId=EB100002095&amp;prodClsCd=24" data-bnnrMngId="3120">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005659[20250203174055541].png" alt="">
-										</span>
-											<p class="tit">EBS Listening POWER 고교영어듣기 실력 수능기출유형+적중모의고사</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005659">관심교재</a>
-										</a>
-									</li>
-								
-							</ul>
-							<div class="pagination"></div>
-						</div>
-					</li>
-					<li>  <!-- 중학 -->
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								
-									<li class="swiper-slide">
-										<a href="/sub/middle/view?txbkId=TB1000012061&amp;ebkId=EB100001820&amp;prodClsCd=24" data-bnnrMngId="2768">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2024/11/11/TB1000012061/114342832926595924_textbook.png" alt="">
-										</span>
-											<p class="tit">어휘가 독해다! 중학 국어 어휘</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012061">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/middle/view?txbkId=TB1000012072&amp;ebkId=EB100001929&amp;prodClsCd=24" data-bnnrMngId="2878">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2024/11/11/TB1000012072/114342000932878258_textbook.jpg" alt="">
-										</span>
-											<p class="tit">어휘가 문해력이다 중학 1학년 1학기</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012072">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/middle/view?txbkId=TB1000012109&amp;ebkId=EB100001989&amp;prodClsCd=24" data-bnnrMngId="3116">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2024/12/30/TB1000012109/118587047813114346_textbook.png" alt="">
-										</span>
-											<p class="tit">중학 뉴런 사회 ①</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012109">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/middle/view?txbkId=TB1000009076&amp;ebkId=EB100000189&amp;prodClsCd=24" data-bnnrMngId="2302">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2021/11/22/TB1000009076/20609376032357690_textbook.jpg" alt="">
-										</span>
-											<p class="tit">수학의 답 중학 수학 1</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000009076">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/middle/view?txbkId=TB1000012107&amp;ebkId=EB100001990&amp;prodClsCd=24" data-bnnrMngId="2956">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2024/12/30/TB1000012107/118587002000359393_textbook.png" alt="">
-										</span>
-											<p class="tit">중학 뉴런 과학 1</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012107">관심교재</a>
-										</a>
-									</li>
-								
-							</ul>
-							<div class="pagination"></div>
-						</div>
-					</li>
-					<li> <!-- 초등 -->
-						<div class="swiper-container">
-							<ul class="swiper-wrapper">
-								
-									<li class="swiper-slide">
-										<a href="/sub/primary/view?txbkId=TB1000012113&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2951">
-										<span class="thumb">
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2025/1/7/TB1000012113/119277300958092644_textbook.jpg" alt="">
-										</span>
-											<p class="tit">EBS 만점왕 세트 초등 5-1(2025)</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012113">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/primary/view?txbkId=TB1000012123&amp;ebkId=EB100002091&amp;prodClsCd=24" data-bnnrMngId="3036">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2025/1/31/TB1000012123/121339744906809166_textbook.jpg" alt="">
-										</span>
-											<p class="tit">헷갈리지 않는 만능 맞춤법 + 받아쓰기</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012123">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/primary/view?txbkId=TB1000012124&amp;ebkId=EB100002090&amp;prodClsCd=24" data-bnnrMngId="3035">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2025/1/31/TB1000012124/121339869323851228_textbook.jpg" alt="">
-										</span>
-											<p class="tit">실수하지 않는 만능 구구단</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012124">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/primary/view?txbkId=TB1000012115&amp;ebkId=EB100002077&amp;prodClsCd=24" data-bnnrMngId="2954">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2025/1/13/TB1000012115/119796218204074073_textbook.png" alt="">
-										</span>
-											<p class="tit">Step by Step 초등 영구문, 독해의 힘! LEVEL 1</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012115">관심교재</a>
-										</a>
-									</li>
-								
-									<li class="swiper-slide">
-										<a href="/sub/primary/view?txbkId=TB1000012100&amp;ebkId=EB100001957&amp;prodClsCd=24" data-bnnrMngId="2952">
-										<span class="thumb">
-											
-												<span class="ebook-tag"></span>
-											
-											<img src="https://cbox.ebs.co.kr//textbook/2024/12/10/TB1000012100/116855129472713238_textbook.jpg" alt="">
-										</span>
-											<p class="tit">만점왕 연산 5단계</p>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012100">관심교재</a>
-										</a>
-									</li>
-								
-							</ul>
-							<div class="pagination"></div>
-							<!-- <div class="control">
-								<button class="btn-prev"><i class="icon-swiper-prev-14">이전</i></button>
-								<button class="btn-next"><i class="icon-swiper-next-14">다음</i></button>
-							</div> -->
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!-- //추천 교재 -->
-		</div>
-
-		<!-- 추천 eBook -->
-		<div class="main-cnt-wrap ebook-bg">
-			<div class="main-inner">
-				<h2 class="tit-ebook">추천 eBook</h2>
-				<div class="main-ebook">
-					<ul class="tab">
-						<li><a href="javascript:;" class="active">고교</a></li>
-						<li><a href="javascript:;">중학</a></li>
-						<li><a href="javascript:;">초등</a></li>
-					</ul>
-					<ul class="ebook-cont">
-						<li class="active">
-							<!-- 고교 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005679&amp;ebkId=EB100002215&amp;prodClsCd=24" data-bnnrMngId="3152">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005679[20250221164449115].png" alt="">
-											</span>
-												<p class="tit">EBS 하루 3개 1등급 국어독서 수능ㆍ모의평가 기출 고3</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005679">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005676&amp;ebkId=EB100002212&amp;prodClsCd=24" data-bnnrMngId="3125">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005676[20250204163317821].png" alt="">
-											</span>
-												<p class="tit">EBS 개념완성 문항편 통합사회 1188제(2022 개정)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005676">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005678&amp;ebkId=EB100002214&amp;prodClsCd=24" data-bnnrMngId="3124">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005678[20250221165608191].png" alt="">
-											</span>
-												<p class="tit">EBS 매쓰 디렉터의 고1 수학 개념 끝장내기 공통수학2(2022개정)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005678">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005665&amp;ebkId=EB100002097&amp;prodClsCd=24" data-bnnrMngId="3048">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005665[20250203174758069].png" alt="">
-											</span>
-												<p class="tit">EBS 2026학년도 수능특강 문학 연계 기출 1 고전시가ㆍ현대시</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005665">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005683&amp;ebkId=EB100002226&amp;prodClsCd=24" data-bnnrMngId="3151">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005683[20250327141839544].png" alt="">
-											</span>
-												<p class="tit">EBS 수학의 왕도 미적분Ⅰ(2022 개정)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005683">관심교재</a>
-
-										</li>
-									
-
-								</ul>
-								<div class="pagination"></div>
-							</div>
-						</li>
-						<li>
-							<!-- 중학 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000011052&amp;ebkId=EB100001585&amp;prodClsCd=24" data-bnnrMngId="2787">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/4/1/TB1000011052/94987338688510955_textbook.jpg" alt="">
-											</span>
-												<p class="tit">수학 마스터 고난도 Σ(시그마) 중학 수학 1-1(22개정)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000011052">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012072&amp;ebkId=EB100001929&amp;prodClsCd=24" data-bnnrMngId="2785">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/11/11/TB1000012072/114342000932878258_textbook.jpg" alt="">
-											</span>
-												<p class="tit">어휘가 문해력이다 중학 1학년 1학기</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012072">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012109&amp;ebkId=EB100001989&amp;prodClsCd=24" data-bnnrMngId="3053">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/12/30/TB1000012109/118587047813114346_textbook.png" alt="">
-											</span>
-												<p class="tit">중학 뉴런 사회 ①</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012109">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012051&amp;ebkId=EB100001779&amp;prodClsCd=24" data-bnnrMngId="2786">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/10/4/TB1000012051/111056277792080760_textbook.png" alt="">
-											</span>
-												<p class="tit">중학 뉴런 연산 수학 1(상)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012051">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012139&amp;ebkId=EB100002292&amp;prodClsCd=24" data-bnnrMngId="3128">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2025/4/1/TB1000012139/126546168094399947_textbook.png" alt="">
-											</span>
-												<p class="tit">수학 마스터 고난도 Σ(시그마) 중학 수학 2-1</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012139">관심교재</a>
-
-										</li>
-									
-
-								</ul>
-								<div class="pagination"></div>
-							</div>
-						</li>
-						<li>
-							<!-- 초등 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000010620&amp;ebkId=EB100001550&amp;prodClsCd=24" data-bnnrMngId="2783">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/2/14/TB1000010620/90923129514893036_textbook.jpg" alt="">
-											</span>
-												<p class="tit">EBS랑 홈스쿨 초등 필수 영단어 LEVEL1</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000010620">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012136&amp;ebkId=EB100002220&amp;prodClsCd=24" data-bnnrMngId="3130">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2025/3/17/TB1000012136/125252156876991934_textbook.jpg" alt="">
-											</span>
-												<p class="tit">어휘가 문해력이다 초등 4학년 1학기 (2025)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012136">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012111&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2968">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2025/1/7/TB1000012111/119276200397362398_textbook.jpg" alt="">
-											</span>
-												<p class="tit">EBS 만점왕 세트 초등 1-1(2025)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012111">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000011122&amp;ebkId=EB100001762&amp;prodClsCd=24" data-bnnrMngId="2782">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/9/24/TB1000011122/110206031281219368_textbook.jpg" alt="">
-											</span>
-												<p class="tit">어휘가 독해다! 초등 국어 어휘 4단계</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000011122">관심교재</a>
-
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=TB1000012058&amp;ebkId=EB100001818&amp;prodClsCd=24" data-bnnrMngId="2781">
-											<span class="thumb">
-												<span class="ebook-tag"></span>
-												<img src="https://cbox.ebs.co.kr//textbook/2024/10/29/TB1000012058/113230133133088015_textbook.png" alt="">
-											</span>
-												<p class="tit">만점왕 과학 6-1 (2025)</p>
-											</a>
-											<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012058">관심교재</a>
-
-										</li>
-									
-
-								</ul>
-								<div class="pagination swiper-pagination-clickable swiper-pagination-bullets">
-									<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-								</div>
-								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- //추천 eBook -->
-
-		<div class="main-cnt-wrap">
-			<div class="main-inner">
-				<!-- 새로 나온 교재 -->
-				<h2 class="tit-new">새로 나온 교재</h2>
-				<div class="main-newbook">
-					<ul class="tab">
-						<li><a href="javascript:;" class="active">고교</a></li>
-						<li><a href="javascript:;">중학</a></li>
-						<li><a href="javascript:;">초등</a></li>
-					</ul>
-					<ul class="newbook-cont">
-						<li class="active">  <!-- 고교 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005591&amp;ebkId=EB100001901&amp;prodClsCd=24" data-bnnrMngId="2972">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005591[20250109142521451].png" alt="">
-											</span>
-												<p class="tit">EBS 2026학년도 수능특강 수학영역 수학Ⅰ</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005591">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005667&amp;ebkId=EB100002082&amp;prodClsCd=24" data-bnnrMngId="2973">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005667[20250203110855898].png" alt="">
-											</span>
-												<p class="tit">EBS 2026학년도 수능특강 사용설명서 문학</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005667">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005652&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2875">
-											<span class="thumb">
-												
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005652[20241216140205345].jpg" alt="">
-											</span>
-												<p class="tit">EBS 올림포스 공통국어1(2022 개정)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005652">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005514&amp;ebkId=EB100001967&amp;prodClsCd=24" data-bnnrMngId="2798">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005514[20241118133518892].png" alt="">
-											</span>
-												<p class="tit">EBS 2025 올림포스 전국연합학력평가 기출문제집 수학(고1)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005514">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/high/view?txbkId=LB00000005662&amp;ebkId=EB100002080&amp;prodClsCd=24" data-bnnrMngId="2974">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005662[20250203105910464].png" alt="">
-											</span>
-												<p class="tit">EBS 2028학년도 수능 스타트 통합사회(2022 개정)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="LB00000005662">관심교재</a>
-											</a>
-										</li>
-									
-								</ul>
-								<div class="pagination"></div>
-							</div>
-						</li>
-						<li>  <!-- 중학 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-									
-										<li class="swiper-slide">
-											<a href="/sub/middle/view?txbkId=TB1000012066&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2807">
-											<span class="thumb">
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/10/29/TB1000012066/113233432437666636_textbook.png" alt="">
-											</span>
-												<p class="tit">EBS 기초학력 진단평가 중학 2학년 (2025)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012066">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/middle/view?txbkId=TB1000011050&amp;ebkId=EB100001583&amp;prodClsCd=24" data-bnnrMngId="2810">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/4/1/TB1000011050/94988175545397683_textbook.jpg" alt="">
-											</span>
-												<p class="tit">수학 마스터 개념 α(알파) 중학 수학 1-1(22개정)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000011050">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/middle/view?txbkId=TB1000012073&amp;ebkId=EB100001928&amp;prodClsCd=24" data-bnnrMngId="2805">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/11/11/TB1000012073/114342123516176923_textbook.jpg" alt="">
-											</span>
-												<p class="tit">한 장 수학 중학 수학 1(상) (2022 개정 교육과정 반영)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012073">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/middle/view?txbkId=TB10017068&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2324">
-											<span class="thumb">
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2019/12/3/TB10017068/73072967306078422_textbook.jpg" alt="">
-											</span>
-												<p class="tit">어휘가 독해다! 중학 국어 어휘</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB10017068">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/middle/view?txbkId=TB1000012072&amp;ebkId=EB100001929&amp;prodClsCd=24" data-bnnrMngId="2806">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/11/11/TB1000012072/114342000932878258_textbook.jpg" alt="">
-											</span>
-												<p class="tit">어휘가 문해력이다 중학 1학년 1학기</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012072">관심교재</a>
-											</a>
-										</li>
-									
-								</ul>
-								<div class="pagination"></div>
-							</div>
-						</li>
-						<li> <!-- 초등 -->
-							<div class="swiper-container">
-								<ul class="swiper-wrapper">
-									
-										<li class="swiper-slide">
-											<a href="/sub/primary/view?txbkId=TB1000012115&amp;ebkId=EB100002077&amp;prodClsCd=24" data-bnnrMngId="2970">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012115/119796218204074073_textbook.png" alt="">
-											</span>
-												<p class="tit">Step by Step 초등 영구문, 독해의 힘! LEVEL 1</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012115">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/primary/view?txbkId=TB1000012114&amp;ebkId=null&amp;prodClsCd=24" data-bnnrMngId="2971">
-											<span class="thumb">
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2025/1/7/TB1000012114/119276453329960549_textbook.jpg" alt="">
-											</span>
-												<p class="tit">EBS 만점왕 세트 초등 6-1(2025)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012114">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/primary/view?txbkId=TB1000012056&amp;ebkId=EB100001816&amp;prodClsCd=24" data-bnnrMngId="2815">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/10/29/TB1000012056/113229125695205703_textbook.png" alt="">
-											</span>
-												<p class="tit">만점왕 과학 5-1 (2025)</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012056">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/primary/view?txbkId=TB1000012077&amp;ebkId=EB100001931&amp;prodClsCd=24" data-bnnrMngId="2813">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2024/11/21/TB1000012077/115226821454441197_textbook.png" alt="">
-											</span>
-												<p class="tit">Step by Step 초등 영문법, 독해의 힘! LEVEL 2</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000012077">관심교재</a>
-											</a>
-										</li>
-									
-										<li class="swiper-slide">
-											<a href="/sub/primary/view?txbkId=TB1000010539&amp;ebkId=EB100001360&amp;prodClsCd=24" data-bnnrMngId="2320">
-											<span class="thumb">
-												
-													<span class="ebook-tag"></span>
-												
-												<img src="https://cbox.ebs.co.kr/textbook/2023/9/6/TB1000010539/77012005624093291_textbook.jpg" alt="">
-											</span>
-												<p class="tit">EBS 초등 수해력 도형∙측정 4단계</p>
-												<a href="javascript:;" class="btn-wish " title="관심교재" data-txbkid="TB1000010539">관심교재</a>
-											</a>
-										</li>
-									
-								</ul>
-								<div class="pagination"></div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!-- //새로나온 교재 -->
-			</div>
-		</div>
-		<div class="main-cnt-wrap">
-			<!-- 추천 시리즈 -->
-			<h2 class="tit-seri">추천 시리즈</h2>
-			<ul class="tab">
-				<li><a href="javascript:;" onclick="tabView(this, 'slide_3')" class="active">고교</a></li>
-				<li><a href="javascript:;" onclick="tabView(this, 'slide_2')">중학</a></li>
-				<li><a href="javascript:;" onclick="tabView(this, 'slide_1')">초등</a></li>
-			</ul>
-			<div id="slide_3" class="main-series active"> <!-- 고교 -->
-				<div class="swiper-wrapper">
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0331" target="_self" data-bnnrMngId="1421">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121963329399445562.png" alt="수능 기출의 미래">
-							</a>
-						</div>
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0330&amp;schSeriesDsCd=1" target="_self" data-bnnrMngId="2999">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121963500012585502.png" alt="EBS 개념완성">
-							</a>
-						</div>
-					
-				</div>
-			</div>
-			<div id="slide_2" class="main-series"> <!-- 중학 -->
-				<div class="swiper-wrapper">
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/middle/series?schSeriesArr=7707" target="_self" data-bnnrMngId="967">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121964573129565363.png" alt="마이코치">
-							</a>
-						</div>
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/middle/series?schSeriesArr=12088" target="_self" data-bnnrMngId="966">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121964598466875021.png" alt="비욘드">
-							</a>
-						</div>
-					
-				</div>
-			</div>
-			<div id="slide_1" class="main-series"> <!-- 초등 -->
-				<div class="swiper-wrapper">
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/primary/series?schSeriesArr=12902" target="_self" data-bnnrMngId="946">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121964083864082894.png" alt="어휘가 문해력이다">
-							</a>
-						</div>
-					
-						<div class="swiper-slide">
-							<a href="https://book.ebs.co.kr/sub/primary/series?schSeriesArr=7160" target="_self" data-bnnrMngId="2040">
-								<img src="https://cbox.ebs.co.kr/portal/banner/2025/2/7/promotionImg_121965050842602453.jpg" alt="만점왕">
-							</a>
-						</div>
-					
-				</div>
-			</div>
-			<!-- //추천 시리즈 -->
-		</div>
-
-	</div>
-	<!-- //contents -->
-
-	<!-- 토스트 팝업 -->
-	
-
-	<script type="text/javascript">
-		var popMngId = "";
-		$(document).ready(function(){
-			if(popMngId){
-				//최초 쿠키에 값이 없으면 팝업 노출
-				if(typeof $.cookie("popNtChk"+popMngId) == 'undefined'){
-					$("div.popup.notice").css('display', 'block');
+			function loginChk(menu, userNm) {
+				if (userNm == null || userNm == "") {
+					alert("로그인 후 이용 가능합니다.");
 				}
 
-				//메인 팝업 다음부터 열지 않기
-				$("label[name=popNtChk"+popMngId+"]").on("click", function(){
-					var day = 7;
-					if($(this).attr("data-day")) {
-						day = parseInt($(this).attr("data-day"));
-					}
-					//쿠키 저장
-					$.cookie("popNtChk"+popMngId, "Y", {expires: day, path:'/'});
-					popNoticeClose();
-				});
+				location.href = "/mypage/" + menu;
+
 			}
 
-			//HIT 증가
-			$("#wrap a").filter("[data-bnnrMngId]").on("click", function(){
-				let popupMngId = $(this).attr("data-bnnrMngId");
-				fnPromiseAjaxHtml('/bnnr/updateHitFig', { 'bnnrMngId' : popupMngId }).then(function(jsonData) {}).catch(function (err){});
-			});
-			// index페이지에서만 이북퀵메뉴 펼침 2023-07-17
-			// $(".quick-menu.ebook").removeClass("on");
-		});
+			function bookSetting() {
+				location.href = "/ebook/bookSetting";
 
-		function popNoticeClose(){
-			$('div.popup.notice').css('display', 'none');
-			$('#mask').css('display', 'none');
-			$('body').removeClass('fixed');
-		}
-	</script>
-	<!-- //토스트 팝업 -->
-	<!-- 2023-05-12 플로팅 배너 -->
-	<div class = "floating-banner" style="display:none;">		
-		<div class="pc-floating-banner">
-			<div class="banner-wrapper banner-bookstory">
-				<a href="https://book.ebs.co.kr/notice/view?pstId=60000461758" title="충북교육청" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/4/16/pcImg_127827223312263955.png" alt="" ></a>
-				<button class="close" onclick="$('.banner-bookstory').fadeOut(100); return false;" title="닫기"></button>
-				<button class="close day close-today" name="floatChk17841"><span class="screen-reader-only">하루동안 열지 않기</span></button>
-			</div>
-		</div>
-	
-		<div class="mobile-floating-banner">
-			<div class="banner-wrapper banner-bookstory">
-					<a href="https://book.ebs.co.kr/notice/view?pstId=60000461758" title="충북교육청" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/4/16/mobImg_127827223312263955.png" alt="" ></a>
-				<button onclick="$('.banner-bookstory').fadeOut(100);" title="닫기"><span class="screen-reader-only">배너 닫기</span></button>
-				<button class="close-today" name="floatChk17841"><span class="screen-reader-only">하루동안 열지 않기</span></button>
-			</div>
-		</div>
-	</div>
-	<link rel="stylesheet" href="/css/main_floating.css?v=20250512104527">
-	<script type="text/javascript">
-	var bnnrMngId = "17841";
-		$(document).ready(function(){
-			Pcfloating();
-			
-			if(bnnrMngId){
-				//최초 쿠키에 값이 없으면 팝업 노출
-				if(typeof $.cookie("floatChk"+bnnrMngId) == 'undefined'){
-					$(".floating-banner").css('display', 'block');	
-				}
-				//플로팅 팝업 다음부터 열지 않기
-				$("button[name=floatChk"+bnnrMngId+"]").on("click", function(){
-					var day = 7;
-					if($(this).attr("data-day")) {
-						day = parseInt($(this).attr("data-day"));
-					}
-					//쿠키 저장
-					$.cookie("floatChk"+bnnrMngId, "Y", {expires: day, path:'/'});
-					$('.floating-banner').fadeOut(100);
-				});
 			}
-			
-			var floatSmartResize = {
-				init : function(){
-					var self = this;
-					$(window).on("resize", function(){
-					self.handler();
-					});
+
+		</script>
+
+		<!--  2023-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
+		<form name="modFrm" id="modFrm" method="POST">
+			<input type="hidden" name="userId" id="userId" />
+			<input type="hidden" name="returnUrl" id="returnUrl" />
+		</form>
+
+
+		<script type="text/javascript">
+			function fnModifyUser() {
+				modUser("U");
+
+				setTimeout(function () {
+					logOutTest();
+				}, 1000);
+			}
+			function logOutTest() {
+				location.href = "/sso/logout?returnUrl=" + encodeURIComponent(location.href.indexOf("/mypage/") > 0 ? fnGetUrl() : location.href);
+			}
+
+		</script>
+		<!--  //2023-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
+
+
+		<script type="text/javascript" src="/js/ebkview-only.js?v=20250514043107561"></script>
+		<!-- contents -->
+		<div id="contentsWrap" class="sub">
+			<div class="sub-cnt-wrap">
+
+				<!-- sort -->
+				<div class="sort-wrap">
+					<div class="sort type2">
+						<ul>
+
+							<li>
+								<strong class="on">학교급</strong>
+								<ul class="area" id="schUl">
+									<li>
+										<input type="radio" id="a0_1" name="sch"
+											onClick="window.location.href='/sub/eHigh/grade?schGradeArr=D300'" checked="checked">
+										<label for="a0_1">고교</label>
+									</li>
+									<li>
+										<input type="radio" id="a0_2" name="sch"
+											onClick="window.location.href='/sub/eMiddle/grade?schGradeArr=M1'">
+										<label for="a0_2">중학</label>
+									</li>
+									<li>
+										<input type="radio" id="a0_3" name="sch"
+											onClick="window.location.href='/sub/ePrimary/grade?schGradeArr=P1'">
+										<label for="a0_3">초등</label>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<strong class="on">학년</strong>
+								<ul class="area" id="stdyUl">
+
+									<li>
+										<input type="radio" id="a1_1" name="stdy" value="D100">
+										<label for="a1_1">1학년</label>
+									</li>
+
+									<li>
+										<input type="radio" id="a1_2" name="stdy" value="D400">
+										<label for="a1_2">1,2학년</label>
+									</li>
+
+									<li>
+										<input type="radio" id="a1_3" name="stdy" value="D200">
+										<label for="a1_3">2학년</label>
+									</li>
+
+									<li>
+										<input type="radio" id="a1_4" name="stdy" value="D700">
+										<label for="a1_4">2,3학년</label>
+									</li>
+
+									<li>
+										<input type="radio" id="a1_5" name="stdy" value="D300" checked="checked">
+										<label for="a1_5">3학년</label>
+									</li>
+
+									<li>
+										<input type="radio" id="a1_6" name="stdy" value="D500">
+										<label for="a1_6">공통</label>
+									</li>
+
+								</ul>
+							</li>
+							<li>
+								<strong class="on">과목</strong>
+								<ul class="area" id="rpstUl"></ul>
+							</li>
+							<li>
+								<strong class="on">시리즈</strong>
+								<ul class="series" id="seriesUl"></ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="innerTxbk"></div>
+
+			</div>
+		</div>
+		<!-- //contents -->
+
+		<form id="subForm" name="subForm" action="/sub/primary/list" method="post">
+			<input type="hidden" name="orderBy" />
+			<input type="hidden" name="searchType" />
+			<input type="hidden" name="searchKeyword" />
+			<input type="hidden" name="schGradeArr" />
+			<input type="hidden" name="ebookSite" />
+			<input type="hidden" name="schSubjectArr" />
+			<input type="hidden" name="schSeriesArr" />
+			<input type="hidden" name="schDepth" />
+			<input type="hidden" name="viewType" />
+			<input type="hidden" name="txbkGbn" value="grade" />
+			<input type="hidden" name="pageNo" />
+		</form>
+
+
+
+		<!-- 퀵메뉴 -->
+
+
+		<script>
+			var isMobile = {
+				Android: function () {
+					return /Android/i.test(navigator.userAgent);
 				},
-				timeOut : '',
-				handler : function(){
-					var self = this;
-					if(self.timeOut) clearTimeout(self.timeOut) 
-					self.timeOut = setTimeout(self.action, 300); // 시간 지정
+				iOS: function () {
+					return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 				},
-				action : function(){
-						Pcfloating();// 함수 영역
+				any: function () {
+					return (isMobile.Android() || isMobile.iOS());
 				}
 			};
-			floatSmartResize.init();
-		});
-		
-		function Pcfloating(){
-			var qnh =  $(".quick-bnr").offset().top;
-			var pfb = $(".pc-floating-banner");
-			pfb.css("top",(qnh)+20);	
-		}
-	</script>
-	<!-- //2023-05-12 플로팅 배너 -->
 
+			function EbookExpe() {
+				if (isMobile.any()) {
+					if (isMobile.Android()) {
 
-			<!-- 퀵메뉴 -->
-			
+					} else if (isMobile.iOS()) {
 
-	<script>
-		var isMobile = {
-		    Android: function() {
-		        return /Android/i.test(navigator.userAgent);
-		    },
-		    iOS: function() {
-		        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-		    },
-		    any: function() {
-		        return (isMobile.Android() || isMobile.iOS());
-		    }
-		};
-	
-		function EbookExpe() {
-			if (isMobile.any()) {
-				if (isMobile.Android()) {
-					
-				} else if (isMobile.iOS()) {
-					
+					}
+
+				} else {
+					location.href = "/ebook/useInfo?quick=EbookExpe";
+
 				}
-				
-			} else {
-				location.href = "/ebook/useInfo?quick=EbookExpe";
-				
 			}
-		}
-		
-		function userInfo() {
-			location.href = "/ebook/useInfo";
-		}
-		
-		function appDown() {
-			if (isMobile.any()) {
-				if (isMobile.Android()) {
-					location.href = "https:\/\/play.google.com\/store\/apps\/details?id=kr.co.ebs.ebook\u0026hl=ko";
-				} else if (isMobile.iOS()) {
-					location.href = "https:\/\/apps.apple.com\/kr\/app\/id6447656525";
+
+			function userInfo() {
+				location.href = "/ebook/useInfo";
+			}
+
+			function appDown() {
+				if (isMobile.any()) {
+					if (isMobile.Android()) {
+						location.href = "https:\/\/play.google.com\/store\/apps\/details?id=kr.co.ebs.ebook\u0026hl=ko";
+					} else if (isMobile.iOS()) {
+						location.href = "https:\/\/apps.apple.com\/kr\/app\/id6447656525";
+					}
+
+				} else {
+					location.href = "/ebook/useInfo?quick=appDown";
+
 				}
-				
-			} else {
-				location.href = "/ebook/useInfo?quick=appDown";
-				
 			}
-		}
 
-		function eBookApply(){
-			location.href = "/ebook/tchrCpn";
-		}
-		
-		 
-		function cookieSet(){
-			$.cookie("quickMenu","Y",{expires:1,path:"/"});
-		}
-		
-		$(document).ready(function(){
-			if($.cookie("quickMenu") == null || $.cookie("quickMenu") != "Y"){
-				$(".quick-menu.ebook").removeClass("on");
-				$(".quick-menu.ebook").stop().animate({left:'0'});
+			function eBookApply() {
+				location.href = "/ebook/tchrCpn";
 			}
-		});
-	</script>
 
-	<!-- eBook 퀵메뉴 -->
-	<div class="quick-menu ebook on" style="left:-135px;">
-		<div class="quick-util ebook">
-			<div class="ebook_crown"><span>EBS eBook</span></div>
-			<a href="javascript:void(0);" title="교사전용 eBook 신청" onclick="eBookApply()"><i class="ico-equick-01"></i><span class="mob">교사전용<br /> eBook 신청</span></a>
-			<a href="javascript:void(0);" title="EBS eBook 체험하기" onclick="EbookExpe()"><i class="ico-equick-02"></i><span class="mob">체험하기</span></a>
-			<a href="javascript:void(0);" title="EBS eBook 이용안내" onclick="userInfo()"><i class="ico-equick-03"></i><span class="mob">이용안내</span></a>
-			<a href="javascript:void(0);" title="EBS eBook APP 설치" onclick="appDown()"><i class="ico-equick-04"></i><span class="mob">APP 설치</span></a>
-			<!-- 2023-05-17 -->
-			<a href="https://book.ebs.co.kr/ebook/index">
-				<!--<span class="mob">종이책 대비<br /> 저렴한 가격</span> -->
-				<span class="mob">필기기능</span>
-				<span class="mob">학습노트</span>
-				<span class="mob">학습계획표</span>
-				<span class="mob">기출문제</span>
-			</a>
-			<button type="button" class="btn_close" title="메뉴 닫기" onclick="cookieSet()"><span>eBook</span></button>
+
+			function cookieSet() {
+				$.cookie("quickMenu", "Y", { expires: 1, path: "/" });
+			}
+
+			$(document).ready(function () {
+				if ($.cookie("quickMenu") == null || $.cookie("quickMenu") != "Y") {
+					$(".quick-menu.ebook").removeClass("on");
+					$(".quick-menu.ebook").stop().animate({ left: '0' });
+				}
+			});
+		</script>
+
+		<!-- eBook 퀵메뉴 -->
+		<div class="quick-menu ebook on" style="left:-135px;">
+			<div class="quick-util ebook">
+				<div class="ebook_crown"><span>EBS eBook</span></div>
+				<a href="javascript:void(0);" title="교사전용 eBook 신청" onclick="eBookApply()"><i class="ico-equick-01"></i><span
+						class="mob">교사전용<br /> eBook 신청</span></a>
+				<a href="javascript:void(0);" title="EBS eBook 체험하기" onclick="EbookExpe()"><i class="ico-equick-02"></i><span
+						class="mob">체험하기</span></a>
+				<a href="javascript:void(0);" title="EBS eBook 이용안내" onclick="userInfo()"><i class="ico-equick-03"></i><span
+						class="mob">이용안내</span></a>
+				<a href="javascript:void(0);" title="EBS eBook APP 설치" onclick="appDown()"><i class="ico-equick-04"></i><span
+						class="mob">APP 설치</span></a>
+				<!-- 2023-05-17 -->
+				<a href="https://book.ebs.co.kr/ebook/index">
+					<!--<span class="mob">종이책 대비<br /> 저렴한 가격</span> -->
+					<span class="mob">필기기능</span>
+					<span class="mob">학습노트</span>
+					<span class="mob">학습계획표</span>
+					<span class="mob">기출문제</span>
+				</a>
+				<button type="button" class="btn_close" title="메뉴 닫기" onclick="cookieSet()"><span>eBook</span></button>
+			</div>
 		</div>
-	</div>
-	<!-- // eBook 퀵메뉴 -->
+		<!-- // eBook 퀵메뉴 -->
 
 
-			
+
 		<!-- quick-menu -->
 		<div class="quick-menu">
 			<div class="quick-bnr"> <!-- 211124: 배너 추가 -->
@@ -1606,14 +702,16 @@
 			<div class="quick-util">
 				<!-- 2022-02-03 -->
 				<a href="/agency/list" title="총판문의"><span class="mob">총판 <br>문의</span></a>
-				<a href="https://teacher.ebsi.co.kr/ercapp/main.do" target="_blank" title="교사지원센터"><span class="mob">교사 <br>지원 <em>센터</em></span></a>
+				<a href="https://teacher.ebsi.co.kr/ercapp/main.do" target="_blank" title="교사지원센터"><span class="mob">교사 <br>지원
+						<em>센터</em></span></a>
 				<a href="https://cbox.ebs.co.kr/portal/PDF/2022/txbk/수학마스터_가이드북.pdf" target="_blank" class="newitem">
 					<span class="mob">
-					<span class="item01">수학마스터<br /><em>가이드북</em></span>
-					<span class="item02">교사<br /><em>강사용</em></span>
+						<span class="item01">수학마스터<br /><em>가이드북</em></span>
+						<span class="item02">교사<br /><em>강사용</em></span>
 					</span>
 				</a>
-				<a href="https://www.ebsi.co.kr/ebs/pot/poty/grtsBookMain.ebs" target="_blank" title="무상교재신청"><span class="mob">무상 <br>교재 <em>신청</em></span></a>
+				<a href="https://www.ebsi.co.kr/ebs/pot/poty/grtsBookMain.ebs" target="_blank" title="무상교재신청"><span
+						class="mob">무상 <br>교재 <em>신청</em></span></a>
 				<!-- // 2022-02-03 -->
 			</div>
 			<div class="quick-sns">
@@ -1674,704 +772,960 @@
 		 -->
 		<!-- //popup: 인덱스 추천 교재 팝업 -->
 
-	<script type="text/javascript">
-	//쿠키값 세팅
-	var popData = $.cookie("mpi");
-	var MPI = '';
-	if(popData){
-		var popObj = JSON.parse(popData);
-		var chkScool = popObj.school;
-		MPI = chkScool < 1 ? 1 : chkScool;
-	}
-
-	var grade = new Array();
-	grade.push({
-		"P1": "1학년","P2": "2학년","P3": "3학년","P4": "4학년","P5": "5학년","P6": "6학년"
-	});
-
-	var subject = new Array();
-	subject.push({
-		"1001": "국어","1003": "수학","1004": "사회","1005": "과학","1002": "영어"
-	});
-
-	grade.push({
-		"M1": "1학년","M2": "2학년","M3": "3학년"
-	});
-
-	subject.push({
-		"1001": "국어","1003": "수학","1002": "영어","1004": "사회","1006": "역사","1005": "과학"
-	});
-
-	grade.push({
-		"D100": "1학년","D200": "2학년","D300": "3학년,N수"
-	});
-
-	subject.push({
-		"KOR000": "국어","MAT000": "수학","ENG000": "영어","SOC000": "사회", "HIS000":"한국사", "SCI000": "과학"
-	});
-
-	$(function(){
-		if($.cookie("popView") != null && $.cookie("popView") == "Y"){
-			//쿠키에 값이 있으면 팝업 닫기
-			popCookieClose();
-		}else if(typeof MPI == 'undefined' || MPI == '') {
-			//팝업에서 체크한 값이 없을때
-			if(location.pathname == '/'){
-				//popView("div.popup.cookie"); 2023-12-15 이지윤 차장님 요청으로 제거
+		<script type="text/javascript">
+			//쿠키값 세팅
+			var popData = $.cookie("mpi");
+			var MPI = '';
+			if (popData) {
+				var popObj = JSON.parse(popData);
+				var chkScool = popObj.school;
+				MPI = chkScool < 1 ? 1 : chkScool;
 			}
-		}else{
-			if(MPI  > 0){
-				$(".best-slide .paging div span:eq(" +(MPI - 1)+ ")").click(); //베스트 교재
-				$(".main-recom ul.tab li a:eq(" + (MPI - 1) + ")").click(); //추천 교재
-				$(".main-inner ul.tab li a:eq(" + (MPI - 1) + ")").click(); //새로나온 교재
-				$("ul.tab:eq(2) li a:eq(" + (MPI - 1) + ")").click(); //추천 시리즈
-			}
-		}
 
-		//팝업 스크립트 - 학교 선택
-		$("#pop_school input[type=radio]").on("click",function(){
-			var idx = $("#pop_school input[type=radio]").index($(this));
-			var gradeHtml = "";
-			gradeHtml = Object.keys(grade[idx]).map(function(a,i){
-				return '<span><input type="checkbox" id="a'+i+'" name="" value="'+a+'"><label for="a'+i+'">'+grade[idx][a]+'</label></span>	';
+			var grade = new Array();
+			grade.push({
+				"P1": "1학년", "P2": "2학년", "P3": "3학년", "P4": "4학년", "P5": "5학년", "P6": "6학년"
 			});
-			$("#pop_grade").html(gradeHtml);
 
-			var subjectHtml = "";
-			subjectHtml = Object.keys(subject[idx]).map(function(a,i){
-				return '<span><input type="checkbox" id="b'+i+'" name="" value="'+a+'"><label for="b'+i+'">'+subject[idx][a]+'</label></span>	';
+			var subject = new Array();
+			subject.push({
+				"1001": "국어", "1003": "수학", "1004": "사회", "1005": "과학", "1002": "영어"
 			});
-			$("#pop_subject").html(subjectHtml);
-		});
 
-		//쿠키 저장
-		$(".btn-darkR").on("click", function(){
-			$.removeCookie("popView");
-			$.removeCookie("mpi");
-			//쿠키 체크 확인
-			var chkRadio = $("#pop_school input[type=radio]").index($(".select input[type=radio]:checked"));
-			var gradeChk = $("#pop_grade input[type=checkbox]:checked").map(function(a,i){ return $(this).val()})
-			var subjectChk = [];
-			$("#pop_subject input[type=checkbox]:checked").map(function(a,i){
-				subjectChk.push($(this).val());
+			grade.push({
+				"M1": "1학년", "M2": "2학년", "M3": "3학년"
+			});
+
+			subject.push({
+				"1001": "국어", "1003": "수학", "1002": "영어", "1004": "사회", "1006": "역사", "1005": "과학"
+			});
+
+			grade.push({
+				"D100": "1학년", "D200": "2학년", "D300": "3학년,N수"
+			});
+
+			subject.push({
+				"KOR000": "국어", "MAT000": "수학", "ENG000": "영어", "SOC000": "사회", "HIS000": "한국사", "SCI000": "과학"
+			});
+
+			$(function () {
+				if ($.cookie("popView") != null && $.cookie("popView") == "Y") {
+					//쿠키에 값이 있으면 팝업 닫기
+					popCookieClose();
+				} else if (typeof MPI == 'undefined' || MPI == '') {
+					//팝업에서 체크한 값이 없을때
+					if (location.pathname == '/') {
+						//popView("div.popup.cookie"); 2023-12-15 이지윤 차장님 요청으로 제거
+					}
+				} else {
+					if (MPI > 0) {
+						$(".best-slide .paging div span:eq(" + (MPI - 1) + ")").click(); //베스트 교재
+						$(".main-recom ul.tab li a:eq(" + (MPI - 1) + ")").click(); //추천 교재
+						$(".main-inner ul.tab li a:eq(" + (MPI - 1) + ")").click(); //새로나온 교재
+						$("ul.tab:eq(2) li a:eq(" + (MPI - 1) + ")").click(); //추천 시리즈
+					}
+				}
+
+				//팝업 스크립트 - 학교 선택
+				$("#pop_school input[type=radio]").on("click", function () {
+					var idx = $("#pop_school input[type=radio]").index($(this));
+					var gradeHtml = "";
+					gradeHtml = Object.keys(grade[idx]).map(function (a, i) {
+						return '<span><input type="checkbox" id="a' + i + '" name="" value="' + a + '"><label for="a' + i + '">' + grade[idx][a] + '</label></span>	';
+					});
+					$("#pop_grade").html(gradeHtml);
+
+					var subjectHtml = "";
+					subjectHtml = Object.keys(subject[idx]).map(function (a, i) {
+						return '<span><input type="checkbox" id="b' + i + '" name="" value="' + a + '"><label for="b' + i + '">' + subject[idx][a] + '</label></span>	';
+					});
+					$("#pop_subject").html(subjectHtml);
+				});
+
+				//쿠키 저장
+				$(".btn-darkR").on("click", function () {
+					$.removeCookie("popView");
+					$.removeCookie("mpi");
+					//쿠키 체크 확인
+					var chkRadio = $("#pop_school input[type=radio]").index($(".select input[type=radio]:checked"));
+					var gradeChk = $("#pop_grade input[type=checkbox]:checked").map(function (a, i) { return $(this).val() })
+					var subjectChk = [];
+					$("#pop_subject input[type=checkbox]:checked").map(function (a, i) {
+						subjectChk.push($(this).val());
+					})
+
+					var cookieStr = {
+						"school": chkRadio + 1,
+						"grade": gradeChk.get(),
+						"subject": subjectChk
+					}
+					$.cookie("mpi", JSON.stringify(cookieStr), { expires: 365, path: '/' });
+					popCookieClose();
+					if (location.pathname == "/") {
+						location.reload();
+					}
+				});
+
+				//7일간 보지 않기
+				$("label[name=7dayChk]").on("click", function () {
+					popViewCookie();
+				})
 			})
 
-			var cookieStr = {
-				"school": chkRadio+1,
-				"grade": gradeChk.get(),
-				"subject": subjectChk
+			//popView 하루동안 열지 않기
+			function popViewCookie() {
+				popCookieClose();
+				$.cookie("popView", "Y", { expires: 7, path: '/' });
 			}
-			$.cookie("mpi", JSON.stringify(cookieStr), {expires: 365, path:'/'});
-			popCookieClose();
-			if(location.pathname == "/"){
-				location.reload();
+
+			function popCookieClose() {
+				$('div.popup.cookie').css('display', 'none');
+				$('#mask').css('display', 'none');
+				$('body').removeClass('fixed');
+				$.cookie("popView", "Y", { expires: 1, path: '/' }); /*닫기 클릭시 앞으로 팝업 미노출 2023-06-28 */
 			}
-		});
-
-		//7일간 보지 않기
-		$("label[name=7dayChk]").on("click", function(){
-			popViewCookie();
-		})
-	})
-
-	//popView 하루동안 열지 않기
-	function popViewCookie(){
-		popCookieClose();
-		$.cookie("popView", "Y", {expires: 7, path:'/'});
-	}
-
-	function popCookieClose(){
-		$('div.popup.cookie').css('display', 'none');
-		$('#mask').css('display', 'none');
-		$('body').removeClass('fixed');
-		$.cookie("popView", "Y",{expires: 1, path:'/'}); /*닫기 클릭시 앞으로 팝업 미노출 2023-06-28 */
-	}
-
-	
-	</script>
 
 
-			
+		</script>
 
-	<!-- footer -->
-	<div id="Footer">
-		<div class="family-site">
-			<div class="family-slide">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide fam-ebs"><a href="https://www.ebs.co.kr/main" target="_blank">EBS</a></div>
-					<div class="swiper-slide fam-pri"><a href="https://www.ebsi.co.kr/ebs/pot/poti/main.ebs" target="_blank">EBS고교</a></div>
-					<div class="swiper-slide fam-mid"><a href="https://primary.ebs.co.kr/main/primary" target="_blank">EBS초등</a></div>
-					<div class="swiper-slide fam-high"><a href="https://mid.ebs.co.kr/main/middle/" target="_blank">EBS중학</a></div>
-					<div class="swiper-slide fam-eng"><a href="https://www.ebse.co.kr/apps/main/main.do" target="_blank">EBS영어</a></div>
-					<div class="swiper-slide fam-math"><a href="https://ebsmath.co.kr/" target="_blank">EBS수학</a></div>
-					<!-- <div class="swiper-slide fam-rang"><a href="http://www.ebslang.co.kr/main.ebs" target="_blank">EBS랑</a></div> -->
-					<div class="swiper-slide fam-esof"><a href="https://www.ebssw.kr/" target="_blank">EBS이솝</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-inner">
-			<div class="footer-util">
-				<a href="/notice/list">공지사항</a>
-				<a href="https://sso.ebs.co.kr/policy/privacy?fsdc=?fsdc=" target="_blank">개인정보처리방침</a>
-				<a href="https://home.ebs.co.kr/copyright/main" target="_blank">저작권침해정보</a>
-				<a href="https://sso.ebs.co.kr/policy/termsInfo" target="_blank">이용약관</a>
-			</div>
-			<div class="footer-cust">
-				<span>고객센터</span>
-				<strong>1588-1580</strong><button onclick="window.open('https://www.whelper.co.kr/client/main.do')">원격지원</button>
-				<p>helpdesk@ebs.co.kr</p>
-				<div class="mark">
-					<p>[인증범위] EBS 교육 포털 웹서비스</p>
-					<p>[유효기간] 2025.04.16 ~ 2028.04.15</p>
-				</div>
-			</div>
-			<div class="footer-addr pc">
-				<p>
-					<span class="foot-pc-ceo1">10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</span>
-					<span class="foot-pc-ceo2">사업자등록번호 : 229-82-01343 (한국교육방송공사 사장)</span>
-				</p>
-				<p>
-					<span>이용자불만상담 : <a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></span>
-					<span>부가통신사업신고 : 10077</span><span>통신판매업신고 : 2017-고양일산동-1415 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></span>
-				</p>
-			</div>
-			<div class="footer-addr mb">
-				<dl>
-					<dt class="foot-m-ceo1">사장</dt>
-					<dd class="foot-m-ceo2"></dd>
-					<dt>주소</dt>
-					<dd>경기도 고양시 일산동구 한류월드로 281 (장항동 한국교육방송공사)</dd>
-					<dt>연락처</dt>
-					<dd>1588-1580 (대표전화/고객센터) helpdesk@ebs.co.kr</dd>
-					<dt>사업자등록번호</dt>
-					<dd>229-82-01343</dd>
-					<dt>이용자불만상담</dt>
-					<dd><a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></dd>
-					<dt>부가통신사업신고</dt>
-					<dd>10077</dd>
-					<dt>통신판매업사업신고</dt>
-					<dd>고양일산동-1415호 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></dd>
-				</dl>
-			</div>
-		</div>
-		
-		<div class="ebk_pw" style="display: none;">	
-			<div class="pw_dim"></div>
-			
-			<div class="pw_dim_layer">
-				<div class="pw_layer">
-					<div class="sso_change">
-						<h1><img src="/images/head_logo_main.gif" alt="EBS 로고"> 개인정보 보호를 위한 <em>비밀번호</em> 변경 안내</h1>
-						<div class="sso_inner">
-							<h2>안녕하세요 EBS Book Story입니다.</h2>
-							<p>최근 인터넷 상에서 개인정보 유출로 인한 피해가 확산되고 있습니다. <br>
-			                       회원님의 소중한 개인정보를 안전하게 보호하고 개인정보 도용으로 인한 피해를 예방하기 위해 비밀번호 변경 안내를 요청드립니다.</p>
-			
-							<form name="pwdChangFrm" id="pwdChangFrm" method="post" action="">
-								<input type="hidden" name="userId" id="userId" value="${ssoUser.id}">
-								<div class="sso_info">
-									<dl>
-										<dt>아이디</dt>
-										<dd id="ssoTargerId">ebsydk4</dd>
-										<dt><label for="currentPassword">현재 비밀번호</label></dt>
-										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="currentPassword" id="currentPassword" maxlength="12"></dd>
-										<dt><label for="password">새로운 비밀번호</label></dt>
-										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="password" id="password" maxlength="12">
-											<div id="passwordMessage" class="info_text03"></div>
-											<p>비밀번호는 8~12자의 영문 대/소문자, 숫자, 특수문자를 <br>혼합해서 사용하실 수 있습니다.</p>
-										</dd>
-										<dt><label for="confirmPassword">비밀번호 확인</label></dt>
-										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="confirmPassword" id="confirmPassword" maxlength="12">
-											<p>재확인을 위해서 입력하신 비밀번호를 다시 한번 입력해 주세요.</p>
-										</dd>
-									</dl>
-									<p class="info_text">아이디, 생일, 전화번호 등 개인정보와 관련된 숫자, 연속적이거나(abcd,1234) 동일한 문자 반복 등  타인이 쉽게 알아낼 수 있는 비밀번호는 개인정보 유출<br> 위험이 있으므로 사용을 자제해주시기 바랍니다.</p>
-								</div>
-							</form>
+
+
+
+		<!-- footer -->
+		<div id="Footer">
+			<div class="family-site">
+				<div class="family-slide">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide fam-ebs"><a href="https://www.ebs.co.kr/main" target="_blank">EBS</a></div>
+						<div class="swiper-slide fam-pri"><a href="https://www.ebsi.co.kr/ebs/pot/poti/main.ebs"
+								target="_blank">EBS고교</a></div>
+						<div class="swiper-slide fam-mid"><a href="https://primary.ebs.co.kr/main/primary" target="_blank">EBS초등</a>
 						</div>
-						<div class="btn_sso">
-							<a href="#none" onclick="ssoTargerUtil.pwdChange(); return false;">
-								<img src="/images/btn_change01.gif" alt="변경하기">
-							</a>
+						<div class="swiper-slide fam-high"><a href="https://mid.ebs.co.kr/main/middle/" target="_blank">EBS중학</a>
+						</div>
+						<div class="swiper-slide fam-eng"><a href="https://www.ebse.co.kr/apps/main/main.do"
+								target="_blank">EBS영어</a></div>
+						<div class="swiper-slide fam-math"><a href="https://ebsmath.co.kr/" target="_blank">EBS수학</a></div>
+						<!-- <div class="swiper-slide fam-rang"><a href="http://www.ebslang.co.kr/main.ebs" target="_blank">EBS랑</a></div> -->
+						<div class="swiper-slide fam-esof"><a href="https://www.ebssw.kr/" target="_blank">EBS이솝</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-inner">
+				<div class="footer-util">
+					<a href="/notice/list">공지사항</a>
+					<a href="https://sso.ebs.co.kr/policy/privacy?fsdc=?fsdc=" target="_blank">개인정보처리방침</a>
+					<a href="https://home.ebs.co.kr/copyright/main" target="_blank">저작권침해정보</a>
+					<a href="https://sso.ebs.co.kr/policy/termsInfo" target="_blank">이용약관</a>
+				</div>
+				<div class="footer-cust">
+					<span>고객센터</span>
+					<strong>1588-1580</strong><button
+						onclick="window.open('https://www.whelper.co.kr/client/main.do')">원격지원</button>
+					<p>helpdesk@ebs.co.kr</p>
+					<div class="mark">
+						<p>[인증범위] EBS 교육 포털 웹서비스</p>
+						<p>[유효기간] 2025.04.16 ~ 2028.04.15</p>
+					</div>
+				</div>
+				<div class="footer-addr pc">
+					<p>
+						<span class="foot-pc-ceo1">10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</span>
+						<span class="foot-pc-ceo2">사업자등록번호 : 229-82-01343 (한국교육방송공사 사장)</span>
+					</p>
+					<p>
+						<span>이용자불만상담 : <a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></span>
+						<span>부가통신사업신고 : 10077</span><span>통신판매업신고 : 2017-고양일산동-1415 <a
+								href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></span>
+					</p>
+				</div>
+				<div class="footer-addr mb">
+					<dl>
+						<dt class="foot-m-ceo1">사장</dt>
+						<dd class="foot-m-ceo2"></dd>
+						<dt>주소</dt>
+						<dd>경기도 고양시 일산동구 한류월드로 281 (장항동 한국교육방송공사)</dd>
+						<dt>연락처</dt>
+						<dd>1588-1580 (대표전화/고객센터) helpdesk@ebs.co.kr</dd>
+						<dt>사업자등록번호</dt>
+						<dd>229-82-01343</dd>
+						<dt>이용자불만상담</dt>
+						<dd><a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></dd>
+						<dt>부가통신사업신고</dt>
+						<dd>10077</dd>
+						<dt>통신판매업사업신고</dt>
+						<dd>고양일산동-1415호 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343"
+								target="_blank">[사업자정보확인]</a></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="ebk_pw" style="display: none;">
+				<div class="pw_dim"></div>
+
+				<div class="pw_dim_layer">
+					<div class="pw_layer">
+						<div class="sso_change">
+							<h1><img src="/images/head_logo_main.gif" alt="EBS 로고"> 개인정보 보호를 위한 <em>비밀번호</em> 변경 안내</h1>
+							<div class="sso_inner">
+								<h2>안녕하세요 EBS Book Story입니다.</h2>
+								<p>최근 인터넷 상에서 개인정보 유출로 인한 피해가 확산되고 있습니다. <br>
+									회원님의 소중한 개인정보를 안전하게 보호하고 개인정보 도용으로 인한 피해를 예방하기 위해 비밀번호 변경 안내를 요청드립니다.</p>
+
+								<form name="pwdChangFrm" id="pwdChangFrm" method="post" action="">
+									<input type="hidden" name="userId" id="userId" value="${ssoUser.id}">
+									<div class="sso_info">
+										<dl>
+											<dt>아이디</dt>
+											<dd id="ssoTargerId">ebsydk4</dd>
+											<dt><label for="currentPassword">현재 비밀번호</label></dt>
+											<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;"
+													name="currentPassword" id="currentPassword" maxlength="12"></dd>
+											<dt><label for="password">새로운 비밀번호</label></dt>
+											<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;"
+													name="password" id="password" maxlength="12">
+												<div id="passwordMessage" class="info_text03"></div>
+												<p>비밀번호는 8~12자의 영문 대/소문자, 숫자, 특수문자를 <br>혼합해서 사용하실 수 있습니다.</p>
+											</dd>
+											<dt><label for="confirmPassword">비밀번호 확인</label></dt>
+											<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;"
+													name="confirmPassword" id="confirmPassword" maxlength="12">
+												<p>재확인을 위해서 입력하신 비밀번호를 다시 한번 입력해 주세요.</p>
+											</dd>
+										</dl>
+										<p class="info_text">아이디, 생일, 전화번호 등 개인정보와 관련된 숫자, 연속적이거나(abcd,1234) 동일한 문자 반복 등 타인이 쉽게 알아낼 수 있는
+											비밀번호는 개인정보 유출<br> 위험이 있으므로 사용을 자제해주시기 바랍니다.</p>
+									</div>
+								</form>
+							</div>
+							<div class="btn_sso">
+								<a href="#none" onclick="ssoTargerUtil.pwdChange(); return false;">
+									<img src="/images/btn_change01.gif" alt="변경하기">
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- //footer -->
+
+
+
+		<script>
+
+		</script>
+
+
 	</div>
-	<!-- //footer -->
-	
-	
-	
+
+	<!-- 공통 스크립트 -->
+
+
+	<!-- mask dim -->
+	<div id="mask" style="display:none;"></div>
+
 	<script>
-		
+		// 로컬모드에 따라 회원가입/수정/탈퇴 링크 블럭처리.
+		function _localmodeChk(command) {
+			var localModeChk = false;
+
+			$.ajax({
+				url: '/sso/localMode',
+				type: 'POST',
+				async: false,
+				success: function (data) {
+					if (data == 'Y') {
+						localModeChk = true;
+					}
+				},
+				error: function (data) {
+					localModeChk = false;
+				}
+			});
+
+			if (localModeChk) {
+				alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+			} else {
+				let ssoDomain = "https:\/\/sso.ebs.co.kr";
+				let bookStoryDomain = "https:\/\/book.ebs.co.kr";
+				if (command == "join") {
+					location.href = ssoDomain + '/join/intro?returnUrl=' + encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href);
+				} else if (command == "findId") {
+					location.href = ssoDomain + "/user/find/id";
+				} else if (command == "findPwd") {
+					location.href = ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain;
+				}
+			}
+		}
+
+		function _localmodeChkForNative(command) {
+			var localModeChk = false;
+
+			$.ajax({
+				url: '/sso/localMode',
+				type: 'POST',
+				async: false,
+				success: function (data) {
+					if (data == 'Y') {
+						localModeChk = true;
+					}
+				},
+				error: function (data) {
+					localModeChk = false;
+				}
+			});
+
+			if (localModeChk) {
+				alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+			} else {
+				let ssoDomain = "https:\/\/sso.ebs.co.kr";
+				let bookStoryDomain = "https:\/\/book.ebs.co.kr";
+				if (command == "join") {
+					window.open(ssoDomain + '/join/intro?returnUrl=' + encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href));
+				} else if (command == "findId") {
+					window.open(ssoDomain + "/user/find/id");
+				} else if (command == "findPwd") {
+					window.open(ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain);
+				}
+			}
+		}
+
+		function fnLogin(paramUrl) {
+			var rtnUrl = location.href;
+			if (typeof (paramUrl) != 'undefined') {
+				rtnUrl = location.origin + paramUrl;
+			}
+			location.href = "/sso/login?returnUrl=" + encodeURIComponent(rtnUrl);
+		}
+
+		function fnLogout() {
+			if (confirm("로그아웃 하시겠습니까?")) {
+				location.href = "/sso/logout?returnUrl=" + encodeURIComponent(location.href.indexOf("/mypage/") > 0 ? fnGetUrl() : location.href);
+			}
+		}
+
+		function fnGetUrl() {
+			return window.location.protocol + "//" + window.location.hostname + ((window.location.port) ? ":" + window.location.port : "");
+		}
+
+		function fnSetAttributeChangePwdYn() {
+
+			fnPromiseAjaxJson("/sso/setAttributeChangePwdYn", {}).then(function (jsonData) { });
+		}
+
+		$(document).ready(function () {
+			//비밀번호 변경 안내
+			if (!fnIsEmpty(null) && (null) == "Y") {
+				window.open(null, "changePwd", "width=473, height=575,left=100,top=100, scrollbar=no");
+				fnSetAttributeChangePwdYn();
+			}
+
+			// 14세 미만 보호자 미등록
+			if (!fnIsEmpty(null) && (null) == "Y") {
+				$('.pop-junior').show();
+			}
+
+			//관심교재
+			$('.btn-wish, button.wish').on("click", function () {
+				var txbkId = $(this).attr("data-txbkid");
+				if (!txbkId) {
+					$(this).removeClass('on');
+					alert("교재ID가 없습니다.");
+					return false;
+				}
+
+				if (!isLogin) {
+					$(this).removeClass('on');
+					alert("로그인 후 이용 가능합니다.");
+					fnLogin();
+					return false;
+				}
+
+				var data = {};
+				data['txbkId'] = txbkId;
+				var url = "/mypage/updateIntrstTxbk";
+
+				if ($(this).hasClass("on")) {
+					//관심교재 등록
+					data['status'] = 'insert';
+				} else {
+					//관심교재 삭제
+					data['status'] = 'delete';
+				}
+
+				// Ajax 호출
+				fnPromiseAjaxJson(url, data).then(function (jsonData) { });
+			});
+		});
+
+		/**
+		 * 교재 구입
+		 * @param txbkId, isbn //main
+		 */
+		function buyBook(txbkId, isbn, fmySiteDsCd) {
+			if (fmySiteDsCd == 'EBSI') {
+				var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EHT';
+			} else {
+				var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EAT';
+			}
+			//부가정보 체크 후 구매페이지 이동
+
+			$.ajax({
+				url: "/sub/getTxbkAdtlInfo",
+				type: 'POST',
+				async: false,
+				dataType: 'json',
+				data: { 'txbkId': txbkId },
+				success: function (jsonData) {
+					if (!!jsonData.txbkAdtlInfo.txbkPchsUrl) {
+						href = /*'https://'+*/jsonData.txbkAdtlInfo.txbkPchsUrl;
+					}
+					// ios 새창 이동 이슈 수정(window.open -> a태그 동적 생성)
+					var aHref = document.createElement('a');
+					aHref.setAttribute('target', '_blank');
+					aHref.setAttribute('href', href);
+					document.body.appendChild(aHref);
+					aHref.click();
+				},
+				error: function (err) {
+					window.open(href);
+				}
+			});
+
+		}
+
+		/**
+		 * 교재 프리뷰 url
+		 * @param isbn //
+		 */
+		function previewBookURL(isbn, fmySiteDsCd) {
+			// 제휴 코드
+			var partnerCode = "EAT";
+			var commonUrl = "https://www.kyobobook.co.kr/cooper/redirect_over.jsp?next_url=http://preview.kyobobook.co.kr/";
+			if (fnIsMobile()) {
+				commonUrl += "mkbrPreview.jsp?siteGb=INK&ejkGb=KOR&barcode=" + isbn + "&loginYn=N&partnerCode=" + partnerCode + "&isApp=true";
+				location.href = commonUrl;
+			} else {
+				commonUrl += "preview.jsp?siteGb=INK&ejkGb=KOR&barcode=" + isbn + "&loginYn=N&LINK=" + partnerCode;
+				window.open(commonUrl, "openpreview", "top=0 , left=0 ,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1250,height=695");
+			}
+		}
+
+		/**
+		 * 구매한 교재 구매함 버튼 클릭 시 나의 교재 페이지로 이동
+		 * @param txbkId
+		 */
+		function goLibrary() {
+			location.href = "/mypage/purchase";
+		}
+
+		/**
+		 * 교재 상세
+		 * @param txbkId
+		 */
+		function goDetail(bookUrl, txbkId, ebkId, fmySiteDsCd, prodClsCd) {
+			var i;
+
+			if (bookUrl == "book") {
+				//상세 클릭시 hash 값 세팅
+				let sbjArr = [];
+				$(".sort-wrap .sort > ul ul:eq(1) li input[type=checkbox]:checked").each(function () {
+					sbjArr.push($(this).val());
+				});
+				let seriesArr = [];
+				$(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function () {
+					seriesArr.push($(this).val());
+				});
+				//hash setting
+				location.hash = $(".sort-wrap .sort > ul ul:eq(0) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
+
+				if (fmySiteDsCd == 'PRIM')
+					location.href = "/sub/primary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EPRI')
+					location.href = "/sub/primary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MIDL')
+					location.href = "/sub/middle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MIPR')
+					location.href = "/sub/middle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSI')
+					location.href = "/sub/high/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EHIG')
+					location.href = "/sub/high/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSE')
+					location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSM')
+					location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MATH')
+					location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'ENGLISH')
+					location.href = "/sub/english/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+
+
+
+			} else { //ebook 목록일 경우
+				//상세 클릭시 hash 값 세팅
+				let sbjArr = [];
+				$(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function () {
+					sbjArr.push($(this).val());
+				});
+				let seriesArr = [];
+				$(".sort-wrap .sort > ul ul:eq(3) li input[type=checkbox]:checked").each(function () {
+					seriesArr.push($(this).val());
+				});
+				//hash setting
+				location.hash = $(".sort-wrap .sort > ul ul:eq(1) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
+
+				if (fmySiteDsCd == 'PRIM')
+					location.href = "/sub/ePrimary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EPRI')
+					location.href = "/sub/ePrimary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MIDL')
+					location.href = "/sub/eMiddle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSI')
+					location.href = "/sub/eHigh/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EHIG')
+					location.href = "/sub/eHigh/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSE')
+					location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'EBSM')
+					location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MATH')
+					location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+				else if (fmySiteDsCd == 'MIPR')
+					location.href = "/sub/eMiddle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+			}
+
+		}
 	</script>
 
-
-		</div>
-
-		<!-- 공통 스크립트 -->
-        
-
-    <!-- mask dim -->
-    <div id="mask" style="display:none;"></div>
-
-<script>
-	// 로컬모드에 따라 회원가입/수정/탈퇴 링크 블럭처리.
-	function _localmodeChk(command) {
-		var localModeChk = false;
-
-		$.ajax({
-			url: '/sso/localMode',
-			type: 'POST',
-			async: false,
-			success: function (data) {
-				if(data == 'Y') {
-					localModeChk = true;
+	<!-- COPYRIGHT (C) 1999-2013 NETHRU INC. ALL RIGHTS RESERVED. -->
+	<script type="text/javascript">
+		(function () {
+			var nl = document.createElement('script');
+			nl.type = 'text/javascript';
+			nl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + window.location.hostname + '/js/weblogs/nethru/wlo.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(nl, s);
+			var done = false;
+			nl.onload = nl.onreadystatechange = function () {
+				if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+					done = true;
+					_n_sid = "book.ebs.co.kr";
+					//_n_uid_cookie = "UID";
+					n_logging();
+					nl.onload = nl.onreadystatechange = null;
 				}
-			},
-			error: function (data) {
-				localModeChk = false;
 			}
-		});
+		})();
+	</script>
 
-		if(localModeChk) {
-			alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
-		} else {
-			let ssoDomain = "https:\/\/sso.ebs.co.kr";
-			let bookStoryDomain = "https:\/\/book.ebs.co.kr";
-			if(command == "join") {
-				location.href = ssoDomain + '/join/intro?returnUrl='+encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href);
-			} else if(command == "findId") {
-				location.href = ssoDomain + "/user/find/id";
-			} else if(command == "findPwd") {
-				location.href = ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain;
-			}
-		}
-	}
-
-	function _localmodeChkForNative(command) {
-		var localModeChk = false;
-
-		$.ajax({
-			url: '/sso/localMode',
-			type: 'POST',
-			async: false,
-			success: function (data) {
-				if(data == 'Y') {
-					localModeChk = true;
+	<script>
+		// 2023-02-02 북스토리
+		$(document).ready(function () {
+			var arrRadio = document.getElementsByName('stdy');
+			$('.stdy').on({
+				'change': function (e) {
+					for (var i = 0; i < arrRadio.length; i++) {
+						if (arrRadio[i].checked) {
+							var obj = arrRadio[i].value;
+							switch (obj) {
+								case 'payhist':
+									location = window.location.origin + "/mypage/payhist"
+									break;
+								case 'refund':
+									location = window.location.origin + "/mypage/refhist"
+									break;
+								case 'coupon':
+									location = window.location.origin + "/mypage/eCouponReg"
+									break;
+								case 'basket':
+									location = window.location.origin + "/mypage/bskt"
+									break;
+								case 'intrst':
+									location = window.location.origin + "/mypage/intrst"
+									break;
+								default:
+							}
+						}
+					}
 				}
-			},
-			error: function (data) {
-				localModeChk = false;
+			})
+		})
+
+		// 장바구니 추가
+		function cartAdd(cart, ebkId, prodClsCd) {
+			if (!isLogin) {
+				$(this).removeClass('on');
+				alert("로그인 후 이용 가능합니다.");
+				fnLogin();
+				return false;
 			}
-		});
-
-		if(localModeChk) {
-			alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
-		} else {
-			let ssoDomain = "https:\/\/sso.ebs.co.kr";
-			let bookStoryDomain = "https:\/\/book.ebs.co.kr";
-			if(command == "join") {
-				window.open(ssoDomain + '/join/intro?returnUrl='+encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href));
-			} else if(command == "findId") {
-				window.open(ssoDomain + "/user/find/id");
-			} else if(command == "findPwd") {
-				window.open(ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain);
+			var data = {
+				"ebkId": ebkId,
+				"prodClsCd": prodClsCd
 			}
+
+			fnPromiseAjaxHtml('/mypage/bskt/add', data).then(function (jsonData) {
+				var json_rst = JSON.parse(jsonData)
+				var rst_code = json_rst.rst_code;
+				console.log('장바구니 코드 =' + rst_code);
+				switch (rst_code) {
+					case "001":
+						if (cart == "buy") {
+							location.href = "/mypage/bskt?ebkId=" + ebkId + "&prodClsCd=" + prodClsCd;
+						} else if ("bskt") {
+							if (confirm("장바구니에 담겼습니다.\n장바구니로 이동하시겠습니까?")) {
+								location.href = "/mypage/bskt?ebkId=" + ebkId;
+							}
+						}
+						break;
+					case "002":
+						if (cart == "buy") {
+							location.href = "/mypage/bskt?ebkId=" + ebkId;
+						} else if ("bskt") {
+							if (confirm("이미 장바구니에 해당 상품이 있습니다.\n장바구니로 이동하시겠습니까?")) {
+								location.href = "/mypage/bskt?ebkId=" + ebkId;
+							}
+						}
+						break;
+					case "003":
+						alert("이미 구매하신 상품 입니다.")
+						break;
+					case "005":
+						alert("장바구니에 담을 수 없는 상품 입니다.");
+						break;
+					case "006":
+						alert("0원 상품 구매완료 처리 되었습니다.");
+						location.reload();
+						break;
+					case "007":
+						alert("상품을 구매 할 수 없습니다.");
+						break;
+					case "008":
+						if (cart == "buy") {
+							alert("패키지 상품 중 구매한 교재가 포함되어있어 구매할 수 없는 상품입니다.");
+						} else if ("bskt") {
+							alert("패키지 상품 중 구매한 교재가 포함되어있어 장바구니에 담을 수 없는 상품입니다.");
+						}
+						break;
+					case "009":
+						if (cart == "buy") {
+							alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어 구매할 수 없습니다.");
+						} else if ("bskt") {
+							alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어, 추가로 담을 수 없습니다.");
+						}
+						break;
+					case "010":
+						if (cart == "buy") {
+							alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 구매할 수 없습니다.");
+						} else if ("bskt") {
+							alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 장바구니에 담을 수 없습니다.");
+						}
+						break;
+					case "011":
+						if (cart == "buy") {
+							alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
+						} else if ("bskt") {
+							alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
+						}
+						break;
+					case "012":
+						if (cart == "buy") {
+							alert("굿노트 쿠폰은 매진 되었습니다.");
+						} else if ("bskt") {
+							alert("굿노트 쿠폰은 매진 되었습니다.");
+						}
+						break;
+					default: alert("error");
+				}
+			});
 		}
-	}
 
-	function fnLogin(paramUrl){
-	    var rtnUrl = location.href;
-	    if(typeof(paramUrl) != 'undefined'){
-	        rtnUrl = location.origin + paramUrl;
-        }
-		location.href="/sso/login?returnUrl=" + encodeURIComponent(rtnUrl);
-	}
+		// 웹뷰어 호출시 새로운 토큰 발행 및 조회 리턴
+		function tknPub() {
+			var result = '';
+			$.ajax({
+				url: '/ebook/webViewer/tknpub',
+				type: 'POST',
+				async: false,
+				success: function (data) {
+					result = data;
+				},
+				error: function (data) {
+					result = 'error';
+				}
+			});
 
-	function fnLogout(){
-		if(confirm("로그아웃 하시겠습니까?")){
-			location.href="/sso/logout?returnUrl=" + encodeURIComponent( location.href.indexOf("/mypage/") > 0 ? fnGetUrl() : location.href);
-		}
-	}
-
-	function fnGetUrl(){
-		return window.location.protocol + "//" + window.location.hostname + ((window.location.port) ? ":" + window.location.port : "");
-	}
-
-	function fnSetAttributeChangePwdYn() {
-
-		fnPromiseAjaxJson("/sso/setAttributeChangePwdYn", {}).then(function(jsonData) {});
-	}
-
-	$(document).ready(function() {
-		//비밀번호 변경 안내
-		if (!fnIsEmpty(null) && (null) == "Y"){
-			window.open(null, "changePwd", "width=473, height=575,left=100,top=100, scrollbar=no");
-			fnSetAttributeChangePwdYn();
+			return result;
 		}
 
-		// 14세 미만 보호자 미등록
-		if (!fnIsEmpty(null) && (null) == "Y"){
-			$('.pop-junior').show();
-		}
-		
-        //관심교재
-        $('.btn-wish, button.wish').on("click",function(){
-            var txbkId = $(this).attr("data-txbkid");
-            if(!txbkId){
-                $(this).removeClass('on');
-                alert("교재ID가 없습니다.");
-                return false;
-            }
 
-            if(!isLogin){
-                $(this).removeClass('on');
-                alert("로그인 후 이용 가능합니다.");
-                fnLogin();
-                return false;
-            }
-
-            var data = {};
-            data['txbkId'] = txbkId;
-            var url = "/mypage/updateIntrstTxbk";
-
-            if($(this).hasClass("on")){
-                //관심교재 등록
-                data['status'] = 'insert';
-            }else{
-                //관심교재 삭제
-                data['status'] = 'delete';
-            }
-
-            // Ajax 호출
-            fnPromiseAjaxJson(url, data).then(function(jsonData) {});
-        });
-	});
-
-    /**
-     * 교재 구입
-     * @param txbkId, isbn //main
-     */
-    function buyBook(txbkId, isbn, fmySiteDsCd){
-        if(fmySiteDsCd=='EBSI'){
-            var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EHT';
-        }else{
-            var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EAT';
-        }
-        //부가정보 체크 후 구매페이지 이동
-
-        $.ajax({
-            url: "/sub/getTxbkAdtlInfo",
-            type: 'POST',
-            async: false,
-            dataType: 'json',
-            data: {'txbkId':txbkId},
-            success: function (jsonData) {
-                if(!!jsonData.txbkAdtlInfo.txbkPchsUrl){
-                    href = /*'https://'+*/jsonData.txbkAdtlInfo.txbkPchsUrl;
-                }
-                // ios 새창 이동 이슈 수정(window.open -> a태그 동적 생성)
-                var aHref = document.createElement('a');
-                aHref.setAttribute('target' , '_blank');
-                aHref.setAttribute('href' , href);
-                document.body.appendChild(aHref);
-                aHref.click();
-            },
-            error: function (err) {
-                window.open(href);
-            }
-        });
-
-    }
-
-    /**
-     * 교재 프리뷰 url
-     * @param isbn //
-     */
-    function previewBookURL(isbn, fmySiteDsCd){
-        // 제휴 코드
-        var partnerCode = "EAT";
-        var commonUrl = "https://www.kyobobook.co.kr/cooper/redirect_over.jsp?next_url=http://preview.kyobobook.co.kr/";
-        if(fnIsMobile()){
-            commonUrl += "mkbrPreview.jsp?siteGb=INK&ejkGb=KOR&barcode="+isbn+"&loginYn=N&partnerCode="+partnerCode+"&isApp=true";
-            location.href = commonUrl;
-        }else{
-            commonUrl += "preview.jsp?siteGb=INK&ejkGb=KOR&barcode="+isbn+"&loginYn=N&LINK="+partnerCode;
-            window.open(commonUrl, "openpreview", "top=0 , left=0 ,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1250,height=695");
-        }
-    }
-
-    /**
-     * 구매한 교재 구매함 버튼 클릭 시 나의 교재 페이지로 이동
-     * @param txbkId
-     */
-	function goLibrary(){
-		location.href = "/mypage/purchase";
-    }
-
-    /**
-     * 교재 상세
-     * @param txbkId
-     */
-	function goDetail(bookUrl,txbkId,ebkId,fmySiteDsCd,prodClsCd){
-    	var i;
-
-    	if(bookUrl == "book") {
-	        //상세 클릭시 hash 값 세팅
-	        let sbjArr = [];
-	        $(".sort-wrap .sort > ul ul:eq(1) li input[type=checkbox]:checked").each(function(){
-	            sbjArr.push($(this).val());
-	        });
-	        let seriesArr = [];
-	        $(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function(){
-	            seriesArr.push($(this).val());
-	        });
-	        //hash setting
-	        location.hash = $(".sort-wrap .sort > ul ul:eq(0) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
-
-	        if(fmySiteDsCd == 'PRIM')
-			    location.href = "/sub/primary/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EPRI')
-                location.href = "/sub/primary/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-		    else if(fmySiteDsCd == 'MIDL')
-			    location.href = "/sub/middle/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'MIPR')
-                location.href = "/sub/middle/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-		    else if(fmySiteDsCd == 'EBSI')
-			    location.href = "/sub/high/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EHIG')
-                location.href = "/sub/high/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EBSE')
-                location.href = "/sub/common/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EBSM')
-                location.href = "/sub/common/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'MATH')
-                location.href = "/sub/common/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'ENGLISH')
-                location.href = "/sub/english/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
+	</script>
+	<!-- WISELOG ONLINE TRACKING SCRIPT CODE END -->
 
 
 
-    	} else { //ebook 목록일 경우
-    		//상세 클릭시 hash 값 세팅
-	        let sbjArr = [];
-	        $(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function(){
-	            sbjArr.push($(this).val());
-	        });
-	        let seriesArr = [];
-	        $(".sort-wrap .sort > ul ul:eq(3) li input[type=checkbox]:checked").each(function(){
-	            seriesArr.push($(this).val());
-	        });
-	        //hash setting
-	        location.hash = $(".sort-wrap .sort > ul ul:eq(1) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
-
-	        if(fmySiteDsCd == 'PRIM')
-			    location.href = "/sub/ePrimary/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EPRI')
-                location.href = "/sub/ePrimary/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-		    else if(fmySiteDsCd == 'MIDL')
-			    location.href = "/sub/eMiddle/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-		    else if(fmySiteDsCd == 'EBSI')
-			    location.href = "/sub/eHigh/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EHIG')
-                location.href = "/sub/eHigh/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EBSE')
-                location.href = "/sub/eCommon/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'EBSM')
-                location.href = "/sub/eCommon/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'MATH')
-                location.href = "/sub/eCommon/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-            else if(fmySiteDsCd == 'MIPR')
-                location.href = "/sub/eMiddle/view?txbkId="+txbkId+"&ebkId="+ebkId+"&prodClsCd="+prodClsCd
-    	}
-
-	}
-</script>
-
-<!-- COPYRIGHT (C) 1999-2013 NETHRU INC. ALL RIGHTS RESERVED. -->
-<script type="text/javascript">
-	(function() {
-		var nl = document.createElement('script');
-		nl.type = 'text/javascript';
-		nl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + window.location.hostname + '/js/weblogs/nethru/wlo.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(nl, s);
-		var done = false;
-		nl.onload = nl.onreadystatechange = function() {
-			if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
-				done = true;
-				_n_sid = "book.ebs.co.kr";
-				//_n_uid_cookie = "UID";
-				n_logging();
-				nl.onload = nl.onreadystatechange = null;
-			}
-		}
-	})();
-</script>
-
-<script>
-	// 2023-02-02 북스토리
-	$(document).ready(function (){
-	    var arrRadio = document.getElementsByName('stdy');
-	    $('.stdy').on({
-	        'change' : function (e){
-	            for (var i = 0; i< arrRadio.length;i++){
-	                if(arrRadio[i].checked){
-	                    var obj = arrRadio[i].value;
-	                    switch (obj){
-	                        case 'payhist':
-	                            location = window.location.origin+"/mypage/payhist"
-	                            break;
-	                        case 'refund':
-	                            location = window.location.origin+"/mypage/refhist"
-	                            break;
-	                        case 'coupon':
-	                            location = window.location.origin+"/mypage/eCouponReg"
-	                            break;
-	                        case 'basket':
-	                            location = window.location.origin+"/mypage/bskt"
-	                            break;
-	                        case 'intrst':
-	                            location = window.location.origin+"/mypage/intrst"
-	                            break;
-	                        default:
-	                    }
-	                }
-	            }
-	        }
-	    })
-	})
-
-    // 장바구니 추가
-    function cartAdd(cart, ebkId, prodClsCd){
-        if(!isLogin){
-            $(this).removeClass('on');
-            alert("로그인 후 이용 가능합니다.");
-            fnLogin();
-            return false;
-        }
-        var data = {
-            "ebkId" : ebkId,
-            "prodClsCd" : prodClsCd
-        }
-
-        fnPromiseAjaxHtml('/mypage/bskt/add', data).then(function(jsonData) {
-            var json_rst = JSON.parse(jsonData)
-            var rst_code = json_rst.rst_code;
-            console.log('장바구니 코드 ='+rst_code);
-            switch (rst_code){
-                case "001":
-                    if(cart == "buy") {
-                        location.href = "/mypage/bskt?ebkId=" + ebkId + "&prodClsCd=" + prodClsCd;
-                    } else if("bskt") {
-                        if(confirm("장바구니에 담겼습니다.\n장바구니로 이동하시겠습니까?")){
-                            location.href = "/mypage/bskt?ebkId=" + ebkId;
-                        }
-                    }
-                    break;
-                case "002":
-                    if(cart == "buy") {
-                        location.href = "/mypage/bskt?ebkId=" + ebkId;
-                    } else if("bskt") {
-                        if(confirm("이미 장바구니에 해당 상품이 있습니다.\n장바구니로 이동하시겠습니까?")){
-                            location.href = "/mypage/bskt?ebkId=" + ebkId;
-                        }
-                    }
-                    break;
-                case "003":
-                    alert("이미 구매하신 상품 입니다.")
-                    break;
-                case "005":
-                    alert("장바구니에 담을 수 없는 상품 입니다.");
-                    break;
-                case "006":
-                    alert("0원 상품 구매완료 처리 되었습니다.");
-                    location.reload();
-                    break;
-                case "007":
-                    alert("상품을 구매 할 수 없습니다.");
-                    break;
-                case "008":
-                    if(cart == "buy") {
-                		alert("패키지 상품 중 구매한 교재가 포함되어있어 구매할 수 없는 상품입니다.");
-                    } else if("bskt") {
-                    	alert("패키지 상품 중 구매한 교재가 포함되어있어 장바구니에 담을 수 없는 상품입니다.");
-                    }
-                    break;
-                case "009":
-                    if(cart == "buy") {
-                		alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어 구매할 수 없습니다.");
-                    } else if("bskt") {
-                    	alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어, 추가로 담을 수 없습니다.");
-                    }
-                    break;
-                case "010":
-                    if(cart == "buy") {
-                		alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 구매할 수 없습니다.");
-                    } else if("bskt") {
-                    	alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 장바구니에 담을 수 없습니다.");
-                    }
-                    break;
-                case "011":
-                    if(cart == "buy") {
-                        alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
-                    } else if("bskt") {
-                        alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
-                    }
-                    break;
-                case "012":
-                    if(cart == "buy") {
-                        alert("굿노트 쿠폰은 매진 되었습니다.");
-                    } else if("bskt") {
-                        alert("굿노트 쿠폰은 매진 되었습니다.");
-                    }
-                    break;
-                default:  alert("error");
-            }
-        });
-    }
-
-    // 웹뷰어 호출시 새로운 토큰 발행 및 조회 리턴
-    function tknPub(){
-        var result = '';
-        $.ajax({
-            url: '/ebook/webViewer/tknpub',
-            type: 'POST',
-            async: false,
-            success: function (data) {
-                result = data;
-            },
-            error: function (data) {
-                result = 'error';
-            }
-        });
-
-        return result;
-    }
-
-
-</script>
-<!-- WISELOG ONLINE TRACKING SCRIPT CODE END -->
-
-
-        
-        <!-- 로딩바 -->
-        
-		<!-- loading -->
-		
-		<!-- //loading  -->
+	<!-- 개인정보 동의 -->
 
 
 
-		<!-- 개인정보 동의 -->
-		
-
-	
 
 
 
-	</body>
+</body>
+
 </html>
 
+
+
+<script type="text/javascript">
+
+	var PAGENO = 1;
+	var school = 'high';
+	var schGradeArr = '[D300]';
+
+	$(window).resize(function () {
+		let winWidth = $(window).width();
+		if (winWidth < 1024) {
+			$('.sort .series').removeAttr('style');
+		}
+	});
+
+	$(window).scroll(function () {
+
+		let pvSchool = 'eHigh';
+
+		//console.log(school);
+		//console.log(pvSchool);
+		let bcHeight = $('body').height();
+		let wHeight = $(window).height();
+		let scHeight = $(window).scrollTop()
+		let revTag = $('#seriesUl').prev();
+		let maxHegiht = $('.sort .series').css('max-height');
+
+		let gnbHeight = $('.sort-wrap').height();
+		let seriesbHeight = $('#seriesUl').height();
+		let bottomHeight = 295;
+
+		if (bcHeight - (wHeight + scHeight) <= 100) {
+			//if($(revTag).hasClass('on') && wHeight == 919){
+			if ($(revTag).hasClass('on') && wHeight == 919) {
+				// 스크롤이 하단일떄 좌측메뉴가 629px가  최고
+				let ableSeriesHeight = 629 - (gnbHeight - seriesbHeight);
+				if (ableSeriesHeight > 244) ableSeriesHeight = 244;
+				if (ableSeriesHeight < 70) {
+					$('#seriesUl').slideUp(150);
+					$(revTag).removeClass('on')
+				}
+				else {
+					$('.sort .series').css('max-height', ableSeriesHeight + 'px');
+				}
+			} else if ($(revTag).hasClass('on') && wHeight < 919) {
+				$('#seriesUl').slideUp(150);
+				$(revTag).removeClass('on')
+			}
+		} else {
+			if (toggleSeriesUl == 'up') {
+				return;
+			}
+			if (!$(revTag).hasClass('on')) {
+				$('#seriesUl').slideDown(150);
+				$(revTag).addClass('on')
+			}
+			else if ($(revTag).hasClass('on') && wHeight == 919) {
+				$('.sort .series').css('max-height', '244px');
+			}
+		}
+	});
+
+
+	$(function () {
+		//학년 선택
+		$("#stdyUl li input[type=radio]").on("change", function () {
+			fnSearchPage(1);
+		});
+
+		//과목 선택
+		$("#rpstUl li input[type=checkbox]").on("click", function () {
+			fnSearchPage(2);
+		});
+
+		//시리즈 선택
+		$("#seriesUl li input[type=checkbox]").on("change", function () {
+			fnSearchPage(3);
+		});
+
+		//최초 학년 처음것 선택
+		if (schGradeArr == '') {
+			$("#stdyUl li input[type=radio]").eq(0).click();
+		} else {
+			fnSearchPage(1);
+		}
+
+		//ckeck hash
+		if (location.hash != '') {
+			getHashPage();
+		}
+	})
+
+	// 사이트 조건 검색
+	function fnSearchPage(depth) {
+		var gradeCd = $("#stdyUl li input[type=radio]:checked").val();
+		var sbjArr = [];
+		$("#rpstUl li input[type=checkbox]:checked").each(function () {
+			sbjArr.push($(this).val());
+		});
+		var seriesArr = [];
+		$("#seriesUl li input[type=checkbox]:checked").each(function () {
+			seriesArr.push($(this).val());
+		});
+		document.subForm.schGradeArr.value = (typeof gradeCd == 'undefined') ? '' : gradeCd;
+		document.subForm.schSubjectArr.value = sbjArr;
+		document.subForm.schSeriesArr.value = seriesArr;
+		document.subForm.schDepth.value = depth;
+		document.subForm.orderBy.value = (typeof $("#orderBy").val() == 'undefined') ? '' : $("#orderBy").val();
+		document.subForm.ebookSite.value = 'high';
+
+		if (depth == 1) {
+			document.subForm.schSubjectArr.value = '';
+			document.subForm.schSeriesArr.value = '';
+			PAGENO = 1;
+		} else if (depth == 2) {
+			document.subForm.schSeriesArr.value = '';
+			PAGENO = 1;
+		} else if (depth == 3) {
+			PAGENO = 1;
+		}
+
+		document.subForm.pageNo.value = PAGENO;
+
+		var dataParam = $("#subForm").serialize();
+		$.ajax({
+			type: 'POST',
+			dataType: 'html',
+			url: '/sub/' + school + '/list',
+			data: dataParam,
+			async: false,
+			success: function (jsonData) {
+				if (PAGENO == 1) {
+					$("#innerTxbk").html(jsonData);
+				} else {
+					$("#type_img").append(jsonData.substring(jsonData.indexOf('<!-- img-list -->'), jsonData.indexOf('<!-- //img-list -->')));
+					$("#type_row").append(jsonData.substring(jsonData.indexOf('<!-- row-list -->'), jsonData.indexOf('<!-- //row-list -->')));
+					$("#listScript").append(jsonData.substring(jsonData.indexOf('<!-- list-script -->'), jsonData.indexOf('<!-- //list-script -->')));
+				}
+				/*종이책 판매가 변경 스크립트 */
+				updateTxbkPrice();
+			},
+			error: function (xhr, errorType, exception) {
+				var errorCode = "ERROR" + xhr.status;
+				alert(errorCode, xhr);
+			}
+		});
+	}
+
+	//더보기
+	function searchMore() {
+		PAGENO++;
+		fnSearchPage(4);
+	}
+
+	//hash 페이지 이동
+	function getHashPage() {
+		let hashArr = location.hash.replace(/^#/, '').split("/");
+		let grade = hashArr[0];
+
+		if (grade == 'none' || grade == undefined) {
+			return;
+		}
+
+		$("#stdyUl li input").map(function (i, v) {
+			if (grade == v.value) {
+				v.click();
+			}
+		})
+
+		let subjectArr = hashArr[1].split(',');
+		subjectArr.map(function (p) {
+			$("#rpstUl li input").map(function (i, v) {
+				if (p == v.value) {
+					v.click();
+				}
+			});
+		});
+
+		let seriesArr = hashArr[2].split(',');
+		seriesArr.map(function (p) {
+			$("#seriesUl li input").map(function (i, v) {
+				if (p == v.value) {
+					v.click();
+				}
+			});
+		});
+	}
+</script>
+
+<script id="listScript">
+	$(document).ready(function () {
+		//wish-btn
+		$(document).on('click', '.btn-wish, button.wish', function () {
+			var txbkId = $(this).attr("data-txbkid");
+			var wishTxbk = document.getElementsByName('wish' + txbkId);
+
+			for (var i = 0; i < wishTxbk.length; i++) {
+				wishTxbk[i].classList.toggle('on');
+			}
+		});
+
+		//관심교재
+		$(document).on("click", ".btn-wish, #type_row .btn-gry.wish", function () {
+			var txbkId = $(this).attr("data-txbkid");
+			if (!txbkId) {
+				$(this).removeClass('on');
+				alert("교재ID가 없습니다.");
+				return false;
+			}
+
+			if (!isLogin) {
+				$(this).removeClass('on');
+				alert("로그인 후 이용 가능합니다.");
+				fnLogin();
+				return false;
+			}
+
+			var data = {};
+			data['txbkId'] = txbkId;
+			var url = "/mypage/updateIntrstTxbk";
+
+			if ($(this).hasClass("on")) {
+				//관심교재 등록
+				data['status'] = 'insert';
+			} else {
+				//관심교재 삭제
+				data['status'] = 'delete';
+			}
+
+			// Ajax 호출
+			fnPromiseAjaxJson(url, data).then(function (jsonData) { });
+		});
+
+		//정렬
+		$(document).on("change", "#orderBy", function () {
+			PAGENO = 1;
+			fnSearchPage(4);
+		});
+
+		//view-type
+		$(document).on('click', '.view-type a', function () {
+			$('.view-type a').removeClass('active');
+			$(this).addClass('active');
+			document.subForm.viewType.value = $('.view-type a').index($(this)) == 0 ? 'img' : 'row';
+		});
+
+		//더보기
+		$(document).on("click", ".btn-more", function () {
+			searchMore();
+		});
+	});
+</script>

@@ -1,0 +1,15 @@
+.native-box {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:50px;
+  color:#fff;
+  font-size:15px;
+  background-color:#e4e5e5;
+}
+.bg-styles {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-img/bg-img01.png") 0 0 / cover no-repeat;
+}

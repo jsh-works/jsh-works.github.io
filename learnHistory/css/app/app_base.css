@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+@import url("./app_common.css");
+@import url("./xeicon.css");
+@import url("./swiper.min.css");
+
+@font-face {
+    font-family:'NotoSans';
+    font-style:normal;
+    font-weight:300;
+    src:url(fonts/NotoSansCJKkr-DemiLight.eot);
+    src: local(☺),
+    url(fonts/NotoSansCJKkr-DemiLight.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSansCJKkr-DemiLight.woff) format('woff');
+}
+@font-face {
+    font-family:'NotoSans';
+    font-style:normal;
+    font-weight:400;
+    src:url(fonts/NotoSansCJKkr-Regular.eot);
+    src: local(☺),
+    url(fonts/NotoSansCJKkr-Regular.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSansCJKkr-Regular.woff) format('woff');
+}
+@font-face {
+    font-family:'NotoSans';
+    font-style:normal;
+    font-weight:600;
+    src:url(fonts/NotoSansCJKkr-Medium.eot);
+    src: local(☺),
+    url(fonts/NotoSansCJKkr-Medium.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSansCJKkr-Medium.woff) format('woff');
+}
+@font-face {
+    font-family:'NotoSans';
+    font-style:normal;
+    font-weight:700;
+    src:url(fonts/NotoSansCJKkr-Bold.eot);
+    src: local(☺),
+    url(fonts/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
+    url(fonts/NotoSansCJKkr-Bold.woff) format('woff');
+}
+
+* {margin:0; padding:0; box-sizing:border-box; -webkit-text-size-adjust:none;}
+body,html {width:100%;min-height:100vh; font-family:'NotoSans',sans-serif; color:#333; font-weight:400; letter-spacing:-.5px; font-size:62.5%;line-height:1.285;}
+body {position:relative}
+a {font-family:inherit; text-decoration:none; color:inherit;}
+em, i, address {font-style:normal;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+ul, ol {list-style:none;}
+ul, ol:after {content:''; display:block; clear:both;}
+b, strong {font-weight:700;}
+img {border:0; vertical-align:top;}
+table {width:100%; table-layout:fixed; border-collapse:collapse; border-spacing:0; border:0;}
+caption, summary {width:0; height:0; line-height:0; font-size:0; visibility:hidden;}
+input, textarea, select, button {font-family:inherit; appearance:none; -webkit-appearance:none;}
+iframe {border:none;}
+button {font-size:inherit; border:0; box-shadow:none; cursor:pointer; background:transparent;}
+input[type="text"]:disabled {background:#eee; opacity:1;}
+input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="email"],
+input[type="button"],input[type="submit"],input[type="reset"] {height:40px; padding:0 10px; border:solid 1px #cfcfcf; border-radius:0;}
+input[type="file"] {position:absolute; left:0; top:0; width:1px; height:1px; margin-left:-1px; vertical-align:top; opacity:0; cursor:pointer; z-index:10;}
+textarea {width:100%; height:200px; line-height:1.5em; padding:12px; border:solid 1px #cfcfcf; resize:none; border-radius:0;}
+select {width:100%; height:42px; padding:0 30px 0 10px; border:1px solid #cfcfcf; color:#333; background:#fff url('../../images/app/input_select.png')right center no-repeat; background-size:24px; border-radius:0;} 
+select::-ms-expand {display:none; background-color:transparent; border:0;}
+.hide{display:none}
+
+::-webkit-input-placeholder {color:#888;}
+::-moz-placeholder {color:#888;}
+:-ms-input-placeholder {color:#888;}
+
+
+/* --------------------------------------------------------------------------------------------------------
+	Fast Class
+----------------------------------------------------------------------------------------------------------- */
+.ac {text-align:center !important;}
+.ar {text-align:right !important;}
+.al {text-align:left !important;}
+.aj {text-align:justify !important;} 
+.at {vertical-align:top !important;}
+.am {vertical-align:middle !important;}
+
+.fl {float:left !important;}
+.fr {float:right !important;}
+
+.mw100 {max-width:100%;}
+.w50 {width:50% !important;}
+.w100 {width:100% !important;}
+
+.mt0 {margin-top:0 !important;}
+.mt10 {margin-top:10px !important;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt30 {margin-top:30px !important;}
+.mt60 {margin-top:60px !important;}
+.ml10 {margin-left:10px !important;}
+.mb0 {margin-bottom:0 !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb40 {margin-bottom:20px !important;}
+.pt10 {padding-top:10px !important;}
+.pt30 {padding-top:30px !important;}
+.pb0 {padding-bottom:0 !important;}
+.pb20 {padding-bottom:20px !important;}
+
+.f-red {color:#e50032 !important;}
+.f-blue {color:#5477d1 !important;}
+.f-dgry {color:#666 !important;}
+.f-gray {color:#999 !important;}
+.bg-gray {background-color:#adabab !important;}
+.bg-orange {background-color:#ff7d65 !important;}
+
+.f-s {font-size:12px;}
+
+
+/* --------------------------------------------------------------------------------------------------------
+	Input(checkbox/radio)
+----------------------------------------------------------------------------------------------------------- */
+input[type="checkbox"], input[type="radio"] {position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); border:0;}
+input[type="radio"] + label, input[type="checkbox"] + label {position:relative; font-size:1.6rem;margin-right:1.5rem; cursor:pointer;} 
+input[type="checkbox"] + label:before, input[type="radio"] + label:before {content:''; display:inline-block; width:2rem; height:2rem; margin:0 1rem 0 0; text-align:center; line-height:2rem; background:#fff; border:1px solid #cbcdcc; border-radius:.2rem; vertical-align:bottom; cursor:pointer;}
+input[type="radio"] + label:before {width:2.2rem; height:2.2rem; border-radius:50%; box-sizing:border-box;}
+input[type="checkbox"]:checked + label:before {content:'\e929'; font-family:'xeicon'; font-size:23px; color:#111; line-height:1.9rem; font-weight:600;}
+input[type="radio"]:checked + label:before {content:''; box-sizing:border-box;}
+input[type="radio"]:checked + label:after {content:''; position:absolute; left:.5rem; top:.41rem; width:1.2rem; height:1.2rem; background:#333; border-radius:50%; /* transform:translateY(-50%); */}
+/* input[type="radio"]:focus + label, input[type="checkbox"]:focus + label {outline:1px dotted #999;} //2023-02-17 에러 없게 상태로 코드 수정 */
+
+/* --------------------------------------------------------------------------------------------------------
+	Button
+----------------------------------------------------------------------------------------------------------- */
+.btn-wrap {margin:0; text-align:center;}
+button[class^="btn-"] {display:inline-block; text-align:center; vertical-align:middle;}
+.btn-wrap button[class^="btn-"] + button[class^="btn-"] {margin-left:.8rem;}
+.btn-wish {position:absolute; top:6%; right:10%; width:2.4rem; height:2.4rem; background:url('../images/ico_heart.png') 0 0 no-repeat; font-size:0;}
+.btn-wish.on {background-position:0 bottom;}
+
+.btn-darkB {border:1px solid #000; color:#000; font-size:18px; font-weight:600;}
+.btn-dark {background:#000; color:#fff; font-size:18px; font-weight:600;}
+.btn-darkR {background:#202020; color:#fff; font-size:18px; font-weight:600; border-radius:.4rem;}
+.btn-blu {padding:0 1.2rem; background:#69748a; color:#fff; border-radius:.2rem;}
+.btn-bright-blu {background:#838fc7; color:#fff; border-radius:2px}
+.btn-dark-blu {padding:0 1.2rem; background:#494b63; color:#fff; border-radius:.5rem;}
+.btn-gry {background:#a5a5a5; color:#fff; border-radius:2px;}
+.btn-pink {background:#ff5697; color:#fff; border-radius:2px;}
+.btn-org {background:#fb6e38; color:#fff; border-radius:2px;}
+.btn-light-red {background:#ff7d65; color:#fff; border-radius:3rem; padding: 1.4rem 2rem;} /* 2023-02-23 추가 */
+.btn-more {font-size: 1.8rem; font-weight: 600; color: #4c546b; background: #f0f0f0; border: 0.2rem solid #dcdcdc; width: 14rem; height: 3.8rem; border-radius: 1.9rem;} /* 2023-02-17 수정 */
+/* .btn-more:after {content:'\e941'; font-family:xeicon; font-size:1.6rem; margin-left:1rem; color:#666; vertical-align:middle;} //2023-02-17 수정 */
+.cssbtn.big.on {color:#FFF;background:#042f6c; }
+.cssbtn.big {color:#042f6c;background:#FFF; border:1px solid #042f6c;font-size:2rem;padding:1.2rem 6rem;line-height:2.3rem;display: inline-block;}
+
+
+/* --------------------------------------------------------------------------------------------------------
+	Table
+----------------------------------------------------------------------------------------------------------- */
+/* .tbl-list thead th {padding:14px 0; border:1px solid #e9e0ce; background:#f1ede5;}
+.tbl-list tbody	th {background:#f1ede5; font-weight:600;}
+.tbl-list tbody	td, .tbl-list tbody	th {padding:15px 6px; border:1px solid #e9e0ce;}
+
+.tbl-list.type2 tbody td, .tbl-list.type2 tbody th {padding:20px 6px; text-align:center;}
+.tbl-list.type2 tbody td .al {padding-left:20px;}
+
+.bbs-list {border-top:2px solid #666;}
+.bbs-list thead	th, .bbs-list tbody	td {padding:15px 5px; border-bottom:1px solid #d0cfd5; text-align:center;}
+
+.tbl-data th, .tbl-data td {padding:8px 15px; text-align:center; background:#fafafa; border:1px solid #e1e1e1; color:#666; font-weight:500;}
+.tbl-data td {text-align:left; padding-left:30px; background:#fff;} //2023-02-17 불필요 코드 숨김 */
+
+/* --------------------------------------------------------------------------------------------------------
+	hidden
+----------------------------------------------------------------------------------------------------------- */
+fieldset {border:none}
+.alt_hidden, legend {display:block;width:1px;height:1px;overflow:hidden;position:absolute;top:-1000em;left:0;}

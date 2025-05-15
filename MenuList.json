@@ -1,11 +1,20 @@
 [
   {
     "id" : 1,
-    "menuName" : "BookStory",
+    "menuName" : "BookStory - main",
     "depth1" : "",
     "depth2" : "",
     "devUrl" : "bookStory/index.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.05.12"
+    "update" : "2025.05.15"
+  },
+  {
+    "id" : 2,
+    "menuName" : "BookStory - sub",
+    "depth1" : "",
+    "depth2" : "",
+    "devUrl" : "bookStory/subpage.html",
+    "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
+    "update" : "2025.05.15"
   }
 ]

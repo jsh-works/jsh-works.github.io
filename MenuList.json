@@ -16,5 +16,14 @@
     "devUrl" : "bookStory/subpage.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
     "update" : "2025.05.15"
+  },
+  {
+    "id" : 3,
+    "menuName" : "학급/학습 이력관리",
+    "depth1" : "",
+    "depth2" : "",
+    "devUrl" : "learnHistory/index.html",
+    "mainUrl" : "",
+    "update" : "2025.05.16"
   }
 ]

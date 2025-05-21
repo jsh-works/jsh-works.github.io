@@ -1,4 +1,5 @@
 $(function() {
+			var filter = 
 			$.each($("td.url > a"), function(i,v){
 				$(v).text($(v).attr("href"));
 			});
@@ -28,7 +29,11 @@ $(function() {
 					html.push('<dd>' + item.depth1 + '</dd>');
 					html.push('<dd>' + item.depth2 + '</dd>');
 					html.push('<dd><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
-					html.push('<dd><a href='+ item.mainUrl +' class="main" target="_blank">운영</a></dd>');
+					if(!item.mainUrl && item.mainUrl === "") {
+						html.push('<dd></dd>');
+					} else {
+						html.push('<dd><a href='+ item.mainUrl +' class="main" target="_blank">운영</a></dd>');
+					}
 					html.push('<dd>' + item.update + '</dd>');
 					html.push('</dl>');
 					html.push('</div>');

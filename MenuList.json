@@ -25,5 +25,14 @@
     "devUrl" : "learnHistory/index.html",
     "mainUrl" : "",
     "update" : "2025.05.16"
+  },
+  {
+    "id" : 4,
+    "menuName" : "중학프리미엄 - 이벤트",
+    "depth1" : "",
+    "depth2" : "",
+    "devUrl" : "midPremium/event.html",
+    "mainUrl" : "",
+    "update" : "2025.05.20"
   }
 ]

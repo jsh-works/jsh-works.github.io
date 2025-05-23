@@ -1,36 +1,42 @@
 [
   {
-    "id" : 1,
-    "menuName" : "BookStory - main",
-    "depth1" : "",
-    "depth2" : "",
-    "devUrl" : "bookStory/index.html",
+    "id" : "bookStory",
+    "menuName" : "북스토리 - 메인 페이지",
+    "devUrl" : "bookStory/bookStoryMain.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.05.15"
+    "update" : "2025.05.23"
+  },
+    {
+    "id" : "bookStory",
+    "menuName" : "북스토리 - 메인 View 페이지",
+    "devUrl" : "bookStory/bookStoryView.html",
+    "mainUrl" : "https://book.ebs.co.kr/sub/high/view?txbkId=LB00000005600&ebkId=EB100001910&prodClsCd=24",
+    "update" : "2025.05.23"
   },
   {
-    "id" : 2,
-    "menuName" : "BookStory - sub",
-    "depth1" : "",
-    "depth2" : "",
-    "devUrl" : "bookStory/subpage.html",
+    "id" : "bookStory",
+    "menuName" : "북스토리 - 리스트 페이지",
+    "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
-    "update" : "2025.05.15"
+    "update" : "2025.05.23"
   },
   {
-    "id" : 3,
+    "id" : "bookStory",
+    "menuName" : "북스토리 - 구독 메인 페이지",
+    "devUrl" : "bookStory/subScribeMain.html",
+    "mainUrl" : "",
+    "update" : "2025.05.23"
+  },
+  {
+    "id" : "e-book",
     "menuName" : "학급/학습 이력관리",
-    "depth1" : "",
-    "depth2" : "",
     "devUrl" : "learnHistory/index.html",
     "mainUrl" : "",
     "update" : "2025.05.16"
   },
   {
-    "id" : 4,
+    "id" : "mid",
     "menuName" : "중학프리미엄 - 이벤트",
-    "depth1" : "",
-    "depth2" : "",
     "devUrl" : "midPremium/event.html",
     "mainUrl" : "",
     "update" : "2025.05.20"

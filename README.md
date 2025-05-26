@@ -20,7 +20,7 @@ key-value 방식으로 작성하면 자동으로 들어갑니다.
   main : master, main 브랜치 입니다.
   featre/prject : 담당하시는 프로젝트 브랜치입니다.
 ```
-- 각 담당자들께서는 feature/`project` 명으로, 브랜치를 생성하고
+- 각 담당자들께서는 feature/`prj-projectName` 명으로, 브랜치를 생성하고
 작업하시고, `main`브랜치에서 각 feature/`project` 브랜치를 merge하시면 됩니다.
 
 
@@ -40,3 +40,9 @@ key-value 방식으로 작성하면 자동으로 들어갑니다.
 |perf|성능 개선에 대한 커밋|
 
 예) `feat : prj-storybook ui 기능 개선`
+
+
+### Tag Push Label 규칙
+```
+예) 메인 브랜치에 업로드 할때 : v20250526, origin push
+```

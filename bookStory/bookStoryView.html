@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
 	<meta name="robots" content="noindex, nofollow" />
@@ -15,6 +17,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
 	<link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
 	<link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+	<link rel="stylesheet" href="./css/newStyles.css" />
 	<link id="contextPathHolder" />
 	<script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
 	<script src="https://book.ebs.co.kr/js/slick.js"></script>
@@ -23,11 +26,12 @@
 	<script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
 	<script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
 	<script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+	<script src="./js/newScript.js"></script>
 	<script type="text/javascript">
-			// Global
-			var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
-			var ebsDateFormat = "YY.MM.DD";
-			var mediaPlayer = null;
+		// Global
+		var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
+		var ebsDateFormat = "YY.MM.DD";
+		var mediaPlayer = null;
 	</script>
 </head>
 
@@ -36,10 +40,7 @@
 		<div class="top-bnr" style="background-color:#eef5f8">
 			<div class="top-bnr-wrapper">
 				<div class="btn">
-					<button
-						class="btn-dist"
-						title="문해력 테스트"
-					>
+					<button class="btn-dist" title="문해력 테스트">
 						문해력테스트 바로가기
 					</button>
 				</div>
@@ -59,8 +60,7 @@
 								<img src="imgs/promotionImg_110216882116626890.jpg" alt="배너">
 							</a>
 							<a href="https://book.ebs.co.kr/notice/view?pstId=60000457099" class="mb" target="_self"
-								data-bnnrMngId="2671"><img
-									src="imgs/flashFile_110216882116626890.jpg" alt="배너"></a>
+								data-bnnrMngId="2671"><img src="imgs/flashFile_110216882116626890.jpg" alt="배너"></a>
 						</div>
 						<div class="swiper-slide">
 							<a href="https://book.ebs.co.kr/roadmap/high" class="pc" target="_self" data-bnnrMngId="2899">
@@ -81,10 +81,10 @@
 						<div class="swiper-slide">
 							<a href="https://primary.ebs.co.kr/course/literacy" class="pc" target="_blank" data-bnnrMngId="1387">
 								<img src="imgs/promotionImg_55777737160352107.jpg" alt="배너">
-								</a>
+							</a>
 							<a href="https://primary.ebs.co.kr/course/literacy" class="mb" target="_blank" data-bnnrMngId="1387">
 								<img src="imgs/flashFile_55777737160352107.jpg" alt="배너">
-								</a>
+							</a>
 						</div>
 						<div class="swiper-slide">
 							<a href="https://book.ebs.co.kr/roadmap/middle" class="pc" target="_self" data-bnnrMngId="2900">
@@ -162,7 +162,7 @@
 					<ul class="gnb-dep01">
 						<li>
 							<a href="/ebook/index" class="ebook active">
-								<span>eBook</span>
+								<span>eBook 구독</span>
 							</a>
 							<div class="gnb-dep02-div" style="display: none;">
 								<ul class="gnb-dep02">
@@ -292,6 +292,8 @@
 			</div>
 			<div class="subGnbBack"></div>
 		</div>
+
+
 		<div id="totalGnb">
 			<div class="total-gnb-wrap">
 				<div class="total-top">
@@ -446,247 +448,219 @@
 		<!--  //2023-01-30 리뉴얼 전 회원정보 수정 탈퇴 추가 -->
 		<!-- <script type="text/javascript" src="/"js/ebkview-only.js?v=20250514043107561"></script> -->
 		<!-- contents -->
-<div id="contentsWrap" class="sub">
-		<div class="cnt-wide bg">
-			<div class="book-info ebook">
-				<p class="ebook-tit">EBS 수학의 왕도 미적분Ⅰ(2022 개정)</p>
-				<div class="ebook-detail-wrapper " data-txbkshwyn="Y">
-					<!--TODO *********************** 이북 컨텐츠 영역 _S**********************************-->
-					<div class="de-left ebook-check-area">
-						<span class="tag ebook">eBook</span>
-						<div class="de-body">
-							<div class="de-items">
-								<p class="subtxt">
-									<em>한국교육방송공사</em>
-									<em>ISBN : 9788954791991</em>
-								</p>
-								<ul class="list-dot">
-									<li>
-										<em>대상</em>
-										<span>1,2학년</span>
-									</li>
-									<li>
-										<em>과목</em>
-										<span>수학</span>
-									</li>
-									<li class="ebook-only">
-										<em>종이책 정가</em>
-										<span>18,500원</span>
-									</li>
-									<li>
-										<em>eBook 판매가</em>
-										<span>
-											<b>14,800원</b>
-											<!-- <span class="ebook-only">(종이책 정가 대비 20% 할인)</span> -->											
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="de-items btn-area">
-								<div class="btn">
-									
-									
-										
-										
-											<button class="btn-gry " onclick="ebookStat(&quot;LB00000005683&quot;, &quot;EB100002226&quot;); cartAdd('bskt', &quot;EB100002226&quot;, '24');">장바구니</button>
-											<button class="btn-pink" onclick="ebookStat(&quot;LB00000005683&quot;, &quot;EB100002226&quot;); cartAdd('buy', &quot;EB100002226&quot;, '24');">eBook 구매</button>
-										
-									
-								</div>
-							</div>
-							<!--교재 구매 이력 조회 분기 구매안함_E-->
-							<div class="de-items btn-bg">
-								<div class="btn bot-btn">
-									<button onclick="ebookUseInfo()">eBook<br>이용안내</button><!--TODO 이용안내  연결 해야함-->
-									<button onclick="ebookPayRefundInfo()">eBook<br>결제/환불</button><!--TODO 결제/환불  연결 해야함-->
-									<button onclick="ebookPolicyInfo()">eBook<br>주요정책</button><!--TODO 주요정책  연결 해야함-->
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--TODO *********************** 이북 컨텐츠 영역 _E**********************************-->
-					<!--TODO *********************** 공통영역 _S**********************************-->
-					<div class="de-center">
-						<div class="img">
-							<span class="ebook-tag detail-top"></span>
+		<div id="contentsWrap" class="sub">
+			<div class="cnt-wide bg">
+				<div class="book-info ebook">
+					<div class="container">
+						<h2>EBS 2026학년도 수능 기출의 미래 수학 1</h2>
+						<nav class="menu-nav">
+							<div class="overlay"></div>
+							<ul>
+								<li data-layer="scribe" class="active">ebook 구독</li>
+								<li data-layer="ebook" class="">ebook</li>
+								<li data-layer="paper" class="">종이책</li>
+							</ul>
+						</nav>
+						<div class="book-details scribe">
 							<div class="thumb-box">
-								<span class="thumb-img">
-										
-									
-										
-										<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005683[20250327141839544].png" alt="교재 이미지">
-									
-								</span>
+								<div class="thumb-img">
+									<img src="./imgs/books_example.png" alt="교재 이미지" />
+									<div class="thumb-ico">
+										<button class="favorite-ico"></button>
+										<button class="preview-ico">미리보기</button>
+										<button class="seeAll-ico">전체 시리즈 보기</button>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="de-center-btn">
-							<div class="de-btn-top">
-								<button class="wish " data-txbkid="LB00000005683">관심교재</button>
-								<!--<th:block  th:if="${not #strings.isEmpty(ebookInfoVO.tchPdfUrl)}">-->
-								<button onclick="viewDoc()">미리보기</button>
-								<!--</th:block>-->
-							</div>
-							
-							<div class="de-btn-bottom">
-								
-								
-									
-									<button onclick="highTxbkLink('ans', &quot;LB00000005683&quot;)"><span>정답지</span></button>
-									
-									<button onclick="highTxbkLink('chrg', &quot;LB00000005683&quot;)"><span> 정오표</span></button>
-									
-								
-							</div>
-							<div class="de-btn-allmore">
-								<button onclick="goSeriesAll(&quot;PRO_0317&quot;,&quot;EBSI&quot;)"><span>시리즈 교재 전체 보기</span></button>
-							</div>
-							
-						</div>
-					</div>
-					<!--TODO *********************** 공통영역 _E**********************************-->
-					<!--TODO *********************** 종이책영역 _S**********************************-->
-					<div class="de-right">
-						<span class="tag book">종이책</span>
-						<div class="de-body">
-							<div class="de-items">
-								<p class="subtxt">
-									<em>한국교육방송공사</em>
-									<em>ISBN : 9788954791939</em>
-								</p>
-								<ul class="list-dot">
-									<li>
-										<em>대상</em>
-										<span>1,2학년</span>
-									</li>
-									<li>
-										<em>과목</em>
-										<span>수학</span>
-									</li>
-									<li>
-										<em>종이책 정가</em>
-										<span>18,500원</span>
-									</li>
-									<li>
-										<em>종이책 판매가</em>
-										<span>
-											<b>16,650원</b>
-											<span>(10% 할인)</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-							<div class="de-items btn-area">
-								<div class="btn">
-									<button class="btn-pink" onclick="ebookStat(&quot;LB00000005683&quot;, null); buyBook(&quot;LB00000005683&quot;, &quot;9788954791939&quot;, &quot;EBSI&quot;);">종이책 구매</button>
+							<div class="book-infos">
+								<div class="ticket-box">
+									<img src="./imgs/book-details_ticket_01.png" width="77" alt="수능 패스" />
+									<img src="./imgs/book-details_ticket_02.png" width="128" alt="중학 eBook 구독" />
+									<img src="./imgs/book-details_ticket_03.png" width="128" alt="초등 eBook 구독" />
+									<span>이용 가능</span>
+								</div>
+
+								<div class="price-box">
+									<dl class="tit">
+										<dt>한국교육방송공사</dt>
+										<dd>ISBN: 9788954789325</dd>
+									</dl>
+									<dl>
+										<dt>대상</dt>
+										<dd>2,3학년</dd>
+									</dl>
+									<dl>
+										<dt>과목</dt>
+										<dd>수학</dd>
+									</dl>
+									<dl>
+										<dt>eBook 정가</dt>
+										<dd class="lineThrough">12,000원</dd>
+									</dl>
+									<dl>
+										<dt>eBook 판매가</dt>
+										<dd class="blueColor">
+											9,600원
+											<em>(10%할인)</em>
+										</dd>
+									</dl>
+									<dl>
+										<dt>부가자료</dt>
+										<dd>
+											<span>정답지</span>
+											<span>정오표</span>
+											<span>MP3</span>
+										</dd>
+									</dl>
 								</div>
 							</div>
 						</div>
+
+						<div class="book-details ebook">
+							<div class="thumb-box">
+								<div class="thumb-img">
+									<img src="./imgs/books_example.png" alt="교재 이미지" />
+									<div class="thumb-ico">
+										<button class="favorite-ico"></button>
+										<button class="preview-ico">미리보기</button>
+										<button class="seeAll-ico">전체 시리즈 보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="book-infos">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat sed minus, blanditiis at dicta consequuntur sit adipisci eveniet qui facere quasi libero molestias dolor ad pariatur facilis perferendis temporibus.
+								Sequi corporis quis dolor fugiat? Quis esse, corrupti aperiam distinctio ut necessitatibus, repudiandae iure reprehenderit repellendus tempore enim blanditiis magnam nobis eum. Dolorem aliquam in unde veritatis aliquid doloremque laborum.
+							</div>
+						</div>
+
+						<div class="book-details paper">
+							<div class="thumb-box">
+								<div class="thumb-img">
+									<img src="./imgs/books_example.png" alt="교재 이미지" />
+									<div class="thumb-ico">
+										<button class="favorite-ico"></button>
+										<button class="preview-ico">미리보기</button>
+										<button class="seeAll-ico">전체 시리즈 보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="book-infos">
+								zzzzzzzzzzzzzzzz
+							</div>
+						</div>
+
+
 					</div>
-					<!--TODO *********************** 종이책영역 _S**********************************-->
+				</div>
+			</div>
+
+
+			<!-- details -->
+			<div class="sub-cnt-wrap">
+				<div class="book-view">
+					<div class="book-cnt">
+						<!-- tab -->
+						<ul class="tab">
+							<li><a href="javascript:;" onclick="fnTab(this, 'tab_1')" class="active" id="txbkInfo">책 소개</a></li>
+							<li><a href="javascript:;" onclick="fnTab(this, 'tab_2')" id="txbkContent">목차</a></li>
+							<li><a href="javascript:;" onclick="fnTab(this, 'tab_3')" id="txbkLinked">관련 강좌</a></li>
+						</ul>
+						<!-- //tab -->
+						<!-- 책 소개 -->
+						<div class="tab-cnt book-intro" id="tab_1" style="display: block;">
+
+
+
+
+
+							<!-- 책 소개 -->
+							<div>
+								<table class="tbl-data" summary="이 상품의 상세정보">
+									<colgroup>
+										<col width="25%">
+										<col width="*">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">ISBN</th>
+											<td><span title="ISBN-13">9788954791939</span>(<span title="ISBN-10">KOR9788954791939</span>)</td>
+										</tr>
+										<tr>
+											<th scope="row">쪽수</th>
+											<td>438쪽</td>
+										</tr>
+										<tr>
+											<th scope="row">크기</th>
+											<td>188 * 257 * 23 mm </td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="cnt">
+									<p>&nbsp;</p>
+								</div>
+
+								<h4>책소개</h4>
+								<div class="cnt">1. 개념을 시각화하여 누구나 이해하기 쉽게 정리!
+									시각적으로 표현된 개념에 부담 없이 접근하고, 복잡한 개념은 추가 설명해 주는 친절한 'Tip'을 통해 쉽게 이해할 수 있습니다.
+									2. 문제 해결 핵심 개념과 전략을 '왕도'로 제시!
+									대표 문제의 단계별 풀이 과정을 확인하며 문제 유형별 해결 전략을 학습할 수 있습니다.
+									3. 실력 완성을 위한 단계별 종합 문제 제공!
+									기본, 실력, 발전까지 이어지는 단계별 문항과 신유형, 고득점, 1등급의 다양한 문항을 풀며 실전 실력을 다질 수 있습니다.</div>
+
+								<div class="cnt"><br><br><b>◆ 상세이미지 ◆</b><br><br>
+									<p align="left"><img src="https://contents.kyobobook.co.kr/dtl/illustrate/939/i9788954791939.jpg"></p>
+								</div>
+
+
+
+							</div>
+							<!-- //책 소개 -->
+
+							<!-- eBook 소개 -->
+
+							<!-- //책 소개 -->
+
+
+
+
+
+
+
+
+
+
+							<script>
+								var fmySiteDsCd = "EBSI";
+								function goCoursePage(courseId) {
+									var href = '';
+									if (fmySiteDsCd == 'PRIM') {
+										href = "https://primary.ebs.co.kr/course/view?courseId=" + courseId;
+									} else if (fmySiteDsCd == 'MIDL' || fmySiteDsCd == 'MIPR') {
+										href = "https://mid.ebs.co.kr/course/view?courseId=" + courseId;
+									} else if (fmySiteDsCd == 'EBSI') {
+										href = "https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=" + courseId;
+									}
+									window.open(href);
+								}
+								function goCoursePage2(courseUrl) {
+									var href = '';
+									href = courseUrl
+									window.open(href);
+								}
+							</script>
+						</div>
+						<!-- 책 소개 -->
+						<!-- 목차 -->
+						<div class="tab-cnt" id="tab_2" style="display: none;"></div>
+						<!-- //목차 -->
+						<!-- 관련 강좌 -->
+						<div class="tab-cnt" id="tab_3" style="display: none;"></div>
+						<!-- //관련 강좌 -->
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="sub-cnt-wrap">
-			<div class="book-view">
-				<div class="book-cnt">
-					<!-- tab -->
-					<ul class="tab">
-						<li><a href="javascript:;" onclick="fnTab(this, 'tab_1')" class="active" id="txbkInfo">책 소개</a></li>
-						<li><a href="javascript:;" onclick="fnTab(this, 'tab_2')" id="txbkContent">목차</a></li>
-						<li><a href="javascript:;" onclick="fnTab(this, 'tab_3')" id="txbkLinked">관련 강좌</a></li>
-					</ul>
-					<!-- //tab -->
-					<!-- 책 소개 -->
-					<div class="tab-cnt book-intro" id="tab_1" style="display: block;">
- 
-	
-		
-		
-			
-			<!-- 책 소개 -->
-			<div>
-				<table class="tbl-data" summary="이 상품의 상세정보">
-					<colgroup>
-						<col width="25%">
-						<col width="*">
-					</colgroup>
-					<tbody>
-						<tr>
-							<th scope="row">ISBN</th>
-							<td><span title="ISBN-13">9788954791939</span>(<span title="ISBN-10">KOR9788954791939</span>)</td>
-						</tr>
-						<tr>
-							<th scope="row">쪽수</th>
-							<td>438쪽</td>
-						</tr>
-						<tr>
-							<th scope="row">크기</th>
-							<td>188 * 257 * 23 mm </td>
-						</tr>
-					</tbody>
-				</table>
-				
-					<div class="cnt"><p>&nbsp;</p></div>
-				
-				<h4>책소개</h4>
-				<div class="cnt">1. 개념을 시각화하여 누구나 이해하기 쉽게 정리! 
-시각적으로 표현된 개념에 부담 없이 접근하고, 복잡한 개념은 추가 설명해 주는 친절한 'Tip'을 통해 쉽게 이해할 수 있습니다.
-2. 문제 해결 핵심 개념과 전략을 '왕도'로 제시! 
-대표 문제의 단계별 풀이 과정을 확인하며 문제 유형별 해결 전략을 학습할 수 있습니다.
-3. 실력 완성을 위한 단계별 종합 문제 제공! 
-기본, 실력, 발전까지 이어지는 단계별 문항과 신유형, 고득점, 1등급의 다양한 문항을 풀며 실전 실력을 다질 수 있습니다.</div>
-
-				<div class="cnt"><br><br><b>◆ 상세이미지 ◆</b><br><br><p align="left"><img src="https://contents.kyobobook.co.kr/dtl/illustrate/939/i9788954791939.jpg"></p></div>
-
-				
-
-			</div>
-			<!-- //책 소개 -->
-			
-			<!-- eBook 소개 -->
-			
-			<!-- //책 소개 -->
-		
-
-		
-
-		
-
-	
-	
-
-
-<script>
-	var fmySiteDsCd = "EBSI";
-	function goCoursePage(courseId){
-		var href = '';
-		if(fmySiteDsCd == 'PRIM'){
-			href = "https://primary.ebs.co.kr/course/view?courseId=" + courseId;
-		}else if(fmySiteDsCd == 'MIDL'||fmySiteDsCd == 'MIPR' ){
-			href = "https://mid.ebs.co.kr/course/view?courseId=" + courseId;
-		}else if(fmySiteDsCd == 'EBSI'){
-			href = "https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=" + courseId;
-		}
-		window.open(href);
-	}
-	function goCoursePage2(courseUrl){
-		var href = '';
-		href = courseUrl
-		window.open(href);
-	}
-</script></div>
-					<!-- 책 소개 -->
-					<!-- 목차 -->
-					<div class="tab-cnt" id="tab_2" style="display: none;"></div>
-					<!-- //목차 -->
-					<!-- 관련 강좌 -->
-					<div class="tab-cnt" id="tab_3" style="display: none;"></div>
-					<!-- //관련 강좌 -->
-				</div>
-			</div>
-		</div>
-	</div>
 		<!-- //contents -->
 
 		<form id="subForm" name="subForm" action="/sub/primary/list" method="post">
@@ -807,7 +781,7 @@
 				<a href="https://hottracks.kyobobook.co.kr/ht/evnExh/evnExhDetail/89378?LNK=EIG" title="듄듄문고 바로가기" target="_blank">
 					<img src="imgs/bnr_quick.png" alt="듄듄문고" />
 				</a> -->
-				 
+
 			</div>
 			<div class="quick-util">
 				<!-- 2022-02-03 -->
@@ -1076,7 +1050,8 @@
 				<div class="pw_dim_layer">
 					<div class="pw_layer">
 						<div class="sso_change">
-							<h1><img src="https://book.ebs.co.kr/images/head_logo_main.gif" alt="EBS 로고"> 개인정보 보호를 위한 <em>비밀번호</em> 변경 안내</h1>
+							<h1><img src="https://book.ebs.co.kr/images/head_logo_main.gif" alt="EBS 로고"> 개인정보 보호를 위한 <em>비밀번호</em> 변경
+								안내</h1>
 							<div class="sso_inner">
 								<h2>안녕하세요 EBS Book Story입니다.</h2>
 								<p>최근 인터넷 상에서 개인정보 유출로 인한 피해가 확산되고 있습니다. <br>
@@ -1584,6 +1559,7 @@
 
 
 </body>
+
 </html>
 
 

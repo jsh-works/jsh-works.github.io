@@ -1,0 +1,239 @@
+/* common.css?v=240312 line: 57 change */
+.gnb-dep01 > li > a.ebook > span {
+  color: #6B89FF;
+  border: 2px solid #6B89FF;
+}
+.book-info .thumb-box {
+  position: relative;
+  width: 100%;
+  padding-top: 432px;
+}
+.book-info .thumb-img {
+  width: 342px;
+}
+.book-info .thumb-img img {
+  border: none;
+}
+#contentsWrap .container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1046px;
+}
+#contentsWrap .container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 28px;
+  letter-spacing: normal;
+}
+#contentsWrap .container .menu-nav {
+  position: relative;
+  margin: 0 auto;
+  max-width: 426px;
+  /* max-width: 394px; */
+  padding-bottom: 50px;
+}
+#contentsWrap .container .menu-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+}
+#contentsWrap .container .menu-nav ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 142px;
+  height: 76px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.35s;
+  z-index: 2;
+}
+#contentsWrap .container .menu-nav ul li.active {
+  width: 142px;
+  color: #4165F4;
+  transition: all 0.35s;
+}
+
+#contentsWrap .container .menu-nav .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 142px;
+  height: 76px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px 0px rgba(65, 101, 244, 0.2);
+  box-shadow: 0px 8px 32px 0px rgba(65, 101, 244, 0.15);
+  transition: all 0.35s;
+}
+#contentsWrap .container .book-details {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+width: 100%;
+max-width: 1046px;
+margin: 0 auto;
+}
+#contentsWrap .container .book-details.ebook,
+#contentsWrap .container .book-details.paper {
+  display: none;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img {
+  box-shadow: 0px 7px 36px 0px #00000026;
+  box-shadow: 0px 10px 42px 0px #0000001A;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img button {
+  outline: none;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .thumb-ico {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  z-index: 10;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .favorite-ico {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.65);
+  background-image: url("../imgs/favorite-ico.png");
+  background-size: 32px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .favorite-ico.active {
+  background-image: url("../imgs/favorite-ico_active.png");
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img:hover .favorite-ico {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-size: 32px 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 20px 0px rgba(16, 24, 40, 0.25);
+  backdrop-filter: blur(20px);
+  transition: all 0.35s;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico,
+#contentsWrap .container .book-details .thumb-box .thumb-img .seeAll-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  padding: 10px 16px 8px;
+  border-radius: 50px;
+  background-color: rgba(0,0,0, 0.8);
+  display: none;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/preview-ico.png") center center/16px 16px no-repeat;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .seeAll-ico::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/see-all-ico.png") center center/15px 19px no-repeat;
+}
+#contentsWrap .container .book-details .book-infos {
+  width: 100%; 
+}
+#contentsWrap .container .book-details .book-infos .ticket-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#contentsWrap .container .book-details .book-infos .ticket-box span {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-align: right;
+  padding-left: 12px;
+}
+#contentsWrap .container .book-details .price-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#contentsWrap .container .book-details .price-box dl.tit {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(221, 221, 221, 1);
+}
+
+#contentsWrap .container .book-details .price-box dl.tit dt,
+#contentsWrap .container .book-details .price-box dl.tit dd {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+#contentsWrap .container .book-details .price-box dl.tit dt {
+  max-width: 126px;
+  text-align: left;
+}
+#contentsWrap .container .book-details .price-box dl {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+#contentsWrap .container .book-details .price-box dl dt {
+  width: 126px;
+  color: #666;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+}
+#contentsWrap .container .book-details .price-box dl dd {
+  color: #272525;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+#contentsWrap .container .book-details .price-box dl dd.lineThrough {
+  text-decoration: line-through;
+}
+#contentsWrap .container .book-details .price-box dl dd.blueColor {
+  color: #4165F4;
+  font-size: 26px;
+}
+#contentsWrap .container .book-details .price-box dl dd > em {
+  color: #272525;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}

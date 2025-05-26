@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBS 교재사이트 </title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/images/bhp/favicon.ico" />
+    <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=24052702">
+    <style>
+        body#error-404 { display:block; justify-content: center; align-items: center; width: 100%; height: auto; letter-spacing: -.025em; line-height: 1; font-family: 'Noto Sans KR', sans-serif;}
+        #error-404 .wrapper { display: flex; justify-content: space-between; align-items: center; gap: 0 64px; padding: 0 96px; width: 1140px; height: 600px; background-color: #f8f9fb; border-radius: 4px;margin:20px auto;}/*240528 수정*/
+        #error-404 .logo { margin-bottom: 100px; width: 184px; height: 34px; }
+        #error-404 img { width: 100%; height: auto; }
+        #error-404 .message-wrapper { margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #d4d6e1; }
+        #error-404 h1 { margin: 26px 0; width: 455px; height: 38px; }/*240528 수정*/
+        #error-404 h2 { margin-bottom: 16px; font-size: 20px; line-height: 24px; color: #333; font-weight: 500; }
+        #error-404 p { color: #666; font-size: 16px; }
+        #error-404 .cs-center-link { position: relative; bottom: 3px; display: inline-flex; justify-content: center; align-items: center; width: 70px; height: 24px; margin-left: 14px; background-color: #f1f1f1; border: 1px solid #c9c9c9; border-radius: 4px;  font-size: 12px; line-height: 1;}
+        #error-404 .cs-center dl { margin-bottom: 24px; }
+        #error-404 .cs-center dl > div { display: flex; }
+        #error-404 .cs-center dl dt { display: flex; align-items: center; gap: 0 7px; margin-left: 2px; }
+        #error-404 .cs-center dl dt::before { content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #a1a1a1;}
+        #error-404 .button-wrapper { display: flex; gap: 0 14px; }
+        #error-404 .button-wrapper a { display: inline-flex; justify-content: center; align-items: center; width: 138px; height: 38px; background-color: #fff; border-radius: 4px; font-size: 14px; line-height: 1; }
+        #error-404 .button-wrapper a:nth-child(1) { border: 1px solid #c9c9c9;}
+        #error-404 .button-wrapper a:nth-child(2) { border: 1px solid #508fdc; color: #508fdc;}
+        #error-404 .cs-center dl dt,
+        #error-404 .cs-center dl dd { color: #777; font-weight: 400; }
+        #error-404 .cs-center dl dt,
+        #error-404 .cs-center dl dd { font-size: 14px; line-height :24px; letter-spacing: 0.025em; }
+        #header{border-bottom: 2px solid #333;}
+        #header::after{content: "";display: block;clear:both;}
+        #header .inner_cnt{width: 1280px;margin: 0 auto;position:relative;padding: 0 0 10px 0;}
+        #header .inner_cnt h1{ margin-bottom: 0; width: 184px; height: 34px;float: left;margin-top: 15px;}
+        #header .inner_cnt .category{display: block; width:calc(100% - 200px);text-align: right;position: absolute;right:0;top: 20px;}
+        #header .inner_cnt .category li{display: inline-block;}
+        #header .inner_cnt .category li::before{content: "";display: inline-block;width:1px;height: 12px;background: #ccc;margin:0 15px;}
+        #header .inner_cnt .category li:first-child::before{display: none;}
+        #Footer {position:relative; clear:both;}
+        .footer-inner {position:relative; max-width:1280px; margin:0 auto; padding:40px 0 45px;}
+        .footer-util a {display:inline-block; font-size:16px; color:#555; font-weight:600; vertical-align:middle;}
+        .footer-util a:after {content:'·'; display:inline-block; margin:0 10px; font-size:20px; font-weight:bold; vertical-align:top; color:#999; line-height:20px;}
+        .footer-util a:last-child:after {display:none;}
+        .footer-util a:nth-of-type(2) {color:#4380ce;}
+        .footer-addr {margin-top:20px;}
+        .footer-addr > p {margin-top:2px; font-size:14px; color:#666;}
+        .footer-addr > p > span {padding-left:10px; line-height:1.5;font-size: 14px;}
+        .footer-addr > p > span:first-child {padding-left:0;}
+        .footer-addr > p > span:before {content:''; display:inline-block; margin-right:10px; width:1px; height:10px; background:#e5e5e5; vertical-align:middle;}
+        .footer-addr > p > span:first-child:before {display:none;}
+        .family-site {height:52px; border-top:1px solid #d9d9da; border-bottom:1px solid #d9d9da;}
+        .family-slide {max-width:1260px; margin:0 auto; overflow:hidden;}
+        .family-slide div {margin:0 auto; background-size:auto 100px; background-position:50% 0; background-repeat:no-repeat; font-size:0;}
+        .family-slide div:hover {background-position:50% bottom;}
+        .family-slide div a {display:block; height:50px;}
+        .family-slide .fam-ebs {background-image:url('https://book.ebs.co.kr/images/fam_site01.png');}
+        .family-slide .fam-pri {background-image:url('https://book.ebs.co.kr/images/fam_site02.png');}
+        .family-slide .fam-mid {background-image:url('https://book.ebs.co.kr/images/fam_site03.png');}
+        .family-slide .fam-high {background-image:url('https://book.ebs.co.kr/images/fam_site04.png');}
+        .family-slide .fam-eng {background-image:url('https://book.ebs.co.kr/images/fam_site05.png');}
+        .family-slide .fam-math {background-image:url('https://book.ebs.co.kr/images/fam_site06.png');}
+        .family-slide .fam-rang {background-image:url('https://book.ebs.co.kr/images/fam_site07.png');}
+        .family-slide .fam-esof {background-image:url('https://book.ebs.co.kr/images/fam_site08.png');}
+        .footer-cust {position:absolute; right:10px; top:25px; font-size:11px; letter-spacing:0;}
+        .footer-cust > p{font-size: 13px!important;}
+        .footer-cust > span {display:block; font-size:16px; font-weight:600;}
+        .footer-cust > strong {margin-right:15px; font-size:30px; color:#888; font-weight:600; line-height:1.15; vertical-align:middle;}
+        .footer-cust > button {width:88px; padding-left:15px; text-align:center; border:1px solid #6f6f6f; background:url('https://book.ebs.co.kr/images/ico_pc.png')4px 50% no-repeat; border-radius:4px; font-size:12px; line-height:29px; vertical-align:middle;}
+        .footer-cust .mark {margin-top:5px; padding:10px 0 10px 55px; background:url('https://book.ebs.co.kr/images/ft_mark.png')0 50% no-repeat;}
+        .footer-cust .mark p{font-size: 13px!important;}
+        @media screen and (min-width: 641px) and (max-width: 1142px) {
+            #error-404 h1 { margin: 26px auto; }
+            #error-404 .wrapper { flex-direction: column; justify-content: flex-start; gap:0; margin-top: 10vw; padding: 64px 36px; width: calc(90vw - 17px); height: inherit; }
+            #error-404 .logo { margin-bottom: 48px; width: 164px; height: 32px; }
+            #error-404 .message-wrapper h2 { text-align: center; }
+            #error-404 .cs-center h2,
+            #error-404 .cs-center dl { margin-left: 20px; }
+        }
+        @media screen and (max-width: 640px) {
+            #error-404 .wrapper { flex-direction: column; justify-content: flex-start; width:100%;; height: 152.38vw; margin:0; padding: 5.63vw 0;  }
+            #error-404 .image-wrapper { padding: 0 6.25vw; width: 100%; }
+            #error-404 .logo { margin-bottom: 7.5vw; width: 25.63vw; height: 5vw; }
+            #error-404 .mockup { margin: 0 auto; width: 41.56vw; height: 40.75vw; }/*240528 수정*/
+            #error-404 h1 { margin: 3.75vw auto; width: 70.63vw; height: 5.63vw; }
+            #error-404 h2 { margin-bottom: 2.5vw; font-size: 3.75vw; }
+            #error-404 .message-wrapper { margin: 0; padding: 0; }
+            #error-404 .message-wrapper h2 {text-align: center; font-size: 3.75vw; line-height: 1.25; letter-spacing: 0;  }
+            #error-404 p { margin: 0 auto 6.25vw; width: 54.06vw; color: #666; font-size: 3.44vw; font-weight: 400; line-height: 3.91vw; }
+            #error-404 .cs-center { padding: 5.63vw 1.88vw; }
+            #error-404 .cs-center h2 { font-weight: 700; margin-left: 2.25vw; }/*240528 수정*/
+            #error-404 .cs-center-link { position: relative; bottom: .31vw; margin-left: 3.13vw; width: 17.81vw; height: 5.94vw; font-weight: 500; font-size: 2.81vw; line-height: 1; }
+            #error-404 .cs-center dl { margin: 0 0 6.25vw 1.56vw; }/*240528 수정*/
+            #error-404 .cs-center dl dt { gap: 1.88vw; }
+            #error-404 .cs-center dl dt,
+            #error-404 .cs-center dl dd { font-size: 3.13vw; line-height: 4.06vw; }
+            #error-404 .button-wrapper { gap: 0 2.5vw; }
+            #error-404 .button-wrapper a { width: 38vw; height: 9.69vw; font-size: 3.44vw; letter-spacing: -0.040em; }/*240528 수정*/
+            #header .inner_cnt h1{float: none!important}
+            #header .inner_cnt .category{width: 100%!important;display: block!important;float: none!important;position:relative!important;margin-bottom: 10px!important;top:0!important;text-align: center!important}
+            #header .inner_cnt .category li::before{margin:0 5px!important;}
+        }
+        @media all and (max-width:1024px) {
+            .footer-inner {padding:0; padding-bottom:25px; background:#4e4e4e;}
+            .footer-util {background:#2b2b2b; text-align:center;}
+            .footer-util a {font-size:13px; color:#fff; line-height:58px;}
+            .footer-util a:after {margin:0 4px; line-height:58px; font-size:14px;}
+            .footer-cust {display:none;}
+            .footer-addr {padding:6px 18px 0; color:#f6f6f6; font-size:12px; font-weight:300;}
+            .footer-addr dt, .footer-addr dd {display:inline-block; padding-bottom:8px; vertical-align:top; letter-spacing:-.3px;}
+            .footer-addr dt {width:120px;}
+            .footer-addr dd {width:calc(100% - 125px); word-break:keep-all;}
+            .family-site {display:none;}
+            #header .inner_cnt{width: 100%!important;padding:0 20px!important;}
+            #header .inner_cnt h1{margin-top: 10px}
+            #header .inner_cnt .category{right:20px!important;}
+        }
+    </style>
+</head>
+<body id="error-404">
+    <div id="header">
+        <div class="inner_cnt">
+            <h1 class="logo"><a href="https://book.ebs.co.kr"><img src="https://book.ebs.co.kr/images/error_logo.png" alt="EBS 북스토리 로고"></a></h1>
+            <ul class="category">
+                <li><a href="https://book.ebs.co.kr/ebook/index">eBook</a></li>
+                <li><a href="https://book.ebs.co.kr/roadmap/high">고교</a></li>
+                <li><a href="https://book.ebs.co.kr/roadmap/middle">중학</a></li>
+                <li><a href="https://book.ebs.co.kr/roadmap/primary">초등</a></li>
+                <li><a href="https://book.ebs.co.kr/roadmap/english">유・초등 영어</a></li>
+                <li><a href="https://book.ebs.co.kr/event/eventCurrent">이벤트</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="image-wrapper">
+            <div class="logo"><img src="https://book.ebs.co.kr/images/error_logo.png" alt="EBS 북스토리 로고"></div>
+            <div class="mockup"><img src="https://book.ebs.co.kr/images/error_mockup.jpg" alt="북스토리 PC, 태블릿, 모바일기기 목업 이미지"></div><!--240528 수정-->
+        </div>
+        <section>
+            <h1><img src="https://book.ebs.co.kr/images/error_message.jpg" alt="페이지를 찾을 수 없습니다."></h1> <!--240528 수정-->
+            <div class="message-wrapper">
+                <h2>
+                    죄송합니다.<br>
+                    요청하신 페이지를 찾을 수 없습니다.
+                </h2>
+                <p>동일한 문제가 지속적으로 발생될 경우 고객센터로 문의하여 주시기 바랍니다.</p>
+            </div>
+            <div class="cs-center">
+                <h2>고객센터<a href="https://www.ebs.co.kr/customer" class="cs-center-link" title="현재 창에서 이동">바로가기</a></h2>
+            
+                <dl>
+                    <div>
+                        <dt>전화번호&nbsp;:&nbsp;</dt>
+                        <dd>1588-1580 (발신자 부담)</dd>
+                    </div>
+                    <div>
+                        <dt>운영시간&nbsp;:&nbsp;</dt>
+                        <dd>월~금 8:00~18:00 (점심시간 12:00~13:00)</dd>
+                    </div>
+                    <div>
+                        <dt>휴무시간&nbsp;:&nbsp;</dt>
+                        <dd>토·일요일·공휴일 휴무</dd>
+                    </div>
+                    <div>
+                        <dt>E-mail&nbsp;:&nbsp;</dt>
+                        <dd>helpdesk@ebs.co.kr</dd>
+                    </div>
+                </dl>
+                <div class="button-wrapper">
+                    <a href="#" onclick="history.back(-1); return false;" title="현재 창에서 이동">이전 페이지</a>
+                    <a href="https://book.ebs.co.kr" title="현재 창에서 이동">홈으로</a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <div id="Footer">
+		<div class="family-site">
+			<div class="family-slide swiper-container-initialized swiper-container-horizontal">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide fam-ebs swiper-slide-active" style="width: 157.5px;"><a href="https://www.ebs.co.kr/main" target="_blank">EBS</a></div>
+					<div class="swiper-slide fam-pri swiper-slide-next" style="width: 157.5px;"><a href="https://www.ebsi.co.kr/ebs/pot/poti/main.ebs" target="_blank">EBS고교</a></div>
+					<div class="swiper-slide fam-mid" style="width: 157.5px;"><a href="https://primary.ebs.co.kr/main/primary" target="_blank">EBS초등</a></div>
+					<div class="swiper-slide fam-high" style="width: 157.5px;"><a href="https://mid.ebs.co.kr/main/middle/" target="_blank">EBS중학</a></div>
+					<div class="swiper-slide fam-eng" style="width: 157.5px;"><a href="https://www.ebse.co.kr/apps/main/main.do" target="_blank">EBS영어</a></div>
+					<div class="swiper-slide fam-math" style="width: 157.5px;"><a href="https://ebsmath.co.kr/" target="_blank">EBS수학</a></div>
+					<!-- <div class="swiper-slide fam-rang"><a href="http://www.ebslang.co.kr/main.ebs" target="_blank">EBS랑</a></div> -->
+					<div class="swiper-slide fam-esof" style="width: 157.5px;"><a href="https://www.ebssw.kr/" target="_blank">EBS이솝</a></div>
+				</div>
+			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		</div>
+		<div class="footer-inner">
+			<div class="footer-util">
+				<a href="https://book.ebs.co.kr/notice/list">공지사항</a>
+				<a href="https://sso.ebs.co.kr/policy/privacy?fsdc=?fsdc=" target="_blank">개인정보처리방침</a>
+				<a href="https://home.ebs.co.kr/copyright/main" target="_blank">저작권침해정보</a>
+				<a href="https://sso.ebs.co.kr/policy/termsInfo" target="_blank">이용약관</a>
+			</div>
+			<div class="footer-cust">
+				<span>고객센터</span>
+				<strong>1588-1580</strong><button onclick="window.open('https://www.whelper.co.kr/client/main.do')">원격지원</button>
+				<p>helpdesk@ebs.co.kr</p>
+				<div class="mark">
+					<p>[인증범위] EBS 교육 포털 웹서비스</p>
+					<p>[유효기간] 2025.04.16 ~ 2028.04.15</p>
+				</div>
+			</div>
+			<div class="footer-addr pc">
+				<p>
+					<span class="foot-pc-ceo1">10393 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사</span>
+					<span class="foot-pc-ceo2">사업자등록번호 : 229-82-01343 (한국교육방송공사 사장 김유열)</span>
+				</p>
+				<p>
+					<span>이용자불만상담 : <a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></span>
+					<span>부가통신사업신고 : 10077</span><span>통신판매업신고 : 2017-고양일산동-1415 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></span>
+				</p>
+			</div>
+			<div class="footer-addr mb">
+				<dl>
+					<dt class="foot-m-ceo1">사장</dt>
+					<dd class="foot-m-ceo2">김유열</dd>
+					<dt>주소</dt>
+					<dd>경기도 고양시 일산동구 한류월드로 281 (장항동 한국교육방송공사)</dd>
+					<dt>연락처</dt>
+					<dd>1588-1580 (대표전화/고객센터) helpdesk@ebs.co.kr</dd>
+					<dt>사업자등록번호</dt>
+					<dd>229-82-01343</dd>
+					<dt>이용자불만상담</dt>
+					<dd><a href="mailto:hotline@ebs.co.kr">hotline@ebs.co.kr</a></dd>
+					<dt>부가통신사업신고</dt>
+					<dd>10077</dd>
+					<dt>통신판매업사업신고</dt>
+					<dd>고양일산동-1415호 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="ebk_pw" style="display: none;">	
+			<div class="pw_dim"></div>
+			<div class="pw_dim_layer">
+				<div class="pw_layer">
+					<div class="sso_change">
+						<h1><img src="https://book.ebs.co.kr/images/head_logo_main.gif" alt="EBS 로고"> 개인정보 보호를 위한 <em>비밀번호</em> 변경 안내</h1>
+						<div class="sso_inner">
+							<h2>안녕하세요 EBS Book Story입니다.</h2>
+							<p>최근 인터넷 상에서 개인정보 유출로 인한 피해가 확산되고 있습니다. <br>
+			                       회원님의 소중한 개인정보를 안전하게 보호하고 개인정보 도용으로 인한 피해를 예방하기 위해 비밀번호 변경 안내를 요청드립니다.</p>
+			
+							<form name="pwdChangFrm" id="pwdChangFrm" method="post" action="">
+								<input type="hidden" name="userId" id="userId" value="${ssoUser.id}">
+								<div class="sso_info">
+									<dl>
+										<dt>아이디</dt>
+										<dd id="ssoTargerId">ebsydk4</dd>
+										<dt><label for="currentPassword">현재 비밀번호</label></dt>
+										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="currentPassword" id="currentPassword" maxlength="12"></dd>
+										<dt><label for="password">새로운 비밀번호</label></dt>
+										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="password" id="password" maxlength="12">
+											<div id="passwordMessage" class="info_text03"></div>
+											<p>비밀번호는 8~12자의 영문 대/소문자, 숫자, 특수문자를 <br>혼합해서 사용하실 수 있습니다.</p>
+										</dd>
+										<dt><label for="confirmPassword">비밀번호 확인</label></dt>
+										<dd><input type="password" class="input_text" style="width:160px; ime-mode:disabled;" name="confirmPassword" id="confirmPassword" maxlength="12">
+											<p>재확인을 위해서 입력하신 비밀번호를 다시 한번 입력해 주세요.</p>
+										</dd>
+									</dl>
+									<p class="info_text">아이디, 생일, 전화번호 등 개인정보와 관련된 숫자, 연속적이거나(abcd,1234) 동일한 문자 반복 등  타인이 쉽게 알아낼 수 있는 비밀번호는 개인정보 유출<br> 위험이 있으므로 사용을 자제해주시기 바랍니다.</p>
+								</div>
+							</form>
+						</div>
+						<div class="btn_sso">
+							<a href="#none" onclick="ssoTargerUtil.pwdChange(); return false;">
+								<img src="https://book.ebs.co.kr/images/btn_change01.gif" alt="변경하기">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

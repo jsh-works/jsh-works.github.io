@@ -461,10 +461,77 @@
 								<li data-layer="paper" class="">종이책</li>
 							</ul>
 						</nav>
+
+						<!-- ebook 구독 -->
 						<div class="book-details scribe">
 							<div class="thumb-box">
 								<div class="thumb-img">
 									<img src="./imgs/books_example.png" alt="교재 이미지" />
+									<div class="thumb-ico">
+										<button class="favorite-ico"></button>
+										<button class="preview-ico">미리보기</button>
+										<button class="seeAll-ico">전체 시리즈 보기</button>
+									</div>
+								</div>
+							</div>
+							<div class="book-infos">
+								<div class="ticket-box">
+									<img src="./imgs/book-details_ticket_01.png" width="77" alt="수능 패스" />
+									<img src="./imgs/book-details_ticket_02.png" width="128" alt="중학 eBook 구독" />
+									<img src="./imgs/book-details_ticket_03.png" width="128" alt="초등 eBook 구독" />
+									<span>이용 가능</span>
+								</div>
+
+								<div class="price-box">
+									<dl class="tit">
+										<dt>한국교육방송공사</dt>
+										<dd>ISBN: 9788954789325</dd>
+									</dl>
+									<dl>
+										<dt>대상</dt>
+										<dd>2,3학년</dd>
+									</dl>
+									<dl>
+										<dt>과목</dt>
+										<dd>국어</dd>
+									</dl>
+									<dl>
+										<dt>eBook 정가</dt>
+										<dd class="lineThrough">12,000원</dd>
+									</dl>
+									<dl>
+										<dt>eBook 판매가</dt>
+										<dd class="blueColor">
+											9,600원
+											<em>(10%할인)</em>
+										</dd>
+									</dl>
+									<dl class="last-dl">
+										<dt>부가자료</dt>
+										<dd>
+											<span>정답지</span>
+											<span>정오표</span>
+											<span>MP3</span>
+										</dd>
+									</dl>
+									<div class="price-btns-box">
+										<button class="long-btn">eBook 구독으로 이용</button>
+										<div class="row-btns">
+											<button class="short-btn">eBook 이용 안내</button>
+											<button class="short-btn">eBook 결제/환불</button>
+											<button class="short-btn">eBook 주요 정책</button>
+											<button class="short-btn">eBook 구독 이용 안내</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ebook -->
+						<div class="book-details ebook">
+							<div class="thumb-box">
+								<div class="thumb-img">
+									<img src="./imgs/books_example_ebook.png" alt="교재 이미지" />
 									<div class="thumb-ico">
 										<button class="favorite-ico"></button>
 										<button class="preview-ico">미리보기</button>
@@ -504,7 +571,7 @@
 											<em>(10%할인)</em>
 										</dd>
 									</dl>
-									<dl>
+									<dl class="last-dl">
 										<dt>부가자료</dt>
 										<dd>
 											<span>정답지</span>
@@ -512,31 +579,27 @@
 											<span>MP3</span>
 										</dd>
 									</dl>
-								</div>
-							</div>
-						</div>
-
-						<div class="book-details ebook">
-							<div class="thumb-box">
-								<div class="thumb-img">
-									<img src="./imgs/books_example.png" alt="교재 이미지" />
-									<div class="thumb-ico">
-										<button class="favorite-ico"></button>
-										<button class="preview-ico">미리보기</button>
-										<button class="seeAll-ico">전체 시리즈 보기</button>
+									<div class="price-btns-box">
+										<div class="between-btns">
+											<button class="middle-btn">장바구니</button>
+											<button class="long-btn">eBook 구독으로 이용</button>
+										</div>
+										<div class="row-btns">
+											<button class="short-btn">eBook 이용 안내</button>
+											<button class="short-btn">eBook 결제/환불</button>
+											<button class="short-btn">eBook 주요 정책</button>
+											<button class="short-btn">eBook 구독 이용 안내</button>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="book-infos">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam fugiat sed minus, blanditiis at dicta consequuntur sit adipisci eveniet qui facere quasi libero molestias dolor ad pariatur facilis perferendis temporibus.
-								Sequi corporis quis dolor fugiat? Quis esse, corrupti aperiam distinctio ut necessitatibus, repudiandae iure reprehenderit repellendus tempore enim blanditiis magnam nobis eum. Dolorem aliquam in unde veritatis aliquid doloremque laborum.
-							</div>
 						</div>
 
+						<!-- 종이책 -->
 						<div class="book-details paper">
 							<div class="thumb-box">
 								<div class="thumb-img">
-									<img src="./imgs/books_example.png" alt="교재 이미지" />
+									<img src="./imgs/books_example_ebook.png" alt="교재 이미지" />
 									<div class="thumb-ico">
 										<button class="favorite-ico"></button>
 										<button class="preview-ico">미리보기</button>
@@ -545,15 +608,74 @@
 								</div>
 							</div>
 							<div class="book-infos">
-								zzzzzzzzzzzzzzzz
+								<div class="ticket-box">
+									<img src="./imgs/book-details_ticket_01.png" width="77" alt="수능 패스" />
+									<img src="./imgs/book-details_ticket_02.png" width="128" alt="중학 eBook 구독" />
+									<img src="./imgs/book-details_ticket_03.png" width="128" alt="초등 eBook 구독" />
+									<span>이용 가능</span>
+								</div>
+
+								<div class="price-box">
+									<dl class="tit">
+										<dt>한국교육방송공사</dt>
+										<dd>ISBN: 9788954789325</dd>
+									</dl>
+									<dl>
+										<dt>대상</dt>
+										<dd>2,3학년</dd>
+									</dl>
+									<dl>
+										<dt>과목</dt>
+										<dd>수학</dd>
+									</dl>
+									<dl>
+										<dt>적립/혜택</dt>
+										<dd class="lineThrough">100P</dd>
+									</dl>
+									<dl>
+										<dt>배송안내</dt>
+										<dd class="blueColor">
+											9,600원
+											<em>(10%할인)</em>
+										</dd>
+									</dl>
+									<dl class="last-dl">
+										<dt>부가자료</dt>
+										<dd>
+											<span>정답지</span>
+											<span>정오표</span>
+											<span>MP3</span>
+										</dd>
+									</dl>
+									<div class="price-btns-box">
+										<div class="between-btns">
+											<button class="middle-btn">장바구니</button>
+											<button class="long-btn">eBook 구독으로 이용</button>
+										</div>
+										<div class="row-btns">
+											<button class="short-btn">eBook 이용 안내</button>
+											<button class="short-btn">eBook 결제/환불</button>
+											<button class="short-btn">eBook 주요 정책</button>
+											<button class="short-btn">eBook 구독 이용 안내</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>
 
+
+			<div class="prod-purchase-footer scribe">
+				<div class="prod-inner">
+					<div class="left-prod-info">EBS eBook 구독으로 가벼운 학습을 시작하세요!</div>
+					<div class="right-prod-info">
+						<button class="scribe-btn"></button>
+						<button class="long-btn">eBook 구독으로 이용</button>
+					</div>
+				</div>
+			</div>
 
 			<!-- details -->
 			<div class="sub-cnt-wrap">
@@ -568,11 +690,6 @@
 						<!-- //tab -->
 						<!-- 책 소개 -->
 						<div class="tab-cnt book-intro" id="tab_1" style="display: block;">
-
-
-
-
-
 							<!-- 책 소개 -->
 							<div>
 								<table class="tbl-data" summary="이 상품의 상세정보">
@@ -607,29 +724,10 @@
 									대표 문제의 단계별 풀이 과정을 확인하며 문제 유형별 해결 전략을 학습할 수 있습니다.
 									3. 실력 완성을 위한 단계별 종합 문제 제공!
 									기본, 실력, 발전까지 이어지는 단계별 문항과 신유형, 고득점, 1등급의 다양한 문항을 풀며 실전 실력을 다질 수 있습니다.</div>
-
 								<div class="cnt"><br><br><b>◆ 상세이미지 ◆</b><br><br>
 									<p align="left"><img src="https://contents.kyobobook.co.kr/dtl/illustrate/939/i9788954791939.jpg"></p>
 								</div>
-
-
-
 							</div>
-							<!-- //책 소개 -->
-
-							<!-- eBook 소개 -->
-
-							<!-- //책 소개 -->
-
-
-
-
-
-
-
-
-
-
 							<script>
 								var fmySiteDsCd = "EBSI";
 								function goCoursePage(courseId) {
@@ -650,18 +748,12 @@
 								}
 							</script>
 						</div>
-						<!-- 책 소개 -->
-						<!-- 목차 -->
 						<div class="tab-cnt" id="tab_2" style="display: none;"></div>
-						<!-- //목차 -->
-						<!-- 관련 강좌 -->
 						<div class="tab-cnt" id="tab_3" style="display: none;"></div>
-						<!-- //관련 강좌 -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- //contents -->
 
 		<form id="subForm" name="subForm" action="/sub/primary/list" method="post">
 			<input type="hidden" name="orderBy" />
@@ -676,12 +768,6 @@
 			<input type="hidden" name="txbkGbn" value="grade" />
 			<input type="hidden" name="pageNo" />
 		</form>
-
-
-
-		<!-- 퀵메뉴 -->
-
-
 		<script>
 			var isMobile = {
 				Android: function () {

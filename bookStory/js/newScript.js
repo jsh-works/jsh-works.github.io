@@ -1,21 +1,22 @@
 $(function(){
-  
+  $(".prod-purchase-footer").css({ bottom : '0px' });
+
   /** Tab Menu Event */
   $(".menu-nav ul li").on('click', function(){
     if($(this).data('layer') === "scribe") {
-      $(".book-details.scribe").fadeIn();
+      $(".book-details.scribe").fadeIn().css({ display : 'flex'});
       $(".book-details.ebook").hide();
       $(".book-details.paper").hide();
 
     } else if($(this).data('layer') === "ebook") {
       $(".book-details.scribe").hide();
-      $(".book-details.ebook").fadeIn();
+      $(".book-details.ebook").fadeIn().css({ display : 'flex'});
       $(".book-details.paper").hide();
 
     } else if($(this).data('layer') === "paper") {
       $(".book-details.scribe").hide();
       $(".book-details.ebook").hide();
-      $(".book-details.paper").fadeIn();
+      $(".book-details.paper").fadeIn().css({ display : 'flex'});
     }
 
 

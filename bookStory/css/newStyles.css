@@ -168,6 +168,7 @@ margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 2px;
   width: 100%;
   margin-bottom: 40px;
 }
@@ -191,7 +192,6 @@ margin: 0 auto;
   gap: 16px;
   width: 100%;
   padding-bottom: 12px;
-  margin-bottom: 16px;
   border-bottom: 1px solid rgba(221, 221, 221, 1);
 }
 
@@ -210,6 +210,10 @@ margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   gap: 16px;
+}
+#contentsWrap .container .book-details .price-box dl.last-dl {
+  height: 35px;
+  margin-bottom: 24px;
 }
 #contentsWrap .container .book-details .price-box dl dt {
   width: 126px;
@@ -236,4 +240,144 @@ margin: 0 auto;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+#contentsWrap .container .book-details .price-box dl dd span {
+  position: relative;
+  color: #3650B8;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  padding: 6px 10px 7px 29px;
+  border-radius: 6px;
+  border: 1px solid #4663D9;
+  box-sizing: border-box;
+}
+#contentsWrap .container .book-details .price-box dl dd span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  background: url("../imgs/ref-ico_01.png") center center/12px 15px no-repeat;
+}
+#contentsWrap .container .book-details .price-box dl dd span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  background: url("../imgs/ref-ico_02.png") center center/14px 14px no-repeat;
+}
+#contentsWrap .container .book-details .price-box dl dd span:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  background: url("../imgs/ref-ico_03.png") center center/13px 10px no-repeat;
+}
+#contentsWrap .container .book-details .price-box .price-btns-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+#contentsWrap .container .book-details .price-box .price-btns-box .between-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+#contentsWrap .container .book-details .price-box .price-btns-box .row-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+#contentsWrap button.long-btn {
+  width: 100%;
+  height: 59px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  background-color: #6B89FF;
+  box-shadow: 0px 8px 36px 0px #00000026;
+}
+#contentsWrap button.middle-btn {
+  min-width: 200px;
+  height: 59px;
+  color: #4165F4;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  padding: 16px 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #4165F4;
+  box-shadow: 0px 8px 36px 0px #00000026;
+}
+#contentsWrap button.short-btn {
+  width: 140px;
+  height: 35px;
+  color: #3650B8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  padding: 8px 0px;
+  border-radius: 6px;
+  border: 1px solid #4663D9;
+}
+#contentsWrap button.scribe-btn {
+  display: inline-block;
+  min-width: 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: url("../imgs/favorite-ico.png") center center/20px 20px no-repeat;
+}
+#contentsWrap .prod-purchase-footer {
+  position: fixed;
+  left: 0;
+  bottom: -71px;
+  width: 100%;
+  min-width: 1440px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 999;
+  transition: all 0.35s;
+  
+}
+#contentsWrap .prod-purchase-footer .prod-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .left-prod-info {
+  font-weight: 700;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .right-prod-info {
+  display: flex;
+  gap: 8px;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn {
+  height: 50px;
+  font-size: 16px;
 }

@@ -24,7 +24,7 @@ export default function Button({
       >
         { btnName }
       </div>
-      { open && !toggle && <Modal />}
+      { open && toggle && <Modal /> }
     </>
   )
 }

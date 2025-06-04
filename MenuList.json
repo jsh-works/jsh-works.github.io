@@ -21,13 +21,6 @@
     "update" : "2025.05.23"
   },
   {
-    "id" : "bookStory",
-    "menuName" : "북스토리 - 구독 메인 페이지",
-    "devUrl" : "bookStory/subScribeMain.html",
-    "mainUrl" : "",
-    "update" : "2025.05.23"
-  },
-  {
     "id" : "e-book",
     "menuName" : "학급/학습 이력관리",
     "devUrl" : "learnHistory/index.html",

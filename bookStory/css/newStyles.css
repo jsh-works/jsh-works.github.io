@@ -381,3 +381,32 @@ margin: 0 auto;
   height: 50px;
   font-size: 16px;
 }
+
+
+/* main visual Renewal */
+#contentsWrap .mainContainer {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  padding: 30px 0px;
+  margin: 0 auto;
+}
+#contentsWrap .mainContainer .flex-inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 16px;
+  column-gap: 30px;
+}
+#contentsWrap .mainContainer .flex-inner .slideBanner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+#contentsWrap .mainContainer .flex-inner .slideBanner .slideReat {
+  width: 100%;
+}

@@ -47,11 +47,24 @@ $(function(){
   });
 
   /** Favorite Click Event */
-  $(".favorite-ico").on('click', function(){
+  $(".favorite-ico").on('click', function(e){
+    e.preventDefault();
     if(!$(this).hasClass('active')) {
       $(this).addClass('active');
     } else {
       $(this).removeClass('active');
+    }
+  });
+
+  /** full list view event */
+  $(".list-active dd").on('click', function(){
+    if($(".list-active dd").hasClass('active')) {
+      $(".list-active dd").removeClass('active');
+      $(this).addClass('active');
+      // $(".list-view").addClass('select');
+      
+    } else {
+      $(".list-active dd").removeClass('active');
     }
   });
 });

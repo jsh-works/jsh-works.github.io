@@ -2,11 +2,18 @@
   {
     "id" : "bookStory",
     "menuName" : "북스토리 - 메인 페이지",
-    "devUrl" : "bookStory/bookStoryMain.html",
+    "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.05.23"
+    "update" : "2025.06.11"
   },
-    {
+  {
+    "id" : "bookStory",
+    "menuName" : "북스토리 - 고교 메인 페이지",
+    "devUrl" : "bookStory/bookStoryHighMain.html",
+    "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
+    "update" : "2025.06.11"
+  },
+  {
     "id" : "bookStory",
     "menuName" : "북스토리 - 메인 View 페이지",
     "devUrl" : "bookStory/bookStoryView.html",

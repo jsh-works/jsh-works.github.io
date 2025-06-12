@@ -1,0 +1,1438 @@
+<html lang="ko">
+
+<head>
+  <style class="vjs-styles-defaults">
+    .video-js {
+      width: 300px;
+      height: 150px;
+    }
+
+    .vjs-fluid:not(.vjs-audio-only-mode) {
+      padding-top: 56.25%
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/app/app_base.css">
+  <link rel="stylesheet" href="css/app_common.css?v=202402152">
+  <link rel="stylesheet" href="css/xeicon.css">
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/video-js.css">
+
+  <!-- Context Path -->
+  <link id="contextPathHolder">
+
+  <script type="text/javascript" src="https://book.ebs.co.krhttps://book.ebs.co.kr/js/weblogs/nethru/wlo.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/custom.js?v=221229"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/app.common.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script type="text/javascript" src="https://book.ebs.co.kr/js/video.min.js"></script>
+
+  <script type="text/javascript">
+
+    // Global
+    var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
+    var ebsDateFormat = "YY.MM.DD";
+    var mediaPlayer = null;
+
+  </script>
+
+  <script>
+    var isLogin = true;
+  </script>
+
+  <title>강의 목록</title>
+  <style type="texthttps://book.ebs.co.kr/css">
+    .video-js .vjs-time-control {
+      display: block;
+    }
+
+    .video-js .vjs-remaining-time {
+      display: none;
+    }
+
+    .vodPlayer-dimensions {
+      width: 100% !important;
+    }
+
+    .mp3PlayerArea-dimensions {
+      width: 100% !important;
+    }
+
+    .vjs-poster {
+      background-size: cover;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+<body>
+
+  <form id="frm" name="frm">
+    <input type="hidden" id="nowIndex">
+    <input type="hidden" id="playType">
+  </form>
+
+  <div class="container">
+    <div class="search-result-contents-wrap">
+      <div id="accordionLecture" class="search-result-contents">
+        <div class="contents-item top-fix">
+          <div class="contents-tlt on" onclick="dropDownEvent(this)">
+            <p>[2025 내신만점 수능특강] 김보라의 영어</p>
+            <i class="arrow-icons">
+              <span>토글 버튼</span>
+            </i>
+          </div>
+          <div class="contents-sub">
+            <div class="item-wrap">
+              <div class="item-video">
+                <video id="vodPlayer" class="video-js vjs-big-play-centered vjs-big-play-button vjs-16-9">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents-dim">
+          <span class="tit">강의 목록</span>
+          <span>인덱스</span>
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 0)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030051877&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>오리엔테이션</p>
+                </div>
+                <span class="time-area">03:11</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="0">
+              <div>
+
+                <div class="contents-player-wrap">
+                  <p class="tit">오프닝</p>
+                  <span class="time">[00:09]</span>
+                  <button class="ico-player xi-play-circle-o" onclick="selectIndex(this, &quot;9&quot;)">
+                    <span>재생 버튼</span>
+                  </button>
+                </div>
+                <div class="contents-player-wrap">
+                  <p class="tit">내신 시험 완벽 준비법</p>
+                  <span class="time">[01:10]</span>
+                  <button class="ico-player xi-play-circle-o" onclick="selectIndex(this, &quot;70&quot;)">
+                    <span>재생 버튼</span>
+                  </button>
+                </div>
+                <div class="contents-player-wrap">
+                  <p class="tit">강좌별 구성</p>
+                  <span class="time">[01:37]</span>
+                  <button class="ico-player xi-play-circle-o" onclick="selectIndex(this, &quot;97&quot;)">
+                    <span>재생 버튼</span>
+                  </button>
+                </div>
+                <div class="contents-player-wrap">
+                  <p class="tit">수강생의 할 일</p>
+                  <span class="time">[02:24]</span>
+                  <button class="ico-player xi-play-circle-o" onclick="selectIndex(this, &quot;144&quot;)">
+                    <span>재생 버튼</span>
+                  </button>
+                </div>
+
+
+                <script>
+                  /*<![CDATA[*/
+
+
+                  /*]]>*/
+                </script>
+              </div>
+            </div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 1)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030051878&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>01강 03 요지, 04 주장 (1)</p>
+                </div>
+                <span class="time-area">48:47</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="1"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 2)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030051879&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>02강 04 주장 (2), 05 함축, 06 주제 (1)</p>
+                </div>
+                <span class="time-area">48:46</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="2"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 3)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030051880&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>03강 06 주제 (2), 07 제목, 11 어법 (1)</p>
+                </div>
+                <span class="time-area">48:48</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="3"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 4)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052116&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>04강 11 어법 (2), 12 어휘</p>
+                </div>
+                <span class="time-area">48:44</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="4"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 5)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052117&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>05강 13 빈칸 (1)</p>
+                </div>
+                <span class="time-area">48:45</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="5"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 6)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052118&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>06강 13 빈칸 (2), 14 흐름 (1)</p>
+                </div>
+                <span class="time-area">48:56</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="6"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 7)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052189&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>07강 14 흐름 (2), 15 순서 (1)</p>
+                </div>
+                <span class="time-area">48:47</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="7"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 8)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052190&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>08강 15 순서 (2), 16 문장 위치</p>
+                </div>
+                <span class="time-area">48:58</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="8"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 9)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052191&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>09강 17 요약, 21</p>
+                </div>
+                <span class="time-area">48:55</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="9"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 10)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052630&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>10강 22, 23, 24(1)</p>
+                </div>
+                <span class="time-area">48:53</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="10"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 11)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052631&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>11강 24(2), 25, 26(1)</p>
+                </div>
+                <span class="time-area">49:03</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="11"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 12)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052632&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>12강 26(2), 27, 28</p>
+                </div>
+                <span class="time-area">49:03</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="12"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 13)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052942&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>13강 29, 30, 31(1)</p>
+                </div>
+                <span class="time-area">48:49</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="13"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 14)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052943&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>14강 31(2), Test 1</p>
+                </div>
+                <span class="time-area">48:59</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="14"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 15)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030052944&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>15강 Test 2 (1)</p>
+                </div>
+                <span class="time-area">48:41</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="15"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 16)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030053056&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>16강 Test 2 (2)</p>
+                </div>
+                <span class="time-area">48:46</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="16"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 17)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030053057&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>17강 Test 3 (1)</p>
+                </div>
+                <span class="time-area">48:53</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="17"></div>
+          </th:bolck>
+
+        </div>
+
+        <div class="contents-item">
+          <button class="video-player-btn">
+            <i class="main-video-player ico-player xi-play-circle-o" onclick="selectLect('main', this, 18)"></i>
+            <span>재생 버튼</span>
+          </button>
+          <th:bolck>
+            <div class="contents-tlt"
+              onclick="loadIndex(this, &quot;LS100030053058&quot;, &quot;EBSI&quot;, &quot;Y&quot;)">
+              <div class="col-02">
+                <div class="tit-area tit-play">
+                  <p>18강 Test 3 (2)</p>
+                </div>
+                <span class="time-area">48:45</span>
+              </div>
+              <i class="arrow-icons">
+                <span>토글 버튼</span>
+              </i>
+            </div>
+            <div class="contents-sub content-lect" style="display: none;" data-idx="18"></div>
+          </th:bolck>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /*<![CDATA[*/
+    let lectBgnNum = 0;
+    let lects = { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "courseId": "S20240000112", "data": [{ "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "\uC624\uB9AC\uC5D4\uD14C\uC774\uC158", "lectId": "LS100030051877", "lectTime": "191", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030051877\u0026file=S100030051877_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030051877.mp4", "sortOrd": 9, "indexYn": "Y", "otYn": "Y", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "01\uAC15 03 \uC694\uC9C0, 04 \uC8FC\uC7A5 (1)", "lectId": "LS100030051878", "lectTime": "2927", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030051878\u0026file=S100030051878_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030051878.mp4", "sortOrd": 10, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "02\uAC15 04 \uC8FC\uC7A5 (2), 05 \uD568\uCD95, 06 \uC8FC\uC81C (1)", "lectId": "LS100030051879", "lectTime": "2926", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030051879\u0026file=S100030051879_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030051879.mp4", "sortOrd": 20, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "03\uAC15 06 \uC8FC\uC81C (2), 07 \uC81C\uBAA9, 11 \uC5B4\uBC95 (1)", "lectId": "LS100030051880", "lectTime": "2928", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030051880\u0026file=S100030051880_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030051880.mp4", "sortOrd": 30, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "04\uAC15 11 \uC5B4\uBC95 (2), 12 \uC5B4\uD718", "lectId": "LS100030052116", "lectTime": "2924", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052116\u0026file=S100030052116_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052116.mp4", "sortOrd": 40, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "05\uAC15 13 \uBE48\uCE78 (1)", "lectId": "LS100030052117", "lectTime": "2925", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052117\u0026file=S100030052117_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052117.mp4", "sortOrd": 50, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "06\uAC15 13 \uBE48\uCE78 (2), 14 \uD750\uB984 (1)", "lectId": "LS100030052118", "lectTime": "2936", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052118\u0026file=S100030052118_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052118.mp4", "sortOrd": 60, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "07\uAC15 14 \uD750\uB984 (2), 15 \uC21C\uC11C (1)", "lectId": "LS100030052189", "lectTime": "2927", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052189\u0026file=S100030052189_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052189.mp4", "sortOrd": 70, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "08\uAC15 15 \uC21C\uC11C (2), 16 \uBB38\uC7A5 \uC704\uCE58", "lectId": "LS100030052190", "lectTime": "2938", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052190\u0026file=S100030052190_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052190.mp4", "sortOrd": 80, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "09\uAC15 17 \uC694\uC57D, 21", "lectId": "LS100030052191", "lectTime": "2935", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052191\u0026file=S100030052191_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052191.mp4", "sortOrd": 90, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "10\uAC15 22, 23, 24(1)", "lectId": "LS100030052630", "lectTime": "2933", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052630\u0026file=S100030052630_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052630.mp4", "sortOrd": 100, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "11\uAC15 24(2), 25, 26(1)", "lectId": "LS100030052631", "lectTime": "2943", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052631\u0026file=S100030052631_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052631.mp4", "sortOrd": 110, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "12\uAC15 26(2), 27, 28", "lectId": "LS100030052632", "lectTime": "2943", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052632\u0026file=S100030052632_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052632.mp4", "sortOrd": 120, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "13\uAC15 29, 30, 31(1)", "lectId": "LS100030052942", "lectTime": "2929", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052942\u0026file=S100030052942_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052942.mp4", "sortOrd": 130, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "14\uAC15 31(2), Test 1", "lectId": "LS100030052943", "lectTime": "2939", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052943\u0026file=S100030052943_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052943.mp4", "sortOrd": 140, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "15\uAC15 Test 2 (1)", "lectId": "LS100030052944", "lectTime": "2921", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030052944\u0026file=S100030052944_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030052944.mp4", "sortOrd": 150, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "16\uAC15 Test 2 (2)", "lectId": "LS100030053056", "lectTime": "2926", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030053056\u0026file=S100030053056_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030053056.mp4", "sortOrd": 160, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "17\uAC15 Test 3 (1)", "lectId": "LS100030053057", "lectTime": "2933", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030053057\u0026file=S100030053057_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030053057.mp4", "sortOrd": 170, "indexYn": "Y", "otYn": "N", "lecSeq": null }, { "courseNm": "[2025 \uB0B4\uC2E0\uB9CC\uC810 \uC218\uB2A5\uD2B9\uAC15] \uAE40\uBCF4\uB77C\uC758 \uC601\uC5B4", "lectNm": "18\uAC15 Test 3 (2)", "lectId": "LS100030053058", "lectTime": "2925", "mp3LecUrl": null, "lowLecUrl": null, "captUrl": "https:\/\/www.ebsi.co.kr\/ebs\/pot\/potb\/captionFileDownload.ebs?dir=caption\u0026path=\/S20240000112\/LS100030053058\u0026file=S100030053058_UTF", "highLecUrl": "https:\/\/WSTR.ebsi.co.kr\/M41M2401\/S20240000112\/S20240000112_1M4_100030053058.mp4", "sortOrd": 180, "indexYn": "Y", "otYn": "N", "lecSeq": null }] };
+    let ebookRestObj = { "txbkId": "LB00000005328", "ebkId": "EB100001443", "courseId": "S20240000112", "fmySiteDsCd": "EBSI", "ec": "ZjZNShVBdoA CGc0dnd9vQ==", "sbjtApplyId": "1036456013" };
+    let player = null;
+    let currIdx = -1;
+
+    let lectIndex = null;
+
+    let isMobile = {
+      Android: function () {
+        return /Android/i.test(navigator.userAgent);
+      },
+      MAC: function () {
+        return /Macintosh|Mac OS X/i.test(navigator.userAgent);
+      },
+      iOS: function () {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      },
+      any: function () {
+        return (isMobile.Android() || isMobile.iOS() || isMobile.MAC());
+      }
+    };
+
+    $(function () {
+      //뒤로가기 버튼 활성화/비활성화 체크
+      setScreenUI();
+    })
+
+    const play_lists = "lct-pl-li"
+    let playList = null
+
+    $(function () {
+
+      playList = JSON.parse(window.sessionStorage.getItem(play_lists));
+      if (playList == null) {
+        playList = {}
+      }
+
+      let options = {
+        languages: {
+          ko: {
+            'subtitles off': '자막 끄기'
+          }
+        },
+        language: "ko",
+        playbackRates: [.5, .75, 1, 1.25, 1.5, 2.0],
+        controls: true,
+        preload: "auto",
+        poster: "/images/app/vod_thum.jpg",
+        autoplay: false,
+        textTrackSettings: false,
+        controlBar: {
+          playToggle: true,
+          pictureInPictureToggle: false,
+          progressControl: true,
+          qualitySelector: true,
+          remainingTimeDisplay: {
+            displayNegative: false
+          }
+        }
+      };
+
+      player = videojs('vodPlayer', options);
+
+      if (lects != null && lects.data.length > 0) {
+        let srcUrl;
+
+        if (lectBgnNum != 0) {
+          srcUrl = replaceHttp(lects.data[lectBgnNum - 1].highLecUrl);
+        } else {
+          srcUrl = replaceHttp(lects.data[0].highLecUrl);
+        }
+
+        player.src(
+          [
+            { src: srcUrl, type: "video/mp4", label: "고화질", selected: true }
+          ]
+        )
+      }
+      var skipBehindBoutton = player.controlBar.addChild("button");
+      var skipBehindBouttonDom = skipBehindBoutton.el();
+      skipBehindBouttonDom.innerHTML = "<<";
+      skipBehindBoutton.addClass("buttonClass");
+      skipBehindBouttonDom.onclick = function () {
+        skips3mv(-10);
+      }
+      skipBehindBouttonDom.ontouchstart = function () {
+        skips3mv(-10);
+      }
+
+
+      var skipAheadBoutton = player.controlBar.addChild("button");
+      var skipAheadBouttonDom = skipAheadBoutton.el();
+      skipAheadBouttonDom.innerHTML = ">>";
+      skipAheadBoutton.addClass("buttonClass");
+      skipAheadBouttonDom.onclick = function () {
+        skips3mv(10);
+      }
+      skipAheadBouttonDom.ontouchstart = function () {
+        skips3mv(10);
+      }
+
+
+      function skips3mv(sec) {
+        player.currentTime(player.currentTime() + sec);
+
+      }
+
+
+      player.on('play', function () {
+        $("#playType").val("pause");
+        var mainVideoPlayer = document.getElementsByClassName('main-video-player');
+
+        if (lectIndex == null) {
+          mainVideoPlayer[0].classList.remove('xi-play-circle-o');
+          mainVideoPlayer[0].classList.add('xi-pause-circle-o');
+        } else {
+          mainVideoPlayer[lectIndex].classList.remove('xi-play-circle-o');
+          mainVideoPlayer[lectIndex].classList.add('xi-pause-circle-o');
+        }
+      });
+
+      player.on('pause', function () {
+        $("#playType").val("play");
+        var mainVideoPlayer = document.getElementsByClassName('main-video-player');
+
+        if (lectIndex == null) {
+          mainVideoPlayer[0].classList.remove('xi-pause-circle-o');
+          mainVideoPlayer[0].classList.add('xi-play-circle-o');
+        } else {
+          mainVideoPlayer[lectIndex].classList.remove('xi-pause-circle-o');
+          mainVideoPlayer[lectIndex].classList.add('xi-play-circle-o');
+        }
+      });
+    })
+
+    function vodEnrol() {
+      $.ajax({
+        url: "/ebook/save/enrol",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+          'ec': ebookRestObj.ec,
+          'txbkId': ebookRestObj.txbkId,
+          'ebkId': ebookRestObj.ebkId,
+          'fmySiteDsCd': ebookRestObj.fmySiteDsCd,
+          'courseId': ebookRestObj.courseId,
+          'lectId': lects.data[currIdx].lectId,
+          'sbjtApplyId': ebookRestObj.sbjtApplyId
+        },
+        success: function (jsonData) {
+        },
+        error: function (err) {
+        }
+      });
+    }
+
+    function selectLect(type, e, index) {
+      lectIndex = index;
+      var nowIndex = $("#nowIndex").val();
+      var playType = $("#playType").val();
+
+      if (index == nowIndex) {
+        if (type == "main") {
+          if (playType == "play") {
+            $(e).addClass('xi-play-circle-o');
+            $(e).removeClass('xi-pause-circle-o');
+            $("#playType").val("pause");
+
+            player.pause();
+          } else {
+            $(e).removeClass('xi-play-circle-o');
+            $(e).addClass('xi-pause-circle-o');
+            $("#playType").val("play");
+
+            player.play();
+
+          }
+        }
+      } else {
+        cleanTexttrack();
+
+        currIdx = index;
+
+        let srcUrl = replaceHttp(lects.data[index].highLecUrl)
+
+        player.src(
+          [
+            { src: srcUrl, type: "video/mp4", label: "고화질", selected: true }
+          ]
+        )
+
+        player.load()
+        player.play()
+
+        if (lects.data[index].captUrl != null) {
+          const track = "/convertSamiToVtt?url=" + btoa(encodeURIComponent(lects.data[index].captUrl));
+          player.addRemoteTextTrack({
+            kind: "subtitles"
+            , label: "한국어"
+            , language: "ko"
+            , src: track
+            , manualCleanup: true
+          })
+        }
+
+        vodEnrol();
+
+        $('.main-video-player').removeClass('xi-pause-circle-o');
+        $('.main-video-player').addClass('xi-play-circle-o');
+
+        if (type == "main") {
+          var ObjLect = $(e);
+          var subLect = ObjLect.parent();
+          var nexLect = subLect.next();
+          var chiLect = nexLect.children('.contents-tlt');
+
+          lectDropDown(chiLect, type);
+          lectScroll($(e));
+
+          $(e).removeClass('xi-play-circle-o');
+          $(e).addClass('xi-pause-circle-o');
+
+        } else if (type == "sub") {
+          var ObjLect = $(e);
+          var subLect = ObjLect.parent().parent().parent();
+          var preLect = subLect.prev();
+
+          lectDropDown(preLect, type);
+
+          var btnLect = subLect.parent().prev();
+          lectScroll(btnLect);
+
+          var mainVideoPlayer = document.getElementsByClassName('main-video-player')
+          mainVideoPlayer[index].classList.remove('xi-play-circle-o');
+          mainVideoPlayer[index].classList.add('xi-pause-circle-o');
+        }
+
+        $("#nowIndex").val(index, type);
+        $("#playType").val("play");
+      }
+    }
+
+    function cleanTexttrack() {
+
+      let tracks = player.remoteTextTracks();
+      for (let i = 0; i < tracks.length; i++) {
+        let track = tracks[i];
+        tracks.removeTrack(track);
+      }
+    }
+
+    function loadIndex(e, lectId, fmySiteDsCd, indexYn) {
+
+      if (indexYn != 'Y') {
+        return;
+      }
+
+      let subItem = $(e).next()
+      if ($.trim(subItem.html()) == '') {
+
+        showLoadingBar()
+
+        $.ajax({
+          url: "/ebook/part/index",
+          data: JSON.stringify({
+            'lectId': lectId,
+            'fmySiteDsCd': fmySiteDsCd
+          }),
+          dataType: "html",
+          contentType: "applicationhttps://book.ebs.co.kr/json;charset=UTF-8",
+          type: "post",
+          success: (result) => {
+            hideLoadingBar()
+            subItem.html(result)
+            subItem.hide()
+
+            dropDown(subItem)
+
+          },
+          error: (err) => {
+            hideLoadingBar()
+            alert("인덱스 요청에 실패하였습니다. 다시 시도해주세요");
+          }
+        })
+      } else {
+        dropDown(subItem)
+      }
+    }
+
+    function selectIndex(e, indexStartTime) {
+      let indexObj = $(e);
+      let subItem = indexObj.parent().parent().parent();
+      let index = subItem.attr("data-idx");
+
+      if (currIdx != index) {
+        selectLect("sub", e, index);
+      } else if (player.paused()) {
+        player.play();
+
+        var mainVideoPlayer = document.getElementsByClassName('main-video-player')
+
+        mainVideoPlayer[index].classList.remove('xi-play-circle-o');
+        mainVideoPlayer[index].classList.add('xi-pause-circle-o');
+      }
+
+      player.currentTime(indexStartTime);
+    }
+
+    function dropDownEvent(e) {
+      dropDown($(e).next());
+    }
+
+    function dropDown(el) {
+      $prev = el.prev();
+      el.slideToggle();
+      $prev.toggleClass('on');
+    }
+
+    function replaceHttp(src) {
+      return src.replace('http://', 'https://')
+    }
+
+    function setScreenUI() {
+      if (isMobile.any()) {
+        if (isMobile.Android()) {
+          var params = JSON.stringify({
+            "backHide": false
+          });
+          messageHandlers.setScreenUI(params);
+
+        } else if (isMobile.iOS() || isMobile.MAC()) {
+          webkit.messageHandlers.setScreenUI.postMessage({
+            "backHide": false
+          });
+        }
+      }
+    }
+
+    function lectDropDown(e, type) {
+      $this = $(e);
+      $next = $this.next();
+
+      $el = $('#accordionLecture');
+
+      $el.find('.content-lect').not($next).slideUp().prev().removeClass('on');
+
+      if (type == 'main' && !$(e).hasClass('on')) {
+        $this.click();
+      }
+    }
+
+    function lectScroll(e) {
+      setTimeout(function () {
+        var topHeight = $('.top-fix').height() + 10;
+        var offset = $(e).offset().top - topHeight;
+        $('html').scrollTop(offset);
+      }, 400);
+    }
+
+    /*]]>*/
+  </script>
+
+
+  <!-- 공통 스크립트 -->
+
+
+  <!-- mask dim -->
+  <div id="mask" style="display:none;"></div>
+
+  <script>
+    // 로컬모드에 따라 회원가입/수정/탈퇴 링크 블럭처리.
+    function _localmodeChk(command) {
+      var localModeChk = false;
+
+      $.ajax({
+        url: '/sso/localMode',
+        type: 'POST',
+        async: false,
+        success: function (data) {
+          if (data == 'Y') {
+            localModeChk = true;
+          }
+        },
+        error: function (data) {
+          localModeChk = false;
+        }
+      });
+
+      if (localModeChk) {
+        alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+      } else {
+        let ssoDomain = "https:\/\/sso.ebs.co.kr";
+        let bookStoryDomain = "https:\/\/book.ebs.co.kr";
+        if (command == "join") {
+          location.href = ssoDomain + '/join/intro?returnUrl=' + encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href);
+        } else if (command == "findId") {
+          location.href = ssoDomain + "/user/find/id";
+        } else if (command == "findPwd") {
+          location.href = ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain;
+        }
+      }
+    }
+
+    function _localmodeChkForNative(command) {
+      var localModeChk = false;
+
+      $.ajax({
+        url: '/sso/localMode',
+        type: 'POST',
+        async: false,
+        success: function (data) {
+          if (data == 'Y') {
+            localModeChk = true;
+          }
+        },
+        error: function (data) {
+          localModeChk = false;
+        }
+      });
+
+      if (localModeChk) {
+        alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n \n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+      } else {
+        let ssoDomain = "https:\/\/sso.ebs.co.kr";
+        let bookStoryDomain = "https:\/\/book.ebs.co.kr";
+        if (command == "join") {
+          window.open(ssoDomain + '/join/intro?returnUrl=' + encodeURIComponent(bookStoryDomain + '/sso/login?returnUrl=' + location.href));
+        } else if (command == "findId") {
+          window.open(ssoDomain + "/user/find/id");
+        } else if (command == "findPwd") {
+          window.open(ssoDomain + "/user/reissue/password?returnUrl=" + bookStoryDomain);
+        }
+      }
+    }
+
+    function fnLogin(paramUrl) {
+      var rtnUrl = location.href;
+      if (typeof (paramUrl) != 'undefined') {
+        rtnUrl = location.origin + paramUrl;
+      }
+      location.href = "/sso/login?returnUrl=" + encodeURIComponent(rtnUrl);
+    }
+
+    function fnLogout() {
+      if (confirm("로그아웃 하시겠습니까?")) {
+        location.href = "/sso/logout?returnUrl=" + encodeURIComponent(location.href.indexOf("/mypage/") > 0 ? fnGetUrl() : location.href);
+      }
+    }
+
+    function fnGetUrl() {
+      return window.location.protocol + "//" + window.location.hostname + ((window.location.port) ? ":" + window.location.port : "");
+    }
+
+    function fnSetAttributeChangePwdYn() {
+
+      fnPromiseAjaxJson("/sso/setAttributeChangePwdYn", {}).then(function (jsonData) { });
+    }
+
+    $(document).ready(function () {
+      //비밀번호 변경 안내
+      if (!fnIsEmpty("N") && ("N") == "Y") {
+        window.open("", "changePwd", "width=473, height=575,left=100,top=100, scrollbar=no");
+        fnSetAttributeChangePwdYn();
+      }
+
+      // 14세 미만 보호자 미등록
+      if (!fnIsEmpty(null) && (null) == "Y") {
+        $('.pop-junior').show();
+      }
+
+      //관심교재
+      $('.btn-wish, button.wish').on("click", function () {
+        var txbkId = $(this).attr("data-txbkid");
+        if (!txbkId) {
+          $(this).removeClass('on');
+          alert("교재ID가 없습니다.");
+          return false;
+        }
+
+        if (!isLogin) {
+          $(this).removeClass('on');
+          alert("로그인 후 이용 가능합니다.");
+          fnLogin();
+          return false;
+        }
+
+        var data = {};
+        data['txbkId'] = txbkId;
+        var url = "/mypage/updateIntrstTxbk";
+
+        if ($(this).hasClass("on")) {
+          //관심교재 등록
+          data['status'] = 'insert';
+        } else {
+          //관심교재 삭제
+          data['status'] = 'delete';
+        }
+
+        // Ajax 호출
+        fnPromiseAjaxJson(url, data).then(function (jsonData) { });
+      });
+    });
+
+    /**
+     * 교재 구입
+     * @param txbkId, isbn //main
+     */
+    function buyBook(txbkId, isbn, fmySiteDsCd) {
+      if (fmySiteDsCd == 'EBSI') {
+        var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EHT';
+      } else {
+        var href = 'https://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=' + isbn + '&LINK=EAT';
+      }
+      //부가정보 체크 후 구매페이지 이동
+
+      $.ajax({
+        url: "/sub/getTxbkAdtlInfo",
+        type: 'POST',
+        async: false,
+        dataType: 'json',
+        data: { 'txbkId': txbkId },
+        success: function (jsonData) {
+          if (!!jsonData.txbkAdtlInfo.txbkPchsUrl) {
+            href = /*'https://'+*https://book.ebs.co.kr/jsonData.txbkAdtlInfo.txbkPchsUrl;
+          }
+          // ios 새창 이동 이슈 수정(window.open -> a태그 동적 생성)
+          var aHref = document.createElement('a');
+          aHref.setAttribute('target', '_blank');
+          aHref.setAttribute('href', href);
+          document.body.appendChild(aHref);
+          aHref.click();
+        },
+        error: function (err) {
+          window.open(href);
+        }
+      });
+
+    }
+
+    /**
+     * 교재 프리뷰 url
+     * @param isbn //
+     */
+    function previewBookURL(isbn, fmySiteDsCd) {
+      // 제휴 코드
+      var partnerCode = "EAT";
+      var commonUrl = "https://www.kyobobook.co.kr/cooper/redirect_over.jsp?next_url=http://preview.kyobobook.co.kr/";
+      if (fnIsMobile()) {
+        commonUrl += "mkbrPreview.jsp?siteGb=INK&ejkGb=KOR&barcode=" + isbn + "&loginYn=N&partnerCode=" + partnerCode + "&isApp=true";
+        location.href = commonUrl;
+      } else {
+        commonUrl += "preview.jsp?siteGb=INK&ejkGb=KOR&barcode=" + isbn + "&loginYn=N&LINK=" + partnerCode;
+        window.open(commonUrl, "openpreview", "top=0 , left=0 ,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=1250,height=695");
+      }
+    }
+
+    /**
+     * 구매한 교재 구매함 버튼 클릭 시 나의 교재 페이지로 이동
+     * @param txbkId
+     */
+    function goLibrary() {
+      location.href = "/mypage/purchase";
+    }
+
+    /**
+     * 교재 상세
+     * @param txbkId
+     */
+    function goDetail(bookUrl, txbkId, ebkId, fmySiteDsCd, prodClsCd) {
+      var i;
+
+      if (bookUrl == "book") {
+        //상세 클릭시 hash 값 세팅
+        let sbjArr = [];
+        $(".sort-wrap .sort > ul ul:eq(1) li input[type=checkbox]:checked").each(function () {
+          sbjArr.push($(this).val());
+        });
+        let seriesArr = [];
+        $(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function () {
+          seriesArr.push($(this).val());
+        });
+        //hash setting
+        location.hash = $(".sort-wrap .sort > ul ul:eq(0) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
+
+        if (fmySiteDsCd == 'PRIM')
+          location.href = "/sub/primary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EPRI')
+          location.href = "/sub/primary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MIDL')
+          location.href = "/sub/middle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MIPR')
+          location.href = "/sub/middle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSI')
+          location.href = "/sub/high/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EHIG')
+          location.href = "/sub/high/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSE')
+          location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSM')
+          location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MATH')
+          location.href = "/sub/common/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'ENGLISH')
+          location.href = "/sub/english/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+
+
+
+      } else { //ebook 목록일 경우
+        //상세 클릭시 hash 값 세팅
+        let sbjArr = [];
+        $(".sort-wrap .sort > ul ul:eq(2) li input[type=checkbox]:checked").each(function () {
+          sbjArr.push($(this).val());
+        });
+        let seriesArr = [];
+        $(".sort-wrap .sort > ul ul:eq(3) li input[type=checkbox]:checked").each(function () {
+          seriesArr.push($(this).val());
+        });
+        //hash setting
+        location.hash = $(".sort-wrap .sort > ul ul:eq(1) li input:checked").val() + '/' + sbjArr.join() + '/' + seriesArr.join();
+
+        if (fmySiteDsCd == 'PRIM')
+          location.href = "/sub/ePrimary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EPRI')
+          location.href = "/sub/ePrimary/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MIDL')
+          location.href = "/sub/eMiddle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSI')
+          location.href = "/sub/eHigh/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EHIG')
+          location.href = "/sub/eHigh/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSE')
+          location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'EBSM')
+          location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MATH')
+          location.href = "/sub/eCommon/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+        else if (fmySiteDsCd == 'MIPR')
+          location.href = "/sub/eMiddle/view?txbkId=" + txbkId + "&ebkId=" + ebkId + "&prodClsCd=" + prodClsCd
+      }
+
+    }
+  </script>
+
+  <!-- COPYRIGHT (C) 1999-2013 NETHRU INC. ALL RIGHTS RESERVED. -->
+  <script type="text/javascript">
+    (function () {
+      var nl = document.createElement('script');
+      nl.type = 'text/javascript';
+      nl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + window.location.hostname + 'https://book.ebs.co.kr/js/weblogs/nethru/wlo.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(nl, s);
+      var done = false;
+      nl.onload = nl.onreadystatechange = function () {
+        if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+          done = true;
+          _n_sid = "book.ebs.co.kr";
+          //_n_uid_cookie = "UID";
+          n_logging();
+          nl.onload = nl.onreadystatechange = null;
+        }
+      }
+    })();
+  </script>
+
+  <script>
+    // 2023-02-02 북스토리
+    $(document).ready(function () {
+      var arrRadio = document.getElementsByName('stdy');
+      $('.stdy').on({
+        'change': function (e) {
+          for (var i = 0; i < arrRadio.length; i++) {
+            if (arrRadio[i].checked) {
+              var obj = arrRadio[i].value;
+              switch (obj) {
+                case 'payhist':
+                  location = window.location.origin + "/mypage/payhist"
+                  break;
+                case 'refund':
+                  location = window.location.origin + "/mypage/refhist"
+                  break;
+                case 'coupon':
+                  location = window.location.origin + "/mypage/eCouponReg"
+                  break;
+                case 'basket':
+                  location = window.location.origin + "/mypage/bskt"
+                  break;
+                case 'intrst':
+                  location = window.location.origin + "/mypage/intrst"
+                  break;
+                default:
+              }
+            }
+          }
+        }
+      })
+    })
+
+    // 장바구니 추가
+    function cartAdd(cart, ebkId, prodClsCd) {
+      if (!isLogin) {
+        $(this).removeClass('on');
+        alert("로그인 후 이용 가능합니다.");
+        fnLogin();
+        return false;
+      }
+      var data = {
+        "ebkId": ebkId,
+        "prodClsCd": prodClsCd
+      }
+
+      fnPromiseAjaxHtml('/mypage/bskt/add', data).then(function (jsonData) {
+        var json_rst = JSON.parse(jsonData)
+        var rst_code = json_rst.rst_code;
+        console.log('장바구니 코드 =' + rst_code);
+        switch (rst_code) {
+          case "001":
+            if (cart == "buy") {
+              location.href = "/mypage/bskt?ebkId=" + ebkId + "&prodClsCd=" + prodClsCd;
+            } else if ("bskt") {
+              if (confirm("장바구니에 담겼습니다.\n장바구니로 이동하시겠습니까?")) {
+                location.href = "/mypage/bskt?ebkId=" + ebkId;
+              }
+            }
+            break;
+          case "002":
+            if (cart == "buy") {
+              location.href = "/mypage/bskt?ebkId=" + ebkId;
+            } else if ("bskt") {
+              if (confirm("이미 장바구니에 해당 상품이 있습니다.\n장바구니로 이동하시겠습니까?")) {
+                location.href = "/mypage/bskt?ebkId=" + ebkId;
+              }
+            }
+            break;
+          case "003":
+            alert("이미 구매하신 상품 입니다.")
+            break;
+          case "005":
+            alert("장바구니에 담을 수 없는 상품 입니다.");
+            break;
+          case "006":
+            alert("0원 상품 구매완료 처리 되었습니다.");
+            location.reload();
+            break;
+          case "007":
+            alert("상품을 구매 할 수 없습니다.");
+            break;
+          case "008":
+            if (cart == "buy") {
+              alert("패키지 상품 중 구매한 교재가 포함되어있어 구매할 수 없는 상품입니다.");
+            } else if ("bskt") {
+              alert("패키지 상품 중 구매한 교재가 포함되어있어 장바구니에 담을 수 없는 상품입니다.");
+            }
+            break;
+          case "009":
+            if (cart == "buy") {
+              alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어 구매할 수 없습니다.");
+            } else if ("bskt") {
+              alert("패키지 상품에 포함된 교재가 이미 장바구니에 있어, 추가로 담을 수 없습니다.");
+            }
+            break;
+          case "010":
+            if (cart == "buy") {
+              alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 구매할 수 없습니다.");
+            } else if ("bskt") {
+              alert("해당 교재가 포함된 패키지 상품이 장바구니에 있어 장바구니에 담을 수 없습니다.");
+            }
+            break;
+          case "011":
+            if (cart == "buy") {
+              alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
+            } else if ("bskt") {
+              alert("동일 교재가 속한 패키지 상품이 이미 장바구니에 담겨있습니다.");
+            }
+            break;
+          case "012":
+            if (cart == "buy") {
+              alert("굿노트 쿠폰은 매진 되었습니다.");
+            } else if ("bskt") {
+              alert("굿노트 쿠폰은 매진 되었습니다.");
+            }
+            break;
+          default: alert("error");
+        }
+      });
+    }
+
+    // 웹뷰어 호출시 새로운 토큰 발행 및 조회 리턴
+    function tknPub() {
+      var result = '';
+      $.ajax({
+        url: '/ebook/webViewer/tknpub',
+        type: 'POST',
+        async: false,
+        success: function (data) {
+          result = data;
+        },
+        error: function (data) {
+          result = 'error';
+        }
+      });
+
+      return result;
+    }
+
+
+  </script>
+  <!-- WISELOG ONLINE TRACKING SCRIPT CODE END -->
+
+
+
+  <!-- 로딩바 -->
+
+  <!-- loading -->
+  <div class="loadbar" style="display: none;">
+    <div class="loader">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;"
+        xml:space="preserve">
+        <rect x="0" y="13" width="4" height="5" fill="#333">
+          <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+        <rect x="10" y="13" width="4" height="5" fill="#333">
+          <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+        <rect x="20" y="13" width="4" height="5" fill="#333">
+          <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+          <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s"
+            repeatCount="indefinite"></animate>
+        </rect>
+      </svg>
+      <p>처리중 입니다.</p>
+    </div>
+  </div>
+  <!-- //loading  -->
+
+
+
+</body>
+
+</html>

@@ -40,5 +40,12 @@
     "devUrl" : "midPremium/event.html",
     "mainUrl" : "",
     "update" : "2025.05.20"
+  },
+  {
+    "id" : "e-book",
+    "menuName" : "강의목록 웹뷰영역 리스트 오류 수정",
+    "devUrl" : "ebookViewer/index.html",
+    "mainUrl" : "https://book.ebs.co.kr/ebook/lect?courseId=S20240000112&fmySiteDsCd=EBSI&ec=ZjZNShVBdoA+CGc0dnd9vQ==&txbkId=LB00000005328&ebkId=EB100001443&sbjtApplyId=1036456013",
+    "update" : "2025.06.12"
   }
 ]

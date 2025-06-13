@@ -1,28 +1,28 @@
 [
   {
     "id" : "bookStory",
-    "menuName" : "북스토리 - 메인 페이지",
+    "menuName" : "메인 페이지",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
     "update" : "2025.06.11"
   },
   {
     "id" : "bookStory",
-    "menuName" : "북스토리 - 고교 메인 페이지",
+    "menuName" : "고교 : 메인 페이지",
     "devUrl" : "bookStory/bookStoryHighMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
     "update" : "2025.06.11"
   },
   {
     "id" : "bookStory",
-    "menuName" : "북스토리 - 메인 View 페이지",
+    "menuName" : "메인 View 페이지",
     "devUrl" : "bookStory/bookStoryView.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/high/view?txbkId=LB00000005600&ebkId=EB100001910&prodClsCd=24",
     "update" : "2025.05.23"
   },
   {
     "id" : "bookStory",
-    "menuName" : "북스토리 - 리스트 페이지",
+    "menuName" : "리스트 페이지",
     "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
     "update" : "2025.05.23"
@@ -35,15 +35,8 @@
     "update" : "2025.05.16"
   },
   {
-    "id" : "mid",
-    "menuName" : "중학프리미엄 - 이벤트",
-    "devUrl" : "midPremium/event.html",
-    "mainUrl" : "",
-    "update" : "2025.05.20"
-  },
-  {
     "id" : "e-book",
-    "menuName" : "강의목록 웹뷰영역 리스트 오류 수정",
+    "menuName" : "강의목록/웹뷰 수정 건",
     "devUrl" : "ebookViewer/index.html",
     "mainUrl" : "https://book.ebs.co.kr/ebook/lect?courseId=S20240000112&fmySiteDsCd=EBSI&ec=ZjZNShVBdoA+CGc0dnd9vQ==&txbkId=LB00000005328&ebkId=EB100001443&sbjtApplyId=1036456013",
     "update" : "2025.06.12"

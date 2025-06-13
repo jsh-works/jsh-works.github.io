@@ -6,14 +6,21 @@ $(function() {
 	      $.each(data, function(i, item) {
 					html.push('<div class="menuList">');
 					html.push('<dl>');
-					html.push('<dt>' + item.menuName + '</dt>');
-					html.push('<dd><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
-					if(!item.mainUrl && item.mainUrl === "") {
-						html.push('<dd></dd>');
-					} else {
-						html.push('<dd><a href='+ item.mainUrl +' class="main" target="_blank">운영</a></dd>');
+					if(item.id === "bookStory") {
+						html.push('<dt>📖</dt>');
+					} else if(item.id === "e-book") {
+						html.push('<dt>💻</dt>');
 					}
-					html.push('<dd >' + item.update + '</dd>');
+
+					
+					html.push('<dd class="menu">' + item.menuName + '</dd>');
+					html.push('<dd style="width: 20%;"><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
+					if(!item.mainUrl && item.mainUrl === "") {
+						html.push('<dd style="width: 20%;"></dd>');
+					} else {
+						html.push('<dd style="width: 20%;"><a href='+ item.mainUrl +' class="main" target="_blank">운영</a></dd>');
+					}
+					html.push('<dd style="width: 20%;" >' + item.update + '</dd>');
 					html.push('</dl>');
 					html.push('</div>');
 	      });

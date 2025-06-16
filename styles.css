@@ -92,25 +92,18 @@ h2 {
 #wrap .container > dl dt, #wrap .container .menuList dl dt {
 	width: 12%;
 }
-#wrap .container dl dd.menu {
+#wrap .container dl dt.menu {
 	display: flex;
 	justify-content: flex-start;
 	width: 100%;
 	text-align: left;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 #wrap .container .menuList dl dd a.dev {
 	color: var(--devColor);
 }
 #wrap .container .menuList dl dd a.main {
 	color: var(--mainColor);
-}
-#wrap .container > dl dt,
-#wrap .container .menuList dl dt {
-	display: flex;
-	justify-content: center;
-	font-size: 1.5rem;
-	text-align: center;
 }
 #wrap .container > dl dt {
 	font-size: 1rem;
@@ -133,15 +126,5 @@ h2 {
 	#wrap .container .menuList dl dd {
 		min-height: 14px;
 	}
-	#wrap .container dl dd.menu {
-		width: 30%;
-		padding-left: 4px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-	#wrap .container > dl dt, #wrap .container .menuList dl dt {
-		width: 10%;
-		font-size: 1rem;
-	}
+
 }

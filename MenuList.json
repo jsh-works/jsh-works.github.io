@@ -1,31 +1,45 @@
 [
   {
     "id" : "bookStory",
-    "menuName" : "메인 페이지",
+    "menuName" : "구독 메인 페이지",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.06.11"
+    "update" : "2025.06.16"
   },
   {
     "id" : "bookStory",
-    "menuName" : "고교 : 메인 페이지",
+    "menuName" : "고교 메인 페이지",
     "devUrl" : "bookStory/bookStoryHighMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
-    "update" : "2025.06.11"
+    "update" : "2025.06.16"
   },
   {
     "id" : "bookStory",
-    "menuName" : "메인 View 페이지",
-    "devUrl" : "bookStory/bookStoryView.html",
-    "mainUrl" : "https://book.ebs.co.kr/sub/high/view?txbkId=LB00000005600&ebkId=EB100001910&prodClsCd=24",
-    "update" : "2025.05.23"
+    "menuName" : "중학 메인 페이지",
+    "devUrl" : "bookStory/bookStoryMidMain.html",
+    "mainUrl" : "https://book.ebs.co.kr/roadmap/middle",
+    "update" : "2025.06.16"
   },
   {
     "id" : "bookStory",
-    "menuName" : "리스트 페이지",
+    "menuName" : "초등 메인 페이지",
+    "devUrl" : "bookStory/bookStoryEleMain.html",
+    "mainUrl" : "https://book.ebs.co.kr/roadmap/primary",
+    "update" : "2025.06.16"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "공통 목록 페이지",
     "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
-    "update" : "2025.05.23"
+    "update" : "2025.06.16"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "공통 상세 페이지",
+    "devUrl" : "bookStory/bookStoryView.html",
+    "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
+    "update" : "2025.06.16"
   },
   {
     "id" : "e-book",

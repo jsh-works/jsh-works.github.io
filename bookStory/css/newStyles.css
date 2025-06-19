@@ -51,8 +51,27 @@
   height: 1110px;
   background-color: #203663;
 }
+#contentsWrap .mainSection .sec1 .top-banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  line-height: 1;
+  padding: 40px 0px;
+  background: url("../imgs/subscribe/top_banner.jpg") 0 0/cover no-repeat;
+}
+#contentsWrap .mainSection .sec1 .top-banner h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#contentsWrap .mainSection .sec1 .top-banner span {
+  color: #9ffcff;
+  font-size: 20px;
+}
 #contentsWrap .mainSection .sec1 .sec-inner {
-  margin-top: 145px;
+  margin-top: 123px;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .text-banner {
   text-align: center;
@@ -153,8 +172,8 @@
   background-color: #3e79f5;
 }
 #contentsWrap .mainSection .sec2 .sec-inner .text-banner {
-  padding-top: 100px;
   text-align: center;
+  padding: 100px 0 66px;
 }
 #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
   color: #fff;
@@ -192,15 +211,267 @@
   gap: 25px;
 }
 #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 120px;
+  height: 150px;
   text-align: center;
+  padding: 25px 80px;
   border-radius: 20px;
   border: 2px solid #fff;
+  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0px 2px 0px 2px #bbc6db;
   transition: all 0.35s;
 }
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  height: 100px;
+  padding-right: 83px;
+  border-right: 1px solid #b9b9b9;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
+  color :#111;
+  font-size: 24px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot {
+  display: flex;
+  justify-content: flex-start;
+  height: 120px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title {
+  height: 71px;
+  margin-right: 344px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title h3 {
+  font-weight: 400;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p > b {
+  color: #333;
+}
+
+#contentsWrap .tooltip {
+	position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 10px;
+  border-radius: 8px;
+	background-color: #111;
+}
+#contentsWrap .tooltip span::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  margin-left: 6px;
+  vertical-align: -1px;
+  background: url("../imgs/subscribe/arrow_down.png") center center/cover no-repeat;
+
+}
+#contentsWrap .tooltip:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+  border: 8px solid transparent;
+  border-top-color: #111;
+  border-bottom: 0;
+  margin-left: -8px;
+  margin-bottom: -8px;
+}
+
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
+  font-family: 'Roboto';
+  color: #111;
+  font-size: 40px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 {
+  font-size: 24px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p {
+  font-size: 16px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
+  color: #3a77f5;
+  font-size: 19px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15.5px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background-color: #6c707a;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 9px;
+  vertical-align: 1px;
+  background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
+  margin-left: 8px;
+}
+#contentsWrap button.check-btn {
+  position: relative;
+  width: 37px;
+  height: 37px;
+  border-radius: 50px;
+  background-color: #ccc;
+  transition: all 0.35s;
+}
+#contentsWrap button.check-btn.on {
+  background-color: #111;
+}
+#contentsWrap button.check-btn::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 9.5px);
+  width: 19px;
+  height: 14px;
+  background: url("../imgs/subscribe/check_ico.png") center center/cover no-repeat;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 390px;
+  padding: 0;
+  border: none;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 77px;
+  color: #111;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #f2f2f5;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
+  font-size: 25px;
+  line-height: 1;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+position: absolute;
+    top: -41px;
+    left: calc(50% - 82.5px);
+    font-size: 14px;
+    padding: 4px 10px;
+    width: 165px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
+  font-family: 'Roboto';
+  color: #111;
+  font-size: 25px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
+  font-size: 35px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p > span {
+  color: #3a77f5;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b9b9b9;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .price-info {
+  position: relative;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .check-btn {
+  position: relative;
+  top: -2px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
+  position: relative;
+  width: 100%;
+  padding: 0 32px;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15.5px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background-color: #6c707a;
+  width: 100%;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 9px;
+  vertical-align: 1px;
+  background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
+  margin-left: 8px;
+}
+
+
+
+
 #contentsWrap .mainSection .sec3 {
   height: 894px;
   background-color: #203663;

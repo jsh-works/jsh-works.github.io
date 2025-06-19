@@ -1,4 +1,8 @@
 $(function(){
+  var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
+  var ebsDateFormat = "YY.MM.DD";
+  var mediaPlayer = null;
+  
   $(".prod-purchase-footer").css({ bottom : '0px' });
 
   /** Tab Menu Event */
@@ -124,5 +128,28 @@ $(function(){
             nextEl: '.slide-banner-btn-next',
             prevEl: '.slide-banner-btn-prev',
         },
-    });
+  });
+
+  var coverFlowSilder = new Swiper ('.coverflow-slide', {
+		loop: true,
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+    },
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: -10,
+      stretch: 0,
+      depth: 350,
+      modifier: 0.7,
+      slideShadows: false,
+    },
+    navigation: {
+      prevEl: '.coverflow-btn-prev',
+      nextEl: '.coverflow-btn-next',
+    },
+  })
 });

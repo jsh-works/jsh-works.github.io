@@ -151,5 +151,65 @@ $(function(){
       prevEl: '.coverflow-btn-prev',
       nextEl: '.coverflow-btn-next',
     },
-  })
+  });
+
+  // 북모닝 이용안내 스크립트
+  var bkmrServiceGuide = () => {
+    var $slider = $('.scroll-conts-box');
+    $slider.find('.scroll-conts-slide').each(function (i) {
+      $(this).siblings(".swiper-pagination").addClass("type" + i);
+      $(this).siblings('ul').addClass("type" + i);
+      var slider = new Swiper($(this), {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        speed: 300,
+        pagination: {
+            el: $slider.find('.swiper-pagination.type' + i),
+            clickable: true,
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+              const idx = this.realIndex
+              $slider.find('ul.type' + i + ' li').eq(idx).addClass('current').siblings('li').removeClass('current')
+            }
+        }
+      });
+    });
+  }
+
+  bkmrServiceGuide();
+  
+  $(".check-btn").on('click', function() {
+    if(!$(this).hasClass('on')) {
+      $(".check-btn").removeClass('on');
+      $(this).addClass('on');
+    }
+
+    $(".floating").addClass('check');
+    if($(".floating").hasClass('check')) {
+      $(".change-box").show();
+      $(".default-box").hide();
+    } else {
+      $(".change-box").hide();
+      $(".default-box").show();
+    }
+   
+  });
+
+  $(".faq-box ul li").on('click', function() {
+    if(!$(this).hasClass('open')) {
+      $(".faq-box ul li").removeClass('open');
+      $(this).addClass('open');
+    }
+  });
+
+
+  $(window).scroll(function () {
+    var winPosY = $(document).scrollTop();
+    if(winPosY > 800) {
+      $(".floating").css('display','block');
+    }
+  });
 });

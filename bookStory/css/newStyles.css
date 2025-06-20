@@ -134,9 +134,10 @@
   box-shadow: 0px 2px 0px 2px #bbc6db;
   transition: all 0.35s;
 }
-#contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li:active {
+#contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li:hover {
   border: 2px solid #f38e2e;
   box-shadow: 0px 0px 2px 3px #ff9c3e;
+  transform: translateY(-10px);
   transition: all 0.35s;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li a {
@@ -469,18 +470,287 @@ position: absolute;
   margin-left: 8px;
 }
 
-
-
-
 #contentsWrap .mainSection .sec3 {
   height: 894px;
   background-color: #203663;
 }
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner {
+  text-align: center;
+  padding: 101px 0 68px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
+  color: #fff;
+  font-size: 47px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul {
+  margin-right: 75px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li:not(:last-child) {
+  margin-bottom: 26px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button {
+  color: #798db5;
+  text-align: left;
+  line-height: 1.5;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li.current button {
+  color: #fff;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button p {
+  font-size: 18px;
+  font-weight: normal;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide {
+  position: relative;
+  width: 780px;
+  height: 449px;
+  padding: 20px;
+  border-radius: 40px;
+  border: 12px solid #000;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: url("../imgs/subscribe/scroll-conts-wheel.png"), pointer;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide .swiper-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination {
+  position: absolute;
+  top: calc(50% - 60px);
+  right: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px 0;
+  width: 14.4px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination-bullet {
+  width: 14.4px;
+  height: 14.4px;
+  opacity: 1;
+  background-color: #000;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .wheel-ico {
+  position: absolute;
+  top: 270px;
+  right: -10px;
+  width: 16px;
+  height: 23px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 366px;
+  height: 76.8px;
+  color: #111;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1px;
+  padding: 29px 0 26px;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0px 2px 0px 2px #bbc6db;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn:hover {
+  border: 2px solid #f38e2e;
+  box-shadow: 0px 0px 2px 2px #ff9c3e;
+  transform: translateY(-5px);
+  transition: all 0.35s;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 55px;
+  width: 11px;
+  height: 18px;
+  background: url("../imgs/subscribe/arrow_right_black.png") center center/cover no-repeat;
+}
 #contentsWrap .mainSection .sec4 {
-  height: 1073px;
+  height: 100%;
+  padding-bottom: 101px;
   background-color: #1b2e54;
 }
-
+#contentsWrap .mainSection .sec4 .sec-inner .text-banner {
+  text-align: center;
+  padding: 101px 0 68px;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .text-banner h4 {
+  color: #fff;
+  font-size: 47px;
+  font-weight: bold;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100px;
+  padding: 38px 57px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li.open {
+  height: auto;
+  transition: all 0.35s;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li .faq-que {
+  position: relative;
+  width: 100%;
+  color: #111;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li .faq-que::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 19px;
+  height: 12px;
+  background: url("../imgs/subscribe/accordion_arrow.png") center center/cover no-repeat;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li .faq-ans {
+  display: none;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li.open .faq-que {
+  font-weight: bold;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ebebf3;
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li.open .faq-que::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 19px;
+  height: 12px;
+  background: url("../imgs/subscribe/accordion_arrow.png") center center/cover no-repeat;
+  transform: rotateX(180deg);
+}
+#contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li.open .faq-ans {
+  display: block;
+  color: #666;
+  font-size: 18px;
+  font-weight: normal;
+  word-break: keep-all;
+}
+#contentsWrap .floating {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  box-sizing: border-box;
+  background-color: #1651ca;
+  box-shadow: 0px 4px 6px 4px #2b74ff;
+  z-index: 9999;
+  display: none;
+  opacity: 0;
+  animation: bounceUp 1s 0.3s forwards;
+}
+#contentsWrap .floating .float-inner {
+  position: relative;
+  height: 100%;
+}
+#contentsWrap .floating .float-inner .default-box,
+#contentsWrap .floating .float-inner .change-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+#contentsWrap .floating .float-inner h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+#contentsWrap .floating .float-inner button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+  max-height: 64px;
+  padding: 18px 0px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #111;
+}
+#contentsWrap .floating.check .float-inner h2 {
+  font-size: 30px;
+  line-height: 1;
+}
+#contentsWrap .floating.check .float-inner h2 > small {
+  font-size: 18px;
+  font-weight: normal;
+}
+#contentsWrap .floating.check .float-inner button {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 64px;
+  padding: 18px 0;
+  font-size: 20px;
+  background-color: #ffa800;
+}
+#contentsWrap .floating.check .float-inner button > em {
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 4px;
+}
+#contentsWrap .floating.check .float-inner .change-box button::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 48px;
+  width: 9px;
+  height: 14px;
+  background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
+}
 
 #contentsWrap .container {
   position: relative;
@@ -1340,6 +1610,11 @@ margin: 0 auto;
 @keyframes rightShow {
   0% { right: 26px; opacity: 0; }
   100% { right: 16px; opacity: 1; }
+}
+@keyframes bounceUp {
+  0% { opacity: 0; bottom: -130px; }
+  50% { opacity: 1; }
+  100% { opacity: 1; bottom: 0px; }
 }
 @keyframes rightFadeIn {
   0% { opacity: 0; }

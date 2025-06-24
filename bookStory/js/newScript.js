@@ -1,11 +1,13 @@
 $(function(){
+  // 기존 페이지 스크립트 (운영서버 불필요 스크립트)
   var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
   var ebsDateFormat = "YY.MM.DD";
   var mediaPlayer = null;
   
+  // 북스토리 공통상세 - 바텀 플로팅 스크립트
   $(".prod-purchase-footer").css({ bottom : '0px' });
 
-  /** Tab Menu Event */
+  // 북스토리 공통상세 - 메뉴 클릭 스크립트
   $(".menu-nav ul li").on('click', function(){
     if($(this).data('layer') === "scribe") {
       $(".book-details.scribe").fadeIn().css({ display : 'flex'});
@@ -23,7 +25,7 @@ $(function(){
       $(".book-details.paper").fadeIn().css({ display : 'flex'});
     }
 
-
+    // 북스토리 공통상세 - 메뉴 변경 애니메이션 스크립트
     if($(".menu-nav ul li").hasClass('active')) {
       $(".menu-nav ul li").removeClass('active');
       $(this).addClass('active');
@@ -33,7 +35,7 @@ $(function(){
     }
   });
 
-  /** Thumb hover Event */
+  // 북스토리 공통상세 - 썸네일 호버 스크립트
   $(".thumb-ico").hover(function(){
     $(".preview-ico").css({ display : 'flex' });
     $(".seeAll-ico").css({ display : 'flex' });
@@ -50,7 +52,7 @@ $(function(){
     alert("전체 시리즈 보기");
   });
 
-  /** Favorite Click Event */
+  // 북스토리 즐겨찾기 기능 스크립트
   $(".favorite-ico").on('click', function(e){
     e.preventDefault();
     if(!$(this).hasClass('active')) {
@@ -60,7 +62,7 @@ $(function(){
     }
   });
 
-  /** full list view event */
+  // 초중고교 eBook 추천 시리즈 페이지 메뉴 변경 스크립트
   $(".list-active dd").on('click', function(){
     const active = $(this).data('active');
 
@@ -68,7 +70,6 @@ $(function(){
       $(".list-active dd").removeClass('active');
       $(this).addClass('active');
       
-      console.log("active : ",active);
       switch (active) {
         case 1:
           $(".list-view.item1").addClass('show');
@@ -101,13 +102,12 @@ $(function(){
         default:
           break;
       }
-
-      
     } else {
       $(".list-active dd").removeClass('active');
     }
   });
 
+  // 초중고교 메인 슬라이드 배너
   var mainSildeBaner = new Swiper ('.slide-banner', {
 		speed: 500,
 		delay: 7000,
@@ -130,6 +130,7 @@ $(function(){
         },
   });
 
+  // 구독메인 상단 슬라이드 스크립트
   var coverFlowSilder = new Swiper ('.coverflow-slide', {
 		loop: true,
     speed: 500,
@@ -153,8 +154,8 @@ $(function(){
     },
   });
 
-  // 북모닝 이용안내 스크립트
-  var bkmrServiceGuide = () => {
+  // EBS eBook 체험하기 event
+  var scrollEvent = () => {
     var $slider = $('.scroll-conts-box');
     $slider.find('.scroll-conts-slide').each(function (i) {
       $(this).siblings(".swiper-pagination").addClass("type" + i);
@@ -171,16 +172,23 @@ $(function(){
         },
         on: {
             slideChangeTransitionStart: function () {
-              const idx = this.realIndex
-              $slider.find('ul.type' + i + ' li').eq(idx).addClass('current').siblings('li').removeClass('current')
+              var idx = this.realIndex
+              $slider.find('ul.type' + i + ' li').eq(idx).addClass('current').siblings('li').removeClass('current');
             }
         }
       });
     });
   }
+  scrollEvent();
 
-  bkmrServiceGuide();
+  // EBS eBook 체험하기 event
+  $(document).on('click', '.scroll-conts-box ul li', function () {
+    var idx = $(this).index();
+    var $that = $(this).parents('.scroll-conts-box');
+    $that.find('.swiper-pagination span').eq(idx).trigger('click');
+  })
   
+  // 구독메인 구독/결제 부분 스크립트
   $(".check-btn").on('click', function() {
     if(!$(this).hasClass('on')) {
       $(".check-btn").removeClass('on');
@@ -198,6 +206,7 @@ $(function(){
    
   });
 
+  // 구독메인 자주묻는질문 스크립트
   $(".faq-box ul li").on('click', function() {
     if(!$(this).hasClass('open')) {
       $(".faq-box ul li").removeClass('open');
@@ -205,11 +214,18 @@ $(function(){
     }
   });
 
-
+  // 구독메인 스크롤 플로팅 표시
   $(window).scroll(function () {
     var winPosY = $(document).scrollTop();
     if(winPosY > 800) {
       $(".floating").css('display','block');
+    } else {
+      $(".floating").css('display','none');
     }
+  });
+
+  // 대상 교재 클릭 이벤트
+  $(".quick-btn").on('click', function() {
+    alert("대상 교재 URL");
   });
 });

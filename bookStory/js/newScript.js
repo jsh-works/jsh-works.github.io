@@ -36,7 +36,7 @@ $(function(){
   });
 
   // 북스토리 공통상세 - 썸네일 호버 스크립트
-  $(".thumb-ico").hover(function(){
+  $(".thumb-img").hover(function(){
     $(".preview-ico").css({ display : 'flex' });
     $(".seeAll-ico").css({ display : 'flex' });
   }, function() {

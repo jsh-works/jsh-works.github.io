@@ -228,4 +228,47 @@ $(function(){
   $(".quick-btn").on('click', function() {
     alert("대상 교재 URL");
   });
+
+  // 나의 교재방 전체/구독/단건구매 타입별로 보기 스크립트
+  $(".viewer-btns ul li").on('click', function() {
+    if(!$(this).hasClass('active')) {
+      $(".viewer-btns ul li").removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+
+  // 나의 교재방 앨범/목록 형 타입 선택 스크립트
+  $(".types button").on('click', function() {
+    if($(this).hasClass('album-type')) { // 앨범 형태
+      $('.album-type').addClass('on');
+      $('.list-type').removeClass('on');
+      $(".mybook-list-box.albumType").show();
+      $(".mybook-list-box.listType").hide();
+
+    } else { // 목록 형태
+      $('.album-type').removeClass('on');
+      $('.list-type').addClass('on');
+      $(".mybook-list-box.albumType").hide();
+      $(".mybook-list-box.listType").show();
+    }
+  });
+
+  // 나의 교재방 더보기 클릭 이벤트 (예시)
+  $(".more-btn").on('click', function() {
+    // 앨범형 타입
+    $(".mybook-list-box.albumType").append('<ul><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li></ul>');
+
+    // 리스트 타입
+    $(".mybook-list-box.listType > ul").append('<li><div class="list-textbook-box"><a href="./bookStoryView.html"><img src="./imgs/books_example.png" alt="교재 이미지" /></a><i class="subscribe-ico"></i><div class="list-exp"><h4>EBS 2026 학년도 수능특강 사용설명서 독서</h4><dl class="purch-date"><dt>구매일</dt><dd>2025년 6월 25일</dd></dl><dl class="down-date"><dt>내려 받은 일</dt><dd>2025년 6월 25일</dd></dl><dl class="expir-date"><dt>만료일</dt><dd>2025년 6월 25일</dd></dl></div><div class="list-btns"><button class="view-textbook-btn">교재 보기</button><button class="view-commentary-btn">해설지 보기</button></div></div></li>');
+  });
+
+  // 나의 교재방 바텀배너 스크립트
+  $(".bootm-banner ul li").hover(function(){
+    $(this).addClass('on');
+  }, function() {
+    $(this).removeClass('on');
+  });
+
+
+
 });

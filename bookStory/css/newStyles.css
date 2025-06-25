@@ -1961,6 +1961,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .mybook-list-box ul li .textbook-box img {
   width: 184.91px;
   height: 252px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  vertical-align: bottom;
 }
 .list-viewer .mybook-list-box ul li .textbook-box .hover-btns {
   align-items: center;
@@ -2004,10 +2007,146 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   transition: all 0.35s;
   white-space: nowrap;
 }
-.list-viewer .mybook-list-box ul li .textbook-box .hover-btns button:active {
+.list-viewer .mybook-list-box ul li .textbook-box .hover-btns button:hover {
   color: #fff;
   background-color: #4165F4;
 }
+.list-viewer .mybook-list-box.listType {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+.list-viewer .mybook-list-box.listType ul {
+  padding-bottom: 0;
+}
+.list-viewer .mybook-list-box.listType ul li {
+  width: 100%;
+  padding-bottom: 40px;
+}
+.list-viewer .mybook-list-box.listType ul li:not(:first-child) {
+  padding-top: 40px;
+}
+.list-viewer .mybook-list-box.listType ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  column-gap: 20px;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 24px;
+  width: 48px;
+  height: 13px;
+  background: url("../imgs/ebook-ico.png") center center / 48px 13px no-repeat;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box img {
+  position: relative;
+  width: 97px;
+  height: 130px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  vertical-align: bottom;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box i.subscribe-ico {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  width: 40px;
+  height: 40px;
+  background: url("../imgs/subscribe-ico.png") 0 0/cover no-repeat;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp {
+  position: relative;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp h4 {
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl:not(:last-child) {
+  margin-bottom: 8px;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl dt {
+  width: 120px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl.purch-date dt::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: -4px;
+  background: url('../imgs/purch-date-ico.png') center center/cover no-repeat;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl.down-date dt::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: -4px;
+  background: url('../imgs/down-date-ico.png') center center/cover no-repeat;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl.expir-date dt::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: -4px;
+  background: url('../imgs/expire-ico.png') center center/cover no-repeat;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl dd {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-btns {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-btns button {
+  width: 200px;
+  height: 40px;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  transition: all 0.35s;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-btns button:hover {
+  color: #fff;
+  background-color: #4165F4;
+}
+.list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-btns button:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+
 .list-viewer .btns-box {
   display: flex;
   align-items: center;
@@ -2067,6 +2206,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   height: 40px;
   margin-right: 12px;
   background: url("../imgs/bottom-banner-ico01.png") 0 0/cover no-repeat;
+  transition: all 0.35s;
+}
+.list-viewer .bootm-banner ul li.guide.on::before {
+  content: '';
+  background: url("../imgs/bottom-banner-ico01_on.png") 0 0/cover no-repeat;
 }
 .list-viewer .bootm-banner ul li.payment::before {
   content: '';
@@ -2075,6 +2219,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   height: 40px;
   margin-right: 12px;
   background: url("../imgs/bottom-banner-ico02.png") 0 0/cover no-repeat;
+  transition: all 0.35s;
+}
+.list-viewer .bootm-banner ul li.payment.on::before {
+  content: '';
+  background: url("../imgs/bottom-banner-ico02_on.png") 0 0/cover no-repeat;
 }
 .list-viewer .bootm-banner ul li.policy::before {
   content: '';
@@ -2083,6 +2232,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   height: 40px;
   margin-right: 12px;
   background: url("../imgs/bottom-banner-ico03.png") 0 0/cover no-repeat;
+  transition: all 0.35s;
+}
+.list-viewer .bootm-banner ul li.policy.on::before {
+  content: '';
+  background: url("../imgs/bottom-banner-ico03_on.png") 0 0/cover no-repeat;
 }
 .list-viewer .bootm-banner ul li.subscribe::before {
   content: '';
@@ -2091,9 +2245,18 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   height: 40px;
   margin-right: 12px;
   background: url("../imgs/bottom-banner-ico04.png") 0 0/cover no-repeat;
+  transition: all 0.35s;
+}
+.list-viewer .bootm-banner ul li.subscribe.on::before {
+  content: '';
+  background: url("../imgs/bottom-banner-ico04_on.png") 0 0/cover no-repeat;
 }
 .list-viewer .bootm-banner ul li a {
   color: #222;
   font-size: 18px;
   font-weight: 400;
+}
+.list-viewer .bootm-banner ul li.on a {
+  color: #4165F4;
+  transition: all 0.35s;
 }

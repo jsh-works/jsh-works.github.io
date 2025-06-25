@@ -1,10 +1,17 @@
 [
   {
     "id" : "bookStory",
-    "menuName" : "구독 메인 페이지",
+    "menuName" : "나의 교재방",
+    "devUrl" : "bookStory/bookStoryMyPage.html",
+    "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
+    "update" : "2025.06.25"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "구독 소개/상품 페이지 (구독메인)",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.06.16"
+    "update" : "2025.06.25"
   },
   {
     "id" : "bookStory",
@@ -29,14 +36,14 @@
   },
   {
     "id" : "bookStory",
-    "menuName" : "공통 목록 페이지",
+    "menuName" : "교재상세 + 리스트 (리스트)",
     "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
     "update" : "2025.06.16"
   },
   {
     "id" : "bookStory",
-    "menuName" : "공통 상세 페이지",
+    "menuName" : "교재상세 + 리스트 (교재상세)",
     "devUrl" : "bookStory/bookStoryView.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
     "update" : "2025.06.16"

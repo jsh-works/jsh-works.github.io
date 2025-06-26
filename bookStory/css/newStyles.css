@@ -321,8 +321,10 @@
   font-size: 16px;
   font-weight: bold;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p > b {
+#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p > a {
   color: #333;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 #contentsWrap .tooltip {

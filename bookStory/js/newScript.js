@@ -209,8 +209,9 @@ $(function(){
   // 구독메인 자주묻는질문 스크립트
   $(".faq-box ul li").on('click', function() {
     if(!$(this).hasClass('open')) {
-      $(".faq-box ul li").removeClass('open');
       $(this).addClass('open');
+    } else {
+      $(this).removeClass('open');
     }
   });
 

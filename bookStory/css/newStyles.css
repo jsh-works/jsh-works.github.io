@@ -5,7 +5,70 @@
     font-style: normal;
 }
 
-/* common.css?v=240312 line: 57 change */
+/* 공통 header, css 추가 */
+.top-bnr {
+  padding: 15px 0px;
+  margin-bottom: 20px;
+  background-color: #FFEB7B;
+}
+.top-bnr img.pc {
+  width: 406px;
+  vertical-align: bottom;
+}
+.top-bnr img.mob {
+  display: none;
+}
+#Header {
+  height: 135px;
+}
+#Header .header-inner {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+#Header h1 {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 212px;
+  height: 32px;
+  background: url("../imgs/ebs_bookstory_logo_pc.png") center center/cover no-repeat;
+  z-index: 19;
+}
+#Header h1 > a, #Header h1 > a:last-child { width: 100%; }
+#Header .header-util {position: absolute; top: 0; height: 48px;}
+#Header .header-util .header-sch input[type="text"] {
+  width: 344px;
+  height: 48px;
+  border-radius: 25px;
+}
+#Header .btn-sch {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background: url("https://book.ebs.co.kr/images/ico_srch.svg") 0 50%/cover no-repeat;
+}
+.gnb-inner { height: 60px; }
+.gnb-dep01 > li > a { line-height: 60px; }
+.gnb-dep01 > li .gnb-dep02-div { height: 237px; }
+
+.gnb-dep01 > li > a.active, .gnb-dep01 > li > a:hover { color: #4165F4; }
+.gnb-dep01 > li > a:after, .gnb-dep01 > li > a:hover:after { background: #4165F4; }
+
+.gnb-dep01 > li > a.high.active, .gnb-dep01 > li > a.high:hover { color: #3B33DE; }
+.gnb-dep01 > li > a.high:after, .gnb-dep01 > li > a.high:hover:after { background: #3B33DE; }
+
+.gnb-dep01 > li > a.middle.active, .gnb-dep01 > li > a.middle:hover { color: #604adb; }
+.gnb-dep01 > li > a.middle:after, .gnb-dep01 > li > a.middle:hover:after { background: #604adb; }
+
+.gnb-dep01 > li > a.elementary.active, .gnb-dep01 > li > a.elementary:hover { color: #28C7CF; }
+.gnb-dep01 > li > a.elementary:after, .gnb-dep01 > li > a.elementary:hover:after { background: #28C7CF; }
+
 .gnb-dep01 > li > a.ebook > span {
   position: relative;
   color: #4165F4;
@@ -23,21 +86,16 @@
   border-radius: 50%;
   background-color: #4165F4;
 }
-.book-info .thumb-box {
-  position: relative;
-  width: 100%;
-  padding-top: 432px;
-}
-.book-info .thumb-img {
-  width: 342px;
-}
-.book-info .thumb-img img {
-  border: none;
-}
-#contentsWrap.main {padding-bottom: 0;}
+
+.subGnbBack { position: absolute; top:134px; }
+.book-info .thumb-box { position: relative; width: 100%; padding-top: 432px; }
+.book-info .thumb-img { width: 342px; }
+.book-info .thumb-img img { border: none; }
+#contentsWrap.main { padding-bottom: 0; }
 
 
-/* subscribe idx css */
+
+/* 구독메인 css 추가 */
 #contentsWrap .mainSection {
   position: relative;
   width: 100%;
@@ -52,14 +110,14 @@
   background-color: #203663;
 }
 #contentsWrap .mainSection .sec1 .top-banner {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
-  line-height: 1;
-  padding: 40px 0px;
-  background: url("../imgs/subscribe/top_banner.jpg") 0 0/cover no-repeat;
+  /* height: 180px; */
+  object-fit: cover;
+}
+#contentsWrap .mainSection .sec1 .top-banner img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
 }
 #contentsWrap .mainSection .sec1 .top-banner h1 {
   color: #fff;
@@ -1121,7 +1179,7 @@ margin: 0 auto;
 }
 
 
-/* high School visual Renewal */
+/* 초/중/고교 메인 css 추가 */
 #contentsWrap .mainSection {
   position: relative;
   width: 100%;
@@ -1642,51 +1700,6 @@ margin: 0 auto;
   background: #fff url("../imgs/favorite-ico_active.png") center center/20px 20px no-repeat;
 }
 
-/* #contentsWrap .highSection section .sec-inner .full-list-box ul {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 31.8px;
-}
-#contentsWrap .highSection section .sec-inner .full-list-box ul li {
-  width: 154.68px;
-}
-#contentsWrap .highSection section .sec-inner .full-list-box ul li a {
-  position: relative;
-}
-#contentsWrap .highSection section .sec-inner .full-list-box ul li a.ebook-anchor::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: calc(50% - 35px);
-  width: 70px;
-  height: 18px;
-  background: url("../imgs/ebook-ico.png") center center/70px 18px no-repeat;
-  z-index: 10;
-}
-
-#contentsWrap .highSection section .sec-inner .full-list-box ul li a img {
-  width: 100%;
-  transition : transform .3s ease-in;
-}
-#contentsWrap .highSection section .sec-inner .full-list-box ul li a:hover img {
-  transform: scale(1.02);
-}
-#contentsWrap .highSection section .sec-inner .full-list-box ul li a span {
-  display: inline-block;
-  color: #666;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 133%;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-} */
-
 #contentsWrap section.foot {
   display: flex;
   align-items: center;
@@ -1725,27 +1738,8 @@ margin: 0 auto;
   vertical-align: bottom;
 }
 
-@keyframes rightShow {
-  0% { right: 26px; opacity: 0; }
-  100% { right: 16px; opacity: 1; }
-}
-@keyframes bounceUp {
-  0% { opacity: 0; bottom: -130px; }
-  50% { opacity: 1; }
-  100% { opacity: 1; bottom: 0px; }
-}
-@keyframes rightFadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes rollingUp {
-  0% { top: 6rem; }
-  50% { top: 3rem; }
-  100% { top: 0; }
-}
 
-
-/* 나의 교재방 mypage */
+/* 나의 교재방 css 추가 */
 .sort-wrap{position:absolute; top:0; width:240px; padding:16px 24px; background:#F7F7F7; z-index:10;}
 .sort>ul>li:not(:last-child){margin-bottom:24px;}
 .sort>ul>li>ul{padding-left:0; margin-bottom:16px;}
@@ -1961,7 +1955,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .mybook-list-box ul li .textbook-box img {
   width: 184.91px;
   height: 252px;
-  border-radius: 8px;
   border: 1px solid #eee;
   vertical-align: bottom;
 }
@@ -2050,7 +2043,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   position: relative;
   width: 97px;
   height: 130px;
-  border-radius: 8px;
   border: 1px solid #eee;
   vertical-align: bottom;
 }
@@ -2145,8 +2137,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-btns button:not(:last-child) {
   margin-bottom: 8px;
 }
-
-
 .list-viewer .btns-box {
   display: flex;
   align-items: center;
@@ -2259,4 +2249,121 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .bootm-banner ul li.on a {
   color: #4165F4;
   transition: all 0.35s;
+}
+
+
+/* keyframes 애니메이션 css 추가 */
+@keyframes rightShow {
+  0% { right: 26px; opacity: 0; }
+  100% { right: 16px; opacity: 1; }
+}
+@keyframes bounceUp {
+  0% { opacity: 0; bottom: -130px; }
+  50% { opacity: 1; }
+  100% { opacity: 1; bottom: 0px; }
+}
+@keyframes rightFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes rollingUp {
+  0% { top: 6rem; }
+  50% { top: 3rem; }
+  100% { top: 0; }
+}
+
+
+/* 북스토리 공통 - 모바일 영역 css 추가 */
+@media all and (max-width: 1024px) {
+  .top-bnr img.pc {
+    display: block !important;
+    width: 406px;
+    margin: 0 auto;
+  }
+  #Header { height: 150px; }
+  #Header .header-inner { max-width: 100%;}
+  #Header .header-util {
+    background: none;
+    border: none;
+  }
+  #Header h1 {
+    position: relative;
+    top: 20px;
+    width: 158px;
+    height: 24px;
+    margin-left: 100px;
+    background: url("../imgs/mob/ebs_bookstory_logo.png") 0 0 / cover no-repeat;
+  }
+  #Header .header-util .header-sch input[type="text"] {
+    width: 100%;
+    padding-left: 20px;
+  }
+  #Header .btn-sch { top: 50%; left: auto; }
+  #Header .header-util {
+    top: 44px;
+    height: auto;
+    padding: 0 20px;
+  }
+  .header-inner button.wish-book {
+    position: absolute;
+    top: 4px;
+    right: 62px;
+    width: 32px;
+    height: 32px;
+    background: url("../imgs/mob/favorites-ico.svg") center center /cover no-repeat;
+  }
+  .header-inner button.wish-book:before {
+    content: none;
+  }
+  .header-menu {position: absolute; top: 4px; right: 20px;}
+  .header-menu > button {width: 32px; height: 32px;}
+  .header-menu > button span {
+    width: 32px;
+    height: 32px;
+    background: url("../imgs/mob/menu-ico.svg") center center /cover no-repeat;
+  }
+  .gnb-inner {height: 46px;}
+  .mGnb > ul li {height: 46px;}
+
+  .mGnb > ul li a.ebook > span {
+    position: relative;
+    color: #4165F4;
+    border: none;
+  }
+  .mGnb > ul li a.ebook > span::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #4165F4;
+  }
+
+  .mGnb > ul li a.ebook:after, .mGnb > ul li a.ebook:hover:after {
+    background: #4165F4;
+  }
+
+  .mGnb ul li a.active { color: #4165F4; }
+  .mGnb ul li a:after, .mGnb ul li a.active:after { background: #4165F4; }
+
+  .mGnb ul li a.high.active { color: #3B33DE; }
+  .mGnb ul li a.high:after, .mGnb ul li a.high.active:after { background: #3B33DE; }
+
+  .mGnb ul li a.middle.active { color: #604adb; }
+  .mGnb ul li a.middle:after, .mGnb ul li a.middle.active:after { background: #604adb; }
+
+  .mGnb ul li a.elementary.active { color: #28C7CF; }
+  .mGnb ul li a.elementary:after, .mGnb ul li a.elementary.active:after { background: #28C7CF; }
+}
+
+@media all and (max-width: 500px) {
+  .top-bnr img.pc {display: none !important;}
+  .top-bnr img.mob {
+    display: block;
+    width: 120px;
+    height: 37px;
+    margin: 0 auto;
+  }
 }

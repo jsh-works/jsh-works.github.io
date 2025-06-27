@@ -256,6 +256,43 @@ $(function(){
     }
   });
 
+  // 나의 교재방 모바일 상단 탭 영역 스크립트
+  $(".sort-wrap.mob ul li").on('click', function() {
+    
+    if($(!$(this).hasClass('active'))) {
+      $(".sort-wrap.mob ul li").removeClass('active');
+      $(this).addClass('active');
+
+      if($(this).data('tab') == '1') {
+        $(".sub-sort .buy-sub-list").hide();
+        $(".sub-sort .scr-sub-list").hide();
+
+      } else if($(this).data('tab') == '2') {
+        $(".sub-sort .buy-sub-list").show();
+        $(".sub-sort .scr-sub-list").hide();
+        
+      } else if($(this).data('tab') == '3') {
+        $(".sub-sort .buy-sub-list").hide();
+        $(".sub-sort .scr-sub-list").show();
+      }
+    }
+
+  });
+  
+  $(".sub-sort .buy-sub-list li").on('click', function() {
+    if($(!$(this).hasClass('active'))) {
+      $(".sub-sort .buy-sub-list li").removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+  
+  $(".sub-sort .scr-sub-list li").on('click', function() {
+    if($(!$(this).hasClass('active'))) {
+      $(".sub-sort .scr-sub-list li").removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+
   // 나의 교재방 모바일 좌측 필터버튼 선택 스크립트
   $(".filter-type").on('click', function() {
     if($(this).hasClass('on')) {

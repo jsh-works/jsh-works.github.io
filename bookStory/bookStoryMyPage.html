@@ -41,7 +41,7 @@
     <!-- contents -->
     <div id="contentsWrap" class="sub">
       <div class="sub-cnt-wrap">
-        <div class="sort-wrap">
+        <div class="sort-wrap pc">
           <div class="sort type2">
             <ul>
               <li class="my">
@@ -95,6 +95,32 @@
             </ul>
           </div>
         </div>
+        <div class="sort-wrap mob">
+          <div class="sort type2">
+            <ul>
+              <li class="active">나의 교재</li>
+              <li>나의 구매정보</li>
+              <li>나의 구독 정보</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub-sort">
+          <ul class="buy-sub-list">
+            <li class="active">eBook 결제내역</li>
+            <li>eBook 환불내역</li>
+            <li>쿠폰등록</li>
+            <li>장바구니</li>
+            <li>관심교제</li>
+          </ul>
+          <ul class="scr-sub-list" style="display: none;">
+            <li>eBook 결제내역</li>
+            <li>eBook 환불내역</li>
+            <li>쿠폰등록</li>
+            <li>장바구니</li>
+            <li>관심교제</li>
+          </ul>
+        </div>
+
         <div class="list-viewer">
           <h2>나의 교재(128권)</h2>
           <div class="viewer-btns">
@@ -118,13 +144,31 @@
                 <option value="EBKNM">제목 순</option>
               </select>
 
+              <button class="filter-type"></button>
               <button class="album-type on">이미지 형태로 보기</button>
               <button class="list-type">목록 형태로 보기</button>
             </div>
           </div>
+          <div class="mob-sort-popup">
+            <dl class="sort-state">
+              <dt>정렬</dt>
+              <dd class="active">구매일순</dd>
+              <dd>높은 가격 순</dd>
+              <dd>낮은 가격 순</dd>
+              <dd>제목 순</dd>
+            </dl>
+            <dl class="filter-state">
+              <dt>필터</dt>
+              <dd>전체</dd>
+              <dd>구독</dd>
+              <dd>단건 구매</dd>
+            </dl>
+            <button class="clear">확인</button>
+          </div>
 
           <div class="mybook-list-box albumType">
             <!-- ul로 묶어서 리스트 뿌려아합니다. -->
+            <!--
             <ul> 
               <li>
                 <div class="textbook-box">
@@ -151,109 +195,12 @@
                 </div>
               </li>
               <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
             </ul>
-
-            <!-- ul로 묶어서 리스트 뿌려아합니다. -->
-            <ul>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="expire">만료: 2025-06-24</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-              <li>
-                <div class="textbook-box">
-                  <img src="./imgs/books_example.png" alt="교재 이미지" />
-                  <i class="subscribe-ico"></i>
-                  <div class="hover-btns">
-                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary">해설지 보기</button>
-                    <button class="view-description">교재 설명 보기</button>
-                  </div>
-                  <span class="buy">구매</span>
-                </div>
-              </li>
-            </ul>
+            -->
           </div>
 
           <div class="mybook-list-box listType">
+            <!--
             <ul>
               <li>
                 <div class="list-textbook-box">
@@ -283,6 +230,7 @@
                 </div>
               </li>
             </ul>
+            -->
           </div>
 
           <div class="btns-box">
@@ -305,11 +253,94 @@
               </li>
             </ul>
           </div>
+
+          <div class="quick-menu">
+            <div class="quick-util">
+              <a href="/agency/list" title="총판문의"><span class="mob">총판 <br>문의</span></a>
+              <a href="https://teacher.ebsi.co.kr/ercapp/main.do" target="_blank" title="교사지원센터"><span class="mob">교사 <br>지원 <em>센터</em></span></a>
+              <a href="https://cbox.ebs.co.kr/portal/PDF/2022/txbk/수학마스터_가이드북.pdf" target="_blank" class="newitem">
+                <span class="mob">
+                <span class="item01">수학마스터<br><em>가이드북</em></span>
+                <span class="item02">교사<br><em>강사용</em></span>
+                </span>
+              </a>
+              <a href="https://www.ebsi.co.kr/ebs/pot/poty/grtsBookMain.ebs" target="_blank" title="무상교재신청">
+                <span class="mob">무상 <br>교재 <em>신청</em></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="foot">
+        <div class="sec-inner">
+          <ul class="btns-box">
+            <li>
+              <a href="https://play.google.com/store/apps/details?id=kr.co.ebs.ebook&hl=ko" title="EBS ebook APP" target="_blank">
+                <img src="./imgs/google-store-btn.png" alt="구글 플레이 바로가기" />
+              </a>
+            </li>
+            <li>
+              <a href="https://apps.apple.com/kr/app/ebs-ebook/id6447656525" title="EBS ebook APP" target="_blank">
+                <img src="./imgs/app-store-btn.png" alt="앱 스토어 바로가기" />
+              </a>
+            </li>
+          </ul>
+          <div class="social-box">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/ebsbookstory/" title="인스타그램 채널" target="_blank">
+                  <img src="./imgs/sns-instagram.png" alt="인스타그램" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC-AxolLaAR9cDHT0xL18yyg" title="유튜브 채널" target="_blank">
+                  <img src="./imgs/sns-youtube.png" alt="유튜브" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/ebsbookstory" title="페이스북 채널" target="_blank">
+                  <img src="./imgs/sns-facebook.png" alt="페이스북" />
+                </a>
+              </li>
+              <li>
+                <a href="https://pf.kakao.com/_nbdKj" title="카카오톡 채널" target="_blank">
+                  <img src="./imgs/sns-kakao.png" alt="카카오톡" />
+                </a>
+              </li>
+              <li>
+                <a href="https://blog.naver.com/ebspub" title="블로그 채널" target="_blank">
+                  <img src="./imgs/sns-naver.png" alt="네이버 블로그" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- bottomSheet popup -->
+      <div class="bottomSheet">
+        <div class="popup">
+          <div class="title">
+            <h1>보기 방법 선택</h1>
+            <a class="close"></a>
+          </div>
+          <ul>
+            <li class="active">교재보기</li>
+            <li>해설지 보기</li>
+            <li>교재 설명 보기</li>
+          </ul>
+          <div class="btn-box">
+            <button class="cancel">취소</button>
+            <button class="clear">확인</button>
+          </div>
         </div>
       </div>
     </div>
     <!-- //contents -->
 
+    
+
+    
     <!-- orign footer import -->
     <div id="bottomFooter"></div>
   </div>

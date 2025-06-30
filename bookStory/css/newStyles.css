@@ -1702,7 +1702,8 @@ margin: 0 auto;
   background: #fff url("../imgs/favorite-ico_active.png") center center/20px 20px no-repeat;
 }
 
-#contentsWrap section.foot {
+/* footer 소셜 배너 추가 */
+#Footer .social-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1710,7 +1711,7 @@ margin: 0 auto;
   height: 80px;
   background-color: #1D1D1E;
 }
-#contentsWrap section.foot .sec-inner {
+#Footer .social-banner .social-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1719,22 +1720,28 @@ margin: 0 auto;
   margin: 0 auto;
   padding: 20px 0;
 }
-#contentsWrap section.foot .sec-inner .btns-box {
+#Footer .social-banner .btns-box {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-#contentsWrap section.foot .sec-inner .btns-box ul li {
+#Footer .social-banner .btns-box ul li {
   width: 120px;
   height: 40px;
 }
-#contentsWrap section.foot .sec-inner .social-box ul {
+#Footer .social-banner .social-box ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
 }
-#contentsWrap section.foot .sec-inner .social-box ul li a img {
+#Footer .social-banner .social-box ul li a img.pc-sns {
+  display: block;
+}
+#Footer .social-banner .social-box ul li a img.mob-sns {
+  display: none;
+}
+#Footer .social-banner .social-box ul li a img {
   width: 24px;
   height: 24px;
   vertical-align: bottom;
@@ -2481,7 +2488,7 @@ border: 1px solid #4165F4;
   /* 나의 교재방 mobile css 추가 */
   #contentsWrap .sub-cnt-wrap {
     margin-top: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
   }
   .list-viewer {
     max-width: 100%;
@@ -2721,6 +2728,71 @@ border: 1px solid #4165F4;
     color: #fff;
     border: 1px solid #4165F4;
     background-color: #4165F4;
+  }
+
+  #Footer .social-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 84px;
+    background-color: #fff;
+  }
+  #Footer .social-banner .social-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  #Footer .social-banner ul.btns-box {
+    display: none;
+  }
+  #Footer .social-banner ul.btns-box li {
+    width: 120px;
+    height: 40px;
+  }
+  #Footer .social-banner .social-box {
+    width: 100%;
+    margin: 0 37.5px;
+  }
+  #Footer .social-banner .social-box ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+  #Footer .social-banner .social-box ul li a img.pc-sns {
+    display: none;
+  }
+  #Footer .social-banner .social-box ul li a img.mob-sns {
+    display: block;
+  }
+  #Footer .social-banner .social-box ul li a img {
+    width: 44px;
+    height: 44px;
+    vertical-align: bottom;
+  }
+  #Footer .footer-store.mb {
+    margin-top: 32px;
+  }
+  #Footer .footer-store.mb > ul.btns-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 11px;
+    width: 100%;
+  }
+  #Footer .footer-store.mb > ul.btns-box li img {
+    width: 100%;
+    height: auto;
+  }
+  #Footer .footer-inner {
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
   }
 }
 

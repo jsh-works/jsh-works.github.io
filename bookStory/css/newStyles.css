@@ -2523,10 +2523,10 @@ border: 1px solid #4165F4;
     font-size: 14px;
     font-weight: 700;
     border: none;
-    border-radius: 6px;
   }
   .sort-wrap.mob .sort ul li.active {
     color: #222;
+    border-radius: 6px;
     background-color: #fff;
   }
   .sort>ul>li:not(:last-child) {

@@ -1933,7 +1933,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   font-weight: 400;
   padding-left: 30px;
   letter-spacing: -1px;
-  line-height: normal;
+  line-height: 160%;
   cursor: pointer;
 }
 .list-viewer .mob-sort-popup dl dd::before {

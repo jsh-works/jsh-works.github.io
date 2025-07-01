@@ -4,6 +4,11 @@ $(function(){
   var ebsDateFormat = "YY.MM.DD";
   var mediaPlayer = null;
   
+  // 나의 교재방 목록 뿌려주기 PC, Mobile 분기처리  
+  var windowWidth = $(window).width();
+  var album ="";
+  var list ="";
+
   // 북스토리 공통상세 - 바텀 플로팅 스크립트
   $(".prod-purchase-footer").css({ bottom : '0px' });
 
@@ -108,7 +113,7 @@ $(function(){
   });
 
   // 초중고교 메인 슬라이드 배너
-  var mainSildeBaner = new Swiper ('.slide-banner', {
+  new Swiper ('.slide-banner', {
 		speed: 500,
 		delay: 7000,
 		loop: true,
@@ -131,30 +136,55 @@ $(function(){
   });
 
   // 구독메인 상단 슬라이드 스크립트
-  var coverFlowSilder = new Swiper ('.coverflow-slide', {
-		loop: true,
-    speed: 500,
-    autoplay: {
-      delay: 3000,
-    },
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: -10,
-      stretch: 0,
-      depth: 350,
-      modifier: 0.7,
-      slideShadows: false,
-    },
-    navigation: {
-      prevEl: '.coverflow-btn-prev',
-      nextEl: '.coverflow-btn-next',
-    },
-  });
+  if(windowWidth > 500) {
+    new Swiper ('.coverflow-slide', { // 구독메인 PC
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 3000,
+      },
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: -10,
+        stretch: 0,
+        depth: 350,
+        modifier: 0.7,
+        slideShadows: false,
+      },
+      navigation: {
+        prevEl: '.coverflow-btn-prev',
+        nextEl: '.coverflow-btn-next',
+      },
+    });
+  } else {
+    new Swiper ('.coverflow-slide', { // 구독메인 Mobile
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 3000,
+      },
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: -10,
+        stretch: 300,
+        depth: 150,
+        modifier: 0.7,
+        slideShadows: false,
+      },
+      navigation: {
+        prevEl: '.coverflow-btn-prev',
+        nextEl: '.coverflow-btn-next',
+      },
+    });
+  }
 
-  // EBS eBook 체험하기 event
+  // EBS eBook 체험하기 pc event
   var scrollEvent = () => {
     var $slider = $('.scroll-conts-box');
     $slider.find('.scroll-conts-slide').each(function (i) {
@@ -181,12 +211,31 @@ $(function(){
   }
   scrollEvent();
 
-  // EBS eBook 체험하기 event
+
+  // EBS eBook 체험하기 pc event
   $(document).on('click', '.scroll-conts-box ul li', function () {
     var idx = $(this).index();
     var $that = $(this).parents('.scroll-conts-box');
     $that.find('.swiper-pagination span').eq(idx).trigger('click');
-  })
+  });
+
+
+  // EBS eBook 체험하기 mobile event
+  new Swiper( '.fade-conts-box', {
+	effect : 'fade',
+  loop: true,
+  speed: 500,
+  delay: 7000,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  centeredSlides: true,
+	navigation : {
+		nextEl : '.fade-btn-next',
+		prevEl : '.fade-btn-prev',
+	},
+});
   
   // 구독메인 구독/결제 부분 스크립트
   $(".check-btn").on('click', function() {
@@ -325,11 +374,6 @@ $(function(){
     $(".filter-type").removeClass('on');
   });
 
-
-  // 나의 교재방 목록 뿌려주기 PC, Mobile 분기처리  
-  var windowWidth = $(window).width();
-  var album ="";
-  var list ="";
 
   function albumTypeFnc() {
     if(windowWidth > 1024) { // PC

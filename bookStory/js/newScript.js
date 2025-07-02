@@ -136,53 +136,50 @@ $(function(){
   });
 
   // 구독메인 상단 슬라이드 스크립트
-  if(windowWidth > 500) {
-    new Swiper ('.coverflow-slide', { // 구독메인 PC
-      loop: true,
-      speed: 500,
-      autoplay: {
-        delay: 3000,
+  new Swiper ('.coverflow-slide', { // mobile
+    loop: true,
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+    },
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: -10,
+      stretch: 0,
+      depth: 300,
+      modifier: 0.6,
+      slideShadows: false,
+    },
+    breakpoints: { // pc
+      
+      500: {
+        coverflowEffect: {
+          rotate: -10,
+          stretch: 320,
+          depth: 450,
+          modifier: 0.6,
+          slideShadows: false,
+        },
       },
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: -10,
-        stretch: 0,
-        depth: 350,
-        modifier: 0.7,
-        slideShadows: false,
+      1024: {
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: -10,
+          stretch: 0,
+          depth: 300,
+          modifier: 0.65,
+          slideShadows: false,
+        },
       },
-      navigation: {
-        prevEl: '.coverflow-btn-prev',
-        nextEl: '.coverflow-btn-next',
-      },
-    });
-  } else {
-    new Swiper ('.coverflow-slide', { // 구독메인 Mobile
-      loop: true,
-      speed: 500,
-      autoplay: {
-        delay: 3000,
-      },
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: -10,
-        stretch: 300,
-        depth: 150,
-        modifier: 0.7,
-        slideShadows: false,
-      },
-      navigation: {
-        prevEl: '.coverflow-btn-prev',
-        nextEl: '.coverflow-btn-next',
-      },
-    });
-  }
+    },
+    navigation: {
+      prevEl: '.coverflow-btn-prev',
+      nextEl: '.coverflow-btn-next',
+    },
+  });
 
   // EBS eBook 체험하기 pc event
   var scrollEvent = () => {

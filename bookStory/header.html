@@ -26,17 +26,16 @@
     href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
-  <script src="./js/newScript.js"></script> <!-- addition -->
-  <script src="./js/bottomFooter.js"></script> <!-- origin -->
   <script src="https://book.ebs.co.kr/js/slick.js"></script>
   <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
   <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
   <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
   <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
   <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+  <script src="./js/newScript.js"></script> <!-- addition -->
   </script>
 </head>
-
 <!-- newStyles.css 필요합니다. / 아래 주석으로 변경된 부분 적어뒀습니다. -->
 
 <!-- 20250626 : 추가/변경  -->
@@ -84,7 +83,7 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
             <span>전체메뉴</span>
           </button>
         </div>
-        <button class='wish-book' title='관심교재' onclick='location.href=&#34;/mypage/intrst&#34;'>관심 교재</button>
+        <button class='wish-book' title='관심교재' onclick='location.href=""'>관심 교재</button>
       </div>
       <div class='gnb-inner'>
         <div class='mGnb'>
@@ -109,16 +108,8 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
                 <ul class='gnb-dep02'>
                   <li>
                     <ul>
-                      <li><a href='/bookStory/bookStoryList.html'>eBook</a></li>
-                      <li><a href='/bookStory/bookStoryList.html'>수능연계</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul>
-                      <li><a href='/bookStory/bookStoryList.html' class='active'>고교</a></li>
-                      <li><a href='/bookStory/bookStoryList.html'>중학</a></li>
-                      <li><a href='/bookStory/bookStoryList.html'>초등</a></li>
-                      <li><a href='/bookStory/bookStoryList.html'>일반</a></li>
+                      <li><a href='/bookStory/bookStoryList.html'>리스트1</a></li>
+                      <li><a href='/bookStory/bookStoryList.html'>리스트2</a></li>
                     </ul>
                   </li>
                 </ul><a href='/bookStory/bookStoryView.html' class='solo_link'><span>공통 상세 페이지</span></a>
@@ -222,7 +213,74 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
           </ul>
         </div>
       </div>
-      <div class='subGnbBack'></div>
+      <!-- <div class='subGnbBack'></div> -->
+       <!-- 서브 뎁스02 추가 -->
+      <div class='gnb-sub-dep'>
+        <div class='gnb-sub-inner'>
+          <div class="gnb-sub-list">
+            <ul class="ebook">
+              <li><a href="" class="on">전체로드맵</a></li>
+              <li><a href="">eBook</a></li>
+              <li><a href="">수능연계</a></li>
+              <li><a href="">고교</a></li>
+              <li><a href="">중학</a></li>
+              <li><a href="">초등</a></li>
+              <li><a href="">일반</a></li>
+            </ul>
+
+            <ul class="high">
+              <li><a href="" class="on">전체로드맵</a></li>
+              <li><a href="" class="">시리즈</a></li>
+              <li><a href="" class="">수능연계</a></li>
+              <li><a href="" class="">1학년</a></li>
+              <li><a href="" class="">2학년</a></li>
+              <li><a href="" class="">3학년/N수</a></li>
+            </ul>
+
+            <ul class="middle">
+              <li><a href="" class="on">전체로드맵</a></li>
+              <li><a href="" class="">시리즈</a></li>
+              <li><a href="" class="">공통</a></li>
+              <li><a href="" class="">1학년</a></li>
+              <li><a href="" class="">2학년</a></li>
+              <li><a href="" class="">3학년</a></li>
+            </ul>
+
+            <ul class="elementary">
+              <li><a href="" class="on">전체로드맵</a></li>
+              <li><a href="" class="">시리즈</a></li>
+              <li><a href="" class="">공통</a></li>
+              <li><a href="" class="">1학년</a></li>
+              <li><a href="" class="">2학년</a></li>
+              <li><a href="" class="">3학년</a></li>
+              <li><a href="" class="">4학년</a></li>
+              <li><a href="" class="">5학년</a></li>
+              <li><a href="" class="">6학년</a></li>
+            </ul>
+
+            <ul class="">
+              <li><a href="" class="on">전체로드맵</a></li>
+              <li><a href="" class="">READERS</a></li>
+              <li><a href="" class="">SKILL BOOK</a></li>
+            </ul>
+
+            <ul class="">
+              <li><a href="" class="on">진행 이벤트</a></li>
+              <li><a href="" class="">완료 이벤트</a></li>
+              <li><a href="" class="">당첨자 발표</a></li>
+            </ul>
+
+            <ul class="">
+              <li><a href="" class="on">나의 교재</a></li>
+              <li><a href="" class="">나의 구매정보</a></li>
+              <li><a href="" class="">eBook 쿠폰 등록</a></li>
+              <li><a href="" class="">장바구니</a></li>
+              <li><a href="" class="">관심교재</a></li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
     </div>
     <div id='totalGnb'>
       <div class='total-gnb-wrap'>
@@ -286,9 +344,6 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       <input type='hidden' name='returnUrl' id='returnUrl'>
     </form>
 
-
-    <!-- 예시 본문 -->
-    <div id="contentsWrap" class="main" style="padding: 240px 0;"></div>
   
     <!-- 예시 푸터 -->
     <div id="bottomFooter" style="padding-bottom: 150px;"></div>

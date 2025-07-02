@@ -4,7 +4,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 /* 공통 header, css 추가 */
 .top-bnr {
   padding: 15px 0px;
@@ -86,6 +85,71 @@
 .book-info .thumb-img { width: 342px; }
 .book-info .thumb-img img { border: none; }
 #contentsWrap.main { padding-bottom: 0; }
+
+.gnb-sub-dep {
+  position: relative;
+  display: none;
+}
+.gnb-sub-dep .gnb-sub-inner {
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list {
+  padding: 12px;
+  overflow: auto;
+  overscroll-behavior: none;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 8px;
+  height: 36px;
+  width: 100%;
+  white-space: nowrap;
+
+  margin-bottom: 10px;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul li:last-child {
+  padding-right: 20px;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul li a {
+  color: #222;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 160%;
+  text-align: center;
+  padding: 7.5px 16px;
+  border-radius: 32px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul li a.on {
+  color: #4165F4;
+  font-weight: 700;
+  border: 1px solid #4165F4;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.ebook li a.on {
+  color: #4165F4;
+  border: 1px solid #4165F4;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.high li a.on {
+  color: #3B33DE;
+  border: 1px solid #3B33DE;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.middle li a.on {
+  color: #604adb;
+  border: 1px solid #604adb;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.elementary li a.on {
+  color: #18BCC4;
+  border: 1px solid #18BCC4;
+}
+
+
+
 
 /* 구독메인 css 추가 */
 #contentsWrap .mainSection {
@@ -2423,6 +2487,9 @@ border: 1px solid #4165F4;
 }
 
 @media all and (max-width: 1024px) {
+  .gnb-sub-dep {
+    display: block;
+  }
   #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li.thirds {
     display: flex;
     flex-direction: column;

@@ -139,22 +139,22 @@
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner {
   position: relative;
   width: 1280px;
-  height: 356px;
+  /* height: 356px; */
   margin: 0 auto 56px;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
   width: 1200px;
-  height: 356px;
+  /* height: 356px; */
   margin: 0 auto 56px;
   overflow: hidden;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
   position: relative;
-  width: 250px;
+ /*  width: 250px; */
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper .swiper-slide img {
-  width: 260px;
-  height: 356px;
+  width: 100%;
+  /* height: 356px; */
   vertical-align: bottom;
   border-radius: 20px;
 }
@@ -2997,11 +2997,11 @@ border: 1px solid #4165F4;
     margin-bottom: 25px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
-    width: 287px;
+    /* width: 287px; */
   }
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper .swiper-slide img {
-    width: 78.5px;
-    height: 107px;
+    width: 100%;
+    /* height: 107px; */
     border-radius: 10px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
@@ -3362,7 +3362,7 @@ border: 1px solid #4165F4;
 
 @media all and (max-width: 375px) {
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
-    width: 414px;
+   /*  width: 414px; */
   }
 }
 

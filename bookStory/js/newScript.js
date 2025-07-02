@@ -145,7 +145,8 @@ $(function(){
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 'auto',
+    slidesPerView: 4,
+    spaceBetween: 15,
     coverflowEffect: {
       rotate: -10,
       stretch: 0,
@@ -154,24 +155,13 @@ $(function(){
       slideShadows: false,
     },
     breakpoints: { // pc
-      
       500: {
         coverflowEffect: {
           rotate: -10,
-          stretch: 320,
-          depth: 450,
-          modifier: 0.6,
-          slideShadows: false,
-        },
-      },
-      1024: {
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: -10,
-          stretch: 0,
-          depth: 300,
-          modifier: 0.65,
-          slideShadows: false,
+          //stretch: 320,
+          //depth: 450,
+          //modifier: 0.6,
+          //slideShadows: false,
         },
       },
     },

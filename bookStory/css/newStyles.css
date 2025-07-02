@@ -1837,7 +1837,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
 }
 .list-viewer .viewer-btns .types select {
   width: 130px;

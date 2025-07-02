@@ -139,22 +139,18 @@
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner {
   position: relative;
   width: 1280px;
-  /* height: 356px; */
   margin: 0 auto 56px;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
   width: 1200px;
-  /* height: 356px; */
   margin: 0 auto 56px;
   overflow: hidden;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
   position: relative;
- /*  width: 250px; */
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper .swiper-slide img {
   width: 100%;
-  /* height: 356px; */
   vertical-align: bottom;
   border-radius: 20px;
 }
@@ -362,7 +358,7 @@
   border-top-color: #111;
   border-bottom: 0;
   margin-left: -8px;
-  margin-bottom: -8px;
+  margin-bottom: -6px;
 }
 
 #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
@@ -504,7 +500,7 @@ position: absolute;
 }
 #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 30px;
   width: 100%;
@@ -552,14 +548,13 @@ position: absolute;
 #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 75px;
 }
 #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box {
   display: none;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul {
-  margin-right: 75px;
-}
+
 #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li:not(:last-child) {
   margin-bottom: 26px;
 }
@@ -598,7 +593,7 @@ position: absolute;
 #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination {
   position: absolute;
   top: calc(50% - 60px);
-  right: -10px;
+  right: -20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -617,7 +612,7 @@ position: absolute;
 #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .wheel-ico {
   position: absolute;
   top: 270px;
-  right: -10px;
+  right: -20px;
   width: 16px;
   height: 23px;
 }
@@ -798,9 +793,7 @@ position: absolute;
   border-radius: 50px;
   background-color: #111;
 }
-  font-size: 30px;
-  line-height: 1;
-}
+
 #contentsWrap .floating.check .float-inner h2 > small {
   font-size: 18px;
   font-weight: normal;
@@ -2367,18 +2360,40 @@ border: 1px solid #4165F4;
 
 /* 미디어쿼리 */
 @media all and (max-width: 1600px) {
-.quick-util:not(.ebook) {
-  width: 100%;
-}
-.quick-menu:not(.ebook) {
+  .quick-util:not(.ebook) {
+    width: 100%;
+  }
+  .quick-menu:not(.ebook) {
     padding: 0;
   }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0 20px; }
+  /* #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+    margin: 0 20px;
+  } */
 }
 
 @media all and (max-width: 1300px) {
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner,
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
     width: 100%;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul {
+    margin-right: 0;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+    display: flex;
+    gap: 0;
+    margin: 0 20px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide {
+    width: 740px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination,
+  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .wheel-ico {
+    right: 20px;
+  }
+  #contentsWrap .mainSection .sec4 .sec-inner .faq-box {
+    margin: 0 20px;
   }
 }
 
@@ -2931,6 +2946,10 @@ border: 1px solid #4165F4;
     padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
     padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
   }
+
+  #contentsWrap .mainSection .sec1 .sec-inner { margin-top: 80px; }
+  #contentsWrap .mainSection .sec2, #contentsWrap .mainSection .sec3, #contentsWrap .mainSection .sec4 { padding: 80px 40px; }
+  
 }
 
 /* 구독메인 전용 CSS 추가*/
@@ -2993,15 +3012,11 @@ border: 1px solid #4165F4;
     margin: 0 20px 20px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner {
-    height: 107px;
     margin-bottom: 25px;
   }
-  #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
-    /* width: 287px; */
-  }
+ 
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper .swiper-slide img {
     width: 100%;
-    /* height: 107px; */
     border-radius: 10px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
@@ -3355,15 +3370,7 @@ border: 1px solid #4165F4;
     width: 4px;
     height: 7px;
   }
-
-}
-
-
-
-@media all and (max-width: 375px) {
-  #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
-   /*  width: 414px; */
-  }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0; }
 }
 
 

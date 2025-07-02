@@ -61,8 +61,8 @@
 .gnb-dep01 > li > a.high:after, .gnb-dep01 > li > a.high:hover:after { background: #3B33DE; }
 .gnb-dep01 > li > a.middle.active, .gnb-dep01 > li > a.middle:hover { color: #604adb; }
 .gnb-dep01 > li > a.middle:after, .gnb-dep01 > li > a.middle:hover:after { background: #604adb; }
-.gnb-dep01 > li > a.elementary.active, .gnb-dep01 > li > a.elementary:hover { color: #28C7CF; }
-.gnb-dep01 > li > a.elementary:after, .gnb-dep01 > li > a.elementary:hover:after { background: #28C7CF; }
+.gnb-dep01 > li > a.elementary.active, .gnb-dep01 > li > a.elementary:hover { color: #18BCC4; }
+.gnb-dep01 > li > a.elementary:after, .gnb-dep01 > li > a.elementary:hover:after { background: #18BCC4; }
 .gnb-dep01 > li > a.ebook > span {
   position: relative;
   color: #4165F4;
@@ -97,7 +97,7 @@
 .gnb-sub-dep .gnb-sub-inner .gnb-sub-list {
   padding: 12px;
   overflow: auto;
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
 }
 .gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul {
   display: flex;
@@ -109,8 +109,7 @@
   height: 36px;
   width: 100%;
   white-space: nowrap;
-
-  margin-bottom: 10px;
+  display: none;
 }
 .gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul li:last-child {
   padding-right: 20px;
@@ -119,31 +118,34 @@
   color: #222;
   font-size: 13px;
   font-weight: 500;
-  line-height: 160%;
+  line-height: 1;
   text-align: center;
   padding: 7.5px 16px;
   border-radius: 32px;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul li a.on {
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.active {
+  display: flex;
+}
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.active li a.on {
   color: #4165F4;
   font-weight: 700;
   border: 1px solid #4165F4;
 }
-.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.ebook li a.on {
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.subscribe.active li a.on {
   color: #4165F4;
   border: 1px solid #4165F4;
 }
-.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.high li a.on {
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.high.active li a.on {
   color: #3B33DE;
   border: 1px solid #3B33DE;
 }
-.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.middle li a.on {
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.middle.active li a.on {
   color: #604adb;
   border: 1px solid #604adb;
 }
-.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.elementary li a.on {
+.gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.elementary.active li a.on {
   color: #18BCC4;
   border: 1px solid #18BCC4;
 }
@@ -2487,6 +2489,7 @@ border: 1px solid #4165F4;
 }
 
 @media all and (max-width: 1024px) {
+  #contentsWrap {margin-top: 60px;}
   .gnb-sub-dep {
     display: block;
   }
@@ -2695,8 +2698,8 @@ border: 1px solid #4165F4;
   .mGnb ul li a.high:after, .mGnb ul li a.high.active:after { background: #3B33DE; }
   .mGnb ul li a.middle.active { color: #604adb; }
   .mGnb ul li a.middle:after, .mGnb ul li a.middle.active:after { background: #604adb; }
-  .mGnb ul li a.elementary.active { color: #28C7CF; }
-  .mGnb ul li a.elementary:after, .mGnb ul li a.elementary.active:after { background: #28C7CF; }
+  .mGnb ul li a.elementary.active { color: #18BCC4; }
+  .mGnb ul li a.elementary:after, .mGnb ul li a.elementary.active:after { background: #18BCC4; }
 
 
   /* 나의 교재방 mobile css 추가 */

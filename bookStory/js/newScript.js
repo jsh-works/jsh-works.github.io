@@ -9,7 +9,6 @@ $(function(){
   var album ="";
   var list ="";
 
-  
   // 북스토리 공통상세 - 바텀 플로팅 스크립트
   $(".prod-purchase-footer").css({ bottom : '0px' });
 
@@ -89,7 +88,7 @@ $(function(){
             prevEl: '.slide-banner-btn-prev',
         },
   });
-
+  
   // 초중고교 eBook 추천 시리즈 페이지 메뉴 변경 스크립트
   $(".list-active dd").on('click', function(){
     const active = $(this).data('active');

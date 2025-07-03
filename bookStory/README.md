@@ -12,3 +12,8 @@ Version.20250626 / 0.0.1
 | 초등 메인 페이지 | [bookStoryEleMain.html](bookStoryEleMain.html) |
 | 리스트 (공통 목록) | [bookStoryList.html](bookStoryList.html) |
 | 교재상세 (공통 상세) | [bookStoryView.html](bookStoryView.html) |
+
+
+* topHeader.js 와 bottomFooter.js는 퍼블리싱 작업 간에 elemnet 코드들이 내부에 모두
+있어야 하는게 보기 불편함에 있어서 빼둔 js입니다. 해당 html파일은, 각각
+header.html 와 footer.html에 있습니다.

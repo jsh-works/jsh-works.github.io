@@ -276,7 +276,10 @@ $(function(){
   // 구독메인 스크롤 플로팅 표시
   $(window).scroll(function () {
     var winPosY = $(document).scrollTop();
-    if(winPosY > 800) {
+    var offset = $(".btn-items").offset();
+    var top = offset.top;
+
+    if(winPosY > top) {
       $(".floating").css('display','block');
     } else {
       $(".floating").css('display','none');

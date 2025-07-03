@@ -4,62 +4,62 @@
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
     "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
-    "update" : "2025.06.25"
+    "update" : "2025.06.27"
   },
   {
     "id" : "bookStory",
     "menuName" : "구독 소개/상품 페이지 (구독메인)",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.06.25"
+    "update" : "2025.07.03"
   },
   {
     "id" : "bookStory",
     "menuName" : "고교 메인 페이지",
     "devUrl" : "bookStory/bookStoryHighMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
-    "update" : "2025.06.16"
+    "update" : "-"
   },
   {
     "id" : "bookStory",
     "menuName" : "중학 메인 페이지",
     "devUrl" : "bookStory/bookStoryMidMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/middle",
-    "update" : "2025.06.16"
+    "update" : "-"
   },
   {
     "id" : "bookStory",
     "menuName" : "초등 메인 페이지",
     "devUrl" : "bookStory/bookStoryEleMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/primary",
-    "update" : "2025.06.16"
+    "update" : "-"
   },
   {
     "id" : "bookStory",
     "menuName" : "교재상세 + 리스트 (리스트)",
     "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
-    "update" : "2025.06.16"
+    "update" : "-"
   },
   {
     "id" : "bookStory",
     "menuName" : "교재상세 + 리스트 (교재상세)",
     "devUrl" : "bookStory/bookStoryView.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
-    "update" : "2025.06.16"
+    "update" : "-"
   },
   {
     "id" : "e-book",
     "menuName" : "학급/학습 이력관리",
     "devUrl" : "learnHistory/index.html",
     "mainUrl" : "",
-    "update" : "2025.05.16"
+    "update" : "-"
   },
   {
     "id" : "e-book",
     "menuName" : "강의목록/웹뷰 수정 건",
     "devUrl" : "ebookViewer/index.html",
     "mainUrl" : "https://book.ebs.co.kr/ebook/lect?courseId=S20240000112&fmySiteDsCd=EBSI&ec=ZjZNShVBdoA+CGc0dnd9vQ==&txbkId=LB00000005328&ebkId=EB100001443&sbjtApplyId=1036456013",
-    "update" : "2025.06.12"
+    "update" : "-"
   }
 ]

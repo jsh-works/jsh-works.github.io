@@ -257,10 +257,22 @@
   transition: all 0.35s;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li:hover {
-  border: 2px solid #f38e2e;
-  box-shadow: 0px 0px 2px 3px #ff9c3e;
+  border: 2px solid #4165F4;
+  box-shadow: 0px 0px 2px 3px #4165F4;
   transform: translateY(-10px);
   transition: all 0.35s;
+}
+#contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.high:hover {
+  border: 2px solid #3B33DE;
+  box-shadow: 0px 0px 2px 3px #3B33DE;
+}
+#contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.middle:hover {
+  border: 2px solid #604adb;
+  box-shadow: 0px 0px 2px 3px #604adb;
+}
+#contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.elementary:hover {
+  border: 2px solid #18BCC4;
+  box-shadow: 0px 0px 2px 3px #18BCC4;
 }
 #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li a {
   display: flex;
@@ -708,8 +720,8 @@ position: absolute;
   box-shadow: 0px 2px 0px 2px #bbc6db;
 }
 #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn:hover {
-  border: 2px solid #f38e2e;
-  box-shadow: 0px 0px 2px 2px #ff9c3e;
+  border: 2px solid #4165F4;
+  box-shadow: 0px 0px 2px 2px #4165F4;
   transform: translateY(-5px);
   transition: all 0.35s;
 }
@@ -844,6 +856,7 @@ position: absolute;
   color: #fff;
   font-size: 30px;
   font-weight: bold;
+  line-height: 1;
 }
 #contentsWrap .floating .float-inner button {
   display: flex;
@@ -2489,7 +2502,7 @@ border: 1px solid #4165F4;
 }
 
 @media all and (max-width: 1024px) {
-  #contentsWrap {margin-top: 60px;}
+  #contentsWrap {margin-top: 75px;}
   .gnb-sub-dep {
     display: block;
   }
@@ -3097,7 +3110,7 @@ border: 1px solid #4165F4;
     margin: 0;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li {
-    width: 78px;
+    width: 25%;
     height: 61.5px;
     text-align: center;
     border-radius: 6px;
@@ -3135,10 +3148,22 @@ border: 1px solid #4165F4;
     height: 30px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li:hover {
-    border: 1px solid #f38e2e;
-    box-shadow: 0px 0px 1px 1.5px #ff9c3e;
+    border: 1px solid #4165F4;
+    box-shadow: 0px 0px 1px 1.5px #4165F4;
     transform: translateY(-10px);
     transition: all 0.35s;
+  }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.high:hover {
+    border: 1px solid #3B33DE;
+    box-shadow: 0px 0px 1px 1.5px #3B33DE;
+  }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.middle:hover {
+    border: 1px solid #604adb;
+    box-shadow: 0px 0px 1px 1.5px #604adb;
+  }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li.elementary:hover {
+    border: 1px solid #18BCC4;
+    box-shadow: 0px 0px 1px 1.5px #18BCC4;
   }
   #contentsWrap .mainSection .sec2 {
     min-height: 100%;
@@ -3331,7 +3356,7 @@ border: 1px solid #4165F4;
     border: 1px solid #fff;
   }
   #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn:hover {
-    border: 1px solid #f38e2e;
+    border: 1px solid #4165F4;
   }
   #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn::after {
     content: '';
@@ -3407,6 +3432,7 @@ border: 1px solid #4165F4;
   #contentsWrap .floating .float-inner h2 {
     width: 35%;
     font-size: 11px;
+    line-height: 1.5;
   }
   #contentsWrap .floating .float-inner button {
     width: 167.5px;

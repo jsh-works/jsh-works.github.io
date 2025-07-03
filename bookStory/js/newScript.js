@@ -286,9 +286,16 @@ $(function(){
     }
   });
 
-  // 대상 교재 클릭 이벤트
+  // 대상 교재 팝업 열기
   $(".quick-btn").on('click', function() {
-    alert("대상 교재 URL");
+    $(".target-popup").fadeIn().css({ display : 'flex' });
+    $('body').css({ overflow : 'hidden' });
+  });
+
+  // 대상 교재 팝업 닫기
+  $(".target-popup .close").on('click', function() {
+    $(".target-popup").fadeOut();
+    $('body').css({ overflow : 'auto' });
   });
 
   // 나의 교재방 전체/구독/단건구매 타입별로 보기 스크립트

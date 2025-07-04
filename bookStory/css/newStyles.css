@@ -1851,16 +1851,22 @@ margin: 0 auto;
 .target-popup .inner {
   position: relative;
   width: 1100px;
-  height: 91.5vh;
+  max-width: calc(80%);
+  height: 840px;
+  max-height: calc(100% - 77px);
   margin: 0 auto;
   border-radius: 16px;
   box-sizing: border-box;
   background-color: #fff;
 }
 .target-popup .inner .title {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 68px;
   padding: 24px;
   box-sizing: border-box;
@@ -1883,6 +1889,9 @@ margin: 0 auto;
 .target-popup .inner .contents {
   position: relative;
   padding: 24px;
+  margin-top: 68px;
+  height: calc(100% - 68px);
+  overflow: auto;
 }
 .target-popup .inner .contents .search-box {
   display: flex;
@@ -1931,25 +1940,22 @@ margin: 0 auto;
   margin-right: 6px;
   background: url("../imgs/search-ico.png") center center/cover no-repeat;
 }
-.target-popup .inner .contents .table-list {
-  margin-bottom: 20px;
-}
-.target-popup .inner .contents .table-list .caption {
+.target-popup .inner .contents .table-caption {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 16px;
 }
-.target-popup .inner .contents .table-list .caption .result {
+.target-popup .inner .contents .table-caption .result {
   color: #666;
   font-size: 16px;
   font-weight: 400;
 }
-.target-popup .inner .contents .table-list .caption .result span {
+.target-popup .inner .contents .table-caption .result span {
   font-weight: 700;
 }
-.target-popup .inner .contents .table-list .caption select {
+.target-popup .inner .contents .table-caption select {
   width: 92px;
   height: 36px;
   color: #222;
@@ -1961,6 +1967,21 @@ margin: 0 auto;
   border: 1px solid #bbb;
   box-sizing: border-box;
   cursor: pointer;
+}
+.target-popup .inner .contents .table-list {
+  margin-bottom: 20px;
+}
+.target-popup .inner .contents .table-list colgroup col.col1 {
+  width: 9.5%;
+}
+.target-popup .inner .contents .table-list colgroup col.col2 {
+  width: 9.5%;
+}
+.target-popup .inner .contents .table-list colgroup col.col3 {
+  width: 35%;
+}
+.target-popup .inner .contents .table-list colgroup col.col4 {
+  width: auto;
 }
 .target-popup .inner .contents .table-list table {
   border-top: 1px solid #666;
@@ -2718,7 +2739,15 @@ border: 1px solid #4165F4;
 }
 
 @media all and (max-width: 1024px) {
-  #contentsWrap {margin-top: 75px;}
+  .target-popup .inner .contents .table-list {
+    overflow: auto;
+  }
+  .target-popup .inner .contents .table-list table {
+    width: 1052px;
+  }
+  #contentsWrap {
+    margin-top: 75px;
+  }
   .gnb-sub-dep {
     display: block;
   }
@@ -3288,6 +3317,74 @@ border: 1px solid #4165F4;
 }
 
 @media all and (max-width: 500px) {
+  .target-popup .inner {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  .target-popup .inner .title {
+    height: 64px;
+    padding: 19.5px 20px;
+  }
+  .target-popup .inner .title h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .target-popup .inner .contents {
+    padding: 20px 0 20px 20px;
+  }
+  .target-popup .inner .contents .search-box {
+    padding: 16px 20px;
+  }
+  .target-popup .inner .contents .search-box button.search-btn {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    font-size: 0;
+    padding: 0;
+  }
+  .target-popup .inner .contents .search-box button.search-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+  }
+  .target-popup .inner .contents .table-caption select {
+    font-size: 13px;
+  }
+  .target-popup .inner .contents .table-caption .result {
+    font-size: 14px;
+  }
+  .target-popup .inner .contents .table-list table thead tr th,
+  .target-popup .inner .contents .table-list table tbody tr td {
+    height: 46px;
+    font-size: 14px;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col1 {
+    width: 7.6%;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col2 {
+    width: 7.6%;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col3 {
+    width: 35%;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col4 {
+    width: auto;
+  }
+  .target-popup .inner .contents .search-box,
+  .target-popup .inner .contents .table-caption {
+    width: auto;
+    margin-right: 20px;
+  }
+  .target-popup .inner .contents .pagination {
+    margin-right: 20px;
+  }
+
+
   #contentsWrap .mainSection .sec1 .top-banner img {
     width: 100%;
     height: 100%;

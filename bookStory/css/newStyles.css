@@ -857,7 +857,7 @@ position: absolute;
   color: #fff;
   font-size: 30px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.5;
 }
 #contentsWrap .floating .float-inner button {
   display: flex;
@@ -3283,8 +3283,16 @@ border: 1px solid #4165F4;
 
 /* 구독메인 전용 CSS 추가*/
 @media all and (max-width: 875px) {
+  #contentsWrap .mainSection .sec1 {
+    min-height: 820px;
+  }
   #contentsWrap .mainSection .sec1 .sec-inner .text-banner {
     margin: 0 20px 74px;
+  }
+  #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4,
+  #contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
+    font-size: 35px;
+    line-height: 1.5;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .text-banner > img {
     width: 100%;

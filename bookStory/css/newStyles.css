@@ -123,6 +123,7 @@
   padding: 7.5px 16px;
   border-radius: 32px;
   border: 1px solid #ddd;
+  background-color: #fff;
   box-sizing: border-box;
 }
 .gnb-sub-dep .gnb-sub-inner .gnb-sub-list ul.active {

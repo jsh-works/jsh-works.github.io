@@ -1,4 +1,16 @@
 $(function(){
+  
+console.log(`
+%c  ########   #######   #######  ##    ##     ######  ########  #######  ########  ##    ## 
+%c  ##     ## ##     ## ##     ## ##   ##     ##    ##    ##    ##     ## ##     ##  ##  ##  
+%c  ##     ## ##     ## ##     ## ##  ##      ##          ##    ##     ## ##     ##   ####   
+%c  ########  ##     ## ##     ## #####        ######     ##    ##     ## ########     ##    
+%c  ##     ## ##     ## ##     ## ##  ##            ##    ##    ##     ## ##   ##      ##    
+%c  ##     ## ##     ## ##     ## ##   ##     ##    ##    ##    ##     ## ##    ##     ##    
+%c  ########   #######   #######  ##    ##     ######     ##     #######  ##     ##    ##
+`, "color:#22577A", "color:#38A3A5", "color:#57CC99", "color:#80ED99", "color:#99FFED", "color:#99FFED", "color:#FFFFFF")
+
+
   // 기존 페이지 스크립트 (운영서버 불필요 스크립트)
   var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
   var ebsDateFormat = "YY.MM.DD";

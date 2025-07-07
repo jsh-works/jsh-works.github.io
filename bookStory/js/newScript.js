@@ -101,7 +101,7 @@ console.log(`
         },
   });
   
-  // 초중고교 eBook 추천 시리즈 페이지 메뉴 변경 스크립트
+  // 초중고교 EBS Picks 목록 뿌려주기 스크립트 PC
   $(".list-active dd").on('click', function(){
     const active = $(this).data('active');
 
@@ -146,6 +146,43 @@ console.log(`
     }
   });
 
+
+  // 초중고교 EBS Picks 목록 뿌려주기 스크립트 Mobile
+  $("#selectGroup").on('change', function() {
+    const select = $("#selectGroup option:selected").val();
+    console.log(select);
+    if(select == 1) {
+      $(".list-view.item1").addClass('show');
+      $(".list-view.item2").removeClass('show');
+      $(".list-view.item3").removeClass('show');
+      $(".list-view.item4").removeClass('show');
+
+    } else if(select == 2) {
+      $(".list-view.item1").removeClass('show');
+      $(".list-view.item2").addClass('show');
+      $(".list-view.item3").removeClass('show');
+      $(".list-view.item4").removeClass('show');
+
+    } else if(select == 2) {
+      $(".list-view.item1").removeClass('show');
+      $(".list-view.item2").removeClass('show');
+      $(".list-view.item3").addClass('show');
+      $(".list-view.item4").removeClass('show');
+
+    } else if(select == 3) {
+      $(".list-view.item1").removeClass('show');
+      $(".list-view.item2").removeClass('show');
+      $(".list-view.item3").addClass('show');
+      $(".list-view.item4").removeClass('show');
+    } else {
+      $(".list-view.item1").removeClass('show');
+      $(".list-view.item2").removeClass('show');
+      $(".list-view.item3").removeClass('show');
+      $(".list-view.item4").addClass('show');
+    }
+  });
+
+
   // 초중고교 메인 슬라이드 배너
   new Swiper ('.slide-banner', {
 		speed: 500,
@@ -175,21 +212,43 @@ console.log(`
 		delay: 7000,
 		loop: true,
 		longSwipes: true,
-		// autoplay: {
-		// 	delay: 7000,
-		// 	disableOnInteraction: false
-		// },
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: false
+		},
 		effect: 'slide',
 		slidesPerView: 1,
-        pagination: {
-					// el: '.swiper-pagination',
-					// type: 'bullets',
+    pagination: {
 			clickable: true,
 		},
 		navigation: {
-            nextEl: '.evt-slide-btn-next',
-            prevEl: '.evt-slide-btn-prev',
+        nextEl: '.evt-slide-btn-next',
+        prevEl: '.evt-slide-btn-prev',
+    },
+  });
+
+  $(window).resize(function() {
+    if(windowWidth < 1024) {
+      new Swiper ('.popular-box', {
+        speed: 500,
+        delay: 7000,
+        loop: true,
+        longSwipes: true,
+        autoplay: {
+        	delay: 7000,
+        	disableOnInteraction: false
         },
+        effect: 'slide',
+        slidesPerView: 1,
+        pagination: {
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.evt-slide-btn-next',
+          prevEl: '.evt-slide-btn-prev',
+        },
+      });
+    }
   });
   
 

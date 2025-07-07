@@ -168,6 +168,30 @@ console.log(`
             prevEl: '.slide-banner-btn-prev',
         },
   });
+  
+  // 초중고교 이벤트 슬라이드 배너
+  new Swiper ('.event-slide-banner', {
+		speed: 500,
+		delay: 7000,
+		loop: true,
+		longSwipes: true,
+		// autoplay: {
+		// 	delay: 7000,
+		// 	disableOnInteraction: false
+		// },
+		effect: 'slide',
+		slidesPerView: 1,
+        pagination: {
+					// el: '.swiper-pagination',
+					// type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+            nextEl: '.evt-slide-btn-next',
+            prevEl: '.evt-slide-btn-prev',
+        },
+  });
+  
 
   // 구독메인 상단 슬라이드 스크립트
   new Swiper ('.coverflow-slide', { // mobile

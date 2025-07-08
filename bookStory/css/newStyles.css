@@ -2953,7 +2953,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
   }
   #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
-    margin: 0 20px;
+    padding: 0 20px;
   }
   #contentsWrap .highSection section .sec-inner ul.event-btns {
     width: 100%;
@@ -4001,6 +4001,126 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 7px;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0; }
+
+  /* 초,중,고교 모바일 500px */
+  #contentsWrap .highSection section .sec-inner .slide-banner.long {
+    height: 108px;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items {
+    padding: 17px 20px;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items h2 {
+    font-size: 24px;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items span {
+    display: block;
+    width: 240px;
+    font-size: 13px;
+    word-break: keep-all;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev,
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4.5px);
+    left: calc(50% - 2.5px);
+    width: 5px;
+    height: 9px;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4.5px);
+    right: calc(50% - 2.5px);
+    width: 5px;
+    height: 9px;
+  }
+  #contentsWrap .highSection section .sec-inner .title {
+    margin: 0 20px 12px;
+  }
+  #contentsWrap .highSection section .sec-inner .title h4 {
+    font-size: 20px;
+  }
+  #contentsWrap .highSection section .sec-inner .title span,
+  #contentsWrap .highSection section .sec-inner .best-box .title span {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  #contentsWrap .highSection section .sec-inner .title span.plus::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../imgs/plus-ico.png") center center / 16px 16px no-repeat;
+  }
+  #contentsWrap .highSection section .sec-inner .popular-box ul li a {
+    width: 140px;
+    height: 56px;
+  }
+  #contentsWrap .highSection section .sec-inner .popular-box .popular-slide-btn .pop-prev-btn,
+  #contentsWrap .highSection section .sec-inner .popular-box .popular-slide-btn .pop-next-btn {
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 40px;
+    height: 40px;
+  }
+  #contentsWrap .highSection section .sec-inner {
+    display: flex;
+    row-gap: 12px;
+    column-gap: 24px;
+  }
+  #contentsWrap .highSection section.full .sec-inner {
+    padding: 32px 0;
+  }
+  #contentsWrap .highSection section .sec-inner .best-box ul li {
+    height: 44px;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  #contentsWrap .highSection section .sec-inner .best-box ul li span.text {
+    font-size: 14px;
+  }
+  #contentsWrap .highSection section .sec-inner .best-box ul li span.number {
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 13px;
+  }
+  #contentsWrap .highSection section.full .sec-inner .list-select h2 > img {
+    width: 136px;
+  }
+  #contentsWrap .highSection section.full .sec-inner ul.list-view.show {
+    gap: 12px;
+  }
+  #contentsWrap .highSection section .sec-inner ul.event-btns {
+    display: flex;
+    gap: 8px;
+  }
+  #contentsWrap .highSection section .sec-inner ul.event-btns li {
+    border-radius: 6px;
+  }
+  #contentsWrap .highSection section .sec-inner ul.event-btns li a {
+    max-height: 48px;
+    font-size: 14px;
+    line-height: 140%;
+    padding: 14px 0;
+  }
+  #contentsWrap .highSection section .sec-inner .title {
+    margin: 0 20px 15px;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-title h4 {
+    height: 78px;
+    font-size: 18px;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-title p {
+    height: 72px;
+    font-size: 14px;
+  }
+
+  
 }
 
 

@@ -1,10 +1,11 @@
 @font-face {
-    font-family: 'GmarketSans';
-    src: url('../fonts/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'GmarketSans';
+  src: url('../fonts/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-/* 공통 header, css 추가 */
+
+/* 공통 header css 추가 */
 .top-bnr {
   padding: 15px 0px;
   margin-bottom: 20px;
@@ -38,11 +39,7 @@
 }
 #Header h1 > a, #Header h1 > a:last-child { width: 100%; }
 #Header .header-util {position: absolute; top: 0; height: 48px;}
-#Header .header-util .header-sch input[type="text"] {
-  width: 344px;
-  height: 48px;
-  border-radius: 25px;
-}
+#Header .header-util .header-sch input[type="text"] { width: 344px; height: 48px; border-radius: 25px; }
 #Header .btn-sch {
   position: absolute;
   right: 20px;
@@ -85,34 +82,19 @@
 .gnb-dep01 > li:hover .gnb-dep02-div.high { background-color: #F0EFFF; }
 .gnb-dep01 > li:hover .gnb-dep02-div.middle { background-color: #F9EFFF; }
 .gnb-dep01 > li:hover .gnb-dep02-div.elem { background-color: #EFFDFF; }
-.gnb-dep01 > li:hover .gnb-dep02-div a:hover {
-  color: #4165F4;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-position: under;
-}
+.gnb-dep01 > li:hover .gnb-dep02-div a:hover { color: #4165F4; font-weight: 600; text-decoration: underline; text-underline-position: under; }
 .gnb-dep01 > li:hover .gnb-dep02-div.ebook a:hover { color: #4165F4; }
 .gnb-dep01 > li:hover .gnb-dep02-div.high a:hover { color: #3B33DE; }
 .gnb-dep01 > li:hover .gnb-dep02-div.middle a:hover { color: #604ADB; }
 .gnb-dep01 > li:hover .gnb-dep02-div.elem a:hover { color: #18BCC4; }
-
-
-
-
 .subGnbBack { position: absolute; top:134px; }
 .book-info .thumb-box { position: relative; width: 100%; padding-top: 432px; }
 .book-info .thumb-img { width: 342px; }
 .book-info .thumb-img img { border: none; }
 #contentsWrap.main { padding-bottom: 0; }
 #contentsWrap.main section.margin { margin-bottom: 80px; }
-body.high .quick-menu {
-  display: none;
-}
-
-.gnb-sub-dep {
-  position: relative;
-  display: none;
-}
+body.high .quick-menu { display: none; }
+.gnb-sub-dep { position: relative; display: none; }
 .gnb-sub-dep .gnb-sub-inner {
   border: 1px solid #ddd;
   background-color: #f7f7f7;
@@ -173,9 +155,6 @@ body.high .quick-menu {
   color: #18BCC4;
   border: 1px solid #18BCC4;
 }
-
-
-
 
 /* 구독메인 css 추가 */
 #contentsWrap .mainSection {
@@ -462,7 +441,6 @@ body.high .quick-menu {
   margin-left: -8px;
   margin-bottom: -6px;
 }
-
 #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
   font-family: 'Roboto';
   color: #111;
@@ -631,7 +609,6 @@ position: absolute;
   background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
   margin-left: 8px;
 }
-
 #contentsWrap .mainSection .sec3 {
   min-height: 694px;
   padding: 100px 0;
@@ -924,7 +901,6 @@ position: absolute;
   height: 14px;
   background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
 }
-
 #contentsWrap .container {
   position: relative;
   margin: 0 auto;
@@ -986,12 +962,12 @@ position: absolute;
   transition: all 0.35s;
 }
 #contentsWrap .container .book-details {
-display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-width: 100%;
-max-width: 1046px;
-margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1046px;
+  margin: 0 auto;
 }
 #contentsWrap .container .book-details.ebook,
 #contentsWrap .container .book-details.paper {
@@ -1103,7 +1079,6 @@ margin: 0 auto;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(221, 221, 221, 1);
 }
-
 #contentsWrap .container .book-details .price-box dl.tit dt,
 #contentsWrap .container .book-details .price-box dl.tit dd {
   color: #666;
@@ -1267,7 +1242,6 @@ margin: 0 auto;
   background-color: #fff;
   z-index: 999;
   transition: all 0.35s;
-  
 }
 #contentsWrap .prod-purchase-footer .prod-inner {
   position: relative;
@@ -1290,7 +1264,6 @@ margin: 0 auto;
   height: 50px;
   font-size: 16px;
 }
-
 
 /* 초/중/고교 메인 css 추가 */
 #contentsWrap .mainSection {
@@ -1325,13 +1298,12 @@ margin: 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  column-gap: 64px;
+  gap: 0;
   max-width: 1280px;
   height: 370px;
   padding: 48px 0;
   margin: 0 auto;
 }
-
 #contentsWrap .highSection section .sec-inner .slide-banner {
   position: relative;
   height: 140px;
@@ -1575,7 +1547,6 @@ margin: 0 auto;
 #contentsWrap .highSection section .sec-inner .best-box ul li:nth-child(5) span.text {
   animation: rollingUp 1.5s 1.3s forwards;
 }
-
 #contentsWrap .highSection section.full .sec-inner dl.list-active {
   display: flex;
   align-items: flex-start;
@@ -1583,6 +1554,7 @@ margin: 0 auto;
   justify-content: flex-start;
   width: 300px;
   min-width: 300px;
+  margin-right: 64px;
 }
 #contentsWrap .highSection section.full .sec-inner dl.list-active dt {
   margin-left: 16px;
@@ -1635,13 +1607,15 @@ margin: 0 auto;
 #contentsWrap .highSection section.full .sec-inner ul.list-view.show {
   display: flex;
 }
+#contentsWrap .highSection section.full .sec-inner ul.list-view.show::-webkit-scrollbar {
+  display: none;
+}
 #contentsWrap .highSection section.full .sec-inner ul.list-view li {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 142px;
   opacity: 0;
-  /* animation: rightFadeIn 1.5s ease-in forwards; */
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li:nth-child(1) {
   animation: rightFadeIn 0.8s 0.1s ease-in forwards;
@@ -1690,7 +1664,6 @@ margin: 0 auto;
   vertical-align: middle;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
@@ -1873,7 +1846,7 @@ margin: 0 auto;
   background: #fff url("../imgs/favorite-ico_active.png") center center/20px 20px no-repeat;
 }
 
-/* footer 소셜 배너 추가 */
+/* footer 소셜/배너 css 추가 */
 #Footer .social-banner {
   display: flex;
   align-items: center;
@@ -1918,7 +1891,7 @@ margin: 0 auto;
   vertical-align: bottom;
 }
 
-/* 대상교재 POPUP */
+/* 대상교재 팝업 css 추가 */
 .target-popup {
   display: flex;
   align-items: center;
@@ -2073,13 +2046,11 @@ margin: 0 auto;
   border-bottom: 1px solid #888;
 }
 .target-popup .inner .contents .table-list table thead tr th {
-  /* height: 58px; */
   height: 40px;
   color: #888;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  /* padding: 16px 0; */
   padding: 12px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #eee;
@@ -2094,7 +2065,6 @@ margin: 0 auto;
   color: #444;
   font-size: 16px;
   font-weight: 400;
-  /* padding: 16px 0; */
   padding: 10px 0;
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -2173,11 +2143,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .sort.type2 input[type="radio"] + label, .sort.type2 input[type="checkbox"] + label {color: #666; font-size: 16px; font-weight: 400;}
 .sort-wrap.pc {display: block;}
 .sort-wrap.mob {display: none;}
-#contentsWrap .sub-cnt-wrap {
-  margin: 50px auto 100px;
-}
+#contentsWrap .sub-cnt-wrap { margin: 50px auto 100px; }
 .sub-sort {display: none;}
-
 .list-viewer {
   position: relative;
   min-height: 600px;
@@ -2360,16 +2327,15 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   margin-bottom: 16px;
 }
 .list-viewer .mob-sort-popup button {
-width: 100%;
-height: 48px;
-color: #4165F4;
-font-size: 14px;
-font-weight: 700;
-padding: 13px 0px;
-border-radius: 6px;
-box-sizing: border-box;
-border: 1px solid #4165F4;
-
+  width: 100%;
+  height: 48px;
+  color: #4165F4;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 0px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 1px solid #4165F4;
 }
 .list-viewer .mybook-list-box {
   position: relative;
@@ -2758,19 +2724,11 @@ border: 1px solid #4165F4;
   display: none;
 }
 
-
 /* 미디어쿼리 */
 @media all and (max-width: 1600px) {
-  .quick-util:not(.ebook) {
-    width: 100%;
-  }
-  .quick-menu:not(.ebook) {
-    padding: 0;
-  }
+  .quick-util:not(.ebook) { width: 100%; }
+  .quick-menu:not(.ebook) { padding: 0; }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0 20px; }
-  /* #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
-    margin: 0 20px;
-  } */
 }
 
 @media all and (max-width: 1300px) {
@@ -2823,7 +2781,7 @@ border: 1px solid #4165F4;
   }
 }
 
-/* mobile origin size */
+/* 미디어쿼리 모바일 오리진 css 추가 */
 @media all and (max-width: 1024px) {
   body.high .quick-menu {
     display: block;
@@ -2871,6 +2829,7 @@ border: 1px solid #4165F4;
     max-width: 100%;
   }
   #contentsWrap .highSection section .sec-inner .popular-box {
+    position: relative;
     width: 100%;
   }
   #contentsWrap .highSection section .sec-inner .best-box {
@@ -2878,14 +2837,35 @@ border: 1px solid #4165F4;
   }
 
   #contentsWrap .highSection section .sec-inner .popular-box ul {
-    margin: 0 20px;
+    padding: 8px 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+  }
+  #contentsWrap .highSection section .sec-inner .popular-box ul::-webkit-scrollbar {
+    display: none;
   }
   #contentsWrap .highSection section .sec-inner .popular-box ul li a {
-    width: 100%;
-    /* width: 246px; */
+    width: 246px;
     height: 106px;
   }
-
+  #contentsWrap .highSection section .sec-inner .popular-box .popular-slide-btn .pop-prev-btn {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: url("../imgs/popular-prev-btn.png") center center/cover no-repeat;
+    display: none;
+  }
+  #contentsWrap .highSection section .sec-inner .popular-box .popular-slide-btn .pop-next-btn {
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: url("../imgs/popular-next-btn.png") center center/cover no-repeat;
+  }
   #contentsWrap .highSection section .sec-inner .indep-banner {
     display: block;
     width: 100%;
@@ -2934,7 +2914,26 @@ border: 1px solid #4165F4;
     border: 1px solid #5474F5;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view {
+    width: 100%;
     margin-left: 20px;
+    padding: 24px 50px 20px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: pointer;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
+    width: 100%;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items::-webkit-scrollbar  {
+    display: none;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item {
+    min-width: 404px;
+    min-height: 216px;
   }
   #contentsWrap .highSection section .sec-inner .event-slide-banner {
     width: 100%;
@@ -2950,6 +2949,12 @@ border: 1px solid #4165F4;
   #contentsWrap .highSection section .sec-inner .event-slide-banner .event-slide-btn-box .evt-slide-btn-next {
     right: 32px;
   }
+  #contentsWrap .highSection section .sec-inner .full-list-box {
+    width: 100%;
+  }
+  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
+    margin: 0 20px;
+  }
   #contentsWrap .highSection section .sec-inner ul.event-btns {
     width: 100%;
     padding: 0 20px;
@@ -2958,21 +2963,11 @@ border: 1px solid #4165F4;
     width: 100%;
     height: 100%;
   }
-  #contentsWrap .highSection section .sec-inner .full-list-box {
-    width: 100%;
-  }
-  #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
-    margin: 0 20px;
-  }
   #contentsWrap .highSection section .sec-inner ul.event-btns li.mp3 a::before,
   #contentsWrap .highSection section .sec-inner ul.event-btns li.answer a::before,
   #contentsWrap .highSection section .sec-inner ul.event-btns li.errata a::before {
     content: none;
   }
-
-
-
-
 
 
   .target-popup .inner .contents .table-list {
@@ -2981,7 +2976,6 @@ border: 1px solid #4165F4;
   .target-popup .inner .contents .table-list table {
     width: 1052px;
   }
-
   .gnb-sub-dep {
     display: block;
   }
@@ -3093,7 +3087,6 @@ border: 1px solid #4165F4;
   #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide.swiper-slide-active .txt-info p {
     opacity: 1;
   }
-
   #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .fade-btn-prev {
     position: absolute;
     top: calc(50% - 114px);
@@ -3117,17 +3110,10 @@ border: 1px solid #4165F4;
 
 
   /* 북스토리 공통 - 모바일 영역 css 추가 */
-  .top-bnr img.pc {
-    display: block !important;
-    width: 406px;
-    margin: 0 auto;
-  }
+  .top-bnr img.pc { display: block !important; width: 406px; margin: 0 auto; }
   #Header { height: 150px; }
-  #Header .header-inner { max-width: 100%;}
-  #Header .header-util {
-    background: none;
-    border: none;
-  }
+  #Header .header-inner { max-width: 100%; }
+  #Header .header-util { background: none; border: none; }
   #Header h1 {
     position: relative;
     top: 20px;
@@ -3192,7 +3178,6 @@ border: 1px solid #4165F4;
   .mGnb ul li a.middle:after, .mGnb ul li a.middle.active:after { background: #604adb; }
   .mGnb ul li a.elementary.active { color: #18BCC4; }
   .mGnb ul li a.elementary:after, .mGnb ul li a.elementary.active:after { background: #18BCC4; }
-
 
   /* 나의 교재방 mobile css 추가 */
   #contentsWrap .sub-cnt-wrap {
@@ -3558,6 +3543,7 @@ border: 1px solid #4165F4;
   }
 }
 
+/* 미디어쿼리 모바일 */
 @media all and (max-width: 500px) {
   .target-popup .inner {
     width: 100%;
@@ -3625,8 +3611,6 @@ border: 1px solid #4165F4;
   .target-popup .inner .contents .pagination {
     margin-right: 20px;
   }
-
-
   #contentsWrap .mainSection .sec1 .top-banner img {
     width: 100%;
     height: 100%;
@@ -3652,7 +3636,6 @@ border: 1px solid #4165F4;
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner {
     margin-bottom: 25px;
   }
- 
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper .swiper-slide img {
     width: 100%;
     border-radius: 10px;
@@ -3764,7 +3747,6 @@ border: 1px solid #4165F4;
   #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
     font-size: 10px;
   }
-  
   #contentsWrap .tooltip,
   #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
     font-size: 11px;
@@ -3978,9 +3960,6 @@ border: 1px solid #4165F4;
   #contentsWrap .mainSection .sec4 .sec-inner .faq-box ul li.open .faq-ans {
     font-size: 11px;
   }
-  /* #bottomFooter {
-    padding-bottom: 65px !important;
-  } */
   #contentsWrap .floating {
     height: 65px;
   }

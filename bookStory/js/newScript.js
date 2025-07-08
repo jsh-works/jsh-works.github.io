@@ -11,7 +11,7 @@ console.log(`
 `, "color:#22577A", "color:#38A3A5", "color:#57CC99", "color:#80ED99", "color:#99FFED", "color:#99FFED", "color:#FFFFFF")
 
 
-  // 기존 페이지 스크립트 (운영서버 불필요 스크립트)
+  // 기존 페이지 스크립트
   var contextPath = $('#contextPathHolder').attr('data-contextPath') ? $('#contextPathHolder').attr('data-contextPath') : '';
   var ebsDateFormat = "YY.MM.DD";
   var mediaPlayer = null;
@@ -210,47 +210,16 @@ console.log(`
   new Swiper ('.event-slide-banner', {
 		speed: 500,
 		delay: 7000,
-		loop: true,
-		longSwipes: true,
+    loop: true,
+    longSwipes: true,
 		autoplay: {
 			delay: 7000,
 			disableOnInteraction: false
 		},
 		effect: 'slide',
 		slidesPerView: 1,
-    pagination: {
-			clickable: true,
-		},
-		navigation: {
-        nextEl: '.evt-slide-btn-next',
-        prevEl: '.evt-slide-btn-prev',
-    },
+   
   });
-
-  $(window).resize(function() {
-    if(windowWidth < 1024) {
-      new Swiper ('.popular-box', {
-        speed: 500,
-        delay: 7000,
-        loop: true,
-        longSwipes: true,
-        autoplay: {
-        	delay: 7000,
-        	disableOnInteraction: false
-        },
-        effect: 'slide',
-        slidesPerView: 1,
-        pagination: {
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.evt-slide-btn-next',
-          prevEl: '.evt-slide-btn-prev',
-        },
-      });
-    }
-  });
-  
 
   // 구독메인 상단 슬라이드 스크립트
   new Swiper ('.coverflow-slide', { // mobile
@@ -275,10 +244,6 @@ console.log(`
       500: {
         coverflowEffect: {
           rotate: -10,
-          //stretch: 320,
-          //depth: 450,
-          //modifier: 0.6,
-          //slideShadows: false,
         },
       },
     },
@@ -287,6 +252,72 @@ console.log(`
       nextEl: '.coverflow-btn-next',
     },
   });
+  
+  // EBS Picks - 드래그 이벤트
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  $('.list-view, .flex-items').mousedown(function(e) {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX - $(this).offset().left;
+    scrollLeft = $(this).scrollLeft();
+    $(this).css('cursor', 'grabbing');
+  });
+
+  $('.list-view, .flex-items').mouseleave(function(e) {
+    e.preventDefault();
+    isDragging = false;
+    $(this).css('cursor', 'grab');
+  });
+
+  $('.list-view, .flex-items').mouseup(function(e) {
+    e.preventDefault();
+    isDragging = false;
+    $(this).css('cursor', 'grab');
+  });
+
+  $('.list-view, .flex-items').mousemove(function(e) {
+    if(!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - $(this).offset().left;
+    const walk = (x - startX) * 1.125; // 조절 가능한 스크롤 속도
+    $(this).scrollLeft(scrollLeft - walk);
+  });
+
+
+  // 초중고교 인기시리즈 슬라이드 제작
+  $(window).resize(function() { // 실시간 브라우저 체크 (반응형 대응)
+    $(".popular-box ul").scroll(function() {
+      let scrollLeft = $(this).scrollLeft();
+      let elemWidth = $(this).width();
+      let scrollWidth = this.scrollWidth;
+      // console.log(scrollLeft + elemWidth, scrollWidth);
+
+
+      if (scrollLeft + elemWidth + 40 >= scrollWidth) { // 스크롤 끝점 도달
+        $(".pop-next-btn").hide();
+        $(".pop-prev-btn").show();
+      } else if (scrollLeft == 0) { // 스크롤 처음으로 도달
+        $(".pop-prev-btn").hide();
+        $(".pop-next-btn").show();
+      }
+    });
+  });
+
+  let tableWidth = $(".popular-box > ul > li").width(); // 한 테이블의 넓이
+  $(".pop-next-btn").on('click', function() {
+    var targetPosition = $(".popular-box ul").scrollLeft() + tableWidth;
+    $(".popular-box ul").animate({scrollLeft: targetPosition}, 500);
+  });
+
+
+  $(".pop-prev-btn").on('click', function() {
+    var targetPosition = $(".popular-box ul").scrollLeft() - tableWidth;
+    $(".popular-box ul").animate({scrollLeft: targetPosition}, 500);
+  });
+  
 
   // EBS eBook 체험하기 pc event
   var scrollEvent = () => {

@@ -201,9 +201,9 @@ console.log(`
 			clickable: true,
 		},
 		navigation: {
-            nextEl: '.slide-banner-btn-next',
-            prevEl: '.slide-banner-btn-prev',
-        },
+        nextEl: '.slide-banner-btn-next',
+        prevEl: '.slide-banner-btn-prev',
+    },
   });
   
   // 초중고교 이벤트 슬라이드 배너
@@ -218,6 +218,10 @@ console.log(`
 		},
 		effect: 'slide',
 		slidesPerView: 1,
+    navigation: {
+        nextEl: '.evt-slide-btn-next',
+        prevEl: '.evt-slide-btn-prev',
+    },
    
   });
 

@@ -1481,6 +1481,7 @@ body.elementary #contentsWrap .highSection section.full {
 }
 #contentsWrap .highSection section .sec-inner .best-box {
   width: 408px;
+  min-width: 408px;
 }
 #contentsWrap .highSection section .sec-inner .best-box .title {
   display: flex;
@@ -2815,12 +2816,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 
 /* 미디어쿼리 모바일 오리진 css 추가 */
 @media all and (max-width: 1024px) {
-  body.high .quick-menu {
+  body.high .quick-menu,
+  body.middle .quick-menu,
+  body.elementary .quick-menu {
     display: block;
     width: auto;
     margin: 0 20px;
   }
-  body.high .quick-menu.ebook{ display: none; }
+  body.high .quick-menu.ebook,
+  body.middle .quick-menu.ebook,
+  body.elementary .quick-menu.ebook { display: none; }
   #contentsWrap {
     margin-top: 75px;
   }

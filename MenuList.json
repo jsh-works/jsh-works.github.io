@@ -4,35 +4,42 @@
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
     "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
-    "update" : "2025.06.27"
+    "update" : "25.06.27"
   },
   {
     "id" : "bookStory",
     "menuName" : "구독 소개/상품 페이지 (구독메인)",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
-    "update" : "2025.07.03"
+    "update" : "25.07.03"
   },
   {
     "id" : "bookStory",
     "menuName" : "고교 메인 페이지",
     "devUrl" : "bookStory/bookStoryHighMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
-    "update" : "-"
+    "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "중학 메인 페이지",
     "devUrl" : "bookStory/bookStoryMidMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/middle",
-    "update" : "-"
+    "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "초등 메인 페이지",
     "devUrl" : "bookStory/bookStoryEleMain.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/primary",
-    "update" : "-"
+    "update" : "25.07.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "유·초등 영어 메인 페이지",
+    "devUrl" : "bookStory/bookStoryEnglish.html",
+    "mainUrl" : "https://book.ebs.co.kr/roadmap/english",
+    "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
@@ -53,13 +60,6 @@
     "menuName" : "학급/학습 이력관리",
     "devUrl" : "learnHistory/index.html",
     "mainUrl" : "",
-    "update" : "-"
-  },
-  {
-    "id" : "e-book",
-    "menuName" : "강의목록/웹뷰 수정 건",
-    "devUrl" : "ebookViewer/index.html",
-    "mainUrl" : "https://book.ebs.co.kr/ebook/lect?courseId=S20240000112&fmySiteDsCd=EBSI&ec=ZjZNShVBdoA+CGc0dnd9vQ==&txbkId=LB00000005328&ebkId=EB100001443&sbjtApplyId=1036456013",
     "update" : "-"
   }
 ]

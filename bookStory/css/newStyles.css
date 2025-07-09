@@ -4115,7 +4115,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap .highSection section .sec-inner {
     display: flex;
-    row-gap: 12px;
+    row-gap: 24px;
     column-gap: 24px;
   }
   #contentsWrap .highSection section.full .sec-inner {

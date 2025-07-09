@@ -109,31 +109,31 @@ console.log(`
       
       switch (active) {
         case 1:
-          $(".list-view.item1").addClass('show');
-          $(".list-view.item2").removeClass('show');
-          $(".list-view.item3").removeClass('show');
-          $(".list-view.item4").removeClass('show');
+          $(".list-slider.item1").addClass('show');
+          $(".list-slider.item2").removeClass('show');
+          $(".list-slider.item3").removeClass('show');
+          $(".list-slider.item4").removeClass('show');
           break;
 
         case 2:
-          $(".list-view.item1").removeClass('show');
-          $(".list-view.item2").addClass('show');
-          $(".list-view.item3").removeClass('show');
-          $(".list-view.item4").removeClass('show');
+          $(".list-slider.item1").removeClass('show');
+          $(".list-slider.item2").addClass('show');
+          $(".list-slider.item3").removeClass('show');
+          $(".list-slider.item4").removeClass('show');
           break;
 
         case 3:
-          $(".list-view.item1").removeClass('show');
-          $(".list-view.item2").removeClass('show');
-          $(".list-view.item3").addClass('show');
-          $(".list-view.item4").removeClass('show');
+          $(".list-slider.item1").removeClass('show');
+          $(".list-slider.item2").removeClass('show');
+          $(".list-slider.item3").addClass('show');
+          $(".list-slider.item4").removeClass('show');
           break;
 
         case 4:
-          $(".list-view.item1").removeClass('show');
-          $(".list-view.item2").removeClass('show');
-          $(".list-view.item3").removeClass('show');
-          $(".list-view.item4").addClass('show');
+          $(".list-slider.item1").removeClass('show');
+          $(".list-slider.item2").removeClass('show');
+          $(".list-slider.item3").removeClass('show');
+          $(".list-slider.item4").addClass('show');
           break;
       
         default:
@@ -150,33 +150,33 @@ console.log(`
     const select = $("#selectGroup option:selected").val();
     console.log(select);
     if(select == 1) {
-      $(".list-view.item1").addClass('show');
-      $(".list-view.item2").removeClass('show');
-      $(".list-view.item3").removeClass('show');
-      $(".list-view.item4").removeClass('show');
+      $(".list-slider.item1").addClass('show');
+      $(".list-slider.item2").removeClass('show');
+      $(".list-slider.item3").removeClass('show');
+      $(".list-slider.item4").removeClass('show');
 
     } else if(select == 2) {
-      $(".list-view.item1").removeClass('show');
-      $(".list-view.item2").addClass('show');
-      $(".list-view.item3").removeClass('show');
-      $(".list-view.item4").removeClass('show');
+      $(".list-slider.item1").removeClass('show');
+      $(".list-slider.item2").addClass('show');
+      $(".list-slider.item3").removeClass('show');
+      $(".list-slider.item4").removeClass('show');
 
     } else if(select == 2) {
-      $(".list-view.item1").removeClass('show');
-      $(".list-view.item2").removeClass('show');
-      $(".list-view.item3").addClass('show');
-      $(".list-view.item4").removeClass('show');
+      $(".list-slider.item1").removeClass('show');
+      $(".list-slider.item2").removeClass('show');
+      $(".list-slider.item3").addClass('show');
+      $(".list-slider.item4").removeClass('show');
 
     } else if(select == 3) {
-      $(".list-view.item1").removeClass('show');
-      $(".list-view.item2").removeClass('show');
-      $(".list-view.item3").addClass('show');
-      $(".list-view.item4").removeClass('show');
+      $(".list-slider.item1").removeClass('show');
+      $(".list-slider.item2").removeClass('show');
+      $(".list-slider.item3").addClass('show');
+      $(".list-slider.item4").removeClass('show');
     } else {
-      $(".list-view.item1").removeClass('show');
-      $(".list-view.item2").removeClass('show');
-      $(".list-view.item3").removeClass('show');
-      $(".list-view.item4").addClass('show');
+      $(".list-slider.item1").removeClass('show');
+      $(".list-slider.item2").removeClass('show');
+      $(".list-slider.item3").removeClass('show');
+      $(".list-slider.item4").addClass('show');
     }
   });
 
@@ -220,10 +220,10 @@ console.log(`
     },
   });
 
-  // 초중고교 EBS Picks 슬라이드 (여기에요)
+  // 초중고교 EBS Picks 슬라이드
   new Swiper ('.list-slider', { // mobile
 		slidesPerView:5,
-    spaceBetween: 35,
+    spaceBetween: 12,
     observer: true,
     observeParents: true,
     loop: false,
@@ -231,13 +231,16 @@ console.log(`
     allowTouchMove: false,
     autoplay:false,
     breakpoints: {
-        500: {
+        550: {
             slidesPerView: 2.8,
             spaceBetweenSlides: 12,
             allowTouchMove: true,
+            grabCursor: true,
         },
         768: {
             slidesPerView: 3.8,
+            allowTouchMove: true,
+            grabCursor: true,
         }
     },
   });
@@ -274,38 +277,39 @@ console.log(`
     },
   });
   
-  // EBS Picks - 드래그 이벤트
-  // let isDragging = false;
-  // let startX;
-  // let scrollLeft;
+  // 초/중/고교 이번주, 이 책! 드래그 이벤트
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
 
-  // $('.list-view, .flex-items').mousedown(function(e) {
-  //   e.preventDefault();
-  //   isDragging = true;
-  //   startX = e.pageX - $(this).offset().left;
-  //   scrollLeft = $(this).scrollLeft();
-  //   $(this).css('cursor', 'grabbing');
-  // });
+  $(".flex-items").mousedown(function(e) {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX - $(this).offset().left;
+    scrollLeft = $(this).scrollLeft();
+    $(this).css('cursor', 'grabbing');
 
-  // $('.list-view, .flex-items').mouseleave(function(e) {
-  //   e.preventDefault();
-  //   isDragging = false;
-  //   $(this).css('cursor', 'grab');
-  // });
+  });
 
-  // $('.list-view, .flex-items').mouseup(function(e) {
-  //   e.preventDefault();
-  //   isDragging = false;
-  //   $(this).css('cursor', 'grab');
-  // });
+  $(".flex-items").mouseleave(function(e) {
+    e.preventDefault();
+    isDragging = false;
+    $(this).css('cursor', 'grab');
+  });
 
-  // $('.list-view, .flex-items').mousemove(function(e) {
-  //   if(!isDragging) return;
-  //   e.preventDefault();
-  //   const x = e.pageX - $(this).offset().left;
-  //   const walk = (x - startX) * 1.125; // 조절 가능한 스크롤 속도
-  //   $(this).scrollLeft(scrollLeft - walk);
-  // });
+  $(".flex-items").mouseup(function(e) {
+    e.preventDefault();
+    isDragging = false;
+    $(this).css('cursor', 'grab');
+  });
+
+  $(".flex-items").mousemove(function(e) {
+    if(!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - $(this).offset().left;
+    const walk = (x - startX) * 3.5; // 조절 가능한 스크롤 속도
+    $(this).scrollLeft(scrollLeft - walk);
+  });
 
 
   // 초중고교 인기시리즈 슬라이드 제작

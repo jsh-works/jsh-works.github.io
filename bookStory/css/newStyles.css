@@ -1597,23 +1597,23 @@ position: absolute;
 #contentsWrap .highSection section.full .sec-inner .list-select {
   display: none;
 }
-#contentsWrap .highSection section.full .sec-inner .list-slider{
+#contentsWrap .highSection section.full .sec-inner .list-slider {
   width:calc(100% - 364px);
   min-width: 916px;
+  display: none;
+}
+#contentsWrap .highSection section.full .sec-inner .list-slider.show {
+  display: flex;
+}
+#contentsWrap .highSection section.full .sec-inner .list-view.show::-webkit-scrollbar {
+  display: none;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* gap: 48px; */
-  display: none;
 }
-#contentsWrap .highSection section.full .sec-inner ul.list-view.show {
-  display: flex;
-}
-#contentsWrap .highSection section.full .sec-inner ul.list-view.show::-webkit-scrollbar {
-  display: none;
-}
+
 #contentsWrap .highSection section.full .sec-inner ul.list-view li {
   position: relative;
   display: flex;
@@ -1640,6 +1640,7 @@ position: absolute;
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 142px;
   gap: 12.97px;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor::after {
@@ -1652,7 +1653,7 @@ position: absolute;
   background: url("../imgs/ebook-ico.png") center center/70px 18px no-repeat;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor img {
-  width: auto;
+  width: 142px;
   height: 196.23px;
   vertical-align: bottom;
   transition : transform .3s ease-in;
@@ -1662,17 +1663,17 @@ position: absolute;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
   display: -webkit-box;
-    /* width: 142px; */
-    height: 36px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 140%;
-    vertical-align: middle;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  width: 142px;
+  height: 36px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 #contentsWrap .highSection section .sec-inner .event-slide-banner {
   position: relative;
@@ -2927,11 +2928,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     overflow:hidden;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view {
-    /* width: 100%; */
-    /* margin-left: 20px; */
     padding: 24px 50px 20px 0;
-    /* overflow-x: auto; */
-    /* overflow-y: hidden; */
     cursor: pointer;
   }
   #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
@@ -2940,6 +2937,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     padding-bottom: 20px;
     overflow-x: auto;
     overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   #contentsWrap .highSection section .sec-inner .full-list-box .flex-items::-webkit-scrollbar  {
     display: none;
@@ -4106,7 +4104,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 136px;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view.show {
-    /* gap: 12px; */
     width: 100%;
   }
   #contentsWrap .highSection section .sec-inner ul.event-btns {
@@ -4133,11 +4130,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 68px;
     font-size: 14px;
   }
-  
-
-  /* #contentsWrap .highSection section.full .sec-inner ul.list-view li {
-    width: auto;
-  } */
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor img {
     width: auto;
     height: auto;
@@ -4146,11 +4138,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: flex;
     flex-direction: column;
   }
-  #contentsWrap .highSection section.full .sec-inner ul.list-view {
-    /* overflow: auto; */
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li {
+    width: 120px !important;
   }
-
-  
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {
+    width: fit-content !important
+  }
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor img,
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
+    width: 120px;
+  }
 }
 
 

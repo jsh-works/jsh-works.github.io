@@ -307,7 +307,7 @@ console.log(`
     if(!isDragging) return;
     e.preventDefault();
     const x = e.pageX - $(this).offset().left;
-    const walk = (x - startX) * 3.5; // 조절 가능한 스크롤 속도
+    const walk = (x - startX) * 1.5; // 조절 가능한 스크롤 속도
     $(this).scrollLeft(scrollLeft - walk);
   });
 

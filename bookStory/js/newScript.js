@@ -90,15 +90,13 @@ console.log(`
 		},
 		effect: 'slide',
 		slidesPerView: 1,
-        pagination: {
-					// el: '.swiper-pagination',
-					// type: 'bullets',
+      pagination: {
 			clickable: true,
 		},
 		navigation: {
-            nextEl: '.slide-banner-btn-next',
-            prevEl: '.slide-banner-btn-prev',
-        },
+        nextEl: '.slide-banner-btn-next',
+        prevEl: '.slide-banner-btn-prev',
+    },
   });
   
   // 초중고교 EBS Picks 목록 뿌려주기 스크립트 PC
@@ -195,14 +193,12 @@ console.log(`
 		},
 		effect: 'slide',
 		slidesPerView: 1,
-        pagination: {
-					// el: '.swiper-pagination',
-					// type: 'bullets',
+      pagination: {
 			clickable: true,
 		},
 		navigation: {
-        nextEl: '.slide-banner-btn-next',
-        prevEl: '.slide-banner-btn-prev',
+      nextEl: '.slide-banner-btn-next',
+      prevEl: '.slide-banner-btn-prev',
     },
   });
   
@@ -222,7 +218,27 @@ console.log(`
         nextEl: '.evt-slide-btn-next',
         prevEl: '.evt-slide-btn-prev',
     },
-   
+  });
+
+  // 초중고교 EBS Picks 슬라이드 (여기에요)
+  new Swiper ('.list-slider', { // mobile
+		speed: 500,
+		delay: 3000,
+    loop: true,
+    longSwipes: false,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false
+		},
+		effect: 'slide',
+		slidesPerView: 'auto',
+    // observer: true,
+    // observeParents: true,
+    // breakpoints: { // pc
+    //   500: {
+    //     slidesPerView: 10,
+    //   },
+    // },
   });
 
   // 구독메인 상단 슬라이드 스크립트
@@ -258,37 +274,37 @@ console.log(`
   });
   
   // EBS Picks - 드래그 이벤트
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
+  // let isDragging = false;
+  // let startX;
+  // let scrollLeft;
 
-  $('.list-view, .flex-items').mousedown(function(e) {
-    e.preventDefault();
-    isDragging = true;
-    startX = e.pageX - $(this).offset().left;
-    scrollLeft = $(this).scrollLeft();
-    $(this).css('cursor', 'grabbing');
-  });
+  // $('.list-view, .flex-items').mousedown(function(e) {
+  //   e.preventDefault();
+  //   isDragging = true;
+  //   startX = e.pageX - $(this).offset().left;
+  //   scrollLeft = $(this).scrollLeft();
+  //   $(this).css('cursor', 'grabbing');
+  // });
 
-  $('.list-view, .flex-items').mouseleave(function(e) {
-    e.preventDefault();
-    isDragging = false;
-    $(this).css('cursor', 'grab');
-  });
+  // $('.list-view, .flex-items').mouseleave(function(e) {
+  //   e.preventDefault();
+  //   isDragging = false;
+  //   $(this).css('cursor', 'grab');
+  // });
 
-  $('.list-view, .flex-items').mouseup(function(e) {
-    e.preventDefault();
-    isDragging = false;
-    $(this).css('cursor', 'grab');
-  });
+  // $('.list-view, .flex-items').mouseup(function(e) {
+  //   e.preventDefault();
+  //   isDragging = false;
+  //   $(this).css('cursor', 'grab');
+  // });
 
-  $('.list-view, .flex-items').mousemove(function(e) {
-    if(!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - $(this).offset().left;
-    const walk = (x - startX) * 1.125; // 조절 가능한 스크롤 속도
-    $(this).scrollLeft(scrollLeft - walk);
-  });
+  // $('.list-view, .flex-items').mousemove(function(e) {
+  //   if(!isDragging) return;
+  //   e.preventDefault();
+  //   const x = e.pageX - $(this).offset().left;
+  //   const walk = (x - startX) * 1.125; // 조절 가능한 스크롤 속도
+  //   $(this).scrollLeft(scrollLeft - walk);
+  // });
 
 
   // 초중고교 인기시리즈 슬라이드 제작

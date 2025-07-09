@@ -1278,7 +1278,16 @@ position: absolute;
 #contentsWrap .highSection section.full {
   position: relative;
   width: 100%;
-  background-color: #F5F4FA;
+  /* background-color: #F5F4FA; */
+}
+body.high #contentsWrap .highSection section.full {
+  background-color: #F2F2FF;
+}
+body.middle #contentsWrap .highSection section.full {
+  background-color: #F7F3FF;
+}
+body.elementary #contentsWrap .highSection section.full {
+  background-color: #EEF9FF;
 }
 #contentsWrap .highSection section:not(:last-child) {
   margin-bottom: 32px;
@@ -1353,14 +1362,8 @@ position: absolute;
   font-weight: 500;
   line-height: 140%;
 }
-#contentsWrap .highSection section .sec-inner .slide-banner .slide-items.fir {
-  background-color: #E4F2FE;
-}
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-items.sec {
   background-color: #fee4e4;
-}
-#contentsWrap .highSection section .sec-inner .slide-banner .slide-items.fir h2 {
-  color: #0A43DC;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-items.sec h2 {
   color: #dc0a0a;
@@ -1580,9 +1583,19 @@ position: absolute;
 }
 #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active {
   position: relative;
+  transition: all 0.35s;
+}
+body.high #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active {
   color: #4165F4;
   background-color: #DEE4FF99;
-  transition: all 0.35s;
+}
+body.middle #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active {
+  color: #604ADB;
+  background-color: #E9DDFF99;
+}
+body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active {
+  color: #18BCC4;
+  background-color: #BDFAFD99;
 }
 #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active::after {
   content: "";
@@ -1591,8 +1604,19 @@ position: absolute;
   right: 16px;
   width: 24px;
   height: 24px;
-  background: url("../imgs/right-arrow.png") center center/24px 24px no-repeat;
   animation: rightShow 0.3s ease-in forwards;
+}
+body.high #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active::after {
+  content: "";
+  background: url("../imgs/right-arrow.png") center center/24px 24px no-repeat;
+}
+body.middle #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active::after {
+  content: "";
+  background: url("../imgs/mid-right-arrow.png") center center/24px 24px no-repeat;
+}
+body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-active dd.active::after {
+  content: "";
+  background: url("../imgs/ele-right-arrow.png") center center/24px 24px no-repeat;
 }
 #contentsWrap .highSection section.full .sec-inner .list-select {
   display: none;

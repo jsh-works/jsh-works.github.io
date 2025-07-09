@@ -1597,11 +1597,15 @@ position: absolute;
 #contentsWrap .highSection section.full .sec-inner .list-select {
   display: none;
 }
+#contentsWrap .highSection section.full .sec-inner .list-slider{
+  width:calc(100% - 364px);
+  min-width: 916px;
+}
 #contentsWrap .highSection section.full .sec-inner ul.list-view {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 48px;
+  /* gap: 48px; */
   display: none;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view.show {
@@ -1657,17 +1661,18 @@ position: absolute;
   transform: scale(1.02);
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
-  display: inline-block;
-  height: 36px;
-  color: #000;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 140%;
-  vertical-align: middle;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: -webkit-box;
+    /* width: 142px; */
+    height: 36px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 #contentsWrap .highSection section .sec-inner .event-slide-banner {
   position: relative;
@@ -2915,12 +2920,18 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     outline: #5474F5;
     border: 1px solid #5474F5;
   }
+  #contentsWrap .highSection section.full .sec-inner .list-slider{
+    width: calc(100% - 20px);
+    min-width: 100%;
+    margin: 0 0 0 20px;
+    overflow:hidden;
+  }
   #contentsWrap .highSection section.full .sec-inner ul.list-view {
-    width: 100%;
-    margin-left: 20px;
+    /* width: 100%; */
+    /* margin-left: 20px; */
     padding: 24px 50px 20px 0;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
     cursor: pointer;
   }
   #contentsWrap .highSection section .sec-inner .full-list-box .flex-items {
@@ -4095,7 +4106,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 136px;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view.show {
-    gap: 12px;
+    /* gap: 12px; */
+    width: 100%;
   }
   #contentsWrap .highSection section .sec-inner ul.event-btns {
     display: flex;
@@ -4135,7 +4147,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     flex-direction: column;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view {
-    overflow: auto;
+    /* overflow: auto; */
   }
 
   

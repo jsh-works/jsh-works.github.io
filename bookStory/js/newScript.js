@@ -222,23 +222,24 @@ console.log(`
 
   // 초중고교 EBS Picks 슬라이드 (여기에요)
   new Swiper ('.list-slider', { // mobile
-		speed: 500,
-		delay: 3000,
-    loop: true,
-    longSwipes: false,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false
-		},
-		effect: 'slide',
-		slidesPerView: 'auto',
-    // observer: true,
-    // observeParents: true,
-    // breakpoints: { // pc
-    //   500: {
-    //     slidesPerView: 10,
-    //   },
-    // },
+		slidesPerView:5,
+    spaceBetween: 35,
+    observer: true,
+    observeParents: true,
+    loop: false,
+    grabCursor: false,
+    allowTouchMove: false,
+    autoplay:false,
+    breakpoints: {
+        500: {
+            slidesPerView: 2.8,
+            spaceBetweenSlides: 12,
+            allowTouchMove: true,
+        },
+        768: {
+            slidesPerView: 3.8,
+        }
+    },
   });
 
   // 구독메인 상단 슬라이드 스크립트

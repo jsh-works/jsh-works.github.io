@@ -13,9 +13,86 @@ body.eng #contentsWrap .highSection section:not(:last-child) {
 body.eng #contentsWrap section.indep-sec {
   display: none;
 }
-/* body.eng .quick-menu:not(.ebook) {
+
+/* quick-navbar */
+.quick-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  /* width: 240px; */
+  height: 100vh;
+  background-color: #fff;
+  border-right: 2px solid #4165F4;
+  box-shadow: 12px 0px 16px 0px #00000012;
+  transition: all 0.35s;
+  z-index: 1000;
+}
+.quick-navbar .inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 160px;
+}
+.quick-navbar .inner .logo  {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EEE;
+}
+.quick-navbar .inner .logo h2 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../imgs/nav/quick-nav-close-logo.svg") center center/cover no-repeat;
+}
+
+
+/* ebsebs spinner */
+.ebsebs-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
   display: none;
-} */
+}
+.ebsebs-spinner .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+}
+.ebsebs-spinner .inner img {
+  width: 100px;
+  height: auto;
+}
+.ebsebs-spinner .inner progress {
+  appearance: none;
+  transition: all 0.35s;
+}
+.ebsebs-spinner .inner progress::-webkit-progress-bar {
+  width: 160px;
+  height: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.ebsebs-spinner .inner progress::-webkit-progress-value {
+  width: 100px;
+  height: 16px;
+  background: #4165F4;
+}
+
+
 /* 공통 header css 추가 */
 .top-bnr {
   padding: 15px 0px;

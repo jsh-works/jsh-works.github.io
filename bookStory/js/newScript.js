@@ -613,4 +613,23 @@ console.log(`
     }
   });
 
+
+  // 스피너 함수
+  function Spinner() {
+    document.getElementsByClassName('ebsebs-spinner')[0].style.display = "block";
+    const progressBar = document.getElementById('progressbar');
+    let progress = 0;
+
+    function updateProgress() {
+      progress += 10; // 한번에 채워지는 양
+      if (progress <= 100) {
+          progressBar.value = progress;
+      } else {
+          clearInterval(interval);
+          document.getElementsByClassName('ebsebs-spinner')[0].style.display = 'none';
+      }
+    }
+    const interval = setInterval(updateProgress, 100); // 속도 조절
+  }
+
 });

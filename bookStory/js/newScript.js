@@ -276,7 +276,7 @@ console.log(`
       nextEl: '.coverflow-btn-next',
     },
   });
-  
+
   // 초/중/고교 이번주, 이 책! 드래그 이벤트
   let isDragging = false;
   let startX;
@@ -436,7 +436,13 @@ console.log(`
       $(".floating").css('display','none');
     }
   });
-
+  
+  // 구독메인 - 구독 시작하기 버튼 스크립트
+  $(".start-btn").on('click', function() {
+    var target = $(".sec2").offset();
+    $('html, body').animate({ scrollTop:target.top },500);
+  });
+  
   // 대상 교재 팝업 열기
   $(".quick-btn").on('click', function() {
     $(".target-popup").fadeIn().css({ display : 'flex' });

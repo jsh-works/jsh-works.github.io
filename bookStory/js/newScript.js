@@ -614,6 +614,16 @@ console.log(`
   });
 
 
+  // 퀵메뉴 오픈
+  $(".quick-navbar .open-btns").on('click', function() {
+    if(!$(".quick-navbar").hasClass('open')) {
+      $(".quick-navbar").addClass('open');
+    } else {
+      $(".quick-navbar").removeClass('open');
+    }
+  });
+
+
   // 스피너 함수
   function Spinner() {
     document.getElementsByClassName('ebsebs-spinner')[0].style.display = "block";

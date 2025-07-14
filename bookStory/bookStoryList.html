@@ -1,1494 +1,320 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
-	<meta name="robots" content="noindex, nofollow" />
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="EBS 북스토리">
-	<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
-	<meta property="og:image" content="/images/ebs_bookstory_sns.png">
-	<title>EBS 교재사이트 :: 목록</title>
-	<link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
-	<link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
-	<link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_sns.png">
+  <title>EBS 교재사이트 :: 교재목록</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
   <link rel="stylesheet" href="./css/xeicon.css" />
-	<link rel="stylesheet" href="./css/newStyles.css" />
-	<link id="contextPathHolder" />
-	<script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
-	<script src="./js/newScript.js"></script> <!-- addition -->
-	<script src="./js/topHeader.js"></script> <!-- origin -->
-	<script src="./js/bottomFooter.js"></script> <!-- origin -->
-	<script src="https://book.ebs.co.kr/js/slick.js"></script>
-	<script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
-	<script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
-	<script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
-	<script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
-	<script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
-</script>
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script> <!-- addition -->
+  <script src="./js/topHeader.js"></script> <!-- origin -->
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+  </script>
 </head>
-<body class="list">
-	<div id="wrap">
-    <!-- orign header import -->
+<body class="textbook">
+  <div id="wrap">
     <div id="topHeader"></div>
-    
-		<!-- contents -->
-		<div id="contentsWrap" class="sub">
-		<div class="sub-cnt-wrap">
+    <div id="contentsWrap" class="sub">
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li>
+                <strong class="on">학년</strong>
+                <ul class="area type2">
+                  <li>
+										<input type="radio" id="a0_1" name="sch">
+                    <label for="a0_1">1학년</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="a0_2" name="sch">
+                    <label for="a0_2">2학년</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="a0_3" name="sch">
+                    <label for="a0_3">3학년</label>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="on">과목</strong>
+                <ul class="area type2">
+                  <li>
+										<input type="checkbox" id="a1_1" name="sch">
+                    <label for="a1_1">국어</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_2" name="sch">
+                    <label for="a1_2">수학</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_3" name="sch">
+                    <label for="a1_3">영어</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_4" name="sch">
+                    <label for="a1_4">한국사</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_5" name="sch">
+                    <label for="a1_5">사회</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_6" name="sch">
+                    <label for="a1_6">과학</label>
+                  </li>
+                </ul>
+              </li>
+              
 
-			<!-- sort -->
-			<div class="sort-wrap fixed">
-				<div class="sort type2">
-					<ul>
-						
-							<li>
-								<strong class="on">학교급</strong>
-								<ul class="area" id="schUl">
-									<li>
-										<input type="radio" id="a0_1" name="sch" onclick="window.location.href='/sub/eHigh/grade?schGradeArr=D300'" checked="checked">
-										<label for="a0_1">고교</label>
-									</li>
-									<li>
-										<input type="radio" id="a0_2" name="sch" onclick="window.location.href='/sub/eMiddle/grade?schGradeArr=M1'">
-										<label for="a0_2">중학</label>
-									</li>
-									<li>
-										<input type="radio" id="a0_3" name="sch" onclick="window.location.href='/sub/ePrimary/grade?schGradeArr=P1'">
-										<label for="a0_3">초등</label>
-									</li>
-								</ul>
-							</li>
-						
-						<li>
-							<strong class="on">학년</strong>
-							<ul class="area" id="stdyUl">
-								
-									<li>
-										<input type="radio" id="a1_1" name="stdy" value="D100">
-										<label for="a1_1">1학년</label>
-									</li>
-								
-									<li>
-										<input type="radio" id="a1_2" name="stdy" value="D400">
-										<label for="a1_2">1,2학년</label>
-									</li>
-								
-									<li>
-										<input type="radio" id="a1_3" name="stdy" value="D200">
-										<label for="a1_3">2학년</label>
-									</li>
-								
-									<li>
-										<input type="radio" id="a1_4" name="stdy" value="D700">
-										<label for="a1_4">2,3학년</label>
-									</li>
-								
-									<li>
-										<input type="radio" id="a1_5" name="stdy" value="D300" checked="checked">
-										<label for="a1_5">3학년</label>
-									</li>
-								
-									<li>
-										<input type="radio" id="a1_6" name="stdy" value="D500">
-										<label for="a1_6">공통</label>
-									</li>
-								
-							</ul>
-						</li>
-						<li>
-							<strong class="on">과목</strong>
-							<ul class="area" id="rpstUl"><li><input type="checkbox" id="a2_1" name="" value="KOR000"><label for="a2_1">국어</label></li><li><input type="checkbox" id="a2_2" name="" value="MAT000"><label for="a2_2">수학</label></li><li><input type="checkbox" id="a2_3" name="" value="ENG000"><label for="a2_3">영어</label></li><li><input type="checkbox" id="a2_4" name="" value="HIS000"><label for="a2_4">한국사</label></li><li><input type="checkbox" id="a2_5" name="" value="SOC000"><label for="a2_5">사회</label></li><li><input type="checkbox" id="a2_6" name="" value="SCI000"><label for="a2_6">과학</label></li></ul>
-						</li>
-						<li>
-							<strong class="on">시리즈</strong>
-							<ul class="series" id="seriesUl"><li><input type="checkbox" id="a3_1" name="" value="PRO_0345"><label for="a3_1">2026학년도 FINAL 실전모의고사</label></li><li><input type="checkbox" id="a3_2" name="" value="PRO_0340"><label for="a3_2">2026학년도 수능특강 연계 기출</label></li><li><input type="checkbox" id="a3_3" name="" value="PRO_0339"><label for="a3_3">2026학년도 수능 영어 간접연계 서치라이트</label></li><li><input type="checkbox" id="a3_4" name="" value="PRO_0338"><label for="a3_4">2026학년도 수능연계교재의 VOCA 1800</label></li><li><input type="checkbox" id="a3_5" name="" value="PRO_0336"><label for="a3_5">2026학년도 수능특강 사용설명서</label></li><li><input type="checkbox" id="a3_6" name="" value="PRO_0333"><label for="a3_6">2026학년도 수능특강</label></li><li><input type="checkbox" id="a3_7" name="" value="PRO_0329"><label for="a3_7">2026학년도 수능개념</label></li><li><input type="checkbox" id="a3_8" name="" value="PRO_0309"><label for="a3_8">수능연계완성 3주 특강</label></li><li><input type="checkbox" id="a3_9" name="" value="PRO_0294"><label for="a3_9">하루 1등급 기출 국어독서ㆍ영어독해</label></li><li><input type="checkbox" id="a3_10" name="" value="S_0046"><label for="a3_10">2026 마더텅 수능기출 20분 미니모의고사 24회</label></li><li><input type="checkbox" id="a3_11" name="" value="S_0044"><label for="a3_11">(19차 개정판) 2026 100% 수능형 마더텅 MP3 수능영어듣기 35회 실전모의고사</label></li><li><input type="checkbox" id="a3_12" name="" value="S_0042"><label for="a3_12">2026 마더텅 수능기출 모의고사</label></li><li><input type="checkbox" id="a3_13" name="" value="S_0040"><label for="a3_13">2026 마더텅 수능기출 유형별 20분 미니모의고사</label></li><li><input type="checkbox" id="a3_14" name="" value="S_0037"><label for="a3_14">수능특강 체험판</label></li><li><input type="checkbox" id="a3_15" name="" value="S_0035"><label for="a3_15">2026 마더텅 미니수능기출 최신 1개년(마더텅)</label></li><li><input type="checkbox" id="a3_16" name="" value="S_0034"><label for="a3_16">2026 마더텅 수능기출문제집(마더텅)</label></li></ul>
-						</li>
-					</ul>
-				</div>
-			</div>
+              <li>
+                <strong class="on">시리즈</strong>
+                <ul class="series type2">
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">50일 통합과학</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">통합사회 1·2기출문제집</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">올림포스 고난도</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">2028학년도 수능 스타트</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">올림포스 유형편</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">개념완성 문항편</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">올림포스</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a2_1" name="sch">
+                    <label for="a2_1">2025년 올림포스 전국연합학력평가 기출문제집</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sort-wrap mob">
+          <div class="sort type2">
+            <ul>
+              <li class="active" data-tab="1">나의 교재</li>
+              <li data-tab="2">나의 구매정보</li>
+              <li data-tab="3">나의 구독 정보</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub-sort">
+          <ul class="buy-sub-list" style="display: none;">
+            <li class="active">eBook 결제내역</li>
+            <li>eBook 환불내역</li>
+            <li>쿠폰등록</li>
+            <li>장바구니</li>
+            <li>관심교제</li>
+          </ul>
+          <ul class="scr-sub-list" style="display: none;">
+            <li class="active">나의 구독 관리</li>
+            <li>구독 환불 내역</li>
+            <li>정기 결제 카드 변경</li>
+          </ul>
+        </div>
 
-			<div id="innerTxbk">
- 
-	
-		
-
-
-		
-			<div class="sv sv-slide-wrap">
-			<!-- sv-slide-swiper 2023-06-23 -->
-			<div class="sv-slide-swiper swiper-container-initialized swiper-container-horizontal">
-				<div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-990px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0317" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/13/promotionImg_122479575154377070.jpg"></a>
+        <div class="list-viewer">
+					<div class="list-viewer-slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../bookStory/imgs/list-viewer-slide-imgs01.png" alt="EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ" />
+							</div>
 						</div>
-
-					
-						<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0273&amp;schSeriesDsCd=1" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/13/promotionImg_122478684033846078.png"></a>
-						</div>
-					
-						<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0122&amp;schSeriesDsCd=2" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2023/12/26/promotionImg_86631483167979661.jpg"></a>
-						</div>
-					
-						<div class="swiper-slide" data-swiper-slide-index="2" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0331" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/13/promotionImg_122479544021114541.jpg"></a>
-						</div>
-					
-						<div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0317" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/13/promotionImg_122479575154377070.jpg"></a>
-						</div>
-					
-				<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 990px;">
-							<a href="https://book.ebs.co.kr/sub/high/series?schSeriesArr=PRO_0273&amp;schSeriesDsCd=1" target="_self"><img src="https://cbox.ebs.co.kr/portal/banner/2025/2/13/promotionImg_122478684033846078.png"></a>
-						</div></div>
-				<div class="paging">
-					<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
-				</div>
-				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-			<!-- //sv-slide-swiper 2023-06-23 -->
-			</div>
-			<!-- //banner -->
-		
-		
-
-
-
-		<!-- inner contents -->
-		<div class="result-list">
-		
-			<!-- no-list -->
-			
-			
-			
-				<div class="view-type">
-					<select name="orderBy" id="orderBy">
-						<option value="CRTN">최신 순</option>
-						<option value="INTRST">인기 순(하트 순)</option>
-					</select>
-					
-						<a href="#none" onclick="viewType(this, 'type_img')" title="이미지형 보기">이미지형 보기</a>
-						<a href="#none" class="active" onclick="viewType(this, 'type_row')" title="리스트형 보기">리스트형 보기</a>
-					
-					
-				</div>
-	
-
-				<div id="type_img" class="list-type img" style="display: none;">
-					<!-- img-list -->
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005685&quot;,&quot;EB100002258&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005685[20250415104706341].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 국어영역</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002258">
-									<span>eBook 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002258&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005685&quot;,&quot;EB100002258&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005685" class="btn-wish " title="관심교재" data-txbkid="LB00000005685">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005686&quot;,&quot;EB100002259&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005686[20250415105021285].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 수학영역</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002259">
-									<span>eBook 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002259&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005686&quot;,&quot;EB100002259&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005686" class="btn-wish " title="관심교재" data-txbkid="LB00000005686">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005687&quot;,&quot;EB100002260&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005687[20250415105107940].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 영어영역</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002260">
-									<span>eBook 판매가 : </span>
-									<span>15,300원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002260&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005687&quot;,&quot;EB100002260&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005687" class="btn-wish " title="관심교재" data-txbkid="LB00000005687">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005688&quot;,&quot;EB100002261&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005688[20250415105131246].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 한국사영역</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002261">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002261&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005688&quot;,&quot;EB100002261&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005688" class="btn-wish " title="관심교재" data-txbkid="LB00000005688">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005689&quot;,&quot;EB100002262&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/[크기변환]LB00000005689[20250418105147613].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 생활과 윤리</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002262">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002262&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005689&quot;,&quot;EB100002262&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005689" class="btn-wish " title="관심교재" data-txbkid="LB00000005689">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005690&quot;,&quot;EB100002263&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/[크기변환]LB00000005690[20250418105231363].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 한국지리</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002263">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002263&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005690&quot;,&quot;EB100002263&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005690" class="btn-wish " title="관심교재" data-txbkid="LB00000005690">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005691&quot;,&quot;EB100002264&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005691[20250415105518475].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 사회·문화</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002264">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002264&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005691&quot;,&quot;EB100002264&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005691" class="btn-wish " title="관심교재" data-txbkid="LB00000005691">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005692&quot;,&quot;EB100002265&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005692[20250415105320300].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 물리학Ⅰ</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002265">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002265&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005692&quot;,&quot;EB100002265&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005692" class="btn-wish " title="관심교재" data-txbkid="LB00000005692">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005693&quot;,&quot;EB100002266&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005693[20250415105515487].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 화학Ⅰ</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002266">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002266&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005693&quot;,&quot;EB100002266&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005693" class="btn-wish " title="관심교재" data-txbkid="LB00000005693">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005694&quot;,&quot;EB100002267&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005694[20250415105535317].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002267">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002267&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005694&quot;,&quot;EB100002267&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005694" class="btn-wish " title="관심교재" data-txbkid="LB00000005694">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005695&quot;,&quot;EB100002268&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005695[20250415105607824].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 지구과학Ⅰ</p>
-						
-						<div class="price-area">
-							
-								<p class="price" data-txbkshwyn="Y">
-									<span>종이책 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-							
-								<p class="price" data-ebkid="EB100002268">
-									<span>eBook 판매가 : </span>
-									<span>9,000원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002268&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005695&quot;,&quot;EB100002268&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005695" class="btn-wish " title="관심교재" data-txbkid="LB00000005695">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,null,&quot;EB100002167&quot;,&quot;EHIG&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-								
-								
-								<img src="https://cbox.ebs.co.kr/portal/ebook/2025/2/20/thmnlImg_123085181201483963.jpg" alt="교재 이미지">
-								
-							</a>
-						</span>
-						
-						<p class="tit">2026 마더텅 수능기출문제집 수능·내신 국어 문법 개념 완성 2400제</p>
-						<div class="price-area">
-							
-							
-								<p class="price" data-ebkid="EB100002167">
-									<span>eBook 판매가 : </span>
-									<span>12,510원</span>
-								</p>
-							
-						</div>
-						<div class="btn-wrap">
-						 							 		
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002167&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,null,&quot;EB100002167&quot;,&quot;EHIG&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-						
-							<a href="javascript:;" name="wishEB100002167" class="btn-wish " title="관심교재" data-txbkid="EB100002167">관심교재</a>
-						
+						<div class="list-viewer-btn-next"></div>
+						<div class="list-viewer-btn-prev"></div>
 					</div>
 					
-					<script>
-						let TOTAL_PAGE_CNT = "12";
-						if(TOTAL_PAGE_CNT == 1 || PAGENO >= TOTAL_PAGE_CNT){
-							$(".btn-more").hide();
-						}
-					</script>
-					<!-- //img-list -->
-				</div>
-				
-				
-				
-				<div id="type_row" class="list-type row active" style="display: block;">
-					<!-- row-list -->
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005685&quot;,&quot;EB100002258&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005685[20250415104706341].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 국어영역</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002258">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
+          <div class="viewer-btns">
+						<div class="correct-box">
+							<i class="flag"></i>
+							<i class="tip"></i>
+							<span>정오답 체크</span>
 						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002258&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005685&quot;,&quot;EB100002258&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005685" class="btn-wish " title="관심교재" data-txbkid="LB00000005685">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005686&quot;,&quot;EB100002259&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005686[20250415105021285].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 수학영역</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002259">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002259&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005686&quot;,&quot;EB100002259&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005686" class="btn-wish " title="관심교재" data-txbkid="LB00000005686">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005687&quot;,&quot;EB100002260&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005687[20250415105107940].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 영어영역</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002260">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>15,300원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002260&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005687&quot;,&quot;EB100002260&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005687" class="btn-wish " title="관심교재" data-txbkid="LB00000005687">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005688&quot;,&quot;EB100002261&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005688[20250415105131246].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 한국사영역</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002261">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002261&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005688&quot;,&quot;EB100002261&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005688" class="btn-wish " title="관심교재" data-txbkid="LB00000005688">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005689&quot;,&quot;EB100002262&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/[크기변환]LB00000005689[20250418105147613].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 생활과 윤리</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002262">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002262&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005689&quot;,&quot;EB100002262&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005689" class="btn-wish " title="관심교재" data-txbkid="LB00000005689">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005690&quot;,&quot;EB100002263&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/[크기변환]LB00000005690[20250418105231363].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 한국지리</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002263">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002263&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005690&quot;,&quot;EB100002263&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005690" class="btn-wish " title="관심교재" data-txbkid="LB00000005690">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005691&quot;,&quot;EB100002264&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005691[20250415105518475].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 사회탐구영역 사회·문화</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002264">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002264&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005691&quot;,&quot;EB100002264&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005691" class="btn-wish " title="관심교재" data-txbkid="LB00000005691">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005692&quot;,&quot;EB100002265&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005692[20250415105320300].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 물리학Ⅰ</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002265">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002265&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005692&quot;,&quot;EB100002265&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005692" class="btn-wish " title="관심교재" data-txbkid="LB00000005692">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005693&quot;,&quot;EB100002266&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005693[20250415105515487].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 화학Ⅰ</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002266">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002266&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005693&quot;,&quot;EB100002266&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005693" class="btn-wish " title="관심교재" data-txbkid="LB00000005693">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005694&quot;,&quot;EB100002267&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005694[20250415105535317].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002267">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002267&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005694&quot;,&quot;EB100002267&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005694" class="btn-wish " title="관심교재" data-txbkid="LB00000005694">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005695&quot;,&quot;EB100002268&quot;,&quot;EBSI&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								<img src="https://lwdw.ebsi.co.kr/UpDown/LZ/bookimages/430x590_LB00000005695[20250415105607824].png" alt="교재 이미지">
-								
-								
-							</a>
-						</span>
-						<div class="exp">
-							<p class="tit">EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 지구과학Ⅰ</p>
-							
-							<div class="price-area">
-								
-									<p class="price" data-txbkshwyn="Y">
-										<span>종이책 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											<em>(10% 할인)</em>
-										</span>
-									</p>
-								
-								
-									<p class="price" data-ebkid="EB100002268">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>9,000원</b>
-											
-											<!-- <em>(종이책 정가 대비 10% 할인)</em> -->
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002268&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,&quot;LB00000005695&quot;,&quot;EB100002268&quot;,&quot;EBSI&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-							<a href="javascript:;" name="wishLB00000005695" class="btn-wish " title="관심교재" data-txbkid="LB00000005695">관심교재</a>
-						
-						
-					</div>
-					<div class="list">
-						<span class="thumb">
-							<a href="javascript:;" onclick="goDetail(&quot;ebook&quot;,null,&quot;EB100002167&quot;,&quot;EHIG&quot;,&quot;24&quot;)">
-								
-									<span class="ebook-tag"></span>
-								
-									
-								
-								<img src="https://cbox.ebs.co.kr/portal/ebook/2025/2/20/thmnlImg_123085181201483963.jpg" alt="교재 이미지">
-								
-							</a>
-						</span>
-						<div class="exp">
-							
-							<p class="tit">2026 마더텅 수능기출문제집 수능·내신 국어 문법 개념 완성 2400제</p>
-							<div class="price-area">
-								
-								
-									<p class="price" data-ebkid="EB100002167">
-										<span>eBook 판매가 : </span>
-										<span>
-											<b>12,510원</b>
-											
-											<!--<em th:if="${not #strings.isEmpty(data.txbkId)}">(종이책 정가 대비 10% 할인)</em>-->
-										</span>
-									</p>
-								
-							</div>
-						</div>
-						<div class="btn">
-							
-								
-								
-									<button class="btn-gry" onclick="cartAdd('bskt',&quot;EB100002167&quot;,&quot;24&quot;)">장바구니 담기</button>
-									<button class="btn-pink" onclick="goDetail(&quot;ebook&quot;,null,&quot;EB100002167&quot;,&quot;EHIG&quot;,&quot;24&quot;)">상세보기</button>
-								
-							
-							
-						</div>
-						
-						
-							<a href="javascript:;" name="wishEB100002167" class="btn-wish " title="관심교재" data-txbkid="EB100002167">관심교재</a>
-						
-					</div>
-					<!-- //row-list -->
-				</div>
-				<!-- btn -->
-				<div class="btn-wrap">
-					<button class="btn-more">더보기</button>
-				</div>
-				<!-- //btn -->
-			
-		</div>
-		<!-- //inner contents -->
+            <div class="types">
+              <select name="textbook" onchange="selBox(this.value)">
+                <option value="none" selected>전체</option>
+                <option value="tbk1">교제 1</option>
+                <option value="tbk2">교제 2</option>
+                <option value="tbk3">교제 3</option>
+              </select>
 
-	<script>
-		//과목 선택시 스크립트
-		var depth = "1";
+              <select name="purchase" onchange="selBox(this.value)">
+                <option value="CREATE" selected>구매일 순</option>
+                <option value="HIGHPRC">높은 가격 순</option>
+                <option value="LOWPRC">낮은 가격 순</option>
+                <option value="EBKNM">제목 순</option>
+              </select>
 
-		if(depth == 1) {
-			var rpstStr = '';
-			
-			var count =  1;
-			var rpstSbjCd =  "KOR000";
-			var rpstSbjNm =  "\uAD6D\uC5B4";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			var count =  2;
-			var rpstSbjCd =  "MAT000";
-			var rpstSbjNm =  "\uC218\uD559";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			var count =  3;
-			var rpstSbjCd =  "ENG000";
-			var rpstSbjNm =  "\uC601\uC5B4";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			var count =  4;
-			var rpstSbjCd =  "HIS000";
-			var rpstSbjNm =  "\uD55C\uAD6D\uC0AC";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			var count =  5;
-			var rpstSbjCd =  "SOC000";
-			var rpstSbjNm =  "\uC0AC\uD68C";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			var count =  6;
-			var rpstSbjCd =  "SCI000";
-			var rpstSbjNm =  "\uACFC\uD559";
-			rpstStr += '<li>';
-			rpstStr += '<input type="checkbox" id="a2_' + count + '" name="" value="' + rpstSbjCd + '">';
-			rpstStr += '<label for="a2_' + count + '">' + rpstSbjNm + '</label>';
-			rpstStr += '</li>';
-			
-			$("#rpstUl").html(rpstStr);
+              <button class="filter-type"></button>
+              <button class="album-type on">이미지 형태로 보기</button>
+              <button class="list-type">목록 형태로 보기</button>
+            </div>
+          </div>
+          <div class="mob-sort-popup">
+            <dl class="sort-state">
+              <dt>정렬</dt>
+              <dd class="active">구매일순</dd>
+              <dd>높은 가격 순</dd>
+              <dd>낮은 가격 순</dd>
+              <dd>제목 순</dd>
+            </dl>
+            <dl class="filter-state">
+              <dt>필터</dt>
+              <dd>전체</dd>
+              <dd>구독</dd>
+              <dd>단건 구매</dd>
+            </dl>
+            <button class="clear">확인</button>
+          </div>
 
-			//과목 선택
-			$("#rpstUl li input[type=checkbox]").on("click",function(){
-				fnSearchPage(2);
-			});
-		}
+          <div class="mybook-list-box albumType">
+            <!-- ul로 묶어서 리스트 뿌려아합니다. -->
+            <ul> 
+              <li>
+                <div class="textbook-box">
+                  <img src="./imgs/books_example.png" alt="교재 이미지" />
+                  <i class="subscribe-ico"></i>
+                  <div class="hover-btns">
+                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
+                    <button class="view-commentary">해설지 보기</button>
+                    <button class="view-description">교재 설명 보기</button>
+                  </div>
+                  <span class="expire">만료: 2025-06-24</span>
+                </div>
+              </li>
+              <li>
+                <div class="textbook-box">
+                  <img src="./imgs/books_example.png" alt="교재 이미지" />
+                  <i class="subscribe-ico"></i>
+                  <div class="hover-btns">
+                    <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
+                    <button class="view-commentary">해설지 보기</button>
+                    <button class="view-description">교재 설명 보기</button>
+                  </div>
+                  <span class="buy">구매</span>
+                </div>
+              </li>
+              <li>
+            </ul>
+          </div>
 
-		if(depth == 1 || depth == 2) {
-			var seriesData = [{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/20\/thmnlImg_123085072309836475.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0044","txbkseriesNm":"(19\uCC28 \uAC1C\uC815\uD310) 2026 100% \uC218\uB2A5\uD615 \uB9C8\uB354\uD145 MP3 \uC218\uB2A5\uC601\uC5B4\uB4E3\uAE30 35\uD68C \uC2E4\uC804\uBAA8\uC758\uACE0\uC0AC","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002166","ebkNm":"(19\uCC28 \uAC1C\uC815\uD310) 2026 100% \uC218\uB2A5\uD615 \uB9C8\uB354\uD145 MP3 \uC218\uB2A5\uC601\uC5B4\uB4E3\uAE30 35\uD68C \uC2E4\uC804\uBAA8\uC758\uACE0\uC0AC","userPchCheck":null,"hmpUrl":null,"createDate":"20250220161050","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"13900","esalPrc":"12510"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/1\/15\/thmnlImg_119965211724654301.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"SCI000","rpstSbjNm":"\uACFC\uD559","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0035","txbkseriesNm":"2026 \uB9C8\uB354\uD145 \uBBF8\uB2C8\uC218\uB2A5\uAE30\uCD9C \uCD5C\uC2E0 1\uAC1C\uB144(\uB9C8\uB354\uD145)","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002076","ebkNm":"2026 \uB9C8\uB354\uD145 \uBBF8\uB2C8\uC218\uB2A5\uAE30\uCD9C \uCD5C\uC2E0 1\uAC1C\uB144 6\uD68C \uC9C0\uAD6C\uACFC\uD559\u2161","userPchCheck":null,"hmpUrl":null,"createDate":"20250115133309","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"3900","esalPrc":"3510"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/20\/thmnlImg_123081869151591390.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0046","txbkseriesNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C 20\uBD84 \uBBF8\uB2C8\uBAA8\uC758\uACE0\uC0AC 24\uD68C","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002138","ebkNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C 20\uBD84 \uBBF8\uB2C8\uBAA8\uC758\uACE0\uC0AC 24\uD68C \uACE03 \uC601\uC5B4 \uC601\uC5ED","userPchCheck":null,"hmpUrl":null,"createDate":"20250220150146","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"11900","esalPrc":"10710"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/20\/thmnlImg_123085482412167748.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"SCI000","rpstSbjNm":"\uACFC\uD559","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0042","txbkseriesNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C \uBAA8\uC758\uACE0\uC0AC","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002161","ebkNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C \uBAA8\uC758\uACE0\uC0AC 25\uD68C \uC0DD\uBA85\uACFC\uD559\u2160","userPchCheck":null,"hmpUrl":null,"createDate":"20250220160159","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"13900","esalPrc":"12510"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/20\/thmnlImg_123081964430558680.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0040","txbkseriesNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C \uC720\uD615\uBCC4 20\uBD84 \uBBF8\uB2C8\uBAA8\uC758\uACE0\uC0AC","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002139","ebkNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C \uC720\uD615\uBCC4 20\uBD84 \uBBF8\uB2C8\uBAA8\uC758\uACE0\uC0AC 24\uD68C \uACE03 \uC601\uC5B4 \uB3C5\uD574","userPchCheck":null,"hmpUrl":null,"createDate":"20250220150321","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"11900","esalPrc":"10710"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uB9C8\uB354\uD145","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/20\/thmnlImg_123085181201483963.jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0034","txbkseriesNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C\uBB38\uC81C\uC9D1(\uB9C8\uB354\uD145)","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EHIG","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"N","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002167","ebkNm":"2026 \uB9C8\uB354\uD145 \uC218\uB2A5\uAE30\uCD9C\uBB38\uC81C\uC9D1 \uC218\uB2A5\u00B7\uB0B4\uC2E0 \uAD6D\uC5B4 \uBB38\uBC95 \uAC1C\uB150 \uC644\uC131 2400\uC81C","userPchCheck":null,"hmpUrl":null,"createDate":"20250220161239","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"13900","esalPrc":"12510"},{"userId":null,"txbkId":"LB00000005685","txbkNm":"EBS 2026\uD559\uB144\uB3C4 FINAL \uC2E4\uC804\uBAA8\uC758\uACE0\uC0AC \uAD6D\uC5B4\uC601\uC5ED","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954792011","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005685[20250415104706341].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"17000","salPrc":"15300","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0345","txbkseriesNm":"2026\uD559\uB144\uB3C4 FINAL \uC2E4\uC804\uBAA8\uC758\uACE0\uC0AC","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002258","ebkNm":"EBS 2026\uD559\uB144\uB3C4 FINAL \uC2E4\uC804\uBAA8\uC758\uACE0\uC0AC \uAD6D\uC5B4\uC601\uC5ED","userPchCheck":null,"hmpUrl":null,"createDate":"20250421000000","ebkIsbn":"9788954792127","snglEbkYn":"N","freePurChase":null,"eprc":"17000","esalPrc":"15300"},{"userId":null,"txbkId":"LB00000005673","txbkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5 \uC601\uC5B4 \uAC04\uC811\uC5F0\uACC4 \uC11C\uCE58\uB77C\uC774\uD2B8","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954790598","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005673[20250203172732386].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":"15500","salPrc":"13950","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0339","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5 \uC601\uC5B4 \uAC04\uC811\uC5F0\uACC4 \uC11C\uCE58\uB77C\uC774\uD2B8","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002089","ebkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5 \uC601\uC5B4 \uAC04\uC811\uC5F0\uACC4 \uC11C\uCE58\uB77C\uC774\uD2B8","userPchCheck":null,"hmpUrl":null,"createDate":"20250131000000","ebkIsbn":"9788954790840","snglEbkYn":"N","freePurChase":null,"eprc":"15500","esalPrc":"12400"},{"userId":null,"txbkId":"LB00000005528","txbkNm":"EBS 2026 \uC218\uB2A5\uAC1C\uB150 \uCD5C\uC11C\uD76C\uC758 \uAD6D\uC5B4 \uB2F4\uD310","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954787970","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005528[20241121182312699].jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"16000","salPrc":"16000","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0329","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5\uAC1C\uB150","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100001868","ebkNm":"EBS 2026 \uC218\uB2A5\uAC1C\uB150 \uCD5C\uC11C\uD76C\uC758 \uAD6D\uC5B4 \uB2F4\uD310","userPchCheck":null,"hmpUrl":null,"createDate":"20241130000000","ebkIsbn":"9788954788755","snglEbkYn":"N","freePurChase":null,"eprc":"16000","esalPrc":"12800"},{"userId":null,"txbkId":"LB00000005664","txbkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uC5F0\uACC4\uAD50\uC7AC\uC758 VOCA 1800","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954790581","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005664[20250203175135386].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":"14500","salPrc":"13050","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0338","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5\uC5F0\uACC4\uAD50\uC7AC\uC758 VOCA 1800","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002088","ebkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uC5F0\uACC4\uAD50\uC7AC\uC758 VOCA 1800","userPchCheck":null,"hmpUrl":null,"createDate":"20250127000000","ebkIsbn":"9788954790833","snglEbkYn":"N","freePurChase":null,"eprc":"14500","esalPrc":"11600"},{"userId":null,"txbkId":"LB00000005587","txbkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uAD6D\uC5B4\uC601\uC5ED \uBB38\uD559","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954789547","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005587[20250106143416378].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"12700","salPrc":"11430","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0333","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100001897","ebkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uAD6D\uC5B4\uC601\uC5ED \uBB38\uD559","userPchCheck":null,"hmpUrl":null,"createDate":"20250131000000","ebkIsbn":"9788954789905","snglEbkYn":"N","freePurChase":null,"eprc":"12700","esalPrc":"10160"},{"userId":null,"txbkId":"LB00000005667","txbkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uC0AC\uC6A9\uC124\uBA85\uC11C \uBB38\uD559","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954790529","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005667[20250203110855898].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"18000","salPrc":"16200","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0336","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uC0AC\uC6A9\uC124\uBA85\uC11C","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002082","ebkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uC0AC\uC6A9\uC124\uBA85\uC11C \uBB38\uD559","userPchCheck":null,"hmpUrl":null,"createDate":"20250130000000","ebkIsbn":"9788954790772","snglEbkYn":"N","freePurChase":null,"eprc":"18000","esalPrc":"14400"},{"userId":null,"txbkId":"LB00000005665","txbkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uBB38\uD559 \uC5F0\uACC4 \uAE30\uCD9C 1 \uACE0\uC804\uC2DC\uAC00\u00B7\uD604\uB300\uC2DC","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954790888","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005665[20250203174758069].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"17000","salPrc":"15300","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0340","txbkseriesNm":"2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uC5F0\uACC4 \uAE30\uCD9C","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002097","ebkNm":"EBS 2026\uD559\uB144\uB3C4 \uC218\uB2A5\uD2B9\uAC15 \uBB38\uD559 \uC5F0\uACC4 \uAE30\uCD9C 1 \uACE0\uC804\uC2DC\uAC00\u318D\uD604\uB300\uC2DC","userPchCheck":null,"hmpUrl":null,"createDate":"20250203000000","ebkIsbn":"9788954790925","snglEbkYn":"N","freePurChase":null,"eprc":"17000","esalPrc":"13600"},{"userId":null,"txbkId":"LB00000005389","txbkNm":"EBS \uC218\uB2A5\uC5F0\uACC4\uC644\uC131 3\uC8FC \uD2B9\uAC15 \uAD6D\uC5B4\uC601\uC5ED \uAD6D\uC5B4","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2024","pubctDt":"","isbn":null,"isbn1":"9788954783491","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005389[20240308150117648].jpg","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"14000","salPrc":"12600","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0309","txbkseriesNm":"\uC218\uB2A5\uC5F0\uACC4\uC644\uC131 3\uC8FC \uD2B9\uAC15","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100001576","ebkNm":"EBS \uC218\uB2A5\uC5F0\uACC4\uC644\uC131 3\uC8FC \uD2B9\uAC15 \uAD6D\uC5B4\uC601\uC5ED \uAD6D\uC5B4","userPchCheck":null,"hmpUrl":null,"createDate":"20240316000000","ebkIsbn":"9788954783521","snglEbkYn":"N","freePurChase":null,"eprc":"14000","esalPrc":"11200"},{"userId":null,"txbkId":null,"txbkNm":null,"publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":null,"pubctDt":null,"isbn":null,"isbn1":null,"isbn2":null,"stdyTgCd":"D300","imageUrl":"https:\/\/cbox.ebs.co.kr\/portal\/ebook\/2025\/2\/13\/thmnlImg_122459490702829590.png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"ENG000","rpstSbjNm":"\uC601\uC5B4","prc":null,"salPrc":null,"statTpNo":null,"statTpNm":null,"txbkseriesId":"S_0037","txbkseriesNm":"\uC218\uB2A5\uD2B9\uAC15 \uCCB4\uD5D8\uD310","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002100","ebkNm":"(\uCCB4\uD5D8\uD310) \uC218\uB2A5\uD2B9\uAC15 \uC601\uC5B4 - 2026\uD559\uB144\uB3C4 \uC218\uB2A5 \uC5F0\uACC4\uAD50\uC7AC","userPchCheck":null,"hmpUrl":null,"createDate":"20250203095226","ebkIsbn":"","snglEbkYn":"Y","freePurChase":null,"eprc":"0","esalPrc":"0"},{"userId":null,"txbkId":"LB00000005679","txbkNm":"EBS \uD558\uB8E8 3\uAC1C 1\uB4F1\uAE09 \uAD6D\uC5B4\uB3C5\uC11C \uC218\uB2A5\u00B7\uBAA8\uC758\uD3C9\uAC00 \uAE30\uCD9C \uACE03","publisherNm":"\uD55C\uAD6D\uAD50\uC721\uBC29\uC1A1\uACF5\uC0AC","txbkYear":"2025","pubctDt":"","isbn":null,"isbn1":"9788954791212","isbn2":"","stdyTgCd":"D300","imageUrl":"430x590_LB00000005679[20250221164449115].png","stdyTgNm":"3\uD559\uB144","rpstSbjCd":"KOR000","rpstSbjNm":"\uAD6D\uC5B4","prc":"17500","salPrc":"15750","statTpNo":"01","statTpNm":"\uD310\uB9E4","txbkseriesId":"PRO_0294","txbkseriesNm":"\uD558\uB8E8 1\uB4F1\uAE09 \uAE30\uCD9C \uAD6D\uC5B4\uB3C5\uC11C\u318D\uC601\uC5B4\uB3C5\uD574","seriesDsCd":null,"intrstYn":null,"intrstCnt":null,"fmySiteDsCd":"EBSI","answerYn":null,"correctYn":null,"courseId":null,"courseNm":null,"subjectNm":null,"clsfnSystNm":null,"tchNm":null,"courseShwYn":null,"txbkShwYn":"Y","mp3Yn":null,"preViewShwYn":null,"txbkPchsUrl":null,"introCntn":null,"tblcnts":null,"prodClsCd":"24","ebkId":"EB100002215","ebkNm":"EBS \uD558\uB8E8 3\uAC1C 1\uB4F1\uAE09 \uAD6D\uC5B4\uB3C5\uC11C \uC218\uB2A5\u318D\uBAA8\uC758\uD3C9\uAC00 \uAE30\uCD9C \uACE03","userPchCheck":null,"hmpUrl":null,"createDate":"20250220000000","ebkIsbn":"9788954791236","snglEbkYn":"N","freePurChase":null,"eprc":"17500","esalPrc":"14000"}];		
-			let pvSchool = "high";
-			
-			
-			if(pvSchool == 'high'){ /*고교만 시리즈 아이디 역순*/
-				let regex = /[^0-9]/g;	
-				$.each(seriesData, function(idx, row) {																
-					seriesData[idx].txbkseriesNum = row.txbkseriesId.replace(regex, '');
-				});				
-				seriesData.sort(function(a, b){			
-					return b.txbkseriesNum - a.txbkseriesNum;
-				});
-				//console.log(seriesData);
-			}
-			
-			
-						 						
-			var seriesStr = '';
-			$.each(seriesData, function(idx, row) {
-				seriesStr += '<li>';
-				seriesStr += 	'<input type="checkbox" id="a3_'+(idx+1)+'" name="" value="'+row.txbkseriesId+'">';
-				seriesStr += 	'<label for="a3_'+(idx+1)+'">'+row.txbkseriesNm+'</label>';
-				seriesStr += '</li>';
-			});															
-			$("#seriesUl").html(seriesStr);
+          <div class="mybook-list-box listType">
+            <ul>
+              <li>
+                <div class="list-textbook-box">
+                  <a href="./bookStoryView.html">
+                    <img src="./imgs/books_example.png" alt="교재 이미지"  />
+                  </a>
+                  <i class="subscribe-ico"></i>
+                  <div class="list-exp">
+                    <h4>EBS 2026 학년도 수능특강 사용설명서 독서</h4>
+                    <dl class="purch-date">
+                      <dt>구매일</dt>
+                      <dd>2025년 6월 25일</dd>
+                    </dl>
+                    <dl class="down-date">
+                      <dt>내려 받은 일</dt>
+                      <dd>2025년 6월 25일</dd>
+                    </dl>
+                    <dl class="expir-date">
+                      <dt>만료일</dt>
+                      <dd>2025년 6월 25일</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-textbook-btn" onClick="location.href='./bookStoryView.html'">교재 보기</button>
+                    <button class="view-commentary-btn">해설지 보기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-			//시리즈 선택
-			$("#seriesUl li input[type=checkbox]").on("change",function(){
-				fnSearchPage(3);
-			});
-		}
+          <div class="btns-box">
+            <button class="more-btn">더 보기</button>
+          </div>
+          
+          <div class="bootm-banner">
+            <ul>
+              <li class="guide">
+                <a href="/">eBook 이용 안내</a>
+              </li>
+              <li class="payment">
+                <a href="/">eBook 결제 / 환불</a>
+              </li>
+              <li class="policy">
+                <a href="/">eBook 주요 정책</a>
+              </li>
+              <li class="subscribe">
+                <a href="/">eBook 구독 이용 안내</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-		$(document).ready(function(){
-			// 시리즈별 메인 슬라이드 sv-slide-swiper 2023-06-23
-			var SvSlideSwiper = new Swiper ('.sv-slide-swiper', {
-				speed: 500,
-				delay: 7000,
-				loop: true,
-				autoplay: {delay: 7000},
-				slidesPerView: 1,
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'bullets',
-					clickable: true,
-				},
-			});
-
-			// 시리즈별 메인 슬라이드 sv-slide-swiper 2023-06-23
-			$('.sv-slide-swiper .swiper-pagination-bullet').on('mouseover', function() {
-				$(this).trigger("click");
-			});
-		});
-    </script>
-	
-	
-
-	
-	
-
-
-<!-- list-script -->
-<script id="listScript">
-	$(document).ready(function(){
-		//viewType 값으로 노출
-		$('.view-type a').map(function(r,v){  if($(v).hasClass('active')) $(v).click() });
-	});
-</script>
-<!-- //list-script -->
-</div>
-
-		</div>
-	</div>
-		<!-- //contents -->
+      <!-- bottomSheet popup -->
+      <div class="bottomSheet">
+        <div class="popup">
+          <div class="title">
+            <h1>보기 방법 선택</h1>
+            <a class="close"></a>
+          </div>
+          <ul>
+            <li class="active">교재보기</li>
+            <li>해설지 보기</li>
+            <li>교재 설명 보기</li>
+          </ul>
+          <div class="btn-box">
+            <button class="cancel">취소</button>
+            <button class="clear">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //contents -->
 
     <!-- orign footer import -->
-     <div id="bottomFooter"></div>
-	</div>
+    <div id="bottomFooter"></div>
+  </div>
 </body>
+
 </html>

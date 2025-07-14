@@ -2059,6 +2059,71 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
   background: #fff url("../imgs/favorite-ico_active.png") center center/20px 20px no-repeat;
 }
 
+/* 교재 목록 css 추가 */
+body.textbook #contentsWrap .list-viewer .list-viewer-slide {
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide img {
+  height: 200px;
+  border-radius: 12px;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .list-viewer-btn-prev {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/event-slide-btn-prev-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+  z-index: 10;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .list-viewer-btn-next {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/event-slide-btn-next-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+  z-index: 10;
+}
+body.textbook #contentsWrap .list-viewer .viewer-btns .correct-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #666;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background-color: #F3F7FB;
+}
+body.textbook #contentsWrap .list-viewer .viewer-btns .correct-box i.flag {
+  display: inline-block;
+  width: 32px;
+  height: 36px;
+  background: url("../imgs/correct-flag.png") center center/ cover no-repeat;
+}
+body.textbook #contentsWrap .list-viewer .viewer-btns .correct-box i.tip {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  background: url("../imgs/correct-tip.png") center center/ cover no-repeat;
+}
+body.textbook #contentsWrap .list-viewer .viewer-btns .types select[name='textbook'] {
+  width: 90px;
+}
+body.textbook #contentsWrap .sort > ul > li > ul.area.type2 > li {
+  width: 50%;
+}
+
+
 /* footer 소셜/배너 css 추가 */
 #Footer .social-banner {
   display: flex;
@@ -2291,6 +2356,10 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
 }
 .target-popup .inner .contents .table-list table tbody tr:hover td {
   background-color: #F3F8FF;
+}
+.target-popup .inner .contents .table-list table tbody tr:hover td > a {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 .target-popup .inner .contents .pagination {
   display: flex;
@@ -3336,7 +3405,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     cursor: pointer;
     z-index: 10;
   }
-
 
   /* 북스토리 공통 - 모바일 영역 css 추가 */
   .top-bnr img.pc { display: block !important; width: 100%; margin: 0 auto; }

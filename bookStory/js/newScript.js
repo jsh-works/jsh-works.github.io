@@ -425,17 +425,19 @@ console.log(`
   });
 
   // 구독메인 스크롤 플로팅 표시
-  $(window).scroll(function () {
-    var winPosY = $(document).scrollTop();
-    var offset = $(".btn-items").offset();
-    var top = offset.top;
+  if($('body').hasClass('subscribe')) {
+    $(window).scroll(function () {
+      var winPosY = $(document).scrollTop();
+      var offset = $(".btn-items").offset();
+      var top = offset.top;
 
-    if(winPosY > top) {
-      $(".floating").css('display','block');
-    } else {
-      $(".floating").css('display','none');
-    }
-  });
+      if(winPosY > top) {
+        $(".floating").css('display','block');
+      } else {
+        $(".floating").css('display','none');
+      }
+    });
+  }
   
   // 구독메인 - 구독 시작하기 버튼 스크립트
   $(".start-btn").on('click', function() {
@@ -635,6 +637,28 @@ console.log(`
       e.preventDefault();
       $(".quick-navbar").addClass('open');
     }
+  });
+
+
+  // 교재목록 슬라이드
+  new Swiper ('.list-viewer-slide', {
+		speed: 500,
+		delay: 7000,
+		loop: true,
+		longSwipes: true,
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: false
+		},
+		effect: 'slide',
+		slidesPerView: 1,
+      pagination: {
+			clickable: true,
+		},
+		navigation: {
+        nextEl: '.list-viewer-btn-next',
+        prevEl: '.list-viewer-btn-prev',
+    },
   });
 
 

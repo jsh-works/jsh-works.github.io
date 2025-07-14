@@ -629,6 +629,14 @@ console.log(`
     }
   });
 
+  // 퀵메뉴 close에서 open 스크립트 추가
+  $(".quick-navbar .inner").on('click', function(e) {
+    if(!$(".quick-navbar").hasClass('open')) {
+      e.preventDefault();
+      $(".quick-navbar").addClass('open');
+    }
+  });
+
 
   // 스피너 함수
   function Spinner() {

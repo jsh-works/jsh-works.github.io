@@ -1502,12 +1502,10 @@ body.elementary #contentsWrap .highSection section.full {
 #contentsWrap .highSection section .sec-inner .slide-banner.long {
   width: 848px;
   min-width: 848px;
-  background-color: #E4F2FE;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner.short {
   width: 416px;
   min-width: 416px;
-  background-color: #F3D9FF;
   overflow-y: hidden;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner.short img {
@@ -1520,13 +1518,16 @@ body.elementary #contentsWrap .highSection section.full {
   transform: scale(1.02);
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-items {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
   height: 100%;
-  padding: 37.5px 46px;
   border-radius: 12px;
+}
+#contentsWrap .highSection section .sec-inner .slide-banner .slide-items img.pc {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#contentsWrap .highSection section .sec-inner .slide-banner .slide-items img.mob {
+  display: none;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-items h2 {
   font-family: 'GmarketSans';
@@ -1541,12 +1542,6 @@ body.elementary #contentsWrap .highSection section.full {
   font-size: 15px;
   font-weight: 500;
   line-height: 140%;
-}
-#contentsWrap .highSection section .sec-inner .slide-banner .slide-items.sec {
-  background-color: #fee4e4;
-}
-#contentsWrap .highSection section .sec-inner .slide-banner .slide-items.sec h2 {
-  color: #dc0a0a;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box {
   position: absolute;
@@ -2004,6 +1999,7 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
   background-color: #F2F7FD;
   width: 404px;
   height: 216px;
+  cursor: pointer;
   box-sizing: border-box;
 }
 #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-title {
@@ -2405,6 +2401,48 @@ body.textbook #contentsWrap .sort > ul > li > ul.area.type2 > li {
   width: 24px;
   height: 24px;
   background: url("../imgs/pg-next-all-ico.png") center center/cover no-repeat;
+}
+
+.payment-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0, 0, .6);
+  z-index: 9999;
+  display: none;
+}
+.payment-popup .inner {
+  position: relative;
+  width: 550px;
+  height: 650px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.payment-popup .inner button.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  /* background: url("../imgs/close-ico-white.png") center center/cover no-repeat; */
+  background: url("../imgs/close-ico.png") center center/cover no-repeat;
+  z-index: 100;
+} 
+.payment-popup .inner .contents {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  overflow: auto;
 }
 
 /* 나의 교재방 css 추가 */
@@ -3105,11 +3143,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .highSection section .sec-inner .slide-banner.long {
     width: 100%;
     min-width: 100%;
+    height: auto;
+  }
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items img.pc {
+    display: block !important;
   }
   #contentsWrap .highSection section .sec-inner .slide-banner.short {
     display: none;
   }
   #contentsWrap .highSection section .sec-inner .slide-banner .slide-items {
+    overflow: hidden;
     border-radius: 0;
   }
   #contentsWrap .highSection section .sec-inner {
@@ -4301,20 +4344,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0; }
 
   /* 초,중,고교 모바일 500px */
-  #contentsWrap .highSection section .sec-inner .slide-banner.long {
+  /* #contentsWrap .highSection section .sec-inner .slide-banner.long {
     height: 108px;
+  } */
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items img.pc {
+    display: none !important;
   }
-  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items {
-    padding: 17px 20px;
-  }
-  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items h2 {
-    font-size: 24px;
-  }
-  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items span {
+  #contentsWrap .highSection section .sec-inner .slide-banner .slide-items img.mob {
     display: block;
-    width: 240px;
-    font-size: 13px;
-    word-break: keep-all;
+    width: 100%;
+    /* height: 108px; */
   }
   #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev,
   #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next {
@@ -4441,6 +4480,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     justify-content: space-between;
     width: 100%;
     gap: 20px;
+  }
+  .payment-popup .inner {
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -444,6 +444,18 @@ console.log(`
     var target = $(".sec2").offset();
     $('html, body').animate({ scrollTop:target.top },500);
   });
+
+  // 구독 메인 - 결제 팝업 열기
+  $(".payment-btn").on('click', function() {
+    $(".payment-popup").fadeIn().css({ display : 'flex' });
+    $('body').css({ overflow : 'hidden' });
+  });
+
+  // 구독 메인 - 결제 팝업 열기
+  $(".payment-popup .close").on('click', function() {
+    $(".payment-popup").fadeOut();
+    $('body').css({ overflow : 'auto' });
+  });
   
   // 대상 교재 팝업 열기
   $(".quick-btn").on('click', function() {

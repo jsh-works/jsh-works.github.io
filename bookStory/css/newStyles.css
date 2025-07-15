@@ -2042,6 +2042,11 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
 #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img {
   position: relative;
 }
+#contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
 #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img img {
   width: 120px;
   height: 164px;
@@ -2127,6 +2132,153 @@ body.textbook #contentsWrap .list-viewer .viewer-btns .types select[name='textbo
 body.textbook #contentsWrap .sort > ul > li > ul.area.type2 > li {
   width: 50%;
 }
+body.textbook #contentsWrap .sort ul.chk li input[type="checkbox"] + label:before {
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  background: url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+  transition: all 0.35s;
+}
+body.textbook #contentsWrap .sort-wrap {
+  padding: 16px 0px 16px 24px;
+}
+body.textbook #contentsWrap .sort-wrap.fixed {
+  top: -50px;
+}
+body.textbook #contentsWrap .sort ul.chk li input[type="checkbox"]:checked + label:before {
+  font-size: 0;
+  background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
+}
+body.textbook #contentsWrap .sort > ul > li > strong:after {
+  right: 16px;
+}
+body.textbook #contentsWrap .textbook-list-box.albumType {
+  max-width: 1000px;
+  margin-bottom: 40px;
+}
+body.textbook #contentsWrap .textbook-list-box.albumType ul {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+body.textbook #contentsWrap .textbook-list-box.albumType ul:not(:last-child) {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+body.textbook #contentsWrap .textbook-list-box.albumType ul li {
+  width: 226px;
+}
+body.textbook #contentsWrap .textbook-list-box.albumType ul li .book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+body.textbook #contentsWrap .book-item .flag-box {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+body.textbook #contentsWrap .book-item .flag-box span {
+  width: 62px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+body.textbook #contentsWrap .book-item .flag-box span.flag-pass {
+  color: #30B77C;
+  background-color: #E2F4E4;
+}
+body.textbook #contentsWrap .book-item .flag-box span.flag-high {
+  color: #2196D7;
+  background-color: #DFEEFF;
+}
+body.textbook #contentsWrap .book-item .flag-box span.flag-middle {
+  color: #805AD9;
+  background-color: #ECE1F8;
+}
+body.textbook #contentsWrap .book-item .thumb-box {
+  position: relative;
+  width: 226px;
+  height: 308px;
+  margin-bottom: 20px;
+}
+body.textbook #contentsWrap .book-item .thumb-box.ebook::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 59px);
+  width: 118px;
+  height: 31px;
+  background: url("../imgs/ebook-ico-x2.png") center center /cover no-repeat;
+}
+
+body.textbook #contentsWrap .book-item .thumb-box > img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+body.textbook #contentsWrap .book-item dl dt {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 8px;
+}
+body.textbook #contentsWrap .book-item dl dd {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+
+body.textbook #contentsWrap .book-item .thumb-box i.favorite-ico {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background: #fff url("../imgs/favorite-ico.png") center center/24px 24px no-repeat;
+  cursor: pointer;
+  transition: all 0.35s;
+  z-index: 3;
+}
+body.textbook #contentsWrap .book-item .thumb-box i.favorite-ico.active {
+  background: #fff url("../imgs/favorite-ico_active.png") center center/24px 24px no-repeat;
+}
+body.textbook #contentsWrap .book-item .thumb-box i.cart-ico {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background: #fff url("../imgs/cart-ico.png") center center/24px 24px no-repeat;
+  cursor: pointer;
+  transition: all 0.35s;
+  z-index: 3;
+}
+body.textbook #contentsWrap .book-item .thumb-box i.cart-ico:hover {
+  background: #4165F4 url("../imgs/cart-ico_active.png") center center/24px 24px no-repeat;
+}
+body.textbook #contentsWrap .book-item .thumb-box i.subscribe-ico {
+  position: absolute;
+  top: 40px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  background: url("../imgs/subscribe-ico.png") 0 0/cover no-repeat;
+}
+
 
 
 /* footer 소셜/배너 css 추가 */

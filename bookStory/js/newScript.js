@@ -485,11 +485,17 @@ console.log(`
       $(".mybook-list-box.albumType").show();
       $(".mybook-list-box.listType").hide();
 
+      $(".textbook-list-box.albumType").show();
+      $(".textbook-list-box.listType").hide();
+
     } else if($(this).hasClass('list-type')) { // 목록 형태
       $('.album-type').removeClass('on');
       $('.list-type').addClass('on');
       $(".mybook-list-box.albumType").hide();
       $(".mybook-list-box.listType").show();
+
+      $(".textbook-list-box.listType").show();
+      $(".textbook-list-box.albumType").hide();
     } else {
       return false;
     }

@@ -19,6 +19,7 @@ console.log(`
   // 나의 교재방 목록 뿌려주기 PC, Mobile 분기처리  
   var windowWidth = $(window).width();
   var album ="";
+  var tbAlbum ="";
   var list ="";
 
   // 북스토리 공통상세 - 바텀 플로팅 스크립트
@@ -67,16 +68,6 @@ console.log(`
 
   $(".seeAll-ico").on('click', function(){
     alert("전체 시리즈 보기");
-  });
-
-  // 북스토리 즐겨찾기 기능 스크립트
-  $(".favorite-ico").on('click', function(e){
-    e.preventDefault();
-    if(!$(this).hasClass('active')) {
-      $(this).addClass('active');
-    } else {
-      $(this).removeClass('active');
-    }
   });
 
   new Swiper ('.slide-banner', {
@@ -575,16 +566,22 @@ console.log(`
     if(windowWidth > 1024) { // PC
       for(var i = 1; i < 3; i++) {
         album+=`<ul><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button></div><span class="buy">구매</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button></div><span class="buy">구매</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="buy">구매</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li></ul>`;
+
+        tbAlbum+=`<ul><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico'></i> <i class='favorite-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico active'></i> <i class='favorite-ico'></i> <i class='subscribe-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico'></i> <i class='favorite-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico'></i> <i class='favorite-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li></ul>`;
       }
 
       $(".mybook-list-box.albumType").html(album);
+      $(".textbook-list-box.albumType").html(tbAlbum);
 
     } else {
       for(var i = 1; i < 3; i++) { // Mobile
         album+=`<ul><li><div class="textbook-box"><img src="./imgs/books_example.png" class="mob-thumb" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="expire">만료: 2025-06-24</span></div></li><li><div class="textbook-box"><img src="./imgs/books_example.png" class="mob-thumb" alt="교재 이미지" /><i class="subscribe-ico"></i><div class="hover-btns"><button class="view-textbook">교재 보기</button><button class="view-commentary">해설지 보기</button><button class="view-description">교재 설명 보기</button></div><span class="buy">구매</span></div></li></ul>`;
+
+        tbAlbum+=`<ul><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico'></i> <i class='favorite-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li><li><div class='book-item'><div class='flag-box'><span class='flag-pass'>수능 패스</span> <span class='flag-high'>고교 <em>구독</em></span> <span class='flag-middle'>중학 <em>구독</em></span></div><div class='thumb-box ebook'><i class='cart-ico active'></i> <i class='favorite-ico'></i> <i class='subscribe-ico'></i> <a href='./bookStoryView.html'><img src='./imgs/textbook-list-img.png' alt='교재 이미지'></a></div><dl class='textbook-info'><dt><a href='./bookStoryView.html'>EBS 2026학년도 수능 기출의 미래 수학</a></dt><dd>종이책 판매가 : <em>10,800</em>원</dd><dd>eBook 판매가 : <em>9,60</em>0원</dd></dl></div></li></ul>`;
       }
 
       $(".mybook-list-box.albumType").html(album);
+      $(".textbook-list-box.albumType").html(tbAlbum);
     }
   }
 
@@ -654,6 +651,16 @@ console.log(`
     if(!$(".quick-navbar").hasClass('open')) {
       e.preventDefault();
       $(".quick-navbar").addClass('open');
+    }
+  });
+
+  // 북스토리 즐겨찾기 기능 스크립트
+  $(".favorite-ico").on('click', function(e){
+    e.preventDefault();
+    if(!$(this).hasClass('active')) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
     }
   });
 

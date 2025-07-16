@@ -95,32 +95,32 @@
                     <label for="a2_1">50일 통합과학</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">통합사회 1·2기출문제집</label>
+                    <input type="checkbox" id="a2_2" name="sch">
+                    <label for="a2_2">통합사회 1·2기출문제집</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">올림포스 고난도</label>
+                    <input type="checkbox" id="a2_3" name="sch">
+                    <label for="a2_3">올림포스 고난도</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">2028학년도 수능 스타트</label>
+                    <input type="checkbox" id="a2_4" name="sch">
+                    <label for="a2_4">2028학년도 수능 스타트</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">올림포스 유형편</label>
+                    <input type="checkbox" id="a2_5" name="sch">
+                    <label for="a2_5">올림포스 유형편</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">개념완성 문항편</label>
+                    <input type="checkbox" id="a2_6" name="sch">
+                    <label for="a2_6">개념완성 문항편</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">올림포스</label>
+                    <input type="checkbox" id="a2_7" name="sch">
+                    <label for="a2_7">올림포스</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="a2_1" name="sch">
-                    <label for="a2_1">2025년 올림포스 전국연합학력평가 기출문제집</label>
+                    <input type="checkbox" id="a2_8" name="sch">
+                    <label for="a2_8">2025년 올림포스 전국연합학력평가 기출문제집</label>
                   </li>
                 </ul>
               </li>
@@ -171,16 +171,13 @@
             <div class="types">
               <select name="textbook" onchange="selBox(this.value)">
                 <option value="none" selected>전체</option>
-                <option value="tbk1">교제 1</option>
-                <option value="tbk2">교제 2</option>
-                <option value="tbk3">교제 3</option>
+                <option value="tbk1">정·오답 체크 제공</option>
+                <option value="tbk2">정·오답 체크 미제공</option>
               </select>
 
               <select name="purchase" onchange="selBox(this.value)">
-                <option value="CREATE" selected>구매일 순</option>
-                <option value="HIGHPRC">높은 가격 순</option>
-                <option value="LOWPRC">낮은 가격 순</option>
-                <option value="EBKNM">제목 순</option>
+                <option value="CRTN" selected>최신 순</option>
+                <option value="INTRST">인기 순(하트 순)</option>
               </select>
 
               <button class="filter-type"></button>
@@ -191,10 +188,8 @@
           <div class="mob-sort-popup">
             <dl class="sort-state">
               <dt>정렬</dt>
-              <dd class="active">구매일순</dd>
-              <dd>높은 가격 순</dd>
-              <dd>낮은 가격 순</dd>
-              <dd>제목 순</dd>
+              <dd class="active">최신 순</dd>
+              <dd>인기 순(하트 순)</dd>
             </dl>
             <dl class="filter-state">
               <dt>필터</dt>
@@ -371,32 +366,139 @@
             </ul>
           </div>
 
-          <div class="mybook-list-box listType">
+          <div class="textbook-list-box listType">
             <ul>
               <li>
-                <div class="list-textbook-box">
-                  <a href="./bookStoryView.html">
-                    <img src="./imgs/books_example.png" alt="교재 이미지"  />
-                  </a>
-                  <i class="subscribe-ico"></i>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
                   <div class="list-exp">
-                    <h4>EBS 2026 학년도 수능특강 사용설명서 독서</h4>
-                    <dl class="purch-date">
-                      <dt>구매일</dt>
-                      <dd>2025년 6월 25일</dd>
-                    </dl>
-                    <dl class="down-date">
-                      <dt>내려 받은 일</dt>
-                      <dd>2025년 6월 25일</dd>
-                    </dl>
-                    <dl class="expir-date">
-                      <dt>만료일</dt>
-                      <dd>2025년 6월 25일</dd>
+                    <div class="flag-box">
+                      <span class="flag-pass">수능 패스</span>
+                      <span class="flag-high">고교 구독</span>
+                      <span class="flag-middle">중학 구독</span>
+                    </div>
+                    <dl>
+                      <dt>EBS 2026 학년도 수능특강 사용설명서 독서</dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
                     </dl>
                   </div>
                   <div class="list-btns">
-                    <button class="view-textbook-btn" onClick="location.href='./bookStoryView.html'">교재 보기</button>
-                    <button class="view-commentary-btn">해설지 보기</button>
+                    <button class="view-detail-btn">상세보기</button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <div class="flag-box">
+                      <span class="flag-pass">수능 패스</span>
+                      <span class="flag-high">고교 구독</span>
+                      <span class="flag-middle">중학 구독</span>
+                    </div>
+                    <dl>
+                      <dt>EBS 2026 학년도 수능특강 사용설명서 독서</dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn">상세보기</button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <div class="flag-box">
+                      <span class="flag-pass">수능 패스</span>
+                      <span class="flag-high">고교 구독</span>
+                      <span class="flag-middle">중학 구독</span>
+                    </div>
+                    <dl>
+                      <dt>EBS 2026 학년도 수능특강 사용설명서 독서</dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn">상세보기</button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <div class="flag-box">
+                      <span class="flag-pass">수능 패스</span>
+                      <span class="flag-high">고교 구독</span>
+                      <span class="flag-middle">중학 구독</span>
+                    </div>
+                    <dl>
+                      <dt>EBS 2026 학년도 수능특강 사용설명서 독서</dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn">상세보기</button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <div class="flag-box">
+                      <span class="flag-pass">수능 패스</span>
+                      <span class="flag-high">고교 구독</span>
+                      <span class="flag-middle">중학 구독</span>
+                    </div>
+                    <dl>
+                      <dt>EBS 2026 학년도 수능특강 사용설명서 독서</dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn">상세보기</button>
                   </div>
                 </div>
               </li>

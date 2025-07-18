@@ -4,6 +4,10 @@
   font-weight: normal;
   font-style: normal;
 }
+.book-info {
+  max-width: 1000px;
+  padding: 60px 0 80px;
+}
 .roadmap-head-tab-wrapper,
 .roadmap-cnt.wide, .tab-cnt.wide { background-color: #fff;}
 .roadmap-head-tab { padding: 0; }
@@ -272,8 +276,18 @@ body.subscribe #bottomFooter {padding-bottom: 120px;}
 .gnb-dep01 > li:hover .gnb-dep02-div.middle a:hover { color: #604ADB; }
 .gnb-dep01 > li:hover .gnb-dep02-div.elem a:hover { color: #18BCC4; }
 .subGnbBack { position: absolute; top:134px; }
-.book-info .thumb-box { position: relative; width: 100%; padding-top: 432px; }
-.book-info .thumb-img { width: 342px; }
+.book-info .thumb-box { position: relative; width: 280px; height: 384px; padding: 0; overflow: unset; }
+.book-info .thumb-img { position: relative; top: auto; left: auto; right: auto; bottom: auto; width: 280px; height: 384px; overflow: unset; }
+.book-info .thumb-img.ebeb::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 59px);
+  width: 118px;
+  height: 31px;
+  background: url("../imgs/ebook-ico-x2.png") center center /cover no-repeat;
+  z-index: 10;
+}
 .book-info .thumb-img img { border: none; }
 #contentsWrap.main { padding-bottom: 0; }
 #contentsWrap.main section.margin { margin-bottom: 80px; }
@@ -1090,36 +1104,38 @@ position: absolute;
   max-width: 1046px;
 }
 #contentsWrap .container h2 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
+  line-height: 140%;
   text-align: center;
-  line-height: 1;
-  padding-bottom: 28px;
+  padding-bottom: 32px;
   letter-spacing: normal;
 }
 #contentsWrap .container .menu-nav {
   position: relative;
   margin: 0 auto;
   max-width: 426px;
-  padding-bottom: 50px;
+  padding-bottom: 32px;
 }
 #contentsWrap .container .menu-nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  border-radius: 16px;
+  padding: 4px;
+  background: #EFF2F8;
+  border-radius: 64px;
 }
 #contentsWrap .container .menu-nav ul li {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 142px;
-  height: 76px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
+  width: 137px;
+  height: 52px;
+  color: #444;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 160%;
   letter-spacing: -0.5px;
   white-space: nowrap;
   text-align: center;
@@ -1129,36 +1145,37 @@ position: absolute;
   z-index: 2;
 }
 #contentsWrap .container .menu-nav ul li.active {
-  width: 142px;
-  color: #4165F4;
+  width: 137px;
+  height: 52px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 64px;
   transition: all 0.35s;
 }
 #contentsWrap .container .menu-nav .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 142px;
-  height: 76px;
-  border-radius: 16px;
-  box-shadow: 0px 8px 20px 0px rgba(65, 101, 244, 0.2);
-  box-shadow: 0px 8px 32px 0px rgba(65, 101, 244, 0.15);
+  top: 4px;
+  left: 4px;
+  width: 137px;
+  height: 52px;
+  border-radius: 64px;
+  box-shadow: 0px 4px 4px 0px #00000012;
   transition: all 0.35s;
+  background-color: #4165F4;
+
 }
 #contentsWrap .container .book-details {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: 40px;
   width: 100%;
   max-width: 1046px;
-  margin: 0 auto;
+  margin: 0 auto 48px;
 }
 #contentsWrap .container .book-details.ebook,
 #contentsWrap .container .book-details.paper {
   display: none;
-}
-#contentsWrap .container .book-details .thumb-box .thumb-img {
-  box-shadow: 0px 7px 36px 0px #00000026;
-  box-shadow: 0px 10px 42px 0px #0000001A;
 }
 #contentsWrap .container .book-details .thumb-box .thumb-img button {
   outline: none;
@@ -1173,32 +1190,23 @@ position: absolute;
   height: 100%;
   z-index: 10;
 }
+#contentsWrap .container .book-details .thumb-box .thumb-img:hover .thumb-ico {
+  background-color: rgba(0,0,0, 0.5);
+}
 #contentsWrap .container .book-details .thumb-box .thumb-img .favorite-ico {
   position: absolute;
-  left: 12px;
-  bottom: 12px;
-  width: 60px;
-  height: 60px;
+  right: -12px;
+  bottom: -12px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.65);
-  background-image: url("../imgs/favorite-ico.svg");
-  background-size: 32px 32px;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
+  background: #fff url("../imgs/favorite-ico.svg") center center/24px 24px no-repeat;
+  box-shadow: 0px 4px 4px 0px #00000026;
   transition: all 0.35s;
+  cursor: pointer;
 }
 #contentsWrap .container .book-details .thumb-box .thumb-img .favorite-ico.active {
   background-image: url("../imgs/favorite-ico_active.svg");
-}
-#contentsWrap .container .book-details .thumb-box .thumb-img:hover .favorite-ico {
-  background-color: rgba(255, 255, 255, 0.8);
-  background-size: 32px 32px;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0px 10px 20px 0px rgba(16, 24, 40, 0.25);
-  backdrop-filter: blur(20px);
-  transition: all 0.35s;
 }
 #contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico,
 #contentsWrap .container .book-details .thumb-box .thumb-img .seeAll-ico {
@@ -1230,29 +1238,70 @@ position: absolute;
   background: url("../imgs/see-all-ico.png") center center/15px 19px no-repeat;
 }
 #contentsWrap .container .book-details .book-infos {
-  width: 100%; 
+  width: 100%;
 }
-#contentsWrap .container .book-details .book-infos .ticket-box {
+#contentsWrap .container .book-details .book-infos .books-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 2px;
-  width: 100%;
-  margin-bottom: 40px;
+  gap: 4px;
 }
-#contentsWrap .container .book-details .book-infos .ticket-box span {
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box span {
+  width: 62px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 0px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box span.flag-pass {
+  color:#30B77C;
+  background-color: #E2F4E4;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box span.flag-high {
+  color:#2196D7;
+  background-color: #DFEEFF;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box span.flag-middle {
+  color:#805AD9;
+  background-color: #ECE1F8;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .flag-box span.flag-elementary {
+  color:#27B4C4;
+  background-color: #D1F5F9;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .product-box {
+  display: inline-block;
+}
+#contentsWrap .container .book-details .book-infos .books-ticket .product-box span {
   color: #666;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  text-align: right;
-  padding-left: 12px;
+  font-weight: 400;
+  line-height: 160%;
 }
+#contentsWrap .container .book-details .book-infos .books-ticket .product-box span.after::after {
+  content: '|';
+  color: #666;
+  padding-left: 12px;
+  margin-right: 12px;
+}
+
+
+
+
 #contentsWrap .container .book-details .price-box {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 #contentsWrap .container .book-details .price-box dl.tit {
   display: flex;
@@ -1275,76 +1324,82 @@ position: absolute;
 }
 #contentsWrap .container .book-details .price-box dl {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
-  gap: 16px;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
 }
 #contentsWrap .container .book-details .price-box dl.last-dl {
-  height: 35px;
   margin-bottom: 24px;
 }
 #contentsWrap .container .book-details .price-box dl dt {
-  width: 126px;
-  color: #666;
+  width: 120px;
+  color: #222;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 17px;
-  letter-spacing: -0.5px;
+  line-height: 160%;
 }
 #contentsWrap .container .book-details .price-box dl dd {
-  color: #272525;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: -0.5px;
+  color: #666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
 }
-#contentsWrap .container .book-details .price-box dl dd.lineThrough {
-  text-decoration: line-through;
+#contentsWrap .container .book-details .price-box dl.last-dl dd {
+  display: flex;
+  gap: 8px;
+  /* cursor: pointer; */
 }
 #contentsWrap .container .book-details .price-box dl dd.blueColor {
   color: #4165F4;
-  font-size: 26px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
 }
 #contentsWrap .container .book-details .price-box dl dd > em {
-  color: #272525;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 18px;
+  line-height: 140%;
+  margin-left: 6px;
 }
 #contentsWrap .container .book-details .price-box dl dd span {
   position: relative;
-  color: #3650B8;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  padding: 6px 10px 7px 29px;
+  color: #222;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 12px;
   border-radius: 6px;
-  border: 1px solid #4663D9;
+  border: 1px solid #bbb;
   box-sizing: border-box;
+}
+#contentsWrap .container .book-details .price-box dl.last-dl dd span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #contentsWrap .container .book-details .price-box dl dd span:nth-child(1)::before {
   content: "";
-  position: absolute;
-  top: calc(50% - 9px);
-  left: 10px;
-  width: 18px;
-  height: 18px;
-  background: url("../imgs/ref-ico_01.png") center center/12px 15px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url("../imgs/ref-ico_01.png") center center/cover no-repeat;
 }
 #contentsWrap .container .book-details .price-box dl dd span:nth-child(2)::before {
   content: "";
-  position: absolute;
-  top: calc(50% - 9px);
-  left: 10px;
-  width: 18px;
-  height: 18px;
-  background: url("../imgs/ref-ico_02.png") center center/14px 14px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url("../imgs/ref-ico_02.png") center center/cover no-repeat;
 }
 #contentsWrap .container .book-details .price-box dl dd span:nth-child(3)::before {
   content: "";
-  position: absolute;
-  top: calc(50% - 9px);
-  left: 10px;
-  width: 18px;
-  height: 18px;
-  background: url("../imgs/ref-ico_03.png") center center/13px 10px no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
 }
 #contentsWrap .container .book-details .price-box .price-btns-box {
   display: flex;
@@ -1361,26 +1416,29 @@ position: absolute;
   gap: 12px;
   width: 100%;
 }
-#contentsWrap .container .book-details .price-box .price-btns-box .row-btns {
+#contentsWrap button.long-btn {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 8px;
+  justify-content: center;
   width: 100%;
-}
-#contentsWrap button.long-btn {
-  width: 100%;
-  height: 59px;
-  color: #fff;
-  font-size: 20px;
+  height: 56px;
+  color: #4165F4;
+  font-size: 16px;
   font-weight: 700;
   line-height: 100%;
-  letter-spacing: -0.5px;
-  padding: 16px 20px;
-  border-radius: 6px;
-  background-color: #6B89FF;
-  box-shadow: 0px 8px 36px 0px #00000026;
+  padding: 16px 0;
+  border-radius: 8px;
+  border: 1px solid #4165F4;
+  background-color: #fff;
+}
+#contentsWrap button.long-btn.b-ico::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url("../imgs/books-ico.png") center center / cover no-repeat;
 }
 #contentsWrap button.middle-btn {
   min-width: 200px;
@@ -1396,18 +1454,7 @@ position: absolute;
   border: 1px solid #4165F4;
   box-shadow: 0px 8px 36px 0px #00000026;
 }
-#contentsWrap button.short-btn {
-  width: 140px;
-  height: 35px;
-  color: #3650B8;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: -0.5px;
-  padding: 8px 0px;
-  border-radius: 6px;
-  border: 1px solid #4663D9;
-}
+
 #contentsWrap button.scribe-btn {
   display: inline-block;
   min-width: 50px;
@@ -3024,8 +3071,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   width: calc(100% - 52px);
   margin-left: 26px;
 }
-
-
 .list-viewer .mybook-list-box {
   position: relative;
 }
@@ -3323,7 +3368,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   vertical-align: -2px;
   background: url("../imgs/more-ico.png") center center/cover no-repeat;
 }
-.list-viewer .bootm-banner {
+.bootm-banner {
   position: relative;
   display: flex;
   align-items: center;
@@ -3333,22 +3378,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   border-radius: 12px;
   background-color: #EEF4FB;
 }
-.list-viewer .bootm-banner ul {
+.bootm-banner ul {
   display: flex;
 }
-.list-viewer .bootm-banner ul li {
+.bootm-banner ul li {
   position: relative;
   display: flex;
   align-items: center;
   white-space: nowrap;
   cursor: pointer;
 }
-.list-viewer .bootm-banner ul li:not(:last-child) {
+.bootm-banner ul li:not(:last-child) {
   padding-right: 28px;
   margin-right: 28px;
   border-right: 1px solid #ddd;
 }
-.list-viewer .bootm-banner ul li.guide::before {
+.bootm-banner ul li.guide::before {
   content: '';
   display: inline-block;
   width: 40px;
@@ -3357,11 +3402,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background: url("../imgs/bottom-banner-ico01.png") 0 0/cover no-repeat;
   transition: all 0.35s;
 }
-.list-viewer .bootm-banner ul li.guide.on::before {
+.bootm-banner ul li.guide.on::before {
   content: '';
   background: url("../imgs/bottom-banner-ico01_on.png") 0 0/cover no-repeat;
 }
-.list-viewer .bootm-banner ul li.payment::before {
+.bootm-banner ul li.payment::before {
   content: '';
   display: inline-block;
   width: 40px;
@@ -3370,11 +3415,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background: url("../imgs/bottom-banner-ico02.png") 0 0/cover no-repeat;
   transition: all 0.35s;
 }
-.list-viewer .bootm-banner ul li.payment.on::before {
+.bootm-banner ul li.payment.on::before {
   content: '';
   background: url("../imgs/bottom-banner-ico02_on.png") 0 0/cover no-repeat;
 }
-.list-viewer .bootm-banner ul li.policy::before {
+.bootm-banner ul li.policy::before {
   content: '';
   display: inline-block;
   width: 40px;
@@ -3383,11 +3428,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background: url("../imgs/bottom-banner-ico03.png") 0 0/cover no-repeat;
   transition: all 0.35s;
 }
-.list-viewer .bootm-banner ul li.policy.on::before {
+.bootm-banner ul li.policy.on::before {
   content: '';
   background: url("../imgs/bottom-banner-ico03_on.png") 0 0/cover no-repeat;
 }
-.list-viewer .bootm-banner ul li.subscribe::before {
+.bootm-banner ul li.subscribe::before {
   content: '';
   display: inline-block;
   width: 40px;
@@ -3396,16 +3441,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background: url("../imgs/bottom-banner-ico04.png") 0 0/cover no-repeat;
   transition: all 0.35s;
 }
-.list-viewer .bootm-banner ul li.subscribe.on::before {
+.bootm-banner ul li.subscribe.on::before {
   content: '';
   background: url("../imgs/bottom-banner-ico04_on.png") 0 0/cover no-repeat;
 }
-.list-viewer .bootm-banner ul li a {
+.bootm-banner ul li a {
   color: #222;
   font-size: 18px;
   font-weight: 400;
 }
-.list-viewer .bootm-banner ul li.on a {
+.bootm-banner ul li.on a {
   color: #4165F4;
   transition: all 0.35s;
 }
@@ -3443,11 +3488,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 }
 
 @media all and (max-width: 1225px) {
-  .list-viewer .bootm-banner {
+  .bootm-banner {
     padding: 20px;
     margin-bottom: 32px;
   }
-  .list-viewer .bootm-banner ul {
+  .bootm-banner ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -3455,13 +3500,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     content: none;
     clear: none;
   }
-  .list-viewer .bootm-banner ul li:not(:last-child) {
+  .bootm-banner ul li:not(:last-child) {
     border-right: 0;
     padding-right: 0;
     margin-right: 0;
     margin-bottom: 16px;
   }
-  .list-viewer .bootm-banner ul li a {
+  .bootm-banner ul li a {
     font-size: 16px;
     font-weight: 400;
   }

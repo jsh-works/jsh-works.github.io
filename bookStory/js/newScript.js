@@ -47,7 +47,11 @@ console.log(`
     if($(".menu-nav ul li").hasClass('active')) {
       $(".menu-nav ul li").removeClass('active');
       $(this).addClass('active');
-      $('.overlay').css({ left: $(this).prevAll().length * 142 + "px" });
+      if( $(this).prevAll().length == 0 ) {
+        $('.overlay').css('left','4px'); 
+      } else {
+        $('.overlay').css({ left: $(this).prevAll().length * 142 + "px" });
+      }
     } else {
       $(".menu-nav ul li").removeClass('active');
     }

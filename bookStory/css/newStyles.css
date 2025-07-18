@@ -2865,7 +2865,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .viewer-btns .types button.filter-type {
   display: none;
 }
-.list-viewer .mob-sort-popup {
+
+.mob-sort-popup {
   display: none;
   position: absolute;
   top: 120px;
@@ -2878,25 +2879,32 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   box-shadow: 8px 8px 8px 0px #00000026;
   z-index: 100;
 }
-.list-viewer .mob-sort-popup dl {
+.mob-sort-popup.textbook {
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 24px 0;
+  z-index: 1000;
+}
+.mob-sort-popup dl {
   display: flex;
   flex-direction: column;
   padding-bottom: 27px;
   margin-bottom: 27px;
 }
-.list-viewer .mob-sort-popup dl.filter-state {
+.mob-sort-popup dl.filter-state {
   margin-bottom: 0;
 }
-.list-viewer .mob-sort-popup dl:first-child {
+.mob-sort-popup dl:first-child {
   border-bottom: 1px solid #ddd;
 }
-.list-viewer .mob-sort-popup dl dt {
+.mob-sort-popup dl dt {
   color: #222;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
 }
-.list-viewer .mob-sort-popup dl dd {
+.mob-sort-popup dl dd {
   position: relative;
   color: #222;
   font-size: 16px;
@@ -2906,7 +2914,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   line-height: 160%;
   cursor: pointer;
 }
-.list-viewer .mob-sort-popup dl dd::before {
+.mob-sort-popup dl dd::before {
   content: "";
   position: absolute;
   top: calc(50% -12px);
@@ -2916,14 +2924,14 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   vertical-align: bottom;
   background: url("../imgs/menu-check-ico.png") center center/cover no-repeat;
 }
-.list-viewer .mob-sort-popup dl dd.active::before {
+.mob-sort-popup dl dd.active::before {
   content: "";
   background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
 }
-.list-viewer .mob-sort-popup dl dd:not(:last-child) {
+.mob-sort-popup dl dd:not(:last-child) {
   margin-bottom: 16px;
 }
-.list-viewer .mob-sort-popup button {
+.mob-sort-popup button {
   width: 100%;
   height: 48px;
   color: #4165F4;
@@ -2934,6 +2942,90 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   box-sizing: border-box;
   border: 1px solid #4165F4;
 }
+.mob-sort-popup.textbook .sort-box {
+  position: relative;
+  margin: 0 26px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.mob-sort-popup.textbook .sort-box h4 {
+  position: relative;
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 12px;
+}
+.mob-sort-popup.textbook .sort-box.acc h4::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  transform: rotateZ(180deg);
+  background: url("../imgs/acc-ico.png") center center / cover no-repeat;
+}
+.mob-sort-popup.textbook .sort-box.acc h4.active::after {
+  transform: rotateZ(0deg);
+}
+.mob-sort-popup.textbook .sort-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+.mob-sort-popup.textbook .sort-box ul.row {
+  justify-content: flex-start;
+  column-gap: 25px;
+  white-space: nowrap;
+}
+.mob-sort-popup.textbook .sort-box ul.column {
+  justify-content: flex-start;
+  width: auto;
+  height: 403px;
+  padding: 0 14px 0 0;
+  margin-bottom: 24px;
+  border-bottom: 0;
+  overflow: auto;
+}
+.mob-sort-popup.textbook .sort-box ul li {
+  position: relative;
+  width: calc(33% - 16px);
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.mob-sort-popup.textbook .sort-box ul li.w-auto {
+  width: auto;
+}
+.mob-sort-popup.textbook .sort-box ul.column li {
+  width: 100%;
+}
+.mob-sort-popup.textbook .sort-box ul li::before {
+  content: "";
+  position: absolute;
+  top: calc(50% -12px);
+  left: 0;
+  width: 24px;
+  height: 24px;
+  vertical-align: bottom;
+  background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+}
+.mob-sort-popup.textbook .sort-box ul li.active::before {
+  content: "";
+  background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
+}
+.mob-sort-popup.textbook button {
+  width: calc(100% - 52px);
+  margin-left: 26px;
+}
+
+
 .list-viewer .mybook-list-box {
   position: relative;
 }

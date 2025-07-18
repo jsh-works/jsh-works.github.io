@@ -664,6 +664,25 @@ console.log(`
     }
   });
 
+  // 교재 리스트 - 정렬 팝업 스크립트
+  $(".sort-box.acc h4").on('click', function() {
+    if(!$(this).hasClass('active')) {
+      $(this).addClass('active');
+      $(this).siblings('ul').css('display', 'none');
+    } else {
+      $(this).removeClass('active');
+      $(this).siblings('ul').css('display', 'flex');
+    }
+  });
+
+  $(".textbook .sort-box ul li").on('click', function() {
+    if(!$(this).hasClass('active')) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+
 
   // 교재목록 슬라이드
   new Swiper ('.list-viewer-slide', {

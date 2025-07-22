@@ -344,7 +344,7 @@ body.subscribe #bottomFooter {padding-bottom: 120px;}
   width: 118px;
   height: 31px;
   background: url("../imgs/ebook-ico-x2.png") center center /cover no-repeat;
-  z-index: 100;
+  z-index: 11;
 }
 .book-info .thumb-img.corct-badge::after {
   content: '';
@@ -354,7 +354,7 @@ body.subscribe #bottomFooter {padding-bottom: 120px;}
   width: 51px;
   height: 57px;
   background: url("../imgs/correct-ico.png") center center /cover no-repeat;
-  z-index: 100;
+  z-index: 11;
 }
 .book-info .thumb-img img { border: none; }
 #contentsWrap.main { padding-bottom: 0; }
@@ -2408,7 +2408,7 @@ body.textbook #contentsWrap .list-viewer .viewer-btns .correct-box i.flag {
   display: inline-block;
   width: 32px;
   height: 36px;
-  background: url("../imgs/correct-flag.png") center center/ cover no-repeat;
+  background: url("../imgs/correct-ico.png") center center/ cover no-repeat;
 }
 body.textbook #contentsWrap .list-viewer .viewer-btns .correct-box i.tip {
   display: inline-block;
@@ -2505,6 +2505,16 @@ body.textbook #contentsWrap .book-item .thumb-box {
   height: auto;
   margin-bottom: 20px;
 }
+body.textbook #contentsWrap .textbook-list-box.albumType .book-item .thumb-box.corct::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 51px;
+  height: 57px;
+  background: url("../imgs/correct-ico.png") center center / cover no-repeat;
+  z-index: 11;
+}
 body.textbook #contentsWrap .book-item .thumb-box.ebook::after {
   content: '';
   position: absolute;
@@ -2514,6 +2524,8 @@ body.textbook #contentsWrap .book-item .thumb-box.ebook::after {
   height: 31px;
   background: url("../imgs/ebook-ico-x2.png") center center /cover no-repeat;
 }
+
+
 
 body.textbook #contentsWrap .book-item .thumb-box a > img {
   width: 100%;
@@ -2670,6 +2682,16 @@ body.textbook #contentsWrap .textbook-list-box.listType .book-item .thumb-box.eb
   width: 50px;
   height: 13px;
   background: url("../imgs/ebook-ico-x2.png") center center / cover no-repeat;
+}
+body.textbook #contentsWrap .textbook-list-box.listType .book-item .thumb-box.corct::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 20px;
+  height: 26px;
+  background: url("../imgs/correct-ico-x2.png") center center / cover no-repeat;
+  z-index: 11;
 }
 body.textbook #contentsWrap .textbook-list-box.listType .book-item .flag-box {
   margin-bottom: 4px;

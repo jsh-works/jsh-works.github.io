@@ -46,21 +46,21 @@
     "menuName" : "교재 리스트",
     "devUrl" : "bookStory/bookStoryList.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
-    "update" : "25.07.14~"
+    "update" : "25.07.18"
   },
   {
     "id" : "bookStory",
     "menuName" : "교재상세",
     "devUrl" : "bookStory/bookStoryView.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
-    "update" : "25.07.14~"
+    "update" : "25.07.22"
   },
   {
     "id" : "bookStory",
     "menuName" : "APP 내려받기",
     "devUrl" : "learnHistory/appDownload.html",
     "mainUrl" : "https://book.ebs.co.kr/ebook/purchase?userHash=ZjZNShVBdoA%2BCGc0dnd9vQ%3D%3D",
-    "update" : "25.07.14~"
+    "update" : "ing"
   },
   {
     "id" : "e-book",

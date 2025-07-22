@@ -54,15 +54,9 @@
 									</div>
 								</div>
 								<ul class="thumb-btn-box">
-									<li class="select">
-										<a href="">eBook 구독</a>
-									</li>
-									<li>
-										<a href="">eBook<br/>9,600원</a>
-									</li>
-									<li>
-										<a href="">종이책</a>
-									</li>
+									<li data-layer="scribe" class="active">ebook 구독</li>
+									<li data-layer="ebook" class="">eBook<br/>9,600원</li>
+									<li data-layer="paper" class="">종이책</li>
 								</ul>
 							</div>
 						</div>
@@ -279,16 +273,76 @@
 				</div>
 			</div>
 
-			<!-- details -->
+			<!-- details mobile 추가 -->
 			<div class="sub-cnt-wrap">
-				<div class="">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae quos laborum corporis similique facere culpa numquam veniam, aspernatur cumque non molestiae fugiat esse quis, eos itaque ducimus soluta praesentium.
+				<div class="mob-cnt-book-infos">
+					<div class="title">
+						<h2>EBS 2026학년도 수능완성 국어영역 독서·문학·화법과 작문</h2>
+					</div>
+
+					<div class="books-ticket">
+						<div class="flag-box">
+							<span class="flag-pass">수능 패스</span>
+							<span class="flag-high">고교 구독</span>
+							<span class="flag-middle">중학 구독</span>
+							<span class="flag-elementary">초등 구독</span>
+							<span class="flag-text">이용 가능</span>
+						</div>
+						<div class="product-box">
+							<p>
+								<span class="after">한국교육방송공사</span>
+								<span>ISBN: 9788954789325</span>
+							</p>
+						</div>
+					</div>
+					<div class="price-box">
+						<dl>
+							<dt>권장 대상</dt>
+							<dd>2,3학년</dd>
+						</dl>
+						<dl>
+							<dt>과목</dt>
+							<dd>국어</dd>
+						</dl>
+						<dl>
+							<dt>eBook 정가</dt>
+							<dd>12,000원</dd>
+						</dl>
+						<dl>
+							<dt>eBook 할인가</dt>
+							<dd class="blueColor">
+								<em class="small">구독으로 이용 시</em>
+								<em class="big">0원</em>
+							</dd>
+						</dl>
+						<dl class="last-dl">
+							<dt>부가자료</dt>
+							<dd>
+								<span>정답지</span>
+								<span>정오표</span>
+								<span>MP3</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="bootm-banner">
+						<ul>
+							<li class="guide">
+								<a href="/">eBook 이용 안내</a>
+							</li>
+							<li class="payment">
+								<a href="/">eBook 결제 / 환불</a>
+							</li>
+							<li class="policy">
+								<a href="/">eBook 주요 정책</a>
+							</li>
+							<li class="subscribe">
+								<a href="/">eBook 구독 이용 안내</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+
+				
 				<div class="book-view">
 					<div class="book-cnt">
 						<!-- tab -->
@@ -424,14 +478,32 @@
 			<!-- viewer footer fixed-->
 			<div class="prod-purchase-footer scribe">
 				<div class="prod-inner">
-					<!-- <div class="left-prod-info">EBS eBook 구독으로 가벼운 학습을 시작하세요!</div> -->
-					<div class="left-prod-info">eBook 단건 구매 <b>9,600원</b></div>
-					<div class="right-prod-info">
-						<button class="scribe-btn"></button>
-						<button class="cart-btn">장바구니</button>
-						<!-- <button class="long-btn">eBook 구독 알아보기</button> -->
-						<!-- <button class="long-btn">eBook 단건 구매</button> -->
-						<button class="long-btn">보유한 구독권으로 이용</button>
+					<div class="scribe-type">
+						<div class="left-prod-info">EBS eBook 구독으로 가벼운 학습을 시작하세요!</div>
+						<div class="right-prod-info">
+							<button class="scribe-btn active"></button>
+							<button class="long-btn">보유한 구독권으로 이용</button>
+						</div>
+					</div>
+
+					<div class="ebook-type">
+						<div class="left-prod-info">eBook 단건 구매 <b>9,600원</b></div>
+						<div class="right-prod-info">
+							<button class="scribe-btn active"></button>
+							<button class="cart-btn">장바구니</button>
+							<button class="long-btn pc-b">eBook 단건 구매</button>
+							<button class="long-btn mo-b">eBook 구매</button>
+						</div>
+					</div>
+					
+					<div class="paper-type">
+						<div class="left-prod-info">EBS eBook 구독으로 가벼운 학습을 시작하세요!</div>
+						<div class="right-prod-info">
+							<button class="scribe-btn active"></button>
+							<button class="paper-buy-btn">종이책 구매</button>
+							<button class="long-btn pc-b">eBook 구독 알아보기</button>
+							<button class="long-btn mo-b">eBook 구독 알아보기</button>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -40,6 +40,9 @@ body.viewer #contentsWrap .sub-cnt-wrap {
   max-width: 100%;
   margin: 0;
 }
+body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos {
+  display: none;
+}
 body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg {
   display: none;
 }
@@ -1236,6 +1239,7 @@ position: absolute;
   gap: 40px;
   width: 100%;
   max-width: 1046px;
+  min-height: 388px;
   margin: 0 auto 48px;
 }
 #contentsWrap .container .book-details.ebook,
@@ -1616,6 +1620,9 @@ position: absolute;
   border: 1px solid #bbb;
   background: url("../imgs/favorite-ico.svg") center center / 32px 32px no-repeat;
 }
+#contentsWrap button.scribe-btn.active {
+  background: url("../imgs/favorite-ico_active.svg") center center / 32px 32px no-repeat;
+}
 #contentsWrap button.cart-btn {
   display: flex;
   align-items: center;
@@ -1644,13 +1651,27 @@ position: absolute;
 }
 #contentsWrap .prod-purchase-footer .prod-inner {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px 0px;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .scribe-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .ebook-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .paper-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
 }
 #contentsWrap .prod-purchase-footer .prod-inner .cart-btn::before {
   content: '';
@@ -1674,6 +1695,9 @@ position: absolute;
   display: flex;
   gap: 12px;
 }
+#contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.paper-buy-btn {
+  display: none;
+}
 #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn {
   position: relative;
   display: flex;
@@ -1689,6 +1713,12 @@ position: absolute;
   border-radius: 8px;
   border: 1px solid #4165F4;
   background-color: #4165F4;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn.pc-b {
+  display: flex;
+}
+#contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn.mo-b {
+  display: none;
 }
 #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn::after {
   content: '';
@@ -4466,6 +4496,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
     padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
   }
+  body.viewer #Footer .footer-inner {
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 100px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 100px);
+  }
 
   #contentsWrap .mainSection .sec1 .sec-inner { margin-top: 80px; }
   #contentsWrap .mainSection .sec2, #contentsWrap .mainSection .sec3, #contentsWrap .mainSection .sec4 { padding: 80px 40px; }
@@ -4578,14 +4612,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     gap: 12px;
     width: 50%;
   }
-  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li  {
+  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li {
     width: 100%;
     text-align: center;
     border-radius: 12px;
     background: #0000001A;
     box-shadow: 0px 4px 8px 0px #00000012;
-  }
-  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li a {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -4595,16 +4628,15 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-size: 13px;
     font-weight: 400;
     padding: 0px 14.5px;
+    cursor: pointer;
   }
-  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li.select {
+  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li.active {
     width: 100%;
     text-align: center;
     border-radius: 12px;
-    background: #fff;
-  }
-  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box li.select a {
     color: #4165F4;
     font-weight: bold;
+    background: #fff;
   }
   body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img .thumb-ico {
     display: flex;
@@ -4630,6 +4662,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-size: 13px;
     font-weight: 500;
     line-height: 100%;
+    white-space: nowrap;
     padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid #bbb;
@@ -4655,9 +4688,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 16px;
     background: url("../imgs/see-all-ico.png") center center / cover no-repeat;
   }
-
-  
-  #contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico {
+  body.viewer #contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4673,7 +4704,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border: 1px solid #4165F4;
     background-color: #4165F4;
   }
-  #contentsWrap .container .book-details .thumb-box .thumb-img .seeAll-ico {
+  body.viewer #contentsWrap .container .book-details .thumb-box .thumb-img .seeAll-ico {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4689,6 +4720,290 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border: 1px solid #BBB;
     background-color: #fff;
   }
+  body.viewer #contentsWrap .sub-cnt-wrap .book-view {
+    position: relative;
+    top: -20px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .book-cnt::before {
+    content: none;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .book-cnt .tab li > a {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .book-cnt .tab li > a.active {
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 0;
+    background: #fff;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos {
+    display: block;
+    position: relative;
+    top: -20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: #fff;
+    
+    border-bottom: 8px solid #eee;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .title h2,
+  #contentsWrap.sub h2 {
+    display: inline-block;
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%;
+    word-break: keep-all;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span {
+    width: 62px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 6px 0px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span.flag-pass {
+    color:#30B77C;
+    background-color: #E2F4E4;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span.flag-high {
+    color:#2196D7;
+    background-color: #DFEEFF;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span.flag-middle {
+    color:#805AD9;
+    background-color: #ECE1F8;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span.flag-elementary {
+    color:#27B4C4;
+    background-color: #D1F5F9;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span.flag-text {
+    color:#222;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .product-box {
+    display: inline-block;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .product-box span {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .product-box span.after::after {
+    content: '|';
+    color: #666;
+    padding-left: 12px;
+    margin-right: 12px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.tit {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.tit dt,
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.tit dd {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.tit dt {
+    max-width: 126px;
+    text-align: left;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.last-dl {
+    margin-bottom: 24px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dt {
+    width: 120px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 160%;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd {
+    color: #666;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.last-dl dd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd.blueColor {
+    display: flex;
+    gap: 6px;
+    color: #4165F4;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd.blueColor > em.big {
+    font-size: 18px;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd.blueColor > em.small {
+    font-size: 14px;
+  }
+
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd span {
+    position: relative;
+    color: #222;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl.last-dl dd span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd span:nth-child(1)::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url("../imgs/ref-ico_01.png") center center/cover no-repeat;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd span:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url("../imgs/ref-ico_02.png") center center/cover no-repeat;
+  }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd span:nth-child(3)::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .left-prod-info {
+    display: none;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .cart-btn::before {
+    content: none;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  body.viewer #contentsWrap .bootm-banner {
+    margin-bottom: 20px;
+  }
+  body.viewer #contentsWrap button.scribe-btn {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    background: url("../imgs/favorite-ico.svg") center center / 20px 18px no-repeat;
+  }
+  body.viewer #contentsWrap button.scribe-btn.active {
+    background: url("../imgs/favorite-ico_active.svg") center center / 20px 18px no-repeat;
+  }
+  body.viewer #contentsWrap button.cart-btn {
+    width: 135px;
+    height: 48px;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn.pc-b {
+    display: none;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn.mo-b {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+  }
+  body.viewer #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.long-btn.mo-b::after {
+    content: none;
+  }
+  #contentsWrap .prod-purchase-footer .prod-inner .right-prod-info > button.paper-buy-btn {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 107px;
+    height: 48px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    white-space: nowrap;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+  }
+  
 }
 
 
@@ -5429,7 +5744,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 150px;
   }
   body.subscribe #bottomFooter {padding-bottom: 65px;}
-  
+  body.viewer #contentsWrap .cnt-wide .cnt-blur-mob-bg {
+    height: 550px;
+  }
 
 }
 

@@ -13,27 +13,295 @@
 	<meta property="og:title" content="EBS 북스토리">
 	<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
 	<meta property="og:image" content="/images/ebs_bookstory_sns.png">
-	<title>EBS 교재사이트 :: APP</title>
+	<title>EBS 교재사이트 :: APP 다운로드</title>
   <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
   <link rel="stylesheet" href="./css/app/app_base.css" />
   <link rel="stylesheet" href="./css/newStyles.css" />
-  <script type="text/javascript" src="https://ai.ebs.co.kr/mid_resource/js/jquery-2.2.0.min.js"></script>
-  <script type="text/javascript" src="https://ai.ebs.co.kr/mid_resource/js/jquery-ui.js"></script>
-  <script type="text/javascript" src="https://ai.ebs.co.kr/cmm_resource/js/jquery/jquery.cookie.js"></script>
-  <script type="text/javascript" src="./js/app.common.js"></script>
-  <script type="text/javascript" src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/newScript.js"></script>
 </head>
 
 <body>
-  <div class="native-box">
-    <button class="goBack">뒤로가기</button>
-    <span>APP 내려받기</span>
-    <button class="close">닫기</button>
-  </div>
-  <div class="container">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, similique eum aliquam quia aperiam ea adipisci, provident voluptate sint ipsam reiciendis, placeat pariatur in. Eligendi recusandae quaerat non voluptas ipsam?
-    Asperiores fuga laboriosam aut rerum debitis magnam facilis, voluptatum dolorem laudantium obcaecati, minus odit vitae deleniti ipsum. Excepturi impedit molestias sunt quos. Nihil rem quod soluta, corrupti nisi ipsa rerum!
+  <div class="app-wrap">
+    <div class="container">
+      <!-- button -->
+      <div class="btns-box">
+        <ul>
+          <li class="active">전체</li>
+          <li class="">구독</li>
+          <li class="">단건 구매</li>
+        </ul>
+        <div class="types">
+          <select name="textbook" onchange="selBox(this.value)">
+            <option value="none" selected="">교제 전체</option>
+            <option value="tbk1">교제 1</option>
+            <option value="tbk2">교제 2</option>
+            <option value="tbk3">교제 3</option>
+          </select>
+          <select name="purchase" onchange="selBox(this.value)">
+            <option value="CREATE" selected="">구매일 순</option>
+            <option value="HIGHPRC">높은 가격 순</option>
+            <option value="LOWPRC">낮은 가격 순</option>
+            <option value="EBKNM">제목 순</option>
+          </select>
+          <button class="filter-type"></button>
+          <button class="album-type on">이미지 형태로 보기</button>
+          <button class="list-type">목록 형태로 보기</button>
+        </div>
+      </div>
+      <!-- contents -->
+      <div class="mytextbook-list">
+        <ul class="album">
+          <li>
+            <div class="thumb-img ebook correct">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <i class="flag-s"></i>
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-ing">
+                <span>내려 받기</span>
+              </button>
+              <button class="btn gnote-notsup">
+                <span>굿노트 보내기 미지원</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <i class="flag-s"></i>
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            
+            <div class="thumb-text">
+              <dl class="time buy">
+                <dt>구매</dt>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-com">
+                <span>내려 받기 완료</span>
+              </button>
+              <button class="btn gnote-ready">
+                <span>굿노트 보내기 준비중</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook correct flag-s">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <i class="flag-i"></i>
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer">
+                <span>굿노트 보내기</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+
+          <li>
+            <div class="thumb-img ebook">
+              <img src="./imgs/textbook-img.png" alt="교재 이미지" />
+              <div class="hover-btns">
+                <button>구독 만료</button>
+              </div>
+            </div>
+            <div class="thumb-text">
+              <dl class="time">
+                <dt>만료일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+              <dl class="down">
+                <dt>내려 받은 일</dt>
+                <dd>25.04.23</dd>
+              </dl>
+            </div>
+            <div class="thumb-btns">
+              <button class="btn down-expir">
+                <span>내려 받기 만료</span>
+              </button>
+              <button class="btn gnote-transfer-com">
+                <span>굿노트 보내기 완료</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
   </div>
 </body>
-
 </html>

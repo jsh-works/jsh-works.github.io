@@ -1,3 +1,12 @@
+select {
+  width: 100%;
+  height: 40px;
+  color: #333;
+  padding: 0 30px 0 10px;
+  border-radius: 0;
+  border: 1px solid #cfcfcf;
+  background: #fff url('../imgs/input_select.png') right center/ 24px no-repeat;
+}
 .native-box {
   display:flex;
   align-items:flex-end;
@@ -13,8 +22,11 @@
 }
 .container {
   position: relative;
-  padding: 0px 71px 0px 52px;
+  margin: 0;
+  padding: 20px;
 }
+
+/* 학습이력/관리 */
 .container .title-form {
   position: relative;
   display: flex;
@@ -89,4 +101,357 @@
 .container .info-form .attch-box span.small {
   font-size: 26px;
   font-weight: normal;
+}
+
+
+/* APP 내려받기 */
+.app-wrap { position: relative; }
+.btns-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+.btns-box ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns-box ul li {
+  color: #222;
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+.btns-box ul li:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+.btns-box ul li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.btns-box ul li.active {
+  color: #4165F4;
+  font-size: 15px;
+  font-weight: 700;
+}
+.btns-box ul li.active::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-right: 6px;
+  background: url("../imgs/check-ico.png") center center/cover no-repeat;
+}
+.btns-box .types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.btns-box .types select {
+  width: 130px;
+  height: 48px;
+  color: #222;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 20px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btns-box .types select option {
+  color: #222;
+  font-weight: 400;
+  font-size: 14px;
+}
+.btns-box .types button {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 8px;
+  border: 1px solid #d9d9da;
+  background-color: #fff;
+}
+.btns-box .types button.album-type::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/album-off-ico.png") center center/cover no-repeat;
+  transition: all 0.25s;
+}
+.btns-box .types button.album-type.on::after {
+  content: '';
+  background: url("../imgs/album-on-ico.png") center center/cover no-repeat;
+}
+.btns-box .types button.list-type::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 24px;
+  height: 22px;
+  background: url("../imgs/list-off-ico.png") center center/cover no-repeat;
+  transition: all 0.25s;
+}
+.btns-box .types button.list-type.on::after {
+  content: '';
+  background: url("../imgs/list-on-ico.png") center center/cover no-repeat;
+}
+.btns-box .types button.filter-type {
+  display: none;
+}
+.btns-box ul li.active::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-right: 6px;
+  background: url("../imgs/check-ico.png") center center/cover no-repeat;
+}
+
+.app-wrap .container .mytextbook-list {
+  position: relative;
+}
+.app-wrap .container .mytextbook-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  row-gap: 40px;
+  column-gap: 3%;
+}
+
+.app-wrap .container .mytextbook-list ul li {
+  width: 100%;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img {
+  position: relative;
+  width: 100%;
+  min-width: 180px;
+  height: auto;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img.ebook::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 45px);
+  width: 90px;
+  height: 24px;
+  background: url("../imgs/ebook-ico.png") center center/ cover no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img.correct::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 44px;
+  height: 53px;
+  background: url("../imgs/correct-ico.png") center center / cover no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.app-wrap .container .mytextbook-list ul li .thumb-img i.flag-s {
+  position: absolute;
+  right: -3px;
+  bottom: 7px;
+  width: 34px;
+  height: 34px;
+  background: url("../imgs/flag-subscribe.png") center center/ cover no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img i.flag-i {
+  position: absolute;
+  right: -3px;
+  bottom: 7px;
+  width: 34px;
+  height: 34px;
+  background: url("../imgs/flag-infinity.png") center center/ cover no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img .hover-btns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.6);
+  z-index: 10;
+  display: none;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img:hover .hover-btns {
+  display: flex;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-img .hover-btns button {
+  width: 140px;
+  height: 40px;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  padding: 9.5px 45px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl dt {
+  position: relative;
+  width: 80%;
+  min-width: 120px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  padding-left: 24px;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl.time dt::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../imgs/time-ico.png") center center / 20px 20px no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl.time.buy dt::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../imgs/round-check-ico.png") center center / 20px 20px no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl.down dt::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../imgs/down-ico.png") center center / 20px 20px no-repeat;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-text dl dd {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  min-width: 180px;
+  height: 48px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: default;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-ing,
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-com,
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-transfer,
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-transfer-com {
+  color: #4165F4;
+  border: 1px solid #4165F4;
+  background-color: #fff;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-expir,
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-notsup,
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-ready {
+  color: #bbb;
+  border: 1px solid #ddd;
+  background-color: #F3F3F3;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn span {
+  display: inline-block;
+  width: 80%;
+  min-width: 112px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-expir::before {
+  background-image: url("../imgs/down-expir-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-ing::before {
+  background-image: url("../imgs/down-ing-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.down-com::before {
+  background-image: url("../imgs/down-com-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-notsup::before {
+  background-image: url("../imgs/gnote-notsup-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-ready::before {
+  background-image: url("../imgs/gnote-ready-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-transfer::before {
+  background-image: url("../imgs/gnote-transfer-ico.png");
+}
+.app-wrap .container .mytextbook-list ul li .thumb-btns .btn.gnote-transfer-com::before {
+  background-image: url("../imgs/gnote-transfer-ico.png");
+}
+
+@media all and (max-width: 650px) {
+  .btns-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+	.btns-box ul {
+    display: none;
+  }
 }

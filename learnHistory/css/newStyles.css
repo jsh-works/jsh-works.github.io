@@ -472,6 +472,7 @@ select {
   position: relative;
   width: 97px;
   min-width: 97px;
+  max-width: 97px;
   height: 130px;
   min-height: 130px;
 }
@@ -723,7 +724,7 @@ select {
 }
 
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 852px) {
   .app-wrap .container .mytextbook-list ul.list li .list-btns {
     top: 48px;
   }
@@ -738,7 +739,8 @@ select {
     font-size: 12px;
   }
 }
-@media (orientation: landscape) or (max-width: 700px) {
+
+@media all and (max-width: 750px) {
   .app-wrap .container .mytextbook-list ul.list li .list-flex {
     margin-bottom: 20px;
   }
@@ -768,7 +770,6 @@ select {
     box-sizing: border-box;
   }
 }
-
 @media all and (max-width: 650px) {
   .btns-box {
     display: flex;

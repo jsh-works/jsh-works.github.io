@@ -403,18 +403,25 @@ select {
   border: 1px solid #ddd;
   background-color: #F3F3F3;
 }
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn span {
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn span,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn span {
   display: inline-block;
   width: 80%;
   min-width: 112px;
   line-height: 1;
   white-space: nowrap;
 }
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn::before {
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn span {
+  width: 100%;
+}
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn::before,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn::before {
   content: '';
   display: inline-block;
   width: 28px;
+  min-width: 28px;
   height: 28px;
+  min-height: 28px;
   background-size: 28px 28px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -596,6 +603,9 @@ select {
   justify-content: flex-start;
   gap: 20px;
 }
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob {
+  display: none;
+}
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn {
   position: relative;
   display: flex;
@@ -612,19 +622,29 @@ select {
   border: 1px solid #bbb;
   box-sizing: border-box;
 }
+
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir {
   border: 1px solid #ddd;
   background-color: #fff;
 }
+
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-expir,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup,
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready {
+.app-wrap .container .mytextbook-list ul.list li .list-btn-mob button.btn.gnote-notsup,
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-ready {
   border: 1px solid #ddd;
   background-color: #F3F3F3;
 }
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-ing,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-com,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer,
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update {
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer-com,
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.update {
   color: #4165F4;
   border: 1px solid #4165F4;
   background-color: #fff;
@@ -661,27 +681,46 @@ select {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn i.icon {
+  position: absolute;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-expir i.icon {
   background-image: url("../imgs/list-down-expir-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-ing i.icon {
   background-image: url("../imgs/list-down-ing-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-com i.icon {
   background-image: url("../imgs/list-down-com-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-notsup i.icon {
   background-image: url("../imgs/list-gnote-notsup-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-ready i.icon {
   background-image: url("../imgs/list-gnote-ready-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer-com i.icon {
   background-image: url("../imgs/list-gnote-transfer-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update i.icon,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.update i.icon {
   background-image: url("../imgs/list-update-ico.png");
 }
+
+
 @media all and (max-width: 850px) {
   .app-wrap .container .mytextbook-list ul.list li .list-btns {
     top: 48px;
@@ -693,7 +732,39 @@ select {
     width: 36px;
     height: 36px;
   }
-
+  .app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn {
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 700px) {
+  .app-wrap .container .mytextbook-list ul.list li .list-flex {
+    margin-bottom: 20px;
+  }
+  .app-wrap .container .mytextbook-list ul.list li .list-btns {
+    display: none;
+  }
+  .app-wrap .container .mytextbook-list ul.list li .list-btns-mob {
+    display: flex;
+    gap: 8px;
+  }
+  .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    color: #BBB;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 160%;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #F3F3F3;
+    box-sizing: border-box;
+  }
 }
 
 @media all and (max-width: 650px) {

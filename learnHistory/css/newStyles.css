@@ -776,3 +776,9 @@ select {
     display: none;
   }
 }
+
+@media all and (max-width: 400px) {
+  .btns-box .types select {
+    width: 114px;
+  }
+}

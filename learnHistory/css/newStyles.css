@@ -479,7 +479,7 @@ select {
 .app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img.ebook::after {
   content: "";
   position: absolute;
-  top: -4px;
+  top: -2px;
   left: calc(50% - 24px);
   width: 48px;
   height: 13px;
@@ -488,7 +488,7 @@ select {
 .app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img.correct::before {
   content: '';
   position: absolute;
-  top: -6px;
+  top: -2px;
   right: 0;
   width: 20px;
   height: 26px;

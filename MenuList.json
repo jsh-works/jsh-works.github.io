@@ -60,13 +60,13 @@
     "menuName" : "APP 내려받기",
     "devUrl" : "learnHistory/appDownload.html",
     "mainUrl" : "https://book.ebs.co.kr/ebook/purchase?userHash=ZjZNShVBdoA%2BCGc0dnd9vQ%3D%3D",
-    "update" : "ing"
+    "update" : "25.07.24"
   },
   {
     "id" : "e-book",
     "menuName" : "학급/학습 이력관리",
     "devUrl" : "learnHistory/index.html",
     "mainUrl" : "",
-    "update" : "-"
+    "update" : "대기"
   }
 ]

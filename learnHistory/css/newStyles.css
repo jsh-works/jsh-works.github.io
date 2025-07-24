@@ -736,7 +736,7 @@ select {
     font-size: 12px;
   }
 }
-@media (orientation: landscape) {
+@media (orientation: landscape) or (max-width: 700px) {
   .app-wrap .container .mytextbook-list ul.list li .list-flex {
     margin-bottom: 20px;
   }

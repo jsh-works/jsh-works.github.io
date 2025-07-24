@@ -470,8 +470,10 @@ select {
 }
 .app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img {
   position: relative;
+  width: 97px;
   min-width: 97px;
   height: 130px;
+  min-height: 130px;
 }
 .app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img.ebook::after {
   content: "";

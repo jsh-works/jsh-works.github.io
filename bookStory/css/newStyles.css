@@ -296,8 +296,8 @@ body.subscribe #bottomFooter {padding-bottom: 120px;}
   background: url("https://book.ebs.co.kr/images/ico_srch.svg") 0 50%/cover no-repeat;
 }
 .gnb-inner { height: 60px; }
+.gnb-dep01 > li { width: 12.5%; }
 .gnb-dep01 > li > a { line-height: 60px; }
-.gnb-dep01 > li .gnb-dep02-div { height: 237px; }
 .gnb-dep01 > li > a.active, .gnb-dep01 > li > a:hover { color: #4165F4; }
 .gnb-dep01 > li > a:after, .gnb-dep01 > li > a:hover:after { background: #4165F4; }
 .gnb-dep01 > li > a.high.active, .gnb-dep01 > li > a.high:hover { color: #3B33DE; }
@@ -334,6 +334,19 @@ body.subscribe #bottomFooter {padding-bottom: 120px;}
 .gnb-dep01 > li:hover .gnb-dep02-div.middle a:hover { color: #604ADB; }
 .gnb-dep01 > li:hover .gnb-dep02-div.elem a:hover { color: #18BCC4; }
 .subGnbBack { position: absolute; top:134px; }
+
+.gnb-dep01 > li .gnb-dep02-div { height: 256px; }
+.subGnbBack.active:before { height: 256px; }
+.gnb-dep02 > li { padding : 0; }
+.pt16 { padding-top: 16px !important; }
+.gnb-dep02.col { padding: 0 0 0 16px; }
+.gnb-dep02 > li:first-child a, .gnb-dep02 > li a { line-height: 1.7; }
+.gnb-dep01 > li .gnb-dep02-div:after {
+  top: 0;
+  height: 100%;
+}
+/* .gnb-dep02.col > li > ul > li:first-child { padding-top: 25px; } */
+
 .book-info .thumb-box { position: relative; width: 280px; height: 384px; padding: 0; overflow: unset; }
 .book-info .thumb-img { position: relative; top: auto; left: auto; right: auto; bottom: auto; width: 280px; height: 384px; overflow: unset; }
 .book-info .thumb-img.ebook-badge::before {

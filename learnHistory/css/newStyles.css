@@ -278,14 +278,6 @@ select {
   height: 34px;
   background: url("../imgs/flag-subscribe.png") center center/ cover no-repeat;
 }
-.app-wrap .container .mytextbook-list ul.album li .thumb-img i.flag-i {
-  position: absolute;
-  right: -3px;
-  bottom: 7px;
-  width: 34px;
-  height: 34px;
-  background: url("../imgs/flag-infinity.png") center center/ cover no-repeat;
-}
 .app-wrap .container .mytextbook-list ul.album li .thumb-img .hover-btns {
   position: absolute;
   top: 0;
@@ -506,14 +498,6 @@ select {
   width: 34px;
   height: 34px;
   background: url("../imgs/flag-subscribe.png") center center/ cover no-repeat;
-}
-.app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img i.flag-i {
-  position: absolute;
-  right: -3px;
-  bottom: 7px;
-  width: 34px;
-  height: 34px;
-  background: url("../imgs/flag-infinity.png") center center/ cover no-repeat;
 }
 .app-wrap .container .mytextbook-list ul.list li .list-flex .thumb-img .hover-btns {
   position: absolute;

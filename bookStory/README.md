@@ -12,6 +12,11 @@ Version.20250626 / 0.0.1
 | 초등 메인 페이지 | [bookStoryEleMain.html](bookStoryEleMain.html) |
 | 리스트 (공통 목록) | [bookStoryList.html](bookStoryList.html) |
 | 교재상세 (공통 상세) | [bookStoryView.html](bookStoryView.html) |
+| 이용안내 페이지 | [bookStoryUseinfo.html](bookStoryUseinfo.html) |
+| 나의 구독 관리 페이지 | [bookStoryMngt.html](bookStoryMngt.html) |
+| header | [header.html](header.html) |
+| footer | [footer.html](footer.html) |
+| 404 페이지 | [error404.html](error404.html) |
 
 
 * topHeader.js 와 bottomFooter.js는 퍼블리싱 작업 간에 elemnet 코드들이 내부에 모두

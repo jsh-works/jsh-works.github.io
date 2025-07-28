@@ -8,6 +8,13 @@
   },
   {
     "id" : "bookStory",
+    "menuName" : "나의 구독 관리",
+    "devUrl" : "bookStory/bookStoryMngt.html",
+    "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
+    "update" : "25.07.28"
+  },
+  {
+    "id" : "bookStory",
     "menuName" : "구독 소개/상품 페이지 (구독메인)",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "mainUrl" : "https://book.ebs.co.kr/",
@@ -36,7 +43,7 @@
   },
   {
     "id" : "bookStory",
-    "menuName" : "유·초등 영어 메인 페이지",
+    "menuName" : "ELT (유초등영어) 페이지",
     "devUrl" : "bookStory/bookStoryEnglish.html",
     "mainUrl" : "https://book.ebs.co.kr/roadmap/english",
     "update" : "25.07.09"
@@ -54,6 +61,13 @@
     "devUrl" : "bookStory/bookStoryView.html",
     "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
     "update" : "25.07.22"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "이용안내",
+    "devUrl" : "bookStory/bookStoryUseinfo.html",
+    "mainUrl" : "https://book.ebs.co.kr/ebook/useInfo",
+    "update" : "25.07.28~"
   },
   {
     "id" : "bookStory",

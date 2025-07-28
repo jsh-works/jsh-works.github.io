@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_sns.png">
+  <title>EBS 교재사이트 :: 나의 구독 관리</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <link rel="stylesheet" href="./css/xeicon.css" />
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script> <!-- addition -->
+  <script src="./js/topHeader.js"></script> <!-- origin -->
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+  </script>
+</head>
+
+<body class="list mngt">
+  <div id="wrap">
+    <!-- orign header import -->
+    <div id="topHeader"></div>
+
+    <!-- contents -->
+    <div id="contentsWrap" class="sub">
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li class="my">
+                <a href="/">
+                  <strong class="on">나의 교재</strong>
+                </a>
+              </li>
+              <li>
+                <strong class="on">나의 구매 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_1" name="ebk" value="payhist">
+                    <label for="ebk_1">eBook 결제 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_2" name="ebk" value="refund">
+                    <label for="ebk_2">eBook 환불 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_3" name="ebk" value="coupon">
+                    <label for="ebk_3">eBook 쿠폰 등록</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_4" name="ebk" value="basket">
+                    <label for="ebk_4">장바구니</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_5" name="ebk" value="intrst">
+                    <label for="ebk_5">관심교재</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong class="on">나의 구독 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_1" name="sbc" value="" checked>
+                    <label for="sbc_1">나의 구독 관리</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_2" name="sbc" value="">
+                    <label for="sbc_2">구독 환불 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_3" name="sbc" value="">
+                    <label for="sbc_3">정기 결제 카드 변경</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sort-wrap mob">
+          <div class="sort type2">
+            <ul>
+              <li class="active" data-tab="1">나의 교재</li>
+              <li data-tab="2">나의 구매정보</li>
+              <li data-tab="3">나의 구독 정보</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub-sort">
+          <ul class="buy-sub-list" style="display: none;">
+            <li class="active">eBook 결제내역</li>
+            <li>eBook 환불내역</li>
+            <li>쿠폰등록</li>
+            <li>장바구니</li>
+            <li>관심교제</li>
+          </ul>
+          <ul class="scr-sub-list" style="display: none;">
+            <li class="active">나의 구독 관리</li>
+            <li>구독 환불 내역</li>
+            <li>정기 결제 카드 변경</li>
+          </ul>
+        </div>
+
+        <div class="list-viewer">
+          <h2>나의 구독</h2>
+          <div class="mngt-item none">
+            <img src="./imgs/mngt-item-none-ico.png" alt="이용중인 구독권이 없습니다." />
+            <p>
+              현재 이용중인 구독권이 없습니다.<br/>
+              EBS eBook 구독으로 가벼운 학습을 시작하세요!
+            </p>
+            <button>EBS eBook 구독 시작하기</button>
+          </div>
+          <div class="mngt-item">
+            <dl>
+              <dt>
+                <span>eBook 구독권</span>
+                <h4>중학 eBook 구독(월)</h4>
+              </dt>
+              <dd>
+                <span class="tit">구독기간</span>
+                <span class="inf">2025.03.05 ~ 구독 해지 시</span>
+              </dd>
+              <dd>
+                <span class="tit">다음 결제일</span>
+                <span class="inf">2025-02-24</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 수단</span>
+                <span class="inf">대한카드(0000)</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 예상 금액</span>
+                <span class="inf">30,000원</span>
+              </dd>
+            </dl>
+          </div>
+          <div class="mngt-item">
+            <dl>
+              <dt>
+                <span>eBook 구독권</span>
+                <h4>고교 eBook 구독(월)</h4>
+              </dt>
+              <dd>
+                <span class="tit">구독기간</span>
+                <span class="inf">2025.03.05 ~ 2025.04.03</span>
+              </dd>
+              <dd>
+                <span class="tit">다음 결제일</span>
+                <span class="inf">없음 (해지)</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 수단</span>
+                <span class="inf">-</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 예상 금액</span>
+                <span class="inf">-</span>
+              </dd>
+            </dl>
+            <div class="mngt-btns">
+              <button>재구독</button>
+            </div>
+          </div>
+          <div class="mngt-item">
+            <dl>
+              <dt>
+                <span>eBook 구독권</span>
+                <h4>고교 eBook 구독(연)</h4>
+              </dt>
+              <dd>
+                <span class="tit">구독기간</span>
+                <span class="inf">2025.03.05 ~ 2025.04.04</span>
+              </dd>
+              <dd>
+                <span class="tit">다음 결제일</span>
+                <span class="inf">없음 (구독 1개월권)</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 수단</span>
+                <span class="inf">-</span>
+              </dd>
+              <dd>
+                <span class="tit">결제 예상 금액</span>
+                <span class="inf">-</span>
+              </dd>
+            </dl>
+            <div class="mngt-btns">
+              <button>구독 비교하기</button>
+            </div>
+          </div>
+          <div class="list-payment">
+            <iframe name="Ifrm" id="Ifrm" src="https://www.ebs.co.kr/mypage/order/list?site_ds_cd=EK" width="100%" height="745px" scrolling="no" style="height: 350px;"></iframe>
+          </div>
+          <div class="list-note">
+            <h2>유의사항</h2>
+            <div class="note-wrap">
+              <ul>
+                <li class="point">[환불신청]의 경우, 구매 후 7일 이내 이용 하지 않은 구독권 한 해 환불이 가능합니다.</li>
+                <li>본 상품은 별도로 배송되지 않는 전자책 구독 서비스 입니다.</li>
+                <li>구독권으로 이용한 eBook은 나의 교재방 > 나의 교재에서 이용할 수 있습니다.</li>
+                <li>신청하신 구독 환불 처리 내역은 나의 구독정보 >  구독 환불 내역에서 확인하실 수 있습니다.</li>
+                <li>결제 취소 및 환불은 환불 신청 접수 후 7일 이내에 처리해 드립니다.</li>
+              </ul>
+              <button onclick="location.href='./bookStoryMngt.html'">
+                <img src="../bookStory/imgs/note-money-ico.png" alt="PC 결제 취소/환불 안내 아이콘" class="i-pc" />
+                <img src="../bookStory/imgs/note-money-mob-ico.png" alt="Mobile 결제 취소/환불 안내 아이콘" class="i-mob" />
+                <span>결제 취소/환불 안내</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //contents -->
+
+    <!-- orign footer import -->
+    <div id="bottomFooter"></div>
+  </div>
+</body>
+
+</html>

@@ -28,9 +28,9 @@ $(function(){
         subList.eq(3).addClass('active');
 
     }else if($("body").hasClass('list')) {
-        pcIdx.eq(6).addClass('active');
-        mobIdx.eq(6).addClass('active');
-        subList.eq(6).addClass('active');
+        pcIdx.eq(7).addClass('active');
+        mobIdx.eq(7).addClass('active');
+        subList.eq(7).addClass('active');
 
     }else if($("body").hasClass('eng')) {
         pcIdx.eq(4).addClass('active');

@@ -152,7 +152,8 @@
         </div>
 
         <div class="list-viewer">
-					<div class="list-viewer-slide">
+					<!-- 
+          <div class="list-viewer-slide">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<img src="../bookStory/imgs/list-viewer-slide-imgs01.png" alt="EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ" class="pc" />
@@ -161,8 +162,221 @@
 						</div>
 						<div class="list-viewer-btn-next"></div>
 						<div class="list-viewer-btn-prev"></div>
-					</div>
-					
+					</div> 
+          -->
+          
+					<!-- 상단 스와이프 전체// -->
+          <div class="list-viewer-slide">
+            <!-- 주 이미지 컨텐츠// -->          
+            <div class="swiper viewSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="">
+                    <img src="./imgs/textbook-img01.png" />
+                    <p>EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학 올해도 FINAL 실전 모의고사로Ⅰ</p>
+                    <span>2026학년도 수능 대비 올해도 FINAL 실전 모의고사로 올해도 FINAL 실전 모의고사로 START!</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="">
+                    <img src="./imgs/textbook-img02.png" />
+                    <p>EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
+                    <span>2026학년도 수능 대비 올해도 FINAL 실전 모의고사로 START!</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="">
+                    <img src="./imgs/textbook-img03.png" />
+                    <p>EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
+                    <span>2026학년도 수능 대비 올해도 FINAL 실전 모의고사로 START!</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="">
+                    <img src="./imgs/textbook-img04.png" />
+                    <p>EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
+                    <span>2026학년도 수능 대비 올해도 FINAL 실전 모의고사로 START!</span>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="">
+                    <img src="./imgs/textbook-img05.png" />
+                    <p>EBS 2026학년도 FINAL 실전모의고사 과학탐구영역 생명과학Ⅰ</p>
+                    <span>2026학년도 수능 대비 올해도 FINAL 실전 모의고사로 START!</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <!-- //주 이미지 컨텐츠 -->          
+            <!-- 썸네일 이미지 컨텐츠// -->          
+            <div thumbsSlider="" class="thumbSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./imgs/textbook-img01.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imgs/textbook-img02.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imgs/textbook-img03.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imgs/textbook-img04.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imgs/textbook-img05.png" />
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일 이미지 컨텐츠 -->
+            <style>
+            .list-viewer-slide {
+              position: relative;
+              min-height: 200px;
+              margin-bottom: 56px;
+              border-radius: 12px;
+              overflow: hidden;
+              padding:0 75px;
+              background: #DBF1FF;
+              display: block;
+            }
+            .list-viewer-slide .viewSwiper {
+              height:100%;
+              width: 520px;
+              padding:25px 0;
+              float: left;
+              overflow:hidden;
+            }
+            .list-viewer-slide .viewSwiper .swiper-slide img{
+              width: 110px;
+              height: 150px;
+              border:1px solid #eee;
+              box-shadow: 8px 8px 16px 0px #00000026;
+              margin:0 25px 0 0;
+              float:left;
+            }
+            .list-viewer-slide .viewSwiper .swiper-slide p{
+              width: calc(100% - 135px);
+              font-weight: 800;
+              font-size: 24px;
+              float:left;
+              padding-top: 30px;
+              word-wrap: break-word;
+              display: -webkit-box;
+              overflow:hidden;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+            .list-viewer-slide .viewSwiper .swiper-slide span{
+              display: block;
+              width: calc(100% - 135px);
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 160%;
+              letter-spacing: -2%;
+              color: #678EA2;
+              float:left;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: inline-block;
+            }
+            .list-viewer-slide .thumbSwiper {
+              width: calc(100% - 560px);
+              float: left;
+              margin:40px 0 0 40px;
+              height:100%;
+              box-sizing: border-box;
+              overflow:hidden;
+            }
+            .list-viewer-slide .thumbSwiper .swiper-wrapper{
+              margin-left: -199px;
+            }
+            .list-viewer-slide .thumbSwiper .swiper-slide {
+              width: 25%;
+              height: 100%;
+              cursor:pointer;
+            }
+            .list-viewer-slide .thumbSwiper .swiper-slide img{
+              height: 120px;
+              border: 1px solid #DBEDF4;
+            }
+            .list-viewer-slide .thumbSwiper .swiper-slide-thumb-active {
+              opacity: 1;
+            }
+            .list-viewer-slide .list-viewer-btn-prev {
+              position: absolute;
+              top: calc(50% - 12px);
+              left: 24px;
+              width: 24px;
+              height: 24px;
+              background: url("../imgs/event-slide-btn-prev-ico.png") center center / cover no-repeat;
+              cursor: pointer;
+              z-index: 10;
+            }
+            .list-viewer-slide .list-viewer-btn-next {
+              position: absolute;
+              top: calc(50% - 12px);
+              right: 24px;
+              width: 24px;
+              height: 24px;
+              background: url("../imgs/event-slide-btn-next-ico.png") center center / cover no-repeat;
+              cursor: pointer;
+              z-index: 10;
+            }
+            @media all and (max-width: 1024px) {
+              .thumbSwiper {display: none;}
+            }
+            </style>
+            <script>
+              var thumbSwiper = new Swiper(".thumbSwiper", {
+                loop: true,
+                allowTouchMove: false,
+                spaceBetween: 10,
+                slidesPerView: 3,
+                freeMode: true,
+                watchSlidesProgress: true,
+                centeredSlides: true,
+                loopAdditionalSlides: 5, // 마지막 스와이프 썸네일 미생성을 위한 복제 요소 생성
+                breakpoints: {
+                  1285: {
+                      slidesPerView: 2,
+                      spaceBetween: 10,
+                  }
+                },
+              });
+              var viewSwiper = new Swiper(".viewSwiper", {
+                loop: true,
+                allowTouchMove: false,
+                spaceBetween: 10, // 책 그림자 겹침방지위해설정
+                slidesPerView: 1,
+                freeMode: true,
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev"
+                },
+                thumbs: {
+                  swiper: thumbSwiper
+                }
+              });
+
+              // 복제된 스와이프 썸네일 오류 수정
+              $('.thumbSwiper .swiper-wrapper').on('click', '.swiper-slide', function(e) {
+                var clickedIndex = $(this).index();
+                var realIndex = $(this).data('swiper-slide-index');
+                if (typeof realIndex === 'undefined') {
+                  realIndex = clickedIndex % thumbSwiper.slides.length;
+                }
+                viewSwiper.slideToLoop(realIndex);
+                e.preventDefault();
+                e.stopPropagation();
+              });
+            </script>
+          </div>
+          <!-- //상단 스와이프 전체 -->
+
           <div class="viewer-btns">
 						<div class="correct-box">
 							<i class="flag"></i>

@@ -715,24 +715,50 @@ console.log(`
 
 
   // 교재목록 슬라이드
-  new Swiper ('.list-viewer-slide', {
-		speed: 500,
-		delay: 7000,
-		loop: true,
-		longSwipes: true,
-		autoplay: {
-			delay: 7000,
-			disableOnInteraction: false
-		},
-		effect: 'slide',
-		slidesPerView: 1,
-      pagination: {
-			clickable: true,
-		},
-		navigation: {
-        nextEl: '.list-viewer-btn-next',
-        prevEl: '.list-viewer-btn-prev',
+  var thumbSwiper = new Swiper(".thumbSwiper", {
+    loop: true,
+    
+    allowTouchMove: false,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    centeredSlides: true,
+    loopAdditionalSlides: 5, // 마지막 스와이프 썸네일 미생성을 위한 복제 요소 생성
+    breakpoints: {
+      1285: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+      }
     },
+  });
+
+  new Swiper(".viewSwiper", {
+    loop: true,
+    effect : 'fade',
+    fadeEffect: { crossFade: true },
+    allowTouchMove: false,
+    spaceBetween: 10, // 책 그림자 겹침방지위해설정
+    slidesPerView: 1,
+    freeMode: true,
+    navigation: {
+      nextEl: ".list-thumb-next",
+      prevEl: ".list-thumb-prev"
+    },
+    thumbs: {
+      swiper: thumbSwiper
+    }
+  });
+
+  $('.thumbSwiper .swiper-wrapper').on('click', '.swiper-slide', function(e) {
+    var clickedIndex = $(this).index();
+    var realIndex = $(this).data('swiper-slide-index');
+    if (typeof realIndex === 'undefined') {
+      realIndex = clickedIndex % thumbSwiper.slides.length;
+    }
+    viewSwiper.slideToLoop(realIndex);
+    e.preventDefault();
+    e.stopPropagation();
   });
 
 

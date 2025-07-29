@@ -2362,22 +2362,108 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
 
 /* 교재 목록 css 추가 */
 body.textbook #contentsWrap .list-viewer .list-viewer-slide {
+  display: block;
   position: relative;
   min-height: 200px;
+  padding: 0 75px;
   margin-bottom: 56px;
   border-radius: 12px;
+  background: #DBF1FF;
   overflow: hidden;
 }
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper {
+  float: left;
+  height: 100%;
+  width: 520px;
+  padding: 25px 0;
+  overflow: hidden;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide img {
+  float: left;
+  width: 110px;
+  height: 150px;
+  margin: 0 25px 0 0;
+  border: 1px solid #eee;
+  box-shadow: 8px 8px 16px 0px #00000026;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide p {
+  float: left;
+  width: calc(100% - 135px);
+  font-size: 24px;
+  font-weight: 800;
+  padding-top: 30px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  word-wrap: break-word;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide span {
+  display: block;
+  float: left;
+  width: calc(100% - 135px);
+  color: #678EA2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .thumbSwiper {
+  float: left;
+  width: calc(100% - 560px);
+  height:100%;
+  margin:40px 0 0 40px;
+  box-sizing: border-box;
+  overflow:hidden;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .thumbSwiper .swiper-wrapper{
+  margin-left: -200px;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .thumbSwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  cursor:pointer;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .thumbSwiper .swiper-slide img{
+  height: 120px;
+  border: 1px solid #DBEDF4;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .thumbSwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .list-thumb-next {
+  position: absolute;
+  top: calc(50% - 14px);
+  right : 20px;
+  width: 28px;
+  height: 28px;
+  background: url("../imgs/list-next-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+  z-index: 10;
+}
+body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .list-thumb-prev {
+  position: absolute;
+  top: calc(50% - 14px);
+  left : 20px;
+  width: 28px;
+  height: 28px;
+  background: url("../imgs/list-prev-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+  z-index: 10;
+}
+
 body.textbook #contentsWrap .list-viewer .list-viewer-slide img.pc {
   display: block;
 }
 body.textbook #contentsWrap .list-viewer .list-viewer-slide img.mob {
   display: none;
 }
-body.textbook #contentsWrap .list-viewer .list-viewer-slide img {
-  height: 200px;
-  border-radius: 12px;
-}
+
 body.textbook #contentsWrap .list-viewer .list-viewer-slide .list-viewer-btn-prev {
   position: absolute;
   top: calc(50% - 12px);
@@ -4000,6 +4086,12 @@ body.list.mngt .list-viewer .list-payment {
   .bootm-banner ul li a {
     font-size: 16px;
     font-weight: 400;
+  }
+  .thumbSwiper {
+    display: none;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper {
+    width: 100%;
   }
 }
 
@@ -6081,6 +6173,38 @@ body.list.mngt .list-viewer .list-payment {
   }
   body.list.mngt .list-viewer .mngt-item.none > p {
     font-size: 16px;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide {
+    height: 169px;
+    padding: 0 48px;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide img {
+    width: 88px;
+    height: 121px;
+    margin: 0 16px 0 0;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide p {
+    width: calc(100% - 104px);
+    font-size: 18px;
+    padding-top: 0px;
+    margin-bottom: 4px;
+    -webkit-line-clamp: 3;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .swiper-slide span {
+    display: -webkit-box;
+    width: calc(100% - 104px);
+    height: 42px;
+    font-size: 13px;
+    white-space: unset;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .list-thumb-prev {
+    left: 8px;
+  }
+  body.textbook #contentsWrap .list-viewer .list-viewer-slide .viewSwiper .list-thumb-next {
+    right: 8px;
   }
 
 }

@@ -1504,6 +1504,13 @@ position: absolute;
   margin-right: 4px;
   background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
 }
+#contentsWrap .container .book-details .price-box dl dd span:nth-child(4)::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../imgs/ref-ico_04.png") center center/cover no-repeat;
+}
 #contentsWrap .container .book-details .price-box .price-btns-box {
   display: flex;
   align-items: center;
@@ -1625,6 +1632,7 @@ position: absolute;
   border-radius: 8px;
   border: 1px solid #bbb;
   background: url("../imgs/favorite-ico.svg") center center / 32px 32px no-repeat;
+  transition: all 0.35s;
 }
 #contentsWrap button.scribe-btn.active {
   background: url("../imgs/favorite-ico_active.svg") center center / 32px 32px no-repeat;
@@ -1836,16 +1844,17 @@ body.elementary #contentsWrap .highSection section.full {
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box {
   position: absolute;
-  display: flex;
-  gap: 12px;
-  right: 16px;
-  bottom: 16px;
-  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   z-index: 12;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev,
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next {
-  position: relative;
+  position: absolute;
   width: 44px;
   height: 44px;
   border-radius: 16px;
@@ -1853,6 +1862,15 @@ body.elementary #contentsWrap .highSection section.full {
   backdrop-filter: blur(312.3999938964844px);
   background-color: rgba(113, 97, 97, 0.25);
   z-index: 10;
+  cursor: pointer;
+}
+#contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev {
+  top: calc(50% - 22px);
+  left: 20px;
+}
+#contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next {
+  top: calc(50% - 22px);
+  right: 20px;
 }
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev::after {
   content: "";
@@ -2136,6 +2154,9 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
 #contentsWrap .highSection section.full .sec-inner ul.list-view li:nth-child(5) {
   animation: rightFadeIn 0.8s 0.5s ease-in forwards;
 }
+
+/* ebook anchor 없을때 추가 */
+#contentsWrap .highSection section.full .sec-inner ul.list-view li a,
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {
   position: relative;
   display: flex;
@@ -2338,6 +2359,21 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
   width: 100%;
   height: 100%;
 }
+
+/* ebook anchor 추가 */
+#contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img a.ebook-anchor {
+  position: relative;
+}
+#contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img a.ebook-anchor::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 35px);
+  width: 70px;
+  height: 18px;
+  background: url("../imgs/ebook-ico.png") center center / 70px 18px no-repeat;
+}
+
 #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-img img {
   width: 120px;
   height: 164px;
@@ -3290,12 +3326,11 @@ body.list.mngt .list-viewer .mngt-item dl dt {
 }
 body.list.mngt .list-viewer .mngt-item dl dt > span {
   width: 87px;
-  height: 28px;
   color: #fff;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
-  padding: 7px 8px;
+  line-height: 28px;
+  padding: 0 8px;
   border-radius: 4px;
   background-color: #7190FF;
 }
@@ -3554,7 +3589,18 @@ body.list.mngt .list-viewer .list-payment {
   font-size: 18px;
   font-weight: 700;
   line-height: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
+}
+.mob-sort-popup.textbook .sort-box span.close-ico {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/close-ico.png") center center / cover no-repeat;
+  cursor: pointer;
 }
 .mob-sort-popup.textbook .sort-box.acc h4::after {
   content: '';
@@ -4340,7 +4386,50 @@ body.list.mngt .list-viewer .list-payment {
 
 /* 미디어쿼리 모바일 오리진 css 추가 */
 @media all and (max-width: 1024px) {
-  .quick-menu, .quick-menu:not(.ebook) { display: flex; justify-content: center; }
+  .quick-util:not(.ebook), .quick-sns {
+    display: flex;
+    gap: 8px;
+  }
+  .quick-util:not(.ebook) a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    height: 78px;
+    padding: 0;
+    margin: 0 !important;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    word-break: keep-all;
+    background-image: none;
+    background-color: #F3F3F3;
+  }
+  .quick-menu, .quick-menu:not(.ebook) {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .quick-util a::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  .quick-util:not(.ebook) a:nth-child(1)::before {
+    background: url("../imgs/quick-ico-01.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(2)::before {
+    background: url("../imgs/quick-ico-02.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(3)::before {
+    background: url("../imgs/quick-ico-03.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(4)::before {
+    background: url("../imgs/quick-ico-04.png") center center / cover no-repeat;
+  }
+  
   body.eng #contentsWrap .highSection section.bnr-sec {
     margin-bottom: 0;
   }
@@ -4788,6 +4877,9 @@ body.list.mngt .list-viewer .list-payment {
     margin: 0 20px 12px;
     border-radius: 6px;
   }
+  body.list .sort-wrap.fixed {
+    background-color: #fafafa;
+  }
   .sort-wrap.mob .sort ul {
     display: flex;
     align-items: center;
@@ -4829,20 +4921,22 @@ body.list.mngt .list-viewer .list-payment {
     display: none;
   }
   .sub-sort ul li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  color: #bbb;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 7.5px 12px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  background-color: #fff;
-  transition: all 0.35s;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #bbb;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    padding: 7.5px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: all 0.35s;
+    cursor: pointer;
   }
   .sub-sort ul li.active {
     color: #fff;
@@ -5351,9 +5445,6 @@ body.list.mngt .list-viewer .list-payment {
     border-bottom: 8px solid #eee;
     background-color: #fff;
   }
-  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos.scribe {
-    display: block;
-  }
   body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos.ebook {
     display: none;
   }
@@ -5530,6 +5621,14 @@ body.list.mngt .list-viewer .list-payment {
     margin-right: 4px;
     background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
   }
+  body.viewer #contentsWrap .sub-cnt-wrap .mob-cnt-book-infos .price-box dl dd span:nth-child(4)::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url("../imgs/ref-ico_04.png") center center/cover no-repeat;
+  }
   body.viewer #contentsWrap .prod-purchase-footer .left-prod-info {
     display: none;
   }
@@ -5610,7 +5709,19 @@ body.list.mngt .list-viewer .list-payment {
     gap: 24px;
   }
   .list-note .note-wrap button {
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    height: 62px;
+    border-radius: 8px;
+  }
+  .list-note .note-wrap button > img.i-pc { display: none; }
+  .list-note .note-wrap button > img.i-mob { display: block; }
+  .list-note .note-wrap button > img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0;
+    margin-right: 8px;
   }
 }
 
@@ -5680,8 +5791,47 @@ body.list.mngt .list-viewer .list-payment {
   }
 }
 
+@media (max-width: 640px) {
+  .quick-util:not(.ebook) a:after {
+    content: none;
+  }
+  .quick-util:not(.ebook) a:nth-child(3) {
+    padding: 0;
+    line-height: normal;
+  }
+}
+
 /* 미디어쿼리 모바일 */
 @media all and (max-width: 500px) {
+  .quick-util:not(.ebook) a .mob{
+    font-weight: 400;
+    word-break: keep-all;
+  }
+  .quick-util:not(.ebook) a:nth-child(3),
+  .quick-util:not(.ebook) a {
+    padding: 0;
+  }
+  .quick-util:not(.ebook) a:after {
+    content: none;
+  }
+  .quick-util a::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  .quick-util:not(.ebook) a:nth-child(1)::before {
+    background: url("../imgs/quick-ico-01.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(2)::before {
+    background: url("../imgs/quick-ico-02.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(3)::before {
+    background: url("../imgs/quick-ico-03.png") center center / cover no-repeat;
+  }
+  .quick-util:not(.ebook) a:nth-child(4)::before {
+    background: url("../imgs/quick-ico-04.png") center center / cover no-repeat;
+  }
   .target-popup .inner {
     width: 100%;
     max-width: 100%;
@@ -6249,6 +6399,7 @@ body.list.mngt .list-viewer .list-payment {
     width: auto;
     height: auto;
   }
+   #contentsWrap .highSection section.full .sec-inner ul.list-view li a,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {
     display: flex;
     flex-direction: column;
@@ -6256,10 +6407,13 @@ body.list.mngt .list-viewer .list-payment {
   #contentsWrap .highSection section.full .sec-inner ul.list-view li {
     width: 120px !important;
   }
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {
-    width: fit-content !important
+    width: fit-content !important;
   }
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a img,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor img,
+  #contentsWrap .highSection section.full .sec-inner ul.list-view li a span.name,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
     width: 120px;
   }
@@ -6398,21 +6552,6 @@ body.list.mngt .list-viewer .list-payment {
     position: absolute;
     left: 24px;
     margin-top: 8px;
-  }
-  .list-note .note-wrap button {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 62px;
-    border-radius: 8px;
-  }
-  .list-note .note-wrap button > img.i-pc { display: none; }
-  .list-note .note-wrap button > img.i-mob { display: block; }
-  .list-note .note-wrap button > img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 0;
-    margin-right: 8px;
   }
   body.list.mngt .list-viewer .mngt-item.none > p {
     font-size: 16px;

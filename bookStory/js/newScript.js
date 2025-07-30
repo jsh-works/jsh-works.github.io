@@ -24,52 +24,37 @@ console.log(`
 
   // 북스토리 공통상세 - 바텀 플로팅 스크립트
   $(".prod-purchase-footer").css({ bottom : '0px' });
-
-  // 북스토리 공통상세 - 메뉴 클릭 스크립트
-  $(".menu-nav ul li, ul.thumb-btn-box li").on('click', function(){
-    if($(this).data('layer') === "scribe") {
+    
+  // 북스토리 PC 공통상세 - 메뉴 클릭 스크립트
+  $(".menu-nav ul li").on('click', function(){
+    if($(this).data('layer') == "scribe") {
       $(".book-details.scribe").fadeIn().css({ display : 'flex'});
       $(".book-details.ebook").hide();
       $(".book-details.paper").hide();
-
-      $(".mob-cnt-book-infos.scribe").fadeIn().css({ display : 'block'});
-      $(".mob-cnt-book-infos.ebook").hide();
-      $(".mob-cnt-book-infos.paper").hide();
-
       $(".prod-purchase-footer .prod-inner .scribe-type").fadeIn().css({ display : 'flex'});
       $(".prod-purchase-footer .prod-inner .ebook-type").hide();
       $(".prod-purchase-footer .prod-inner .paper-type").hide();
 
-    } else if($(this).data('layer') === "ebook") {
+    } else if($(this).data('layer') == "ebook") {
       $(".book-details.scribe").hide();
       $(".book-details.ebook").fadeIn().css({ display : 'flex'});
       $(".book-details.paper").hide();
-
-      $(".mob-cnt-book-infos.scribe").hide();
-      $(".mob-cnt-book-infos.ebook").fadeIn().css({ display : 'block'});
-      $(".mob-cnt-book-infos.paper").hide();
-
       $(".prod-purchase-footer .prod-inner .scribe-type").hide();
       $(".prod-purchase-footer .prod-inner .ebook-type").fadeIn().css({ display : 'flex'});
       $(".prod-purchase-footer .prod-inner .paper-type").hide();
 
-    } else if($(this).data('layer') === "paper") {
+    } else if($(this).data('layer') == "paper") {
       $(".book-details.scribe").hide();
       $(".book-details.ebook").hide();
       $(".book-details.paper").fadeIn().css({ display : 'flex'});
-
-      $(".mob-cnt-book-infos.scribe").hide();
-      $(".mob-cnt-book-infos.ebook").hide();
-      $(".mob-cnt-book-infos.paper").fadeIn().css({ display : 'block'});
-
       $(".prod-purchase-footer .prod-inner .scribe-type").hide();
       $(".prod-purchase-footer .prod-inner .ebook-type").hide();
       $(".prod-purchase-footer .prod-inner .paper-type").fadeIn().css({ display : 'flex'});
     }
 
-    // 북스토리 공통상세 - 메뉴 변경 애니메이션 스크립트
-    if($(".menu-nav ul li, ul.thumb-btn-box li").hasClass('active')) {
-      $(".menu-nav ul li, ul.thumb-btn-box li").removeClass('active');
+    // 북스토리 PC 공통상세 - 메뉴 변경 애니메이션 스크립트
+    if($(".menu-nav ul li").hasClass('active')) {
+      $(".menu-nav ul li").removeClass('active');
       $(this).addClass('active');
       
       if( $(this).prevAll().length == 0 ) {
@@ -78,9 +63,63 @@ console.log(`
         $('.overlay').css({ left: $(this).prevAll().length * 142 + "px" });
       }
     } else {
-      $(".menu-nav ul li, ul.thumb-btn-box li").removeClass('active');
+      $(".menu-nav ul li").removeClass('active');
+    }
+  });
+
+  // 북스토리 모바일 공통상세 - 메뉴 클릭 스크립트
+  $(".thumb-btn-box li").on('click', function(){
+    if($(this).data('layer') == "scribe") {
+      $(".mob-cnt-book-infos.scribe").fadeIn().css({ display : 'block'});
+      $(".mob-cnt-book-infos.ebook").hide();
+      $(".mob-cnt-book-infos.paper").hide();
+      $(".prod-purchase-footer .prod-inner .scribe-type").fadeIn().css({ display : 'flex'});
+      $(".prod-purchase-footer .prod-inner .ebook-type").hide();
+      $(".prod-purchase-footer .prod-inner .paper-type").hide();
+
+    } else if($(this).data('layer') == "ebook") {
+      $(".mob-cnt-book-infos.scribe").hide();
+      $(".mob-cnt-book-infos.ebook").fadeIn().css({ display : 'block'});
+      $(".mob-cnt-book-infos.paper").hide();
+      $(".prod-purchase-footer .prod-inner .scribe-type").hide();
+      $(".prod-purchase-footer .prod-inner .ebook-type").fadeIn().css({ display : 'flex'});
+      $(".prod-purchase-footer .prod-inner .paper-type").hide();
+
+    } else if($(this).data('layer') == "paper") {
+      $(".mob-cnt-book-infos.scribe").hide();
+      $(".mob-cnt-book-infos.ebook").hide();
+      $(".mob-cnt-book-infos.paper").fadeIn().css({ display : 'block'});
+      $(".prod-purchase-footer .prod-inner .scribe-type").hide();
+      $(".prod-purchase-footer .prod-inner .ebook-type").hide();
+      $(".prod-purchase-footer .prod-inner .paper-type").fadeIn().css({ display : 'flex'});
     }
 
+    // 북스토리 공통상세 - 메뉴 변경 애니메이션 스크립트
+    if($(".thumb-btn-box li").hasClass('active')) {
+      $(".thumb-btn-box li").removeClass('active');
+      $(this).addClass('active');
+    } else {
+      $(".thumb-btn-box li").removeClass('active');
+    }
+  });
+
+  // 북스토리 모바일 공통상세 - 버그수정
+  $(window).resize(function() {
+    var ww = $(window).width();
+    if(ww > 1024) {
+      $(".mob-cnt-book-infos.scribe").hide();
+      $(".mob-cnt-book-infos.ebook").hide();
+      $(".mob-cnt-book-infos.paper").hide();
+    }
+  });
+
+  // 북스토리 공통상세 - 관심교재 ON/OFF 스크립트
+  $(".scribe-btn").on('click', function() {
+    if($(".scribe-btn").hasClass('active')) {
+      $(".scribe-btn").removeClass('active');
+    } else {
+      $(this).addClass('active');
+    }
   });
 
   // 북스토리 공통상세 - 썸네일 호버 스크립트
@@ -568,6 +607,10 @@ console.log(`
       $(this).addClass('on');
       $(".mob-sort-popup").show();
     }
+  });
+  
+  $(".mob-sort-popup .close-ico").on('click', function() {
+    $(".mob-sort-popup").hide();
   });
 
   // 나의 교재방 모바일 좌측 필터버튼 정렬순서 선택 스크립트

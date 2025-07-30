@@ -2161,7 +2161,7 @@ body.elementary #contentsWrap .highSection section.full .sec-inner dl.list-activ
 #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor:hover img {
   transform: scale(1.02);
 }
-#contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
+#contentsWrap .highSection section.full .sec-inner ul.list-view li a span.name {
   display: -webkit-box;
   width: 142px;
   height: 36px;
@@ -4027,6 +4027,249 @@ body.list.mngt .list-viewer .list-payment {
   color: #4165F4;
   transition: all 0.35s;
 }
+
+/* 이용안내 CSS 추가 */
+#contentsWrap.use .useSection {
+  position: relative;
+  margin-top: 40px;
+}
+#contentsWrap.use .useSection .tab-menu {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+#contentsWrap.use .useSection .tab-menu ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#contentsWrap.use .useSection .tab-menu ul li {
+  width: 25%;
+  height: 61px;
+}
+#contentsWrap.use .useSection .tab-menu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #ddd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #fff;
+}
+#contentsWrap.use .useSection .tab-menu ul li.active a {
+  color: #fff;
+  font-weight: 700;
+  background-color: #4165F4;
+}
+#contentsWrap.use .useSection section {
+  padding: 100px 0px;
+}
+#contentsWrap.use .useSection section.sec-top {
+  height: 862px;
+  background-color: #EBF2FF;
+}
+#contentsWrap.use .useSection section.sec-bot {
+  height: 914px;
+  background-color: #EEFFFE;
+}
+#contentsWrap.use .useSection section .inner {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+#contentsWrap.use .useSection section .inner .text-banner {
+  text-align: center;
+  padding-bottom: 68px;
+}
+#contentsWrap.use .useSection section .inner .text-banner h4 {
+  color: #222;
+  font-size: 36px;
+  font-weight: 700;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+#contentsWrap.use .useSection section .inner .fade-conts-box {
+  display: none;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul {
+  min-width: 462px;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul li {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul li button {
+  position: relative;
+  color: #666;
+  text-align: left;
+  line-height: 1.5;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul li button h3 {
+  color: #BBB;
+  font-size: 22px;
+  font-weight: 700;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul li button p {
+  color: #BBB;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+#contentsWrap.use .useSection section.sec-top .inner .scroll-conts-box ul li.current button::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -40px;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/use-right-current-ico.png") center center / cover no-repeat;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-box ul li.current button::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -40px;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/use-left-current-ico.png") center center / cover no-repeat;
+}
+#contentsWrap.use .useSection section.sec-top .inner .scroll-conts-box ul li.current button h3 {
+  color: #1334B7;
+  font-weight: 700;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-box ul li.current button h3 {
+  color: #1F8F8F;
+  font-weight: 700;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box ul li.current button p {
+  color: #666;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box .scroll-conts-slide {
+  position: relative;
+  width: 778px;
+  height: 388px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 12px solid #000;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 12px 0px #00000040;
+  overflow: hidden;
+  cursor: url("../imgs/subscribe/scroll-conts-wheel_t2.png"), pointer;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box .scroll-conts-slide .swiper-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+#contentsWrap.use .useSection section.sec-top .inner .scroll-conts-box .swiper-pagination {
+  position: absolute;
+  top: 172px;
+  right: -30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px 0;
+  width: 14.4px;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-box .swiper-pagination {
+  position: absolute;
+  top: 172px;
+  left: -30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px 0;
+  width: 14.4px;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #ccc;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-box .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+#contentsWrap.use .useSection section.sec-top .inner .scroll-conts-box .wheel-ico {
+  position: absolute;
+  top: 264px;
+  right: -35px;
+  width: 24px;
+  height: 24px;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-box .wheel-ico {
+  position: absolute;
+  top: 264px;
+  left: -35px;
+  width: 24px;
+  height: 24px;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-btn button {
+  position: relative;
+  width: 25%;
+  height: 100px;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-btn button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  gap: 20px;
+  padding: 23px 0px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 64px;
+  white-space: nowrap;
+  box-shadow: 8px 8px 12px 0px #00000040;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-btn button.ebook-exper-btn {
+  width: 421px;
+  background-color: #107578;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-btn button.ebook-scribe-btn {
+  width: 481px;
+  background-color: #0C5262;
+}
+#contentsWrap.use .useSection section.sec-bot .inner .scroll-conts-btn button::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../imgs/use-play-ico.png") center center / cover no-repeat;
+}
+
+#contentsWrap.use .useSection section .inner .scroll-conts-btn button.google-btn {
+  background: url("../imgs/use-info-google-btn.png") center center / cover no-repeat;
+}
+#contentsWrap.use .useSection section .inner .scroll-conts-btn button.appstore-btn {
+  background: url("../imgs/use-info-appstore-btn.png") center center / cover no-repeat;
+}
+
 /* 미디어쿼리 */
 @media all and (max-width: 1600px) {
   body.textbook #contentsWrap .sort-wrap.fixed { top: -150px; }

@@ -1510,6 +1510,7 @@ position: absolute;
   display: inline-block;
   width: 16px;
   height: 16px;
+  margin-right: 4px;
   background: url("../imgs/ref-ico_04.png") center center/cover no-repeat;
 }
 #contentsWrap .container .book-details .price-box .price-btns-box {

@@ -7,32 +7,32 @@ $(function(){
     var mobIdx = $(this).find("#Header .mGnb ul li a");
     var subList = $(this).find(".gnb-sub-dep ul");
 
-    if($("body").hasClass('subscribe')) {
+    if($("#contentsWrap").hasClass('subscribe')) {
         pcIdx.eq(0).addClass('active');
         mobIdx.eq(0).addClass('active');
         subList.eq(0).addClass('active');
 
-    }else if($("body").hasClass('high')) {
+    }else if($("#contentsWrap").hasClass('high')) {
         pcIdx.eq(1).addClass('active');
         mobIdx.eq(1).addClass('active');
         subList.eq(1).addClass('active');
 
-    }else if($("body").hasClass('middle')) {
+    }else if($("#contentsWrap").hasClass('middle')) {
         pcIdx.eq(2).addClass('active');
         mobIdx.eq(2).addClass('active');
         subList.eq(2).addClass('active');
 
-    }else if($("body").hasClass('elementary')) {
+    }else if($("#contentsWrap").hasClass('elementary')) {
         pcIdx.eq(3).addClass('active');
         mobIdx.eq(3).addClass('active');
         subList.eq(3).addClass('active');
 
-    }else if($("body").hasClass('list')) {
+    }else if($("#contentsWrap").hasClass('list')) {
         pcIdx.eq(7).addClass('active');
         mobIdx.eq(7).addClass('active');
         subList.eq(7).addClass('active');
 
-    }else if($("body").hasClass('eng')) {
+    }else if($("#contentsWrap").hasClass('eng')) {
         pcIdx.eq(4).addClass('active');
         mobIdx.eq(4).addClass('active');
         subList.eq(4).addClass('active');

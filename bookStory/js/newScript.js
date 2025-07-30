@@ -485,7 +485,7 @@ console.log(`
   });
 
   // 구독메인 스크롤 플로팅 표시
-  if($('body').hasClass('subscribe')) {
+  if($('#contentsWrap').hasClass('subscribe')) {
     $(window).scroll(function () {
       var winPosY = $(document).scrollTop();
       var offset = $(".btn-items").offset();

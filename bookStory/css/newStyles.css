@@ -2609,13 +2609,12 @@ position: absolute;
 }
 #contentsWrap.textbook .book-item .flag-box span {
   width: 62px;
-  height: 24px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 24px;
   text-align: center;
   white-space: nowrap;
-  padding: 6px 8px;
+  padding: 0 8px;
   border-radius: 4px;
 }
 #contentsWrap.textbook .book-item .flag-box span.flag-pass {
@@ -3332,11 +3331,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   align-items: center;
   justify-content: center;
   width: 87px;
-  height: 28px;
   color: #fff;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 28px;
   padding: 0 8px;
   border-radius: 4px;
   background-color: #7190FF;

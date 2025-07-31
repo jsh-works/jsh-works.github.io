@@ -707,6 +707,69 @@ select {
   background-image: url("../imgs/list-update-ico.png");
 }
 
+/* 학습관리시스템 CSS 추가 */
+.mngt-wrap { position: relative; }
+.mngt-wrap .container {
+  position: relative;
+  width: 100%;
+  max-width: 1094px;
+  line-height: 1;
+  padding: 0;
+  margin: 0 auto;
+}
+.mngt-wrap .container .title-box {
+  margin-bottom: 24px;
+}
+.mngt-wrap .container .title-box h2 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mngt-wrap .container .title-box p {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents table.learn {
+  border-top: 1px solid #666;
+}
+.mngt-wrap .container .contents table.learn thead tr th {
+  height: 72px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  padding: 26px 0px;
+  border-bottom: 1px solid #ccc;
+  background-color: #F7F7F7;
+}
+.mngt-wrap .container .contents table.learn thead tr th:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+.mngt-wrap .container .contents table.learn tbody tr td {
+  min-height: 73px;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  padding: 25.5px 0px;
+  border-bottom: 1px solid #eee;;
+
+}
+.mngt-wrap .container .contents table.learn tbody tr td:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+.mngt-wrap .container .contents table.learn tbody tr td.left {
+  text-align: left;
+  padding-left: 16px;
+}
+
+
+
 
 @media all and (max-width: 852px) {
   .app-wrap .container .mytextbook-list ul.list li .list-btns {
@@ -754,6 +817,7 @@ select {
     box-sizing: border-box;
   }
 }
+
 @media all and (max-width: 650px) {
   .btns-box {
     display: flex;

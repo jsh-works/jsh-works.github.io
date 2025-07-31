@@ -1,8 +1,5 @@
 # 🌟 EBSi - Book Story Directory Structure
 
-생성자 : 하재상 과장  
-Version.20250626 / 0.0.1
-
 | 메뉴 명 | 파일 |
 |:---|---:|
 | 나의 교재방 | [bookStoryMypage.html](bookStoryMypage.html) |
@@ -18,7 +15,7 @@ Version.20250626 / 0.0.1
 | footer | [footer.html](footer.html) |
 | 404 페이지 | [error404.html](error404.html) |
 
-
-* topHeader.js 와 bottomFooter.js는 퍼블리싱 작업 간에 elemnet 코드들이 내부에 모두
-있어야 하는게 보기 불편함에 있어서 빼둔 js입니다. 해당 html파일은, 각각
-header.html 와 footer.html에 있습니다.
+```
+topHeader.js : 퍼블 페이지 보기 위함으로 넣은 것, 실제파일은 header.html 입니다.
+bottomFooter.js : 퍼블 페이지 보기 위함으로 넣은 것, 실제파일은 footer.html 입니다.
+```

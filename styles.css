@@ -114,7 +114,9 @@ h2 {
 #wrap .container > dl dt {
 	font-size: 1rem;
 }
-
+#wrap .mob-view .container .mob-target ul {
+	margin-bottom: 10px;
+}
 #wrap .mob-view .container .mob-target ul li {
 	width: 100%;
 	display: flex;

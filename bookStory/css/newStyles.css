@@ -36,7 +36,7 @@ input[type="radio"]:checked + label::after {
 }
 .tab li > a.active {
   color: #fff;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 700;
   background: #4165F4;
   border-top-left-radius: 8px;
@@ -2609,9 +2609,10 @@ position: absolute;
 }
 #contentsWrap.textbook .book-item .flag-box span {
   width: 62px;
+  height: 24px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 100%;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   padding: 6px 8px;
@@ -3327,11 +3328,15 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   margin-bottom: 12px;
 }
 #contentsWrap.list.mngt .list-viewer .mngt-item dl dt > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 87px;
+  height: 28px;
   color: #fff;
   font-size: 12px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1;
   padding: 0 8px;
   border-radius: 4px;
   background-color: #7190FF;
@@ -3516,6 +3521,17 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background-color: #fff;
   box-shadow: 8px 8px 8px 0px #00000026;
   z-index: 100;
+}
+.mob-sort-popup .close-ico {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/close-ico.png") center center / cover no-repeat;
+  cursor: pointer;
 }
 .mob-sort-popup.textbook {
   top: 0;
@@ -5248,8 +5264,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(50px) brightness(150%);
-    -webkit-backdrop-filter: blur(50px) brightness(150%);
+    backdrop-filter: blur(50px) brightness(100%);
+    -webkit-backdrop-filter: blur(50px) brightness(100%);
   }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .cnt-blur-mob-mask .blur-mask-inner {
     position: relative;
@@ -5294,7 +5310,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border-radius: 50%;
     background: #fff url("../imgs/favorite-ico.svg") center center/24px 24px no-repeat;
     box-shadow: 0px 4px 4px 0px #00000026;
-    transition: all 0.35s;
     cursor: pointer;
     z-index: 100;
   }
@@ -5313,7 +5328,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     text-align: center;
     border-radius: 12px;
-    background: #0000001A;
+    background: #00000030;
     box-shadow: 0px 4px 8px 0px #00000012;
 
     display: flex;
@@ -5660,6 +5675,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     min-width: 48px;
     min-height: 48px;
     background: url("../imgs/favorite-ico.svg") center center / 20px 18px no-repeat;
+    transition: none;
   }
   #contentsWrap.viewer button.scribe-btn.active {
     background: url("../imgs/favorite-ico_active.svg") center center / 20px 18px no-repeat;

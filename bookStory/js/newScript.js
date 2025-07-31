@@ -737,6 +737,16 @@ console.log(`
     }
   });
 
+  // 북스토리 즐겨찾기 기능 스크립트
+  $(".favorite-btn").on('click', function(e){
+    e.preventDefault();
+    if(!$(this).hasClass('active')) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+
   // 교재 리스트 - 정렬 팝업 스크립트
   $(".sort-box.acc h4").on('click', function() {
     if(!$(this).hasClass('active')) {

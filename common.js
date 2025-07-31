@@ -1,6 +1,7 @@
 $(function() {
 	    $.getJSON('./MenuList.json', function(data) {
 	      const html = undefined || [];
+	      const mob = undefined || [];
 	      const div = undefined || [];
 				
 	      $.each(data, function(i, item) {
@@ -17,8 +18,20 @@ $(function() {
 					html.push('</dl>');
 					html.push('</div>');
 	      });
+
+	      $.each(data, function(j, item) {
+					mob.push('<ul>');
+					mob.push('<li class="tit">' + item.menuName + '</li>');
+					mob.push('<li class="info">');
+					mob.push('<a href='+ item.devUrl +' class="dev" target="_blank">개발</a>');
+					mob.push('<span>' + item.update + '</span>');
+					mob.push('</li>');
+					mob.push('</ul>');
+	      });
+
 	      // console.log(html);
 	      $('.sort').html(div.join(''));
-	      $('.traget').html(html.join(''));
+	      $('.pc-target').html(html.join(''));
+	      $('.mob-target').html(mob.join(''));
 	    });
 	});

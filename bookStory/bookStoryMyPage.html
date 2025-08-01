@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="EBS 북스토리">
   <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
-  <meta property="og:image" content="/images/ebs_bookstory_og.png" />
+  <meta property="og:image" content="/images/ebs_bookstory_og.png" /> <!-- 수정추가 20250731 -->
   <title>EBS 교재사이트 :: 나의교재방</title>
   <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
   <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
@@ -31,13 +31,13 @@
   <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
   </script>
 </head>
-<body>
+<body> <!-- 수정추가 20250731 -->
   <div id="wrap">
     <!-- orign header import -->
     <div id="topHeader"></div>
 
     <!-- contents -->
-    <div id="contentsWrap" class="sub list">
+    <div id="contentsWrap" class="sub list"> <!-- 수정추가 20250731 -->
       <div class="sub-cnt-wrap">
         <div class="sort-wrap pc">
           <div class="sort type2">
@@ -76,6 +76,7 @@
               <li>
                 <strong class="on">나의 구독 정보</strong>
                 <ul id="" class="area type2">
+                  <!-- 수정추가 20250731 onClick 링크 추가 -->
                   <li onClick="location.href='./bookStoryMngt.html'">
                     <input class="stdy" type="radio" id="sbc_1" name="sbc" value="">
                     <label for="sbc_1">나의 구독 관리</label>
@@ -111,6 +112,7 @@
             <li>관심교제</li>
           </ul>
           <ul class="scr-sub-list" style="display: none;">
+            <!-- 수정추가 20250731 onClick 링크 추가 -->
             <li onClick="location.href='./bookStoryMngt.html'" class="active">나의 구독 관리</li>
             <li>구독 환불 내역</li>
             <li>정기 결제 카드 변경</li>
@@ -146,6 +148,7 @@
             </div>
           </div>
           <div class="mob-sort-popup">
+            <!-- 수정추가 20250731 팝업 닫기 추가 -->
             <span class="close-ico">닫기</span>
             <dl class="sort-state">
               <dt>정렬</dt>
@@ -169,6 +172,7 @@
               <li>
                 <div class="textbook-box">
                   <img src="./imgs/books_example.png" alt="교재 이미지" />
+                  <!-- 수정추가 20250731 구독 플래그 추가 -->
                   <i class="subscribe-ico"></i> <!-- 구독 플래그 -->
                   <div class="hover-btns">
                     <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
@@ -181,6 +185,7 @@
               <li>
                 <div class="textbook-box">
                   <img src="./imgs/books_example.png" alt="교재 이미지" />
+                  <!-- 수정추가 20250731 구독 플래그 추가 -->
                   <i class="subscribe-ico"></i> <!-- 구독 플래그 -->
                   <div class="hover-btns">
                     <button class="view-textbook" onClick="location.href='./bookStoryView.html'">교재 보기</button>
@@ -201,6 +206,7 @@
                   <a href="./bookStoryView.html">
                     <img src="./imgs/books_example.png" alt="교재 이미지"  />
                   </a>
+                  <!-- 수정추가 20250731 구독 플래그 추가 -->
                   <i class="subscribe-ico"></i> <!-- 구독 플래그 -->
                   <div class="list-exp">
                     <h4>EBS 2026 학년도 수능특강 사용설명서 독서</h4>
@@ -271,7 +277,7 @@
     <!-- //contents -->
 
     <!-- orign footer import -->
-    <div id="bottomFooter" class="pd0"></div>
+    <div id="bottomFooter" class="pd0"></div> <!-- 수정추가 20250731 -->
   </div>
 </body>
 

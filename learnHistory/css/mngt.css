@@ -733,6 +733,7 @@ select {
   line-height: 160%;
 }
 .mngt-wrap .container .contents table.learn {
+  margin-bottom: 40px;
   border-top: 1px solid #666;
 }
 .mngt-wrap .container .contents table.learn thead tr th {
@@ -742,7 +743,7 @@ select {
   font-weight: 400;
   line-height: 140%;
   text-align: center;
-  padding: 26px 0px;
+  padding: 14px 0px;
   border-bottom: 1px solid #ccc;
   background-color: #F7F7F7;
 }
@@ -767,6 +768,151 @@ select {
   text-align: left;
   padding-left: 16px;
 }
+.mngt-wrap .container .contents table.learn tbody tr td div.value {
+  display: inline-block;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents table.learn tbody tr td .current-val {
+  color: #4165F4;
+  font-size: 13px;
+  font-weight: 700;
+}
+.mngt-wrap .container .contents table.learn tbody tr td .current-val::after {
+  content: ' / ';
+  color: #444;
+}
+.mngt-wrap .container .contents table.learn tbody tr td .total-val {
+  color: #444;
+  font-size: 13px;
+  font-weight: 400;
+}
+.mngt-wrap .container .contents table.learn tbody tr td div.progress {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  max-width: 100px;
+  height: 10px;
+  border-radius: 32px;
+  background-color: #E7E7E7;
+}
+.mngt-wrap .container .contents table.learn tbody tr td div.progress > span.score {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  background-color: #4165F4;
+}
+.mngt-wrap .container .contents table.learn tbody tr td button.goDetails {
+  width: 68px;
+  height: 32px;
+  color: #222;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  padding: 6.5px 0px;
+  border-radius: 4px;
+  border: 1px solid #BBB;
+  background-color: #fff;
+}
+.mngt-wrap .container .contents table.learn tbody tr td span.user-name {
+  display: block;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents table.learn tbody tr td span.user-name:not(:last-child) {
+  margin-bottom: 8px;
+}
+.mngt-wrap .container .contents table.learn .info::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  vertical-align: -4px;
+  background: url("../imgs/info-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+}
+.mngt-wrap .container .contents .toggle-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.mngt-wrap .container .contents .toggle-box:not(:last-child) {
+  margin-bottom: 18px;
+}
+.mngt-wrap .container .contents .toggle-box .switch {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 12px;
+  border-radius: 9px;
+  background: #DDE1E4;
+  cursor: pointer;
+}
+.mngt-wrap .container .contents .toggle-box .switch .toggle-after {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #F7F7F8;
+  box-shadow: 0px 2px 3px 0px #0000001A;
+}
+.mngt-wrap .container .contents .toggle-box .switch.active .toggle-after {
+  left: calc(100% - 22px);
+  background-color: #4165F4;
+}
+.mngt-wrap .container .contents .toggle-box .switch.active {
+  background-color: #92A4FF;
+}
+.mngt-wrap .container .contents .toggle-box .switch, .toggle-after {
+  transition: all 0.2s ease-in;
+}
+.mngt-wrap .container .contents .btn-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.mngt-wrap .container .contents .btn-box button.more-btn {
+  position: relative;
+  width: 160px;
+  height: 56px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+}
+.mngt-wrap .container .contents .btn-box button.more-btn::after {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 15px;
+  margin-left: 10px;
+  vertical-align: -2px;
+  background: url("../imgs/more-ico.png") center center / cover no-repeat;
+}
+
+
+
+
+
+
+
+
+
 
 
 

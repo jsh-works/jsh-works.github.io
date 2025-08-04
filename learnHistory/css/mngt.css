@@ -818,6 +818,7 @@ select {
   background-color: #fff;
 }
 .mngt-wrap .container .contents table.learn tbody tr td span.user-name {
+  position: relative;
   display: block;
   color: #444;
   font-size: 14px;
@@ -836,6 +837,33 @@ select {
   vertical-align: -4px;
   background: url("../imgs/info-ico.png") center center / cover no-repeat;
   cursor: pointer;
+}
+.mngt-wrap .container .contents .helpTip {
+  display: none;
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: auto;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #484848;
+}
+.mngt-wrap .container .contents .helpTip::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 10px);
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(180deg);
 }
 .mngt-wrap .container .contents .toggle-box {
   position: relative;
@@ -904,8 +932,149 @@ select {
   vertical-align: -2px;
   background: url("../imgs/more-ico.png") center center / cover no-repeat;
 }
-
-
+.mngt-wrap .container .contents .class-box {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  padding: 42.5px 0px;
+  border-radius: 12px;
+}
+.mngt-wrap .container .contents .class-box.create {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  height: 206px;
+  padding: 40px 0px;
+  border: 2px dashed #4165F4;
+  cursor: pointer;
+}
+.mngt-wrap .container .contents .class-box.create button.create-ico {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #4165F4;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mngt-wrap .container .contents .class-box.create button.create-ico::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  background: url("../imgs/class-create-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .class-box.create > p {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents .class-box.create > p span {
+  display: inline-block;
+  width: 126px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 160%;
+  margin-left: 12px;
+  padding: 6px 16px;
+  border-radius: 32px;
+  background-color: #4165F4;
+}
+.mngt-wrap .container .contents .class-box.create > p span::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: -3px;
+  background: url("../imgs/check-white-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .class-box:not(:last-child) {
+  margin-bottom: 20px;
+}
+.mngt-wrap .container .contents .class-box .class-delete-ico {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.mngt-wrap .container .contents .class-box .class-delete-ico::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  vertical-align: -4px;
+  background: url("../imgs/class-delete-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .class-box .class-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60.25px;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item {
+  text-align: center;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item span.calendar::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  vertical-align: -6px;
+  background: url("../imgs/class-calendar-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item span > b {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item button {
+  height: 34px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  white-space: nowrap;
+  padding: 6px 20px;
+  border-radius: 32px;
+  background-color: rgba(0,0,0, 0.2);
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item button:not(:last-child) {
+  margin-right: 8px;
+}
 
 
 

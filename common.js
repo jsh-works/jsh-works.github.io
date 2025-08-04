@@ -7,7 +7,11 @@ $(function() {
 	      $.each(data, function(i, item) {
 					html.push('<div class="menuList">');
 					html.push('<dl>');
-					html.push('<dt class="menu">' + item.menuName + '</dt>');
+					if(item.id == 'learnHistory') {
+						html.push('<dt class="menu learn">' + item.menuName + '</dt>');
+					} else {
+						html.push('<dt class="menu">' + item.menuName + '</dt>');
+					}
 					html.push('<dd><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
 					if(!item.mainUrl && item.mainUrl === "") {
 						html.push('<dd></dd>');
@@ -21,7 +25,11 @@ $(function() {
 
 	      $.each(data, function(j, item) {
 					mob.push('<ul>');
-					mob.push('<li class="tit">' + item.menuName + '</li>');
+					if(item.id == 'learnHistory') {
+						mob.push('<li class="tit learn">' + item.menuName + '</li>');
+					} else {
+						mob.push('<li class="tit">' + item.menuName + '</li>');
+					}
 					mob.push('<li class="info">');
 					mob.push('<a href='+ item.devUrl +' class="dev" target="_blank">개발</a>');
 					mob.push('<span>' + item.update + '</span>');

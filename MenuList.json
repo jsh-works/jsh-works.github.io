@@ -70,17 +70,52 @@
     "update" : "25.07.28~"
   },
   {
-    "id" : "bookStory",
+    "id" : "learnHistory",
     "menuName" : "APP 내려받기",
     "devUrl" : "learnHistory/appDownload.html",
     "mainUrl" : "https://book.ebs.co.kr/ebook/purchase?userHash=ZjZNShVBdoA%2BCGc0dnd9vQ%3D%3D",
     "update" : "25.07.24"
   },
   {
-    "id" : "e-book",
-    "menuName" : "학급/학습 이력관리",
-    "devUrl" : "learnHistory/index.html",
+    "id" : "learnHistory",
+    "menuName" : "상세현황",
+    "devUrl" : "learnHistory/detailStatus.html",
     "mainUrl" : "",
-    "update" : "대기"
+    "update" : "25.08.04"
+  },
+  {
+    "id" : "learnHistory",
+    "menuName" : "학급생성 및 현황",
+    "devUrl" : "learnHistory/classStatus.html",
+    "mainUrl" : "",
+    "update" : "25.08.04"
+  },
+  {
+    "id" : "learnHistory",
+    "menuName" : "신규 학급 생성",
+    "devUrl" : "learnHistory/createClass.html",
+    "mainUrl" : "",
+    "update" : "-"
+  },
+  {
+    "id" : "learnHistory",
+    "menuName" : "학생별 학습 이력",
+    "devUrl" : "learnHistory/learningHistory.html",
+    "mainUrl" : "",
+    "update" : "-"
+  },
+  {
+    "id" : "learnHistory",
+    "menuName" : "결과지 다운로드",
+    "devUrl" : "learnHistory/resultDownload.html",
+    "mainUrl" : "",
+    "update" : "-"
+  },
+  {
+    "id" : "learnHistory",
+    "menuName" : "동의 팝업",
+    "devUrl" : "learnHistory/popup.html",
+    "mainUrl" : "",
+    "update" : "-"
   }
 ]

@@ -19,8 +19,17 @@ $(function() {
   const toggleList = document.querySelectorAll(".switch");
   toggleList.forEach(($toggle) => {
     $toggle.onclick = () => {
-      $toggle.classList.toggle('active');
+      if($toggle.classList.contains('active')) {
+        $toggle.classList.remove('active');
+        alert("해당 교재의 학습이력은 더 이상 선생님께 공유되지 않습니다.");
+      } else {
+        $toggle.classList.add('active');
+      }
     }
+  });
+
+  $(".goDetails").on('click', function() {
+    alert('팝업띄우기 popup');
   });
 
   // info 버튼 말풍선 스크립트
@@ -67,5 +76,8 @@ $(function() {
   //   $(".problem-status").text("진행중");
   // }
 
+  // $(".class-box").on('click', function() {
+  //   location.href='../learnHistory/learningHistory.html';
+  // });
   
 });

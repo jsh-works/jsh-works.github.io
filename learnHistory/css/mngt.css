@@ -847,6 +847,7 @@ select {
   height: 140px;
   padding: 42.5px 0px;
   border-radius: 12px;
+  cursor: pointer;
 }
 .mngt-wrap .container .contents .class-box.create {
   display: flex;

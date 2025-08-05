@@ -440,6 +440,30 @@ input[type="radio"]:checked + label::after {
   color: #18BCC4;
   border: 1px solid #18BCC4;
 }
+.gnb-mini-sub-dep {
+  padding: 12px 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.gnb-mini-sub-dep ul {
+  display: flex;
+}
+.gnb-mini-sub-dep ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.gnb-mini-sub-dep ul li a.active::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  margin-right: 4px;
+  background: url("../imgs/gnb-mini-dep-check.png") center center / cover no-repeat;
+}
 
 /* 구독메인 css 추가 */
 #contentsWrap .mainSection {
@@ -1844,16 +1868,7 @@ position: absolute;
   font-weight: 500;
   line-height: 140%;
 }
-#contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 12;
-}
+
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev,
 #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-next {
   position: absolute;
@@ -4674,6 +4689,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .gnb-sub-dep {
     display: block;
   }
+  .gnb-mini-sub-dep.buy-tab {
+    display: block;
+  }
   #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li.thirds {
     display: flex;
     flex-direction: column;
@@ -4875,7 +4893,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 
   /* 나의 교재방 mobile css 추가 */
   #contentsWrap .sub-cnt-wrap {
-    margin-top: 24px;
+    margin-top: 50px;
     margin-bottom: 0;
   }
   .list-viewer {
@@ -6317,6 +6335,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 32px;
     height: 32px;
     border-radius: 12px;
+    opacity: 0.5;
   }
   #contentsWrap .highSection section .sec-inner .slide-banner .slide-banner-btn-box .slide-banner-btn-prev::after {
     content: "";

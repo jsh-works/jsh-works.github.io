@@ -139,6 +139,24 @@ console.log(`
     alert("전체 시리즈 보기");
   });
 
+  new Swiper ('.gnb-mini-sub-dep', {
+    loop: false,
+    speed: 500,
+    pagination: false,
+    effect: 'slide',
+    breakpoints: {
+      1024: {
+        slidesPerView: 7
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      380: {
+        slidesPerView: 3,
+      }
+    }
+  });
+
   new Swiper ('.slide-banner', {
 		speed: 500,
 		delay: 7000,
@@ -561,29 +579,6 @@ console.log(`
     }
   });
 
-  // 나의 교재방 모바일 상단 탭 영역 스크립트
-  $(".sort-wrap.mob ul li").on('click', function() {
-    
-    if($(!$(this).hasClass('active'))) {
-      $(".sort-wrap.mob ul li").removeClass('active');
-      $(this).addClass('active');
-
-      if($(this).data('tab') == '1') {
-        $(".sub-sort .buy-sub-list").hide();
-        $(".sub-sort .scr-sub-list").hide();
-
-      } else if($(this).data('tab') == '2') {
-        $(".sub-sort .buy-sub-list").show();
-        $(".sub-sort .scr-sub-list").hide();
-        
-      } else if($(this).data('tab') == '3') {
-        $(".sub-sort .buy-sub-list").hide();
-        $(".sub-sort .scr-sub-list").show();
-      }
-    }
-
-  });
-  
   $(".sub-sort .buy-sub-list li").on('click', function() {
     if($(!$(this).hasClass('active'))) {
       $(".sub-sort .buy-sub-list li").removeClass('active');
@@ -832,5 +827,12 @@ console.log(`
     }
     const interval = setInterval(updateProgress, 100); // 속도 조절
   }
+
+
+  $(".gnb-mini-sub-dep li").on('click', function() {
+    alert('dd');
+
+  });
+
 
 });

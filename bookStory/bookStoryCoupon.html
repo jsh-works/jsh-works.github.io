@@ -1,0 +1,181 @@
+<!-- 수정추가 20250805 신규 페이지 생성 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_og.png" />
+  <title>EBS 교재사이트 :: 쿠폰/구독권 등록</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <link rel="stylesheet" href="./css/xeicon.css" />
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script> <!-- addition -->
+  <script src="./js/topHeader.js"></script> <!-- origin -->
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <!-- orign header import -->
+    <div id="topHeader"></div>
+
+    <!-- contents -->
+    <div id="contentsWrap" class="sub list mngt">
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li class="my">
+                <a href="/">
+                  <strong class="on">나의 교재</strong>
+                </a>
+              </li>
+              <li>
+                <strong class="on">나의 구매 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_1" name="ebk" value="payhist">
+                    <label for="ebk_1">eBook 결제 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_2" name="ebk" value="refund">
+                    <label for="ebk_2">eBook 환불 내역</label>
+                  </li>
+                  <!-- 수정추가 20250805 onClick 링크 추가 -->
+                  <li onClick="location.href='./bookStoryCoupon.html'">
+                    <input class="stdy" type="radio" id="ebk_3" name="ebk" value="coupon" checked>
+                    <label for="ebk_3">쿠폰/구독권 등록</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_4" name="ebk" value="basket">
+                    <label for="ebk_4">장바구니</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_5" name="ebk" value="intrst">
+                    <label for="ebk_5">관심교재</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong class="on">나의 구독 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_1" name="sbc" value="">
+                    <label for="sbc_1">나의 구독 관리</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_2" name="sbc" value="">
+                    <label for="sbc_2">구독 환불 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_3" name="sbc" value="">
+                    <label for="sbc_3">정기 결제 카드 변경</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="list-viewer">
+          <h2>쿠폰/구독권 등록</h2>
+          <div class="list-payment">
+            <iframe name="Ifrm" id="Ifrm" src="https://www.ebs.co.kr/mypage/order/list?site_ds_cd=EK" width="100%" height="745px" scrolling="no" style="height: 422px;"></iframe>
+          </div>
+          <div class="list-note mb56">
+            <h2>유의사항</h2>
+            <div class="note-wrap column">
+              <ul>
+                <li class="bold">[교재사이트 쿠폰/구독권 등록 유의사항]</li>
+                <li>유효기간이 지난 쿠폰/구독권은 사용이 불가능하며, 재발급되지 않습니다.</li>
+                <li>이미 사용된 쿠폰/구독권은 결제 취소 및 환불 시 재발행되지 않습니다.</li>
+                <li>등록한 쿠폰/구독권은 타인에게 양도할 수 없습니다.</li>
+              </ul>
+              <ul>
+                <li class="bold">[eBook 구독권]</li>
+                <li>등록 즉시 사용됩니다</li>
+                <li>이미 구독 상품을 이용 중이면 구독권을 사용할 수 없습니다.</li>
+              </ul>
+              <ul>
+                <li class="bold">[eBook 쿠폰]</li>
+                <li>eBook 단건 구매 시 사용할 수 있습니다.</li>
+                <li>쿠폰은 1개 상품당 1개만 적용할 수 있습니다.</li>
+                <li>쿠폰 등록 후 쿠폰명을 클릭하면 적용 가능한 상품 및 상세 정보를 확인하실 수 있습니다.</li>
+                <li>이미 할인 혜택이 적용된 자유이용권, 패키지, 이벤트 상품, 실물 상품, 제휴 상품 등에는 사용이 제한될 수 있습니다.</li>
+                <li>쿠폰 사용 시 포인트는 실 결제금액 기준으로 적립됩니다. (포인트 적립 대상 콘텐츠인 경우)</li>
+                <li>포인트 결제 가능 상품은 쿠폰 할인 적용 후에 포인트 사용이 가능합니다.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="list-note">
+            <h2>구독권 코드 환불 안내</h2>
+            <div class="table-wrap">
+              <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-tu2r">구분</th>
+                    <th class="tg-tu2r" colspan="2">상황</th>
+                    <th class="tg-tu2r">환불 가능 여부</th>
+                    <th class="tg-tu2r">환불 주체</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="t-bg bold" rowspan="3">구독권 코드<br/>(별도 판매)</td>
+                    <td class="t-bg" rowspan="2">등록 전</td>
+                    <td class="t-bg">7일 이내</td>
+                    <td class="t-bg">환불 가능</td>
+                    <td class="t-bg">개별 판매처*</td>
+                  </tr>
+                  <tr>
+                    <td>7일 초과</td>
+                    <td>환불 불가</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">등록 후</td>
+                    <td>환불 불가</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td class="bor bold" rowspan="2">구독권 결제<br/>(교재 사이트)</td>
+                    <td class="bor" colspan="2" rowspan="2">구입 즉시 등록</td>
+                    <td class="bor" rowspan="2">월할 계산하여 환불</td>
+                    <td class="bor" rowspan="2">EBS</td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- //contents -->
+
+    <!-- orign footer import -->
+    <div id="bottomFooter" class="pd0"></div>
+  </div>
+</body>
+
+</html>

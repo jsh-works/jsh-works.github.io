@@ -280,16 +280,18 @@ console.log(`
     },
   });
   
-  // 초중고교 이벤트 슬라이드 배너
+  // 초중고교 이벤트 슬라이드 배너 
+  var eventSlideCount = $('.event-slide-banner .swiper-slide').length;
   new Swiper ('.event-slide-banner', {
 		speed: 500,
 		delay: 7000,
-    loop: true,
+    loop: eventSlideCount > 1, 
+    allowTouchMove: eventSlideCount > 1, 
     longSwipes: true,
-		autoplay: {
-			delay: 7000,
-			disableOnInteraction: false
-		},
+    autoplay: eventSlideCount > 1 ? { 
+      delay: 7000,
+      disableOnInteraction: false
+    } : false,
 		effect: 'slide',
 		slidesPerView: 1,
     navigation: {
@@ -297,6 +299,9 @@ console.log(`
         prevEl: '.evt-slide-btn-prev',
     },
   });
+  if(eventSlideCount <= 1) { 
+    $('.evt-slide-btn-next, .evt-slide-btn-prev').hide();
+  }
 
   // 초중고교 EBS Picks 슬라이드
   new Swiper ('.list-slider', { // mobile

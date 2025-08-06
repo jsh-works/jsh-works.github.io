@@ -22,6 +22,45 @@ console.log(`
   var tbAlbum ="";
   var list ="";
 
+  // 이용안내 tab 스크립트
+  var $tabs = $(".use .tab-menu ul li");
+  $tabs.on('click', function() {
+    if($tabs.hasClass('active')) {
+      $tabs.removeClass('active');
+      $(this).addClass('active');
+
+      if($(this).hasClass('tab1')) {
+        $(".tab-con1").show();
+        $(".tab-con2").hide();
+        $(".tab-con3").hide();
+        $(".tab-con4").hide();
+
+      } else if($(this).hasClass('tab2')) {
+        $(".tab-con1").hide();
+        $(".tab-con2").show();
+        $(".tab-con3").hide();
+        $(".tab-con4").hide();
+
+      } else if($(this).hasClass('tab3')) {
+        $(".tab-con1").hide();
+        $(".tab-con2").hide();
+        $(".tab-con3").show();
+        $(".tab-con4").hide();
+
+      } else if($(this).hasClass('tab4')) {
+        $(".tab-con1").hide();
+        $(".tab-con2").hide();
+        $(".tab-con3").hide();
+        $(".tab-con4").show();
+      }
+    } else {
+      $(this).addClass('active');
+      $(".use .tab-menu ul li").removeClass('active');
+    }
+  });
+  
+
+
   // 북스토리 공통상세 - 바텀 플로팅 스크립트
   $(".prod-purchase-footer").css({ bottom : '0px' });
     

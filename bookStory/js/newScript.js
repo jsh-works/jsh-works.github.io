@@ -508,20 +508,91 @@ console.log(`
 
   // EBS eBook 체험하기 mobile event
   new Swiper( '.fade-conts-box', {
-	effect : 'fade',
-  loop: true,
-  speed: 500,
-  delay: 7000,
-  autoplay: {
+    effect : 'fade',
+    loop: true,
+    speed: 500,
     delay: 7000,
-    disableOnInteraction: false,
-  },
-  centeredSlides: true,
-	navigation : {
-		nextEl : '.fade-btn-next',
-		prevEl : '.fade-btn-prev',
-	},
-});
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    navigation : {
+      nextEl : '.fade-btn-next',
+      prevEl : '.fade-btn-prev',
+    },
+    observer: true, // DOM 변화 감지
+    observeParents: true, // DOM 변화 감지
+  });
+
+  new Swiper( '.fade-conts-box.type01', {
+    effect : 'fade',
+    loop: true,
+    speed: 500,
+    delay: 7000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    navigation : {
+      nextEl : '.fade-btn-next',
+      prevEl : '.fade-btn-prev',
+    },
+    observer: true, // DOM 변화 감지
+    observeParents: true, // DOM 변화 감지
+  });
+  new Swiper( '.fade-conts-box.type02', {
+    effect : 'fade',
+    loop: true,
+    speed: 500,
+    delay: 7000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    navigation : {
+      nextEl : '.fade-btn-next',
+      prevEl : '.fade-btn-prev',
+    },
+    observer: true, // DOM 변화 감지
+    observeParents: true, // DOM 변화 감지
+  });
+  new Swiper( '.fade-conts-box.type03', {
+    effect : 'fade',
+    loop: true,
+    speed: 500,
+    delay: 7000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    navigation : {
+      nextEl : '.fade-btn-next',
+      prevEl : '.fade-btn-prev',
+    },
+    observer: true, // DOM 변화 감지
+    observeParents: true, // DOM 변화 감지
+  });
+  new Swiper( '.fade-conts-box.type04', {
+    effect : 'fade',
+    loop: true,
+    speed: 500,
+    delay: 7000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    centeredSlides: true,
+    navigation : {
+      nextEl : '.fade-btn-next',
+      prevEl : '.fade-btn-prev',
+    },
+    observer: true, // DOM 변화 감지
+    observeParents: true, // DOM 변화 감지
+  });
   
   // 구독메인 구독/결제 부분 스크립트
   $(".check-btn").on('click', function() {
@@ -875,12 +946,4 @@ console.log(`
     }
     const interval = setInterval(updateProgress, 100); // 속도 조절
   }
-
-
-  $(".gnb-mini-sub-dep li").on('click', function() {
-    alert('dd');
-
-  });
-
-
 });

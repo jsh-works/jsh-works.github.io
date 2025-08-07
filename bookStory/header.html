@@ -237,14 +237,10 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       <div class='gnb-sub-dep'>
         <div class='gnb-sub-inner'>
           <div class="gnb-sub-list">
+            <!-- 수정추가 20250805 : 텝메뉴 추가 -->
             <ul class="subscribe">
-              <li><a href="" class="">전체로드맵</a></li>
-              <li><a href="" class="">eBook</a></li>
-              <li><a href="" class="">수능연계</a></li>
-              <li><a href="" class="">고교</a></li>
-              <li><a href="" class="">중학</a></li>
-              <li><a href="" class="">초등</a></li>
-              <li><a href="" class="">어학/일반</a></li>
+              <li data-info="scribe"><a class="">eBook 구독</a></li>
+              <li data-info="use"><a class="">eBook 이용안내</a></li>
             </ul>
 
             <ul class="high">
@@ -304,6 +300,24 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
           </div>
         </div>
       </div>
+      <!-- 수정추가 20250805 GNB 3뎁스 추가 -->
+      <div class="gnb-mini-sub-dep useInfo-tab">
+        <ul class='swiper-wrapper'>
+          <li class='swiper-slide mob-tab1'>
+            <a href="javascript:void(0);" class="active">eBook 이용안내</a>
+          </li>
+          <li class='swiper-slide mob-tab2'>
+            <a href="javascript:void(0);" class="">eBook 단건 결제/환불</a>
+          </li>
+          <li class='swiper-slide mob-tab3'>
+            <a href="javascript:void(0);" class="">eBook 구독 결제/환불</a>
+          </li>
+          <li class='swiper-slide mob-tab4'>
+            <a href="javascript:void(0);" class="">주요정책</a>
+          </li>
+        </ul>
+      </div>
+
       <!-- 수정추가 20250805 GNB 3뎁스 추가 -->
       <div class="gnb-mini-sub-dep buy-tab">
         <ul class='swiper-wrapper'>
@@ -414,6 +428,80 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
 
   <!-- 수정추가 20250805 GNB 3뎁스 추가 -->
   <script>
+    
+    // 상단 메뉴 Page index active, sub list 보이기
+    var pcIdx = $(this).find("#Gnb > ul > li > a");
+    var mobIdx = $(this).find("#Header .mGnb ul li a");
+    var subList = $(this).find(".gnb-sub-dep ul");
+
+    if($("#contentsWrap").hasClass('subscribe')) {
+        pcIdx.eq(0).addClass('active');
+        mobIdx.eq(0).addClass('active');
+        subList.eq(0).addClass('active');
+
+    }else if($("#contentsWrap").hasClass('high')) {
+        pcIdx.eq(1).addClass('active');
+        mobIdx.eq(1).addClass('active');
+        subList.eq(1).addClass('active');
+
+    }else if($("#contentsWrap").hasClass('middle')) {
+        pcIdx.eq(2).addClass('active');
+        mobIdx.eq(2).addClass('active');
+        subList.eq(2).addClass('active');
+
+    }else if($("#contentsWrap").hasClass('elementary')) {
+        pcIdx.eq(3).addClass('active');
+        mobIdx.eq(3).addClass('active');
+        subList.eq(3).addClass('active');
+
+    }else if($("#contentsWrap").hasClass('list')) {
+        pcIdx.eq(7).addClass('active');
+        mobIdx.eq(7).addClass('active');
+        subList.eq(7).addClass('active');
+
+    }else if($("#contentsWrap").hasClass('eng')) {
+        pcIdx.eq(4).addClass('active');
+        mobIdx.eq(4).addClass('active');
+        subList.eq(4).addClass('active');
+    }
+
+    // 이용안내 모바일 tab 스크립트
+    var $tabs = $(".useInfo-tab ul li");
+    $tabs.on('click', function() {
+      if($tabs.hasClass('active')) {
+        $tabs.removeClass('active');
+        $(this).addClass('active');
+        console.log($(this), $tabs);
+
+        if($(this).hasClass('mob-tab1')) {
+          $(".tab-con1").show();
+          $(".tab-con2").hide();
+          $(".tab-con3").hide();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab2')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").show();
+          $(".tab-con3").hide();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab3')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").hide();
+          $(".tab-con3").show();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab4')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").hide();
+          $(".tab-con3").hide();
+          $(".tab-con4").show();
+        }
+      } else {
+        $(this).addClass('active');
+      }
+    });
+
     new Swiper ('.gnb-mini-sub-dep.buy-tab', {
       loop: false,
       speed: 500,
@@ -422,7 +510,9 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       1024: { slidesPerView: 7 },
       767: { slidesPerView: 3 },
       380: { slidesPerView: 3 }
-      }
+      },
+      observer: true, // DOM 변화 감지
+      observeParents: true, // DOM 변화 감지
     });
     new Swiper ('.gnb-mini-sub-dep.scr-tab', {
       loop: false,
@@ -432,7 +522,21 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       1024: { slidesPerView: 7 },
       767: { slidesPerView: 3 },
       380: { slidesPerView: 3 }
-      }
+      },
+      observer: true, // DOM 변화 감지
+      observeParents: true, // DOM 변화 감지
+    });
+    new Swiper ('.gnb-mini-sub-dep.useInfo-tab', {
+      loop: false,
+      speed: 500,
+      pagination: false,
+      breakpoints: {
+      1024: { slidesPerView: 3 },
+      767: { slidesPerView: 3 },
+      380: { slidesPerView: 2.5 }
+      },
+      observer: true, // DOM 변화 감지
+      observeParents: true, // DOM 변화 감지
     });
 
     $(".gnb-mini-sub-dep a").on('click', function() {
@@ -449,8 +553,12 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       }
     });
 
+
+    // 3뎁스 스크립트
+    $(".gnb-mini-sub-dep.useInfo-tab").hide();
     $(".gnb-mini-sub-dep.buy-tab").hide();
     $(".gnb-mini-sub-dep.scr-tab").hide();
+
 
     $(".gnb-sub-dep ul li").on('click', function() {
       if($(this).data('tab') == '1') {
@@ -463,6 +571,12 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       } else if($(this).data('tab') == '3') {
         $(".gnb-mini-sub-dep.buy-tab").hide();
         $(".gnb-mini-sub-dep.scr-tab").show();
+      
+      } else if($(this).data('info') === 'scribe') {
+        $(".gnb-mini-sub-dep.useInfo-tab").hide();
+        
+      } else if($(this).data('info') === 'use') {
+        $(".gnb-mini-sub-dep.useInfo-tab").show();
       }
     });
   </script>

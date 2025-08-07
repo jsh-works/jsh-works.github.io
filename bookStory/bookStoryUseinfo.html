@@ -41,7 +41,7 @@
     <div id="topHeader"></div>
     
 		<!-- contents -->
-		<div id="contentsWrap" class="use subscribe">
+		<div id="contentsWrap" class="use">
 			<div class="useSection">
 				<div class="tab-menu">
 					<ul>
@@ -66,7 +66,7 @@
 							<div class="text-banner">
 								<h4>EBS eBook 어떻게 보나요?</h4>
 							</div>
-							<div class="scroll-conts-box">
+							<div class="scroll-conts-box type01">
 								<ul>
 									<li class="current">
 										<button>
@@ -166,8 +166,8 @@
 								<div class="fade-btn-prev"></div>
 							</div>
 							<div class="scroll-conts-btn">
-								<button type="button" class="google-btn"></button>
-								<button type="button" class="appstore-btn"></button>
+								<button type="button" class="google-btn" onclick="alert('구글플레이')"></button>
+								<button type="button" class="appstore-btn" onclick="alert('앱스토어')"></button>
 							</div>
 						</div>
 					</section>
@@ -178,7 +178,7 @@
 								<h4>EBS eBook 만의 특별한 기능</h4>
 							</div>
 
-							<div class="scroll-conts-box">
+							<div class="scroll-conts-box type02">
 								<div class="scroll-conts-slide">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide swiper-slide-active">
@@ -278,10 +278,10 @@
 								<div class="fade-btn-prev"></div>
 							</div>
 							<div class="scroll-conts-btn">
-								<button type="button" class="ebook-exper-btn">
+								<button type="button" class="ebook-exper-btn" onclick="alert('EBS eBook 체험하기')">
 									EBS eBook 체험하기
 								</button>
-								<button type="button" class="ebook-scribe-btn">
+								<button type="button" class="ebook-scribe-btn" onclick="alert('EBS eBook 구독 시작하기')">
 									EBS eBook 구독 시작하기
 								</button>
 							</div>
@@ -426,7 +426,7 @@
 							<div class="text-banner">
 								<h4>EBS eBook 구독 결제 방법 안내</h4>
 							</div>
-							<div class="scroll-conts-box">
+							<div class="scroll-conts-box type03">
 								<ul>
 									<li class="current">
 										<button>
@@ -453,13 +453,13 @@
 								<div class="scroll-conts-slide">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide swiper-slide-active">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 1. eBook 구독권 선택" />
+											<img src="./imgs/tab3-top-step1-img.png" alt="STEP 1. eBook 구독권 선택" />
 										</div>
 										<div class="swiper-slide swiper-slide-next">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 2. 결제 정보 입력" />
+											<img src="./imgs/tab3-top-step1-img.png" alt="STEP 2. 결제 정보 입력" />
 										</div>
 										<div class="swiper-slide">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 3. 결제 진행" />
+											<img src="./imgs/tab3-top-step1-img.png" alt="STEP 3. 결제 진행" />
 										</div>
 									</div>
 									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -503,7 +503,7 @@
 								<div class="fade-btn-prev"></div>
 							</div>
 							<div class="scroll-conts-btn">
-								<button type="button" class="ebook-scribe-btn">
+								<button type="button" class="ebook-scribe-btn" onclick="alert('EBS eBook 구독 시작하기')">
 									EBS eBook 구독 시작하기
 								</button>
 							</div>
@@ -515,20 +515,20 @@
 							<div class="text-banner">
 								<h4>eBook 구독 해지 방법 안내</h4>
 							</div>
-							<div class="scroll-conts-box">
+							<div class="scroll-conts-box type04">
 								<div class="scroll-conts-slide">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide swiper-slide-active">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 1." />
+											<img src="./imgs/tab3-bot-step1-img.png" alt="STEP 1." />
 										</div>
 										<div class="swiper-slide swiper-slide-next">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 2." />
+											<img src="./imgs/tab3-bot-step1-img.png" alt="STEP 2." />
 										</div>
 										<div class="swiper-slide">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 3. />
+											<img src="./imgs/tab3-bot-step1-img.png" alt="STEP 3." />
 										</div>
 										<div class="swiper-slide">
-											<img src="./imgs/subscribe/scroll-conts-imgs01.jpg" alt="STEP 4." />
+											<img src="./imgs/tab3-bot-step1-img.png" alt="STEP 4." />
 										</div>
 									</div>
 									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -660,8 +660,54 @@
 							<div class="text-banner">
 								<h4>EBS eBook 서비스 이용 시 참고하세요!</h4>
 							</div>
-							<div class="notes" style="width: 100%; height: 1208px; background-color: #fff;">
-								12
+							<div class="notes">
+								<div class="notes-list li-01">
+									<img src="./imgs/tab-notes-img01.png" alt="1. 내려받기 횟수" />
+									<dl>
+										<dt>1. 내려받기 횟수</dt>
+										<dd>eBook 교재는 구매 후 <b>1회만 내려받기 가능하며, 하나의 기기에서만 이용이 가능합니다.</b></dd>
+										<dd>내려받은 후에는 다른 기기에서 이용하실 수 없습니다.</dd>
+									</dl>
+								</div>
+								
+								<div class="notes-list li-02">
+									<img src="./imgs/tab-notes-img02.png" alt="2. DRM 적용" />
+									<dl>
+										<dt>2. DRM 적용</dt>
+										<dd>eBook의 모든 교재는 <b>배포 추적이 가능한 DRM 기술이 적용되어 있습니다.</b></dd>
+										<dd>내려받은 후에는 다른 기기에서 이용하실 수 없습니다.</dd>
+									</dl>
+								</div>
+
+								<div class="notes-list li-03">
+									<img src="./imgs/tab-notes-img03.png" alt="3. 필기 자료 보관" />
+									<dl>
+										<dt>3. 필기 자료 보관</dt>
+										<dd><b>나의 교재에 작성된 필기 자료는 최초 이용일로부터 2년 동안 온라인에 보관됩니다.</b></dd>
+										<dd>보유한 기기에 저장된 필기 자료는 기간 제한 없이 이용하실 수 있습니다.</dd>
+										<dd>구독으로 이용한 교재의 필기 자료는 구독 만료 후 7일까지 보관되며, 7일 이내 재구독 시 필기 자료는 복구됩니다.</dd>
+										<dd class="not">(학습노트, 학습계획표는 온라인에 저장되지 않습니다.)</dd>
+									</dl>
+								</div>
+
+								<div class="notes-list li-04">
+									<img src="./imgs/tab-notes-img04.png" alt="4. 오프라인 이용" />
+									<dl>
+										<dt>4. 오프라인 이용</dt>
+										<dd>구매한 eBook 교재 열람과 나만의 학습노트, 학습계획표 기능은 <b>오프라인에서도 언제든지 사용할 수 있습니다.</b></dd>
+									</dl>
+								</div>
+
+								<div class="notes-list li-05">
+									<img src="./imgs/tab-notes-img05.png" alt="5. 플랫폼 연동" />
+									<dl>
+										<dt>5. 플랫폼 연동</dt>
+										<dd>단건 구매한 eBook은 Goodnotes와 연동하여 열람할 수 있습니다. (EBS 외 출판사, ELT 교재 제외)</dd>
+										<dd>구독으로 이용 중인 eBook은 연동되지 않습니다.</dd>
+										<dd>Goodnotes 연동에 대한 자세한 설명은 공지사항을 참고하시기 바랍니다.</dd>
+										<dd class="not">(Goodnotes 연동은 부가 서비스로 별도 고지 없이 중단될 수 있습니다.)</dd>
+									</dl>
+								</div>
 							</div>
 						</div>
 					</section>

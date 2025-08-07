@@ -466,40 +466,44 @@ console.log(`
   });
   
 
-  // EBS eBook 체험하기 pc event
-  var scrollEvent = () => {
-    var $slider = $('.scroll-conts-box');
+  // EBS eBook 체험하기 pc event 
+  function initScrollEventSwiper(type) {
+    var $slider = $('.scroll-conts-box.' + type);
     $slider.find('.scroll-conts-slide').each(function (i) {
-      $(this).siblings(".swiper-pagination").addClass("type" + i);
-      $(this).siblings('ul').addClass("type" + i);
-      var slider = new Swiper($(this), {
+      $(this).siblings('.swiper-pagination').addClass(type);
+      $(this).siblings('ul').addClass(type);
+      new Swiper($(this), {
         direction: "vertical",
         slidesPerView: 1,
-        spaceBetween: 30,
+        // spaceBetween: 30,
         mousewheel: true,
         speed: 300,
         pagination: {
-            el: $slider.find('.swiper-pagination.type' + i),
-            clickable: true,
+          el: $slider.find('.swiper-pagination.' + type),
+          clickable: true,
         },
         on: {
-            slideChangeTransitionStart: function () {
-              var idx = this.realIndex
-              $slider.find('ul.type' + i + ' li').eq(idx).addClass('current').siblings('li').removeClass('current');
-            }
-        }
+          slideChangeTransitionStart: function () {
+            var idx = this.realIndex;
+            $slider.find('ul.' + type + ' li').eq(idx).addClass('current').siblings('li').removeClass('current');
+          }
+        },
+        observer: true, // DOM 변화 감지
+        observeParents: true, // DOM 변화 감지
       });
     });
+
+    $(document).on('click', '.scroll-conts-box.' + type + ' ul li', function () {
+      var idx = $(this).index();
+      var $that = $(this).closest('.scroll-conts-box.' + type);
+      $that.find('.swiper-pagination span').eq(idx).trigger('click');
+    });
   }
-  scrollEvent();
 
-
-  // EBS eBook 체험하기 pc event
-  $(document).on('click', '.scroll-conts-box ul li', function () {
-    var idx = $(this).index();
-    var $that = $(this).parents('.scroll-conts-box');
-    $that.find('.swiper-pagination span').eq(idx).trigger('click');
-  });
+  initScrollEventSwiper('type01'); 
+  initScrollEventSwiper('type02');
+  initScrollEventSwiper('type03');
+  initScrollEventSwiper('type04');
 
 
   // EBS eBook 체험하기 mobile event

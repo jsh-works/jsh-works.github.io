@@ -201,7 +201,7 @@ $(function () {
 			fnMainBookAction.swiper3();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 
@@ -350,7 +350,7 @@ $(function () {
 			fnMainBookAction2.swiper6();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 
@@ -479,7 +479,7 @@ $(function () {
 			fnMainBookAction3.swiper9();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 
@@ -608,7 +608,7 @@ $(function () {
 			fnMainBookAction4.swiper12();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 
@@ -809,7 +809,7 @@ $(function () {
 			fnMainBookAction5.swiper15();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 	var isSwiper13,
@@ -964,7 +964,7 @@ $(function () {
 			fnMainBookAction6.swiper18();
 				break;
 			default:
-				console.log('default');
+				// console.log('default');
 		}
 	})
 	var isSwiper16,

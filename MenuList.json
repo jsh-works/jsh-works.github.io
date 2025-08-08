@@ -3,119 +3,119 @@
     "id" : "bookStory",
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
-    "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
+    "progress" : "완료",
     "update" : "25.06.27"
   },
   {
     "id" : "bookStory",
     "menuName" : "나의 구독 관리",
     "devUrl" : "bookStory/bookStoryMngt.html",
-    "mainUrl" : "https://book.ebs.co.kr/mypage/purchase",
+    "progress" : "완료",
     "update" : "25.07.28"
   },
   {
     "id" : "bookStory",
     "menuName" : "구독 소개/상품 페이지 (구독메인)",
     "devUrl" : "bookStory/bookStoryIndex.html",
-    "mainUrl" : "https://book.ebs.co.kr/",
+    "progress" : "완료",
     "update" : "25.07.03"
   },
   {
     "id" : "bookStory",
     "menuName" : "고교 메인 페이지",
     "devUrl" : "bookStory/bookStoryHighMain.html",
-    "mainUrl" : "https://book.ebs.co.kr/roadmap/high",
+    "progress" : "완료",
     "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "중학 메인 페이지",
     "devUrl" : "bookStory/bookStoryMidMain.html",
-    "mainUrl" : "https://book.ebs.co.kr/roadmap/middle",
+    "progress" : "완료",
     "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "초등 메인 페이지",
     "devUrl" : "bookStory/bookStoryEleMain.html",
-    "mainUrl" : "https://book.ebs.co.kr/roadmap/primary",
+    "progress" : "완료",
     "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "ELT (유초등영어) 페이지",
     "devUrl" : "bookStory/bookStoryEnglish.html",
-    "mainUrl" : "https://book.ebs.co.kr/roadmap/english",
+    "progress" : "완료",
     "update" : "25.07.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "교재 리스트",
     "devUrl" : "bookStory/bookStoryList.html",
-    "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/grade?schGradeArr=D300",
+    "progress" : "완료",
     "update" : "25.07.18"
   },
   {
     "id" : "bookStory",
     "menuName" : "교재상세",
     "devUrl" : "bookStory/bookStoryView.html",
-    "mainUrl" : "https://book.ebs.co.kr/sub/eHigh/view?txbkId=LB00000005734&ebkId=EB100002251&prodClsCd=24",
+    "progress" : "완료",
     "update" : "25.07.22"
   },
   {
     "id" : "bookStory",
     "menuName" : "이용안내",
     "devUrl" : "bookStory/bookStoryUseinfo.html",
-    "mainUrl" : "https://book.ebs.co.kr/ebook/useInfo",
-    "update" : "25.07.28~"
+    "progress" : "완료",
+    "update" : "25.08.07"
   },
   {
     "id" : "learnHistory",
     "menuName" : "APP 내려받기",
     "devUrl" : "learnHistory/appDownload.html",
-    "mainUrl" : "https://book.ebs.co.kr/ebook/purchase?userHash=ZjZNShVBdoA%2BCGc0dnd9vQ%3D%3D",
+    "progress" : "완료",
     "update" : "25.07.24"
   },
   {
     "id" : "learnHistory",
     "menuName" : "상세현황",
     "devUrl" : "learnHistory/detailStatus.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "25.08.04"
   },
   {
     "id" : "learnHistory",
     "menuName" : "학급생성 및 현황",
     "devUrl" : "learnHistory/classStatus.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "25.08.04"
   },
   {
     "id" : "learnHistory",
     "menuName" : "신규 학급 생성",
     "devUrl" : "learnHistory/createClass.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "-"
   },
   {
     "id" : "learnHistory",
     "menuName" : "학생별 학습 이력",
     "devUrl" : "learnHistory/learningHistory.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "-"
   },
   {
     "id" : "learnHistory",
     "menuName" : "결과지 다운로드",
     "devUrl" : "learnHistory/resultDownload.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "-"
   },
   {
     "id" : "learnHistory",
     "menuName" : "동의 팝업",
     "devUrl" : "learnHistory/popup.html",
-    "mainUrl" : "",
+    "progress" : "대기",
     "update" : "-"
   }
 ]

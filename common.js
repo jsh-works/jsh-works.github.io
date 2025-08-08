@@ -13,10 +13,10 @@ $(function() {
 						html.push('<dt class="menu">' + item.menuName + '</dt>');
 					}
 					html.push('<dd><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
-					if(!item.mainUrl && item.mainUrl === "") {
-						html.push('<dd></dd>');
+					if(item.progress == '대기') {
+						html.push('<dd style="color:red;">'+ item.progress +'</dd>');
 					} else {
-						html.push('<dd><a href='+ item.mainUrl +' class="main" target="_blank">운영</a></dd>');
+						html.push('<dd>'+ item.progress +'</dd>');
 					}
 					html.push('<dd >' + item.update + '</dd>');
 					html.push('</dl>');
@@ -37,7 +37,6 @@ $(function() {
 					mob.push('</ul>');
 	      });
 
-	      // console.log(html);
 	      $('.sort').html(div.join(''));
 	      $('.pc-target').html(html.join(''));
 	      $('.mob-target').html(mob.join(''));

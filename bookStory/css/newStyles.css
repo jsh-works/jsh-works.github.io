@@ -37,7 +37,7 @@ input[type="radio"]:checked + label::after {
 #contentsWrap.viewer .sub-cnt-wrap .book-cnt::before {
   content: '';
   position: absolute;
-  top: 61px;
+  top: 52px;
   left: 0;
   width: 100%;
   border-bottom: 1px solid #4165F4;

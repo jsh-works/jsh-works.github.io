@@ -96,15 +96,18 @@ $(function(){
     $(".gnb-mini-sub-dep.scr-tab").hide();
 
     // 이용안내 모바일 View 진입 시  스크립트
+    var windowWidth = $(window).width();
     var path = window.location.pathname;
     var realPath = path.substring(10);
-    
-    if(realPath === '/bookStoryIndex.html') {
-      $(this).find(".gnb-sub-dep ul li.scribe").children('a').addClass('on');
-    }
-    if(realPath === '/bookStoryUseInfo.html') {
-      $(this).find(".gnb-sub-dep ul li.use").children('a').addClass('on');
-      $(".gnb-mini-sub-dep.useInfo-tab").show();
+
+    if (windowWidth < 767) {
+      if(realPath === '/bookStoryIndex.html') {
+        $(this).find(".gnb-sub-dep ul li.scribe").children('a').addClass('on');
+      }
+      if(realPath === '/bookStoryUseinfo.html') {
+        $(this).find(".gnb-sub-dep ul li.use").children('a').addClass('on');
+        $(".gnb-mini-sub-dep.useInfo-tab").show();
+      }
     }
 
     $(".gnb-sub-dep ul li").on('click', function() {

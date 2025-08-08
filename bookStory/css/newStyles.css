@@ -6583,8 +6583,62 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: auto;
   }
   
-}
 
+  /* 수정추가 20250805 : 기존 Roadmap css 변경/추가 */
+  #contentsWrap.sub.roadmap {
+    margin-top: 60px;
+  }
+  #contentsWrap.sub.roadmap .roadmap-cnt.wide,
+  #contentsWrap.sub.roadmap .tab-cnt.wide {
+    background: #f6f7f9;
+  }
+  #contentsWrap.sub.roadmap h2 {
+    padding-bottom: 15px;
+    font-size: 19px;
+    letter-spacing: -.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contentsWrap.sub.roadmap .roadmap-cnt h2.tit:first-child {
+    padding-bottom: 10px !important;
+    margin-top: 0;
+  }
+  #contentsWrap.sub.roadmap .sort-wrap {
+    position: relative;
+    width: 100%;
+    top: auto;
+    margin-top: -5px;
+    padding: 0;
+    z-index: auto;
+    background: none;
+  }
+  #contentsWrap.sub.roadmap .sort>ul>li>strong {
+    height: 42px;
+    line-height: 42px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #contentsWrap.sub.roadmap .sort>ul>li>strong:after,
+  #contentsWrap.sub.roadmap .sort>ul>li>strong.on:after {
+    right: 15px;
+  }
+  #contentsWrap.sub.roadmap .sort>ul>li>ul>li {
+    padding-left: 10px;
+    margin: 14px 0;
+  }
+  #contentsWrap.sub.roadmap .sort > ul > li > ul.area > li, .sort > ul > li > ul.area.type2 > li {
+    margin-bottom: 0;
+  }
+  #contentsWrap.sub.roadmap .sort > ul > li > ul.exc {
+    padding-bottom: 0;
+  }
+  #contentsWrap.sub.roadmap .sub-cnt-wrap {
+    margin: 20px 15px 65px;
+  }
+  
+}
+  
 
 
 @media all and (max-width: 979px) {

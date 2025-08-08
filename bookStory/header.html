@@ -239,8 +239,8 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
           <div class="gnb-sub-list">
             <!-- 수정추가 20250805 : 텝메뉴 추가 -->
             <ul class="subscribe">
-              <li data-info="scribe"><a class="">eBook 구독</a></li>
-              <li data-info="use"><a class="">eBook 이용안내</a></li>
+              <li data-info="scribe" class="scribe"><a class="" href="../bookStory/bookStoryIndex.html">eBook 구독</a></li>
+              <li data-info="use" class="use"><a class="" href="../bookStory/bookStoryUseInfo.html">eBook 이용안내</a></li>
             </ul>
 
             <ul class="high">
@@ -433,74 +433,37 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
     var pcIdx = $(this).find("#Gnb > ul > li > a");
     var mobIdx = $(this).find("#Header .mGnb ul li a");
     var subList = $(this).find(".gnb-sub-dep ul");
-
+    
     if($("#contentsWrap").hasClass('subscribe')) {
-        pcIdx.eq(0).addClass('active');
-        mobIdx.eq(0).addClass('active');
-        subList.eq(0).addClass('active');
+      pcIdx.eq(0).addClass('active');
+      mobIdx.eq(0).addClass('active');
+      subList.eq(0).addClass('active');
 
-    }else if($("#contentsWrap").hasClass('high')) {
-        pcIdx.eq(1).addClass('active');
-        mobIdx.eq(1).addClass('active');
-        subList.eq(1).addClass('active');
+    } else if($("#contentsWrap").hasClass('high')) {
+      pcIdx.eq(1).addClass('active');
+      mobIdx.eq(1).addClass('active');
+      subList.eq(1).addClass('active');
 
-    }else if($("#contentsWrap").hasClass('middle')) {
-        pcIdx.eq(2).addClass('active');
-        mobIdx.eq(2).addClass('active');
-        subList.eq(2).addClass('active');
+    } else if($("#contentsWrap").hasClass('middle')) {
+      pcIdx.eq(2).addClass('active');
+      mobIdx.eq(2).addClass('active');
+      subList.eq(2).addClass('active');
 
-    }else if($("#contentsWrap").hasClass('elementary')) {
-        pcIdx.eq(3).addClass('active');
-        mobIdx.eq(3).addClass('active');
-        subList.eq(3).addClass('active');
+    } else if($("#contentsWrap").hasClass('elementary')) {
+      pcIdx.eq(3).addClass('active');
+      mobIdx.eq(3).addClass('active');
+      subList.eq(3).addClass('active');
 
-    }else if($("#contentsWrap").hasClass('list')) {
-        pcIdx.eq(7).addClass('active');
-        mobIdx.eq(7).addClass('active');
-        subList.eq(7).addClass('active');
+    } else if($("#contentsWrap").hasClass('list')) {
+      pcIdx.eq(7).addClass('active');
+      mobIdx.eq(7).addClass('active');
+      subList.eq(7).addClass('active');
 
-    }else if($("#contentsWrap").hasClass('eng')) {
-        pcIdx.eq(4).addClass('active');
-        mobIdx.eq(4).addClass('active');
-        subList.eq(4).addClass('active');
+    } else if($("#contentsWrap").hasClass('eng')) {
+      pcIdx.eq(4).addClass('active');
+      mobIdx.eq(4).addClass('active');
+      subList.eq(4).addClass('active');
     }
-
-    // 이용안내 모바일 tab 스크립트
-    var $tabs = $(".useInfo-tab ul li");
-    $tabs.on('click', function() {
-      if($tabs.hasClass('active')) {
-        $tabs.removeClass('active');
-        $(this).addClass('active');
-        console.log($(this), $tabs);
-
-        if($(this).hasClass('mob-tab1')) {
-          $(".tab-con1").show();
-          $(".tab-con2").hide();
-          $(".tab-con3").hide();
-          $(".tab-con4").hide();
-
-        } else if($(this).hasClass('mob-tab2')) {
-          $(".tab-con1").hide();
-          $(".tab-con2").show();
-          $(".tab-con3").hide();
-          $(".tab-con4").hide();
-
-        } else if($(this).hasClass('mob-tab3')) {
-          $(".tab-con1").hide();
-          $(".tab-con2").hide();
-          $(".tab-con3").show();
-          $(".tab-con4").hide();
-
-        } else if($(this).hasClass('mob-tab4')) {
-          $(".tab-con1").hide();
-          $(".tab-con2").hide();
-          $(".tab-con3").hide();
-          $(".tab-con4").show();
-        }
-      } else {
-        $(this).addClass('active');
-      }
-    });
 
     new Swiper ('.gnb-mini-sub-dep.buy-tab', {
       loop: false,
@@ -532,7 +495,7 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       pagination: false,
       breakpoints: {
       1024: { slidesPerView: 3 },
-      767: { slidesPerView: 3 },
+      767: { slidesPerView: 2.5 },
       380: { slidesPerView: 2.5 }
       },
       observer: true, // DOM 변화 감지
@@ -559,6 +522,17 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
     $(".gnb-mini-sub-dep.buy-tab").hide();
     $(".gnb-mini-sub-dep.scr-tab").hide();
 
+    // 이용안내 모바일 View 진입 시  스크립트
+    var path = window.location.pathname;
+    var realPath = path.substring(10);
+    
+    if(realPath === '/bookStoryIndex.html') {
+      $(this).find(".gnb-sub-dep ul li.scribe").children('a').addClass('on');
+    }
+    if(realPath === '/bookStoryUseInfo.html') {
+      $(this).find(".gnb-sub-dep ul li.use").children('a').addClass('on');
+      $(".gnb-mini-sub-dep.useInfo-tab").show();
+    }
 
     $(".gnb-sub-dep ul li").on('click', function() {
       if($(this).data('tab') == '1') {
@@ -572,11 +546,47 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
         $(".gnb-mini-sub-dep.buy-tab").hide();
         $(".gnb-mini-sub-dep.scr-tab").show();
       
-      } else if($(this).data('info') === 'scribe') {
+      } else if($(this).data('info') === 'scribe') { // 이용안내 3뎁스 닫기
         $(".gnb-mini-sub-dep.useInfo-tab").hide();
         
-      } else if($(this).data('info') === 'use') {
+      } else if($(this).data('info') === 'use') { // 이용안내 3뎁스 열기
         $(".gnb-mini-sub-dep.useInfo-tab").show();
+      }
+    });
+
+    // 이용안내 모바일 tab 스크립트
+    var $tabs = $(".useInfo-tab ul li");
+    $tabs.on('click', function() {
+      if($tabs.hasClass('active')) {
+        $tabs.removeClass('active');
+        $(this).addClass('active');
+
+        if($(this).hasClass('mob-tab1')) {
+          $(".tab-con1").show();
+          $(".tab-con2").hide();
+          $(".tab-con3").hide();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab2')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").show();
+          $(".tab-con3").hide();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab3')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").hide();
+          $(".tab-con3").show();
+          $(".tab-con4").hide();
+
+        } else if($(this).hasClass('mob-tab4')) {
+          $(".tab-con1").hide();
+          $(".tab-con2").hide();
+          $(".tab-con3").hide();
+          $(".tab-con4").show();
+        }
+      } else {
+        $(this).addClass('active');
       }
     });
   </script>

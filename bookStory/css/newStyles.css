@@ -455,12 +455,17 @@ input[type="radio"]:checked + label::after {
   display: flex;
   justify-content: center;
 }
+.gnb-mini-sub-dep ul li a {
+  color: #222;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+}
 .gnb-mini-sub-dep ul li a.active::before {
   content: '';
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin-top: 3px;
   margin-right: 4px;
   background: url("../imgs/gnb-mini-dep-check.png") center center / cover no-repeat;
 }
@@ -4452,6 +4457,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   color: #fff;
   font-size: 30px;
   font-weight: 600;
+  line-height: 1;
   border: none;
   border-radius: 64px;
   white-space: nowrap;
@@ -4624,7 +4630,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 #contentsWrap.use .useSection .info-wrap .info-note ul li::before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: -20px;
   width: 4px;
   height: 4px;
@@ -7408,13 +7414,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .list-viewer .list-viewer-slide .viewSwiper .list-thumb-next {
     right: 8px;
   }
-
-  /* #contentsWrap.use .useSection section .inner .fade-conts-box .swiper-wrapper .swiper-slide .img-box {
-    height: 175px;
-  } */
+  #contentsWrap.use .useSection {
+    margin-top: 24px;
+  }
   #contentsWrap.use .useSection section .inner .fade-conts-box .fade-btn-prev,
   #contentsWrap.use .useSection section .inner .fade-conts-box .fade-btn-next {
-    top: calc(50% - 58px);
+    top: calc(50% - 70px);
     width: 30px;
     height: 30px;
   }

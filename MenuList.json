@@ -1,6 +1,13 @@
 [
   {
     "id" : "bookStory",
+    "menuName" : "구독 소개/상품 페이지 (구독메인)",
+    "devUrl" : "bookStory/bookStoryIndex.html",
+    "progress" : "완료",
+    "update" : "25.07.03"
+  },
+  {
+    "id" : "bookStory",
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
     "progress" : "완료",
@@ -13,13 +20,7 @@
     "progress" : "완료",
     "update" : "25.07.28"
   },
-  {
-    "id" : "bookStory",
-    "menuName" : "구독 소개/상품 페이지 (구독메인)",
-    "devUrl" : "bookStory/bookStoryIndex.html",
-    "progress" : "완료",
-    "update" : "25.07.03"
-  },
+  
   {
     "id" : "bookStory",
     "menuName" : "고교 메인 페이지",

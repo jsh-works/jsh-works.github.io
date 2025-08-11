@@ -51,7 +51,7 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap.eng .highSection section:not(:last-child) {
   margin-bottom: 0;
-  padding-bottom: 60px;
+  padding-bottom: 0;
   background-color: #fff;
 }
 #contentsWrap.eng section.indep-sec {

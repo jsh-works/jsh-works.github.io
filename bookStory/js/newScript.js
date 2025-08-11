@@ -336,6 +336,7 @@ console.log(`
 
   // 초중고교 EBS Picks 슬라이드
   new Swiper ('.list-slider', { // mobile
+    initialSlide: 0,
 		slidesPerView:5,
     spaceBetween: 12,
     observer: true,
@@ -346,12 +347,14 @@ console.log(`
     autoplay:false,
     breakpoints: {
         550: {
+            initialSlide: 0,
             slidesPerView: 2.8,
             spaceBetweenSlides: 12,
             allowTouchMove: true,
             grabCursor: true,
         },
         768: {
+            initialSlide: 0,
             slidesPerView: 3.8,
             allowTouchMove: true,
             grabCursor: true,

@@ -630,7 +630,7 @@ console.log(`
   
   // 구독메인 - 구독 시작하기 버튼 스크립트
   $(".start-btn").on('click', function() {
-    var target = $(".sec2").offset();
+    var target = $(".sec3").offset();
     $('html, body').animate({ scrollTop:target.top },500);
   });
 
@@ -663,8 +663,14 @@ console.log(`
     $('body').css({ overflow : 'auto' });
   });
   
-  // 대상 교재 팝업 열기
+  // 이용 가능 교재 - 팝업 열기
   $(".quick-btn").on('click', function() {
+    $(".target-popup").fadeIn().css({ display : 'flex' });
+    $('body').css({ overflow : 'hidden' });
+  });
+
+  // 이용 가능 교재 모바일 - 팝업 열기
+  $(".mo-quick-btn").on('click', function() {
     $(".target-popup").fadeIn().css({ display : 'flex' });
     $('body').css({ overflow : 'hidden' });
   });

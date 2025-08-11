@@ -490,6 +490,7 @@ console.log(`
     });
   }
 
+  initScrollEventSwiper('type00'); 
   initScrollEventSwiper('type01'); 
   initScrollEventSwiper('type02');
   initScrollEventSwiper('type03');
@@ -615,8 +616,9 @@ console.log(`
   if($('#contentsWrap').hasClass('subscribe')) {
     $(window).scroll(function () {
       var winPosY = $(document).scrollTop();
-      var offset = $(".btn-items").offset();
+      var offset = $(".experience-btn").offset();
       var top = offset.top;
+      // console.log(winPosY, top);
 
       if(winPosY > top) {
         $(".floating").css('display','block');
@@ -632,13 +634,30 @@ console.log(`
     $('html, body').animate({ scrollTop:target.top },500);
   });
 
-  // 구독 메인 - 결제 팝업 열기
+  // 구독 메인 - 결제 이전 유의사항 팝업 열기
   $(".payment-btn").on('click', function() {
-    $(".payment-popup").fadeIn().css({ display : 'flex' });
+    $(".payment-before-popup").fadeIn().css({ display : 'flex' });
     $('body').css({ overflow : 'hidden' });
   });
 
-  // 구독 메인 - 결제 팝업 열기
+  // 구독 메인 - 결제 이전 유의사항, 결제 버튼 클릭
+  $(".pay-after-btn button").on('click', function() {
+    if($(".info-check input").prop('checked')) {
+      $(".payment-before-popup").fadeOut();
+      $(".payment-popup").fadeIn().css({ display : 'flex' });
+      $('body').css({ overflow : 'hidden' });
+    } else {
+      alert("유의 사항 확인 후 구매 가능합니다.");
+    }
+  });
+
+   // 구독 메인 - 결제 이전 유의사항 팝업 닫기
+  $(".payment-before-popup .close").on('click', function() {
+    $(".payment-before-popup").fadeOut();
+    $('body').css({ overflow : 'auto' });
+  });
+
+  // 구독 메인 - 결제 팝업 닫기
   $(".payment-popup .close").on('click', function() {
     $(".payment-popup").fadeOut();
     $('body').css({ overflow : 'auto' });

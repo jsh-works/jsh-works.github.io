@@ -622,68 +622,90 @@ input[type="radio"]:checked + label::after {
   vertical-align: 1px;
   background: url("../imgs/subscribe/after_ico.png") center center/ cover no-repeat;
 }
-#contentsWrap .mainSection .sec2 {
+#contentsWrap .mainSection .sec3 {
   min-height: 1128px;
   padding: 100px 20px;
   background-color: #3e79f5;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .text-banner {
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner {
   text-align: center;
   padding-bottom: 66px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
   color: #fff;
   font-size: 47px;
   font-weight: 700;
   line-height: 64px;
   margin-bottom: 30px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .text-banner p {
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner p {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .text-banner p > span {
+#contentsWrap .mainSection .sec3 .sec-inner .text-banner p > span {
   display: block;
   color: #86dbff;
+  padding-top: 28px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
   width: 100%;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li {
   width: 100%;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li.thirds {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer {
   width: 100%;
-  height: 150px;
-  text-align: center;
-  padding: 25px 80px;
+  padding: 50px;
   border-radius: 20px;
+  background-color: #123a8c;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li.second .palnContainer {
+  background-color: #1b1683;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer h3.limit-tit {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer .flexible {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer > p {
+  color: #86dbff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 175px;
+  text-align: center;
+  padding: 0px 40px 0px 80px;
+  margin-bottom: 26px;
+  border-radius: 30px;
   border: 2px solid #fff;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0px 2px 0px 2px #bbc6db;
   transition: all 0.35s;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob  {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob  {
   display: none;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -693,37 +715,10 @@ input[type="radio"]:checked + label::after {
   padding-right: 83px;
   border-right: 1px solid #b9b9b9;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
   color :#111;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot {
-  display: flex;
-  justify-content: flex-start;
-  height: 120px;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title {
-  height: 71px;
-  margin-right: 344px;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title h3 {
-  font-weight: 400;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p {
-  color: #666;
-  font-size: 16px;
-  font-weight: bold;
-}
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p > a {
-  color: #333;
-  text-decoration: underline;
-  text-underline-position: under;
 }
 #contentsWrap .tooltip {
 	position: relative;
@@ -731,8 +726,9 @@ input[type="radio"]:checked + label::after {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
-  padding: 7px 10px;
-  border-radius: 8px;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 4px;
 	background-color: #111;
 }
 #contentsWrap .tooltip span::after {
@@ -757,38 +753,38 @@ input[type="radio"]:checked + label::after {
   margin-left: -8px;
   margin-bottom: -6px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
   font-family: 'Roboto';
   color: #111;
   font-size: 40px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 {
   font-size: 24px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p {
   font-size: 16px;
   font-weight: bold;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
-  color: #3a77f5;
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
+  color: #1595e7;
   font-size: 19px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
   padding: 5px 15.5px;
   margin-bottom: 18px;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: #6c707a;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn::after {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn::after {
   content: '';
   display: inline-block;
   width: 6px;
@@ -799,8 +795,8 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap button.check-btn {
   position: relative;
-  width: 37px;
-  height: 37px;
+  width: 36px;
+  height: 36px;
   border-radius: 50px;
   background-color: #ccc;
   transition: all 0.35s;
@@ -817,20 +813,21 @@ input[type="radio"]:checked + label::after {
   height: 14px;
   background: url("../imgs/subscribe/check_ico.png") center center/cover no-repeat;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 390px;
+  height: 373px;
   padding: 0;
   border: none;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 77px;
+  height: 82px;
   color: #111;
   font-size: 24px;
   font-weight: bold;
@@ -839,46 +836,49 @@ input[type="radio"]:checked + label::after {
   border-top-right-radius: 20px;
   background-color: #f2f2f5;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0 32px;
+  padding: 0 60px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
   font-size: 25px;
-  line-height: 1;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
-position: absolute;
-    top: -41px;
-    left: calc(50% - 82.5px);
-    font-size: 14px;
-    padding: 4px 10px;
-    width: 165px;
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 14px;
+  padding: 8px 12px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
+  width: 154px;
   font-family: 'Roboto';
   color: #111;
   font-size: 25px;
   line-height: 1;
-  margin-bottom: 14px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
   font-size: 35px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
   color: #111;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p > span {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p > span {
   color: #3a77f5;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -887,26 +887,32 @@ position: absolute;
   padding-bottom: 20px;
   border-bottom: 1px solid #b9b9b9;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .price-info {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .price-info,
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box .price-info {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  width: 75%;
+  text-align: right;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .check-btn {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .check-btn {
   position: relative;
-  top: -2px;
+  top: 0;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
   width: 100%;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
   position: relative;
   width: 100%;
   padding: 0 32px;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
   color: #fff;
   font-size: 14px;
   font-weight: bold;
@@ -916,7 +922,7 @@ position: absolute;
   background-color: #6c707a;
   width: 100%;
 }
-#contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn::after {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn::after {
   content: '';
   display: inline-block;
   width: 6px;
@@ -925,51 +931,75 @@ position: absolute;
   background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
   margin-left: 8px;
 }
-#contentsWrap .mainSection .sec3 {
-  min-height: 694px;
-  padding: 100px 0;
-  background-color: #203663;
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .text-banner {
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > p {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > p > a {
+  color: #fef6b0;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+
+#contentsWrap .mainSection .sec2 {
+  min-height: 894px;
+  padding: 100px 0;
+  background-color: #123a8c;
+}
+#contentsWrap .mainSection .sec2 .sec-inner .text-banner {
   text-align: center;
   padding-bottom: 68px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
+#contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
   color: #fff;
   font-size: 47px;
   font-weight: bold;
   word-break: keep-all;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box {
   position: relative;
   display: flex;
   justify-content: center;
   gap: 75px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box {
+#contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box {
   display: none;
 }
 
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li:not(:last-child) {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul li:not(:last-child) {
   margin-bottom: 26px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul li button {
   color: #798db5;
   text-align: left;
   line-height: 1.5;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li.current button {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul li.current button {
   color: #fff;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button h3 {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul li button h3 {
   font-size: 30px;
   font-weight: bold;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul li button p {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul li button p {
   font-size: 18px;
   font-weight: normal;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .scroll-conts-slide {
   position: relative;
   width: 780px;
   height: 449px;
@@ -981,11 +1011,11 @@ position: absolute;
   overflow: hidden;
   cursor: url("../imgs/subscribe/scroll-conts-wheel.png"), pointer;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide .swiper-wrapper img {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .scroll-conts-slide .swiper-wrapper img {
   width: 100%;
   height: 100%;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .swiper-pagination {
   position: absolute;
   top: calc(50% - 60px);
   right: -20px;
@@ -995,29 +1025,29 @@ position: absolute;
   gap: 12px 0;
   width: 14.4px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination-bullet {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .swiper-pagination-bullet {
   width: 14.4px;
   height: 14.4px;
   opacity: 1;
   background-color: #000;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fff;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .wheel-ico {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .wheel-ico {
   position: absolute;
   top: 270px;
   right: -20px;
   width: 16px;
   height: 23px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1036,13 +1066,13 @@ position: absolute;
   background-color: #fff;
   box-shadow: 0px 2px 0px 2px #bbc6db;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn:hover {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn:hover {
   border: 2px solid #4165F4;
   box-shadow: 0px 0px 2px 2px #4165F4;
   transform: translateY(-5px);
   transition: all 0.35s;
 }
-#contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn::after {
+#contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn::after {
   content: '';
   position: absolute;
   top: calc(50% - 6px);
@@ -1197,10 +1227,12 @@ position: absolute;
 #contentsWrap .floating.check .float-inner button {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  width: 238px;
   height: 64px;
-  padding: 18px 0;
-  font-size: 20px;
+  padding: 19px 0px;
+  line-height: 1;
+  font-size: 28px;
   background-color: #ffa800;
 }
 #contentsWrap .floating.check .float-inner button > em {
@@ -1211,10 +1243,10 @@ position: absolute;
 #contentsWrap .floating.check .float-inner .change-box button::after {
   content: '';
   position: absolute;
-  top: calc(50% - 7px);
-  right: 48px;
-  width: 9px;
-  height: 14px;
+  top: calc(50% - 13.5px);
+  right: 40px;
+  width: 18px;
+  height: 27px;
   background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
 }
 #contentsWrap .container {
@@ -2996,6 +3028,47 @@ position: absolute;
   height: calc(100% - 68px);
   overflow: auto;
 }
+.target-popup .inner .contents .con-info {
+  position: relative;
+  padding: 32px;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+.target-popup .inner .contents .con-info p {
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 24px;
+}
+.target-popup .inner .contents .con-info dl dt {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+.target-popup .inner .contents .con-info dl dd {
+  position: relative;
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  padding-left: 8px;
+}
+.target-popup .inner .contents .con-info dl dd::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  background-color: #aaa;
+}
+.target-popup .inner .contents .con-info dl:not(:last-child) {
+  margin-bottom: 24px;
+}
 .target-popup .inner .contents .search-box {
   display: flex;
   align-items: center;
@@ -3214,6 +3287,150 @@ position: absolute;
   height: 100%;
   background-color: #fff;
   overflow: auto;
+}
+
+
+.payment-before-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0, 0, .6);
+  z-index: 9999;
+  display: none;
+}
+.payment-before-popup .inner {
+  position: relative;
+  width: 800px;
+  max-width: calc(80%);
+  height: 720px;
+  max-height: calc(100% - 77px);
+  margin: 0 auto;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.payment-before-popup .inner .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 68px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.payment-before-popup .inner .title h2 {
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.payment-before-popup .inner .title button.close {
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  background: url("../imgs/close-ico.png") center center/cover no-repeat;
+}
+.payment-before-popup .inner .contents {
+  position: relative;
+  padding: 24px;
+  margin-top: 68px;
+  height: calc(100% - 70px);
+  overflow: auto;
+}
+.payment-before-popup .inner .contents .con-info {
+  position: relative;
+  padding: 20px 34px 20px 20px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.payment-before-popup .inner .contents .con-info p {
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 24px;
+}
+.payment-before-popup .inner .contents .con-info dl dt {
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 4px;
+}
+.payment-before-popup .inner .contents .con-info dl dd {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  padding-left: 8px;
+  word-break: keep-all;
+}
+.payment-before-popup .inner .contents .con-info dl:not(:last-child) {
+  margin-bottom: 24px;
+}
+.payment-before-popup .inner .contents .info-check {
+  margin-bottom: 40px;
+}
+.payment-before-popup .inner .contents .info-check input[type="checkbox"] {
+  display: none;
+}
+.payment-before-popup .inner .contents .info-check input[type="checkbox"] + label {
+  line-height: 24px;
+  padding-left: 32px;
+  vertical-align: bottom;
+}
+.payment-before-popup .inner .contents .info-check input[type="checkbox"] + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 0;
+  border: none;
+  border-radius: 0;
+  background: url("../imgs/menu-check-ico.png") center center / cover no-repeat;
+  transition: all 0.35s;
+}
+.payment-before-popup .inner .contents .info-check input[type="checkbox"]:checked + label:before {
+  content: '';
+  background: url("../imgs/menu-check-on-ico.png") center center / cover no-repeat;
+}
+.payment-before-popup .inner .contents .pay-after-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-before-popup .inner .contents .pay-after-btn button {
+  width: 330px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 12.5px 0px;
+  border-radius: 8px;
+  background-color: #4165F4;
+}
+.payment-before-popup .inner .contents .pay-after-btn button::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -3.5px;
+  background: url("../imgs/pay-after-ico.png") center center / cover no-repeat;
 }
 
 /* 나의 교재방 css 추가 */
@@ -4906,19 +5123,19 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide {
     width: 100%;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box ul {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box ul {
     margin-right: 0;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box {
     display: flex;
     gap: 0;
     margin: 0 20px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .scroll-conts-slide {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .scroll-conts-slide {
     width: 740px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .swiper-pagination,
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box .wheel-ico {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .swiper-pagination,
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box .wheel-ico {
     right: 20px;
   }
   #contentsWrap .mainSection .sec4 .sec-inner .faq-box {
@@ -5234,14 +5451,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .gnb-mini-sub-dep.buy-tab {
     display: block;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li.thirds {
-    display: flex;
-    flex-direction: column;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz {
     display: none;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -5249,24 +5462,24 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 100%;
     padding: 20px 32px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title {
     padding-right: 30px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn {
     width: 100%;
     color: #fff;
     font-size: 14px;
@@ -5275,7 +5488,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border-radius: 8px;
     background-color: #6c707a;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn::after {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn::after {
     content: '';
     display: inline-block;
     width: 6px;
@@ -5284,37 +5497,25 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     background: url("../imgs/subscribe/arrow_right.png") center center / cover no-repeat;
     margin-left: 8px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot {
-    padding: 20px 32px;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title {
-    margin-right: 0;
-    padding-right: 30px;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title h3 {
-    font-weight: bold;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org {
-    width: 100%;
-  }
+
   #contentsWrap .mainSection .sec4 {
     padding: 100px 20px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-box {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-box {
     display: none;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box {
     position: relative;
     display: flex;
     margin: 0 20px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide img {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide img {
     width: 100%;
     text-align: center;
     vertical-align: bottom;
     margin-bottom: 40px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -5324,25 +5525,25 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     text-align: center;
     word-break: keep-all;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3 {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3 {
     color: #fff;
     font-size: 36px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p {
     color: #fff;
     font-size: 22px;
     line-height: 1.5;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3,
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3,
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p {
     opacity: 0;
     transition: all 0.5s;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide.swiper-slide-active .txt-info h3,
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide.swiper-slide-active .txt-info p {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide.swiper-slide-active .txt-info h3,
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide.swiper-slide-active .txt-info p {
     opacity: 1;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .fade-btn-prev {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .fade-btn-prev {
     position: absolute;
     top: calc(50% - 114px);
     left: 0;
@@ -5352,7 +5553,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     cursor: pointer;
     z-index: 10;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .fade-btn-next {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .fade-btn-next {
     position: absolute;
     top: calc(50% - 114px);
     right: 0;
@@ -5769,7 +5970,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   } */
 
   #contentsWrap .mainSection .sec1 .sec-inner { margin-top: 80px; }
-  #contentsWrap .mainSection .sec2, #contentsWrap .mainSection .sec3, #contentsWrap .mainSection .sec4 { padding: 80px 40px; }
+  #contentsWrap .mainSection .sec3, #contentsWrap .mainSection .sec2, #contentsWrap .mainSection .sec4 { padding: 80px 40px; }
   
   #contentsWrap.textbook { margin-top: 60px; }
   #contentsWrap.textbook .sub-cnt-wrap { margin-top: 0; }
@@ -6657,8 +6858,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec1 .sec-inner .text-banner {
     margin: 0 20px 74px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4,
-  #contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
+  #contentsWrap .mainSection .sec3 .sec-inner .text-banner h4,
+  #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
     font-size: 35px;
     line-height: 1.5;
   }
@@ -6748,7 +6949,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .quick-util:not(.ebook) a:nth-child(4)::before {
     background: url("../imgs/quick-ico-04.png") center center / cover no-repeat;
   }
-  .target-popup .inner {
+  .target-popup .inner, .payment-before-popup .inner {
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -6765,6 +6966,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .target-popup .inner .contents {
     padding: 20px 0 20px 20px;
+  }
+  .target-popup .inner .contents .con-info {
+    padding: 16px;
+    margin-right: 20px;
   }
   .target-popup .inner .contents .search-box {
     padding: 16px 20px;
@@ -6813,6 +7018,34 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .target-popup .inner .contents .pagination {
     margin-right: 20px;
+  }
+  .target-popup .inner .contents .con-info p,
+  .target-popup .inner .contents .con-info dl dd {
+    font-size: 14px;
+  }
+  .target-popup .inner .contents .con-info dl dt {
+    font-size: 16px;
+  }
+  .payment-before-popup .inner .title h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .payment-before-popup .inner .contents .con-info dl dt {
+    font-size: 14px;
+  }
+  .payment-before-popup .inner .contents .con-info dl dd {
+    font-size: 13px;
+    padding-left: 0;
+  }
+  .payment-before-popup .inner .contents .con-info {
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .payment-before-popup .inner .contents .info-check input[type="checkbox"] + label {
+    font-size: 12px;
+  }
+  .payment-before-popup .inner .contents .info-check input[type="checkbox"] + label::before {
+    top: -3px;
   }
   #contentsWrap .mainSection .sec1 .top-banner img {
     width: 100%;
@@ -6899,59 +7132,59 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border: 1px solid #18BCC4;
     box-shadow: 0px 0px 1px 1.5px #18BCC4;
   }
-  #contentsWrap .mainSection .sec2 {
+  #contentsWrap .mainSection .sec3 {
     min-height: 100%;
     padding: 40px 20px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .text-banner {
+  #contentsWrap .mainSection .sec3 .sec-inner .text-banner {
     padding-bottom: 22px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
+  #contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
     font-size: 18px;
     line-height: normal;
     margin-bottom: 13px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .text-banner p {
+  #contentsWrap .mainSection .sec3 .sec-inner .text-banner p {
     color: #fff;
     font-size: 10px;
     font-weight: 500;
     line-height: normal;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
     padding: 20px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
     display: flex;
     gap: 21px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title {
     padding-right: 16.5px;
     border-right: 1px solid #e6e6e6;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title > img {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title > img {
     width: 61.5px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
     font-size: 18px;
     line-height: 1;
     white-space: nowrap;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
     font-size: 28px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p,
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p,
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
     font-size: 10px;
   }
   #contentsWrap .tooltip,
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
     font-size: 11px;
     padding: 4px 12px;
     white-space: nowrap;
     border-radius: 6px;
   }
   #contentsWrap .tooltip:after,
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip::after {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -6965,13 +7198,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     margin-bottom: -4px;
   }
   #contentsWrap .tooltip span::after,
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip span::after {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip span::after {
     content: '';
     width: 9px;
     height: 10px;
     margin-left: 4px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
     width: 137px;
   }
   #contentsWrap button.check-btn {
@@ -6986,112 +7219,90 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 9.5px;
     height: 7px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn,
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn,
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
     font-size: 11px;
     padding: 5px 15.5px;
     border-radius: 4px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn::after {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn::after {
     content: '';
     display: inline-block;
     width: 4px;
     height: 7px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical {
     height: 317px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
     height: 48px;
     font-size: 18px;
     margin-bottom: 23.5px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
     padding: 0 20px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
     font-size: 20px;
     margin-top: 4px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
     font-size: 28px; 
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
     font-size: 18px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
     font-size: 15px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
     position: absolute;
     top: -27px;
     left: calc(50% - 75.5px);
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box {
     padding-bottom: 16.5px;
     margin-bottom: 16.5px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
     padding: 0 20px;
   }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot {
-    height: 125px;
-    padding: 20px;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title {
-    padding-right: 16px;
-    border-right: 1px solid #e6e6e6;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-title > img {
-    width: 61.5px;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot {
-    display: flex;
-    gap: 18px;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org h2 {
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-  #contentsWrap .mainSection .sec2 .sec-inner .rate-plan-items ul li div.planBox.horiz.bot .plan-org p {
-    font-size: 11px;
-  }
-  #contentsWrap .mainSection .sec3 {
+
+  #contentsWrap .mainSection .sec2 {
     min-height: 430px;
     padding: 40px 0;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .text-banner {
+  #contentsWrap .mainSection .sec2 .sec-inner .text-banner {
     padding-bottom: 20px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .text-banner h4 {
+  #contentsWrap .mainSection .sec2 .sec-inner .text-banner h4 {
     font-size: 18px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide img {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide img {
     margin-bottom: 19px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info {
     display: flex;
     gap: 12.5px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3 {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info h3 {
     font-size: 18px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p  {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .swiper-wrapper .swiper-slide .txt-info p  {
     font-size: 11px;
     line-height: 1.5;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn {
     width: 183px;
     height: 38.4px;
     font-size: 12px;
     padding: 14.5px 0 13px;
     border: 1px solid #fff;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn:hover {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn:hover {
     border: 1px solid #4165F4;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn .experience-btn::after {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn .experience-btn::after {
     content: '';
     position: absolute;
     top: calc(50% - 4px);
@@ -7100,12 +7311,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 9px;
     background: url("../imgs/subscribe/arrow_right_black.png") center center / cover no-repeat;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .scroll-conts-btn {
+  #contentsWrap .mainSection .sec2 .sec-inner .scroll-conts-btn {
     margin-top: 21px;
   }
   
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .fade-btn-prev,
-  #contentsWrap .mainSection .sec3 .sec-inner .fade-conts-box .fade-btn-next {
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .fade-btn-prev,
+  #contentsWrap .mainSection .sec2 .sec-inner .fade-conts-box .fade-btn-next {
     top: calc(50% - 58px);
     width: 30px;
     height: 30px;

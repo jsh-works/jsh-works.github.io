@@ -784,6 +784,9 @@ input[type="radio"]:checked + label::after {
   border-radius: 6px;
   background-color: #6c707a;
 }
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-quick-box .mo-quick-btn {
+  display: none;
+}
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn::after {
   content: '';
   display: inline-block;
@@ -855,7 +858,6 @@ input[type="radio"]:checked + label::after {
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
   position: absolute;
   top: -40px;
-  left: 0;
   font-size: 14px;
   padding: 8px 12px;
 }
@@ -936,6 +938,12 @@ input[type="radio"]:checked + label::after {
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img.pc {
+  display: block;
+}
+#contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img.mob {
+  display: none;
 }
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img {
   width: 100%;
@@ -1242,11 +1250,10 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap .floating.check .float-inner .change-box button::after {
   content: '';
-  position: absolute;
-  top: calc(50% - 13.5px);
-  right: 40px;
+  display: inline-block;
   width: 18px;
   height: 27px;
+  margin-left: 8px;
   background: url("../imgs/subscribe/arrow_right.png") center center/cover no-repeat;
 }
 #contentsWrap .container {
@@ -5114,8 +5121,19 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0 20px; }
   #contentsWrap.viewer .prod-purchase-footer {min-width: 100%;}
   #contentsWrap.viewer .prod-purchase-footer .prod-inner {max-width:100%; margin: 0 auto; padding: 16px 20px;}
-  
+}
 
+/* 구독메인 CSS 추가 */
+@media all and (max-width: 1400px) {
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer .flexible {
+    flex-direction: column;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .year-box .price-info, #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .month-box .price-info {
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    text-align: center;
+  }
 }
 
 @media all and (max-width: 1300px) {
@@ -5219,7 +5237,54 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .quick-util:not(.ebook) a:nth-child(4)::before {
     background: url("../imgs/quick-ico-04.png") center center / cover no-repeat;
   }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img.pc {
+    display: none;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a > img.mob {
+    display: block;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px 20px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title {
+    padding-right: 23px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price {
+    width: 254px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-chk-box button.quick-btn {
+    display: none;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-quick-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
   
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-quick-box .mo-quick-btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15.5px;
+    border-radius: 6px;
+    background-color: #6c707a;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-quick-box .mo-quick-btn::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    vertical-align: 1px;
+    background: url("../imgs/subscribe/arrow_right.png") center center / cover no-repeat;
+    margin-left: 8px;
+  }
   #contentsWrap.eng .highSection section.bnr-sec {
     margin-bottom: 0;
   }
@@ -5451,53 +5516,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .gnb-mini-sub-dep.buy-tab {
     display: block;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz {
-    display: none;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    padding: 20px 32px;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top .plan-title {
-    padding-right: 30px;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn {
-    width: 100%;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 5px 15.5px;
-    border-radius: 8px;
-    background-color: #6c707a;
-  }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn::after {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 9px;
-    vertical-align: 1px;
-    background: url("../imgs/subscribe/arrow_right.png") center center / cover no-repeat;
-    margin-left: 8px;
-  }
-
   #contentsWrap .mainSection .sec4 {
     padding: 100px 20px;
   }
@@ -6868,7 +6886,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: auto;
   }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li a > h5 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  #contentsWrap .mainSection .sec1 .sec-inner .btn-items ul li a > span {
+    font-size: 15px;
   }
   #contentsWrap .floating .float-inner h2 {
     font-size: 22px;
@@ -6881,9 +6902,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-size: 14px;
   }
   #contentsWrap .floating.check .float-inner button {
-    width: 50%;
+    width: 30%;
     max-height: 56px;
-    font-size: 14px;
+    font-size: 18px;
   }
   #contentsWrap .floating.check .float-inner button > em {
     font-size: 24px;
@@ -6891,6 +6912,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .floating.check .float-inner .change-box button::after {
     content: '';
     right: 16px;
+    width: 9px;
+    height: 13.5px;
   }
 }
 @media all and (max-width: 797px) {
@@ -6906,6 +6929,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .textbook-list-box.listType ul li .book-item .list-btns {
     display: none;
   }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer {
+    padding: 30px 20px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox {
+    border-radius: 18px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -6915,6 +6944,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .quick-util:not(.ebook) a:nth-child(3) {
     padding: 0;
     line-height: normal;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price {
+    width: 140px;
   }
 }
 
@@ -6948,6 +6980,90 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .quick-util:not(.ebook) a:nth-child(4)::before {
     background: url("../imgs/quick-ico-04.png") center center / cover no-repeat;
+  }
+
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer h3.limit-tit {
+    font-size: 16px;
+    margin-bottom: 17.5px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title h3 {
+    font-size: 20px;
+  }
+  #contentsWrap .tooltip {
+    font-size: 11px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox {
+    padding: 20px 10px;
+    margin-bottom: 12px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price {
+    width: 127px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 {
+    font-size: 18px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 > em {
+    font-size: 28px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p {
+    font-size: 10px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price p > b {
+    font-size: 11px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-quick-box .mo-quick-btn {
+    font-size: 11px;
+  }
+  
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li .palnContainer > p {
+    font-size: 10px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul {
+    gap: 40px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-title {
+    padding-right: 11px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title {
+    gap: 4px;
+    font-size: 19px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-title p {
+    font-size: 10px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price {
+    padding: 0 20px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
+    font-size: 13px
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h4 {
+    font-size: 21px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
+    font-size: 30px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 {
+    font-size: 19px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
+    font-size: 16px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
+    padding: 0 10px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
+    padding: 6px 15.5px;
+    font-size: 11px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > p {
+    font-size: 15px;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > p > span {
+    display: block;
+  }
+  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.event-box > a {
+    margin-bottom: 10px;
   }
   .target-popup .inner, .payment-before-popup .inner {
     width: 100%;
@@ -7150,7 +7266,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-weight: 500;
     line-height: normal;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
+  /* #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob {
     padding: 20px;
   }
   #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-top {
@@ -7206,7 +7322,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price .tooltip {
     width: 137px;
-  }
+  } */
   #contentsWrap button.check-btn {
     width: 30px;
     height: 30px;
@@ -7219,7 +7335,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 9.5px;
     height: 7px;
   }
-  #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn,
+  /* #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz.mob .plan-mob-bot button.quick-btn,
   #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box .quick-btn {
     font-size: 11px;
     padding: 5px 15.5px;
@@ -7266,7 +7382,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-chk-box {
     padding: 0 20px;
-  }
+  } */
 
   #contentsWrap .mainSection .sec2 {
     min-height: 430px;
@@ -7393,6 +7509,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .floating.check .float-inner button {
     display: flex;
     align-items: center;
+    width: 110px;
     height: 32px;
     padding: 16px 0;
     font-size: 10px;

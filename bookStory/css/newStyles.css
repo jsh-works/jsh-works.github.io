@@ -3389,7 +3389,8 @@ input[type="radio"]:checked + label::after {
   margin-bottom: 24px;
 }
 .payment-before-popup .inner .contents .info-check {
-  height: 26px;
+  display: flex;
+  height: 32px;
   margin-bottom: 40px;
 }
 .payment-before-popup .inner .contents .info-check input[type="checkbox"] {
@@ -3405,16 +3406,16 @@ input[type="radio"]:checked + label::after {
   top: 0;
   left: 0;
   width: 24px;
-  height: 24px;
+  height: 24.5px;
   margin: 0 8px 0 0;
   border: none;
   border-radius: 0;
-  background: url("../imgs/menu-check-ico.png") center center / cover no-repeat;
+  background: url("../imgs/menu-check-ico.png") center center / 24px 24.5px no-repeat;
   transition: all 0.35s;
 }
 .payment-before-popup .inner .contents .info-check input[type="checkbox"]:checked + label:before {
   content: '';
-  background: url("../imgs/menu-check-on-ico.png") center center / cover no-repeat;
+  background: url("../imgs/menu-check-on-ico.png") center center / 24px 24.5px no-repeat;
 }
 .payment-before-popup .inner .contents .pay-after-btn {
   width: 100%;
@@ -7163,9 +7164,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .payment-before-popup .inner .contents .info-check input[type="checkbox"] + label {
     font-size: 12px;
-  }
-  .payment-before-popup .inner .contents .info-check input[type="checkbox"] + label::before {
-    top: -3px;
   }
   #contentsWrap .mainSection .sec1 .top-banner img {
     width: 100%;

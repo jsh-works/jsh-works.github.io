@@ -1847,7 +1847,12 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap.main.eng .highSection .bnr-sec {
   background-color: #f6f7f9;
+  margin-bottom: 30px;/* 2025-08-11 */
 }
+#contentsWrap.main.eng .highSection .roadmap-cnt h2.tit{
+  font-size: 22px; /* 2025-08-11 */
+}
+
 #contentsWrap .highSection section.full {
   position: relative;
   width: 100%;
@@ -2760,6 +2765,7 @@ input[type="radio"]:checked + label::after {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+  aspect-ratio: 1 / 1.3; /* 2025-08-11 */
 }
 #contentsWrap.textbook .book-item dl dt {
   color: #222;
@@ -4133,6 +4139,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   /* min-height: 226px; */
   border: 1px solid #eee;
   vertical-align: bottom;
+  aspect-ratio: 1 / 1.3; /* 2025-08-11 */
 }
 .list-viewer .mybook-list-box ul li .textbook-box .hover-btns {
   align-items: center;
@@ -5400,6 +5407,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: block;
     width: 100%;
   }
+  #contentsWrap.main.eng .highSection .bnr-sec {
+    margin-bottom: 0;
+  }
+
   #contentsWrap .highSection section .indep-banner .inner {
     margin: 0 20px;
   }

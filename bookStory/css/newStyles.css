@@ -4,6 +4,17 @@
   font-weight: normal;
   font-style: normal;
 }
+.gnb-dep01 > li .gnb-dep02-div {
+  position: relative;
+  display: none;
+  height: 234px;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 1px;
+}
+.gnb-dep01 > li.one-line-deps .gnb-dep02 > li:first-child {
+    padding-top: 16px;
+}
 input[type="radio"]:checked + label::before {
   border: 1px solid #4165F4;
 }

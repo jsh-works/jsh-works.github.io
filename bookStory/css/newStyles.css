@@ -757,6 +757,7 @@ input[type="radio"]:checked + label::after {
   font-family: 'Roboto';
   color: #111;
   font-size: 40px;
+  letter-spacing: -1.5px;
 }
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.horiz .plan-price h2 {
   font-size: 24px;
@@ -870,6 +871,7 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price h2 > em {
   font-size: 35px;
+  letter-spacing: -1.5px;
 }
 #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox.vertical .plan-price p {
   color: #111;

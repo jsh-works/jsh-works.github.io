@@ -2655,7 +2655,7 @@ input[type="radio"]:checked + label::after {
   height: 24px;
   border: none;
   outline: none;
-  background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+  background: url("../imgs/menu-check-ico.png") center center/cover no-repeat;
   transition: all 0.35s;
 }
 #contentsWrap.textbook .sort-wrap {
@@ -2675,27 +2675,26 @@ input[type="radio"]:checked + label::after {
   max-width: 1000px;
   margin-bottom: 40px;
 }
+/* #contentsWrap.textbook .textbook-list-box.albumType ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 40px;
+  column-gap: 3%;
+} */
 #contentsWrap.textbook .textbook-list-box.albumType ul {
   display: flex;
-  /* gap: 32px; */
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
+  align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #ccc;
 }
-#contentsWrap.textbook .textbook-list-box.albumType ul:not(:last-child) {
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #eee;
-}
 #contentsWrap.textbook .textbook-list-box.albumType ul li {
-  /* width: calc(25% - 32px); */
-  width: calc(25% - 24px);
-  
-}
-#contentsWrap.textbook .textbook-list-box.albumType ul li:not(:last-child) {
-  margin-right: 32px;
+  width: calc(25% - 16px);
 }
 #contentsWrap.textbook .textbook-list-box.albumType ul li .book-item {
   display: flex;
@@ -2706,6 +2705,7 @@ input[type="radio"]:checked + label::after {
 
 #contentsWrap.textbook .book-item .flag-box {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   width: 100%;
   margin-bottom: 14px;
@@ -2765,6 +2765,7 @@ input[type="radio"]:checked + label::after {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+  border: 1px solid #eee;
   aspect-ratio: 1 / 1.3; /* 2025-08-11 */
 }
 #contentsWrap.textbook .book-item dl dt {
@@ -3041,36 +3042,30 @@ input[type="radio"]:checked + label::after {
   height: calc(100% - 68px);
   overflow: auto;
 }
-.target-popup .inner .contents .con-info {
+.target-popup .inner .contents p.con-info-text {
   position: relative;
-  padding: 32px;
-  margin-bottom: 32px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-}
-.target-popup .inner .contents .con-info p {
   color: #222;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
+  margin-bottom: 32px;
+}
+.target-popup .inner .contents .con-info {
+  position: relative;
+  padding: 32px;
   margin-bottom: 24px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
 }
-.target-popup .inner .contents .con-info dl dt {
-  color: #222;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 140%;
-  margin-bottom: 12px;
-}
-.target-popup .inner .contents .con-info dl dd {
+.target-popup .inner .contents .con-info ul li {
   position: relative;
   color: #444;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  padding-left: 8px;
+  padding-left: 12px;
 }
-.target-popup .inner .contents .con-info dl dd::before {
+.target-popup .inner .contents .con-info ul li:before {
   content: '';
   position: absolute;
   top: 10px;
@@ -3079,9 +3074,7 @@ input[type="radio"]:checked + label::after {
   height: 4px;
   background-color: #aaa;
 }
-.target-popup .inner .contents .con-info dl:not(:last-child) {
-  margin-bottom: 24px;
-}
+
 .target-popup .inner .contents .search-box {
   display: flex;
   align-items: center;
@@ -3145,7 +3138,7 @@ input[type="radio"]:checked + label::after {
   font-weight: 700;
 }
 .target-popup .inner .contents .table-caption select {
-  width: 92px;
+  width: 112px;
   height: 36px;
   color: #222;
   font-weight: 400;
@@ -4001,7 +3994,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .mob-sort-popup.textbook .sort-box ul.column {
   justify-content: flex-start;
   width: auto;
-  height: 403px;
+  height: 100%;
+  max-height: 403px;
   padding: 0 14px 0 0;
   margin-bottom: 24px;
   border-bottom: 0;
@@ -4051,15 +4045,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   flex-wrap: wrap;
   flex-direction: row;
   column-gap: 20px;
+  row-gap: 40px;
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #eee;
 }
-.list-viewer .mybook-list-box ul:last-child {
-  border-bottom: 1px solid #ccc;
-}
 .list-viewer .mybook-list-box ul li {
-  width: calc(20% - 20px);
+  width: calc(20% - 16px);
 }
 .list-viewer .mybook-list-box ul li .textbook-box {
   position: relative;
@@ -5121,6 +5113,17 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 #contentsWrap.use .useSection .tab-con4 section.sec-top .inner .notes .notes-list dl dd.not::before {
   content: none;
 }
+.list-none {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+}
+.list-none img {
+  width: auto;
+}
 
 /* 미디어쿼리 */
 @media all and (max-width: 1600px) {
@@ -5784,16 +5787,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     content: '';
     background: url("../imgs/filter-on-ico.png") center center / cover no-repeat;
   }
-  .list-viewer .mybook-list-box ul {
-    display: flex;
-    column-gap: 0;
-    justify-content: space-between;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
-  .list-viewer .mybook-list-box ul li {
-    width: calc(48%);
-  }
   .list-viewer .btns-box {
     margin-bottom: 40px;
   }
@@ -5981,12 +5974,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #Footer .footer-store.mb > ul.btns-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 11px;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
   }
   #Footer .footer-store.mb > ul.btns-box li img {
     width: 100%;
+    max-width: 200px;
     height: auto;
   }
 
@@ -6930,14 +6924,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
 }
 @media all and (max-width: 797px) {
-  #contentsWrap.textbook .textbook-list-box.albumType ul {
-    row-gap: 15px;
-  }
   #contentsWrap.textbook .textbook-list-box.albumType ul li {
-    width: calc(50% - 16px);
-  }
-  #contentsWrap.textbook .textbook-list-box.albumType ul li:not(:last-child) {
-    margin-right: 16px;
+    width: calc(50% - 10px);
   }
   #contentsWrap.textbook .textbook-list-box.listType ul li .book-item .list-btns {
     display: none;
@@ -6948,6 +6936,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec3 .sec-inner .rate-plan-items ul li div.planBox {
     border-radius: 18px;
   }
+  .list-viewer .mybook-list-box ul li {
+    width: calc(50% - 10px);
+}
 }
 
 @media (max-width: 640px) {
@@ -7099,6 +7090,16 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .target-popup .inner .contents .con-info {
     padding: 16px;
     margin-right: 20px;
+  }
+  .target-popup .inner .contents p.con-info-text {
+    margin-right: 24px;
+    margin-bottom: 20px;
+    word-break: keep-all;
+  }
+  .target-popup .inner .contents p.con-info-text,
+  .target-popup .inner .contents .con-info ul li {
+    font-size: 14px;
+    word-break: keep-all;
   }
   .target-popup .inner .contents .search-box {
     padding: 16px 20px;
@@ -7595,9 +7596,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     gap: 20px;
   }
-  #contentsWrap.textbook .textbook-list-box.albumType ul li {
-    width: calc(50% - 8px);
-  }
   .payment-popup .inner {
     width: 100%;
     height: 100%;
@@ -7651,7 +7649,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .textbook-list-box.listType ul li .book-item .thumb-box a > img {
     min-width: 102px;
   }
-  #contentsWrap.textbook .textbook-list-box.albumType ul {
+  /* #contentsWrap.textbook .textbook-list-box.albumType ul {
     padding-bottom: 24px;
   }
   #contentsWrap.textbook .textbook-list-box.albumType ul:not(:last-child) {
@@ -7665,7 +7663,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .textbook-list-box.listType ul li:not(:last-child) {
     padding-bottom: 24px;
     margin-bottom: 24px;
-  }
+  } */
   #contentsWrap.textbook .textbook-list-box.listType ul li .book-item .thumb-box {
     width: 102px;
     height: auto;
@@ -7785,6 +7783,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     height: auto;
   }
+  .list-none img { width: 100%; }
 }
 
 

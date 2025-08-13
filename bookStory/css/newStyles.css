@@ -2792,6 +2792,13 @@ input[type="radio"]:checked + label::after {
   height: 40px;
   background: url("../imgs/subscribe-ico.png") 0 0/cover no-repeat;
 }
+#contentsWrap.textbook .book-item dl.textbook-info dt a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
 #contentsWrap.textbook .textbook-list-box.listType {
   display: none;
 }
@@ -5155,6 +5162,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
   }
 }
+@media all and (max-width: 1134px) {
+  #contentsWrap.textbook .book-item .flag-box {
+    min-height: 52px;
+  }
+}
 
 /* 미디어쿼리 모바일 오리진 css 추가 */
 @media all and (max-width: 1024px) {
@@ -6748,6 +6760,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     height: auto;
   }
+  #contentsWrap.textbook .book-item .flag-box {
+    min-height: 24px;
+  }
 
   /* 수정추가 20250805 : 기존 공통 css 변경/추가 */
   #contentsWrap.sub.entire {
@@ -6838,6 +6853,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
 }
 
+@media all and (max-width: 894px) {
+  #contentsWrap.textbook .book-item .flag-box {
+    min-height: 52px;
+  }
+}
+
 /* 구독메인 전용 CSS 추가*/
 @media all and (max-width: 875px) {
   #contentsWrap .mainSection .sec1 {
@@ -6901,6 +6922,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .list-viewer .mybook-list-box ul li {
     width: calc(50% - 10px);
+  }
+  #contentsWrap.textbook .book-item .flag-box {
+    min-height: 24px;
   }
 }
 
@@ -7573,6 +7597,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .book-item .flag-box {
     display: flex;
     flex-wrap: wrap;
+    min-height: 52px;
   }
   #contentsWrap.textbook .book-item .flag-box span {
     width: auto;

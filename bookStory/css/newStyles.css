@@ -7597,7 +7597,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .book-item .flag-box {
     display: flex;
     flex-wrap: wrap;
-    min-height: 52px;
+    min-height: 24px;
   }
   #contentsWrap.textbook .book-item .flag-box span {
     width: auto;
@@ -7759,6 +7759,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .list-none img { width: 100%; }
 }
 
+@media all and (max-width: 499px) {
+  #contentsWrap.textbook .book-item .flag-box {
+    min-height: 52px;
+  }
+}
 
 /* keyframes 애니메이션 css 추가 */
 @keyframes rightShow { 0% { right: 26px; opacity: 0; } 100% { right: 16px; opacity: 1; } }

@@ -140,19 +140,13 @@ select {
   position: relative;
 }
 .app-wrap .container .mytextbook-list ul.album {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, auto));
   column-gap: 3%;
   row-gap: 40px;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
 }
 .app-wrap .container .mytextbook-list ul.album li {
   width: 100%;
-  max-width: 218px;
 }
 .app-wrap .container .mytextbook-list ul.album li .thumb-img {
   position: relative;
@@ -995,11 +989,6 @@ select {
   margin-right: 8px;
 }
 
-@media all and (max-width: 1750px) {
-  .app-wrap .container .mytextbook-list ul.album {
-    column-gap: 4.3%;
-  }
-}
 
 @media all and (max-width: 852px) {
   .app-wrap .container .mytextbook-list ul.list li .list-btns {
@@ -1056,20 +1045,10 @@ select {
 	.btns-box ul {
     display: none;
   }
-  .app-wrap .container .mytextbook-list ul.album {
-    column-gap: 2%;
-  }
-  
 }
 
 @media all and (max-width: 400px) {
   .btns-box .types select {
     width: 114px;
-  }
-  .app-wrap .container .mytextbook-list ul.album {
-    column-gap: normal;
-  }
-  .app-wrap .container .mytextbook-list ul.album li {
-    max-width: 100%;
   }
 }

@@ -2627,7 +2627,8 @@ input[type="radio"]:checked + label::after {
   height: 24px;
   border: none;
   outline: none;
-  background: url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+  border-radius: 50%;
+  background:#fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
   transition: all 0.35s;
 }
 #contentsWrap.textbook .sort-wrap {
@@ -3419,7 +3420,7 @@ input[type="radio"]:checked + label::after {
 .sort>ul>li>strong:after{content:'\e941'; font-family:xeicon; font-size:16px; position:absolute; right:0; top:50%; transform:translateY(-50%);}
 .sort>ul>li.my>strong.on:after{content:'\e944'; transform:translateY(-50%) rotateZ(90deg);}
 input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
-.sort.type2 input[type="radio"] + label, .sort.type2 input[type="checkbox"] + label {color: #666; font-size: 16px; font-weight: 400;}
+.sort.type2 input[type="radio"] + label, .sort.type2 input[type="checkbox"] + label {width: calc(100% - 10px); color: #666; font-size: 16px; font-weight: 400;}
 .sort-wrap.pc {display: block;}
 .sort-wrap.mob {display: none;}
 #contentsWrap .sub-cnt-wrap { margin: 50px auto 100px; }

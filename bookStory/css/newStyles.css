@@ -475,6 +475,7 @@ input[type="radio"]:checked + label::after {
   object-fit: cover;
   width: 100%;
   margin: 0 auto;
+  cursor: pointer;
   background: #93edea;
 }
 #contentsWrap .mainSection .sec1 .top-banner img {

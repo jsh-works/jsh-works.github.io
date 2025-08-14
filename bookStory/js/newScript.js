@@ -619,7 +619,7 @@ console.log(`
   if($('#contentsWrap').hasClass('subscribe')) {
     $(window).scroll(function () {
       var winPosY = $(document).scrollTop();
-      var offset = $(".experience-btn").offset();
+      var offset = $(".btn-items ul").offset();
       var top = offset.top;
       // console.log(winPosY, top);
 
@@ -630,9 +630,14 @@ console.log(`
       }
     });
   }
+
+  // 구독메인 - top-banner 스크립트 추가
+  $(".top-banner").on('click', function() {
+      
+  });
   
   // 구독메인 - 구독 시작하기 버튼 스크립트
-  $(".start-btn").on('click', function() {
+  $(".top-banner, .start-btn").on('click', function() {
     var target = $(".sec3").offset();
     $('html, body').animate({ scrollTop:target.top },500);
   });

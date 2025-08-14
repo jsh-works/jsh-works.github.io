@@ -6824,9 +6824,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.sub.entire {
     margin-top: 60px;
   }
+  
   #contentsWrap.sub.entire .roadmap-cnt.wide,
   #contentsWrap.sub.entire .tab-cnt.wide {
-    background: #f6f7f9;
+    background: #fff;
   }
   #contentsWrap.sub.entire h2 {
     padding-bottom: 15px;
@@ -6838,7 +6839,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.sub.entire .roadmap-cnt h2.tit:first-child {
     padding-bottom: 10px !important;
-    margin-top: 0;
   }
   #contentsWrap.sub.entire .sort-wrap {
     position: relative;
@@ -7822,6 +7822,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.textbook.result .mob-sort-popup.textbook .sort-box ul {
     white-space: nowrap;
+  }
+  
+  .bootm-banner ul li.guide.on::before {
+    background: url("../imgs/bottom-banner-ico01.png") 0 0/cover no-repeat;
+  }
+  .bootm-banner ul li.payment.on::before {
+    background: url("../imgs/bottom-banner-ico02.png") 0 0/cover no-repeat;
+  }
+  .bootm-banner ul li.policy.on::before {
+    background: url("../imgs/bottom-banner-ico03.png") 0 0/cover no-repeat;
+  }
+  .bootm-banner ul li.subscribe.on::before {
+    background: url("../imgs/bottom-banner-ico04.png") 0 0/cover no-repeat;
+  }
+  .bootm-banner ul li.on a {
+    color: #222;
   }
   .list-none img { width: 100%; }
 }

@@ -1,0 +1,499 @@
+<!-- 수정추가 20250814 결과검색 신규페이지 생성 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_og.png" />
+  <title>EBS 교재사이트 :: 검색결과</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <link rel="stylesheet" href="./css/xeicon.css" />
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script>
+  <script src="./js/topHeader.js"></script>
+  <script src="./js/bottomFooter.js"></script>
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="topHeader"></div>
+    <div id="contentsWrap" class="sub high textbook result">
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li>
+                <strong class="on">학교</strong>
+                <ul class="area type2">
+                  <li>
+										<input type="radio" id="a0_1" name="sch">
+                    <label for="a0_1">초등</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="a0_2" name="sch">
+                    <label for="a0_2">중학</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="a0_3" name="sch">
+                    <label for="a0_3">고교</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="a0_3" name="sch">
+                    <label for="a0_3">일반</label>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="on">학년</strong>
+                <ul class="area type2 chk">
+                  <li>
+										<input type="checkbox" id="a1_1" name="sch">
+                    <label for="a1_1">1학년</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_2" name="sch">
+                    <label for="a1_2">2학년</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_3" name="sch">
+                    <label for="a1_3">3학년</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_4" name="sch">
+                    <label for="a1_4">4학년</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_5" name="sch">
+                    <label for="a1_5">5학년</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_6" name="sch">
+                    <label for="a1_6">6학년</label>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="on">과목</strong>
+                <ul class="area type2 chk">
+                  <li>
+										<input type="checkbox" id="a1_1" name="sch">
+                    <label for="a1_1">국어</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_2" name="sch">
+                    <label for="a1_2">수학</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_3" name="sch">
+                    <label for="a1_3">영어</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_4" name="sch">
+                    <label for="a1_4">한국사</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_5" name="sch">
+                    <label for="a1_5">사회</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="a1_6" name="sch">
+                    <label for="a1_6">과학</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-viewer">
+          <h2>
+            검색결과 <small>(총 25)</small>
+          </h2>
+          <div class="viewer-btns" style="justify-content: flex-end;">
+            <div class="types">
+              <select name="purchase" onchange="selBox(this.value)">
+                <option value="CRTN1" selected>정확도순</option>
+                <option value="CRTN">최신순</option>
+                <option value="INTRST">인기순(하트순)</option>
+              </select>
+
+              <button class="filter-type"></button>
+              <button class="album-type on">이미지 형태로 보기</button>
+              <button class="list-type">목록 형태로 보기</button>
+            </div>
+          </div>
+          <div class="mob-sort-popup textbook">
+            <div class="sort-box">
+              <h4>정렬</h4>
+              <span class="close-ico">닫기</span>
+              <ul>
+                <li class="">정확도순</li>
+                <li class="">최신순</li>
+                <li class="w-auto">인기순(하트순)</li>
+              </ul>
+            </div>
+            
+            <div class="sort-box acc">
+              <h4>학교</h4>
+              <ul class="">
+                <li class="">초등</li>
+                <li class="">중등</li>
+                <li class="">고교</li>
+                <li class="">일반</li>
+              </ul>
+            </div>
+            <div class="sort-box acc">
+              <h4>학년</h4>
+              <ul class="">
+                <li class="">1학년</li>
+                <li class="">2학년</li>
+                <li class="">3학년</li>
+                <li class="">4학년</li>
+                <li class="">5학년</li>
+                <li class="">6학년</li>
+              </ul>
+            </div>
+            <div class="sort-box acc">
+              <h4>과목</h4>
+              <ul class="row">
+                <li>국어</li>
+                <li>수학</li>
+                <li>영어</li>
+                <li>한국사</li>
+                <li>사회</li>
+                <li>과학</li>
+                <li>직업</li>
+                <li>제2외국어</li>
+              </ul>
+            </div>
+            <button class="clear">확인</button>
+          </div>
+
+          <div class="textbook-list-box albumType">
+            <ul>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico active"></i>
+                    <i class="favorite-ico"></i>
+                    <i class="subscribe-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지" />
+                    </a>
+                  </div>
+                  <dl class="textbook-info">
+                    <dt>
+                      <a href="./bookStoryView.html">EBS 2026학년도 수능 기출의 미래 수학</a>
+                    </dt>
+                    <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                    <dd>eBook 판매가 : <em>9,60</em>0원</dd>
+                  </dl>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="textbook-list-box listType">
+            <ul>
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <dl>
+                      <dt>
+                        <a href="./bookStoryView.html">EBS 2026 학년도 수능특강 사용설명서 독서</a>
+                      </dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn" onclick="window.location.href='./bookStoryView.html'">
+                      상세보기
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <dl>
+                      <dt>
+                        <a href="./bookStoryView.html">EBS 2026 학년도 수능특강 사용설명서 독서</a>
+                      </dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn" onclick="window.location.href='./bookStoryView.html'">
+                      상세보기
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <dl>
+                      <dt>
+                        <a href="./bookStoryView.html">EBS 2026 학년도 수능특강 사용설명서 독서</a>
+                      </dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn" onclick="window.location.href='./bookStoryView.html'">
+                      상세보기
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <dl>
+                      <dt>
+                        <a href="./bookStoryView.html">EBS 2026 학년도 수능특강 사용설명서 독서</a>
+                      </dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn" onclick="window.location.href='./bookStoryView.html'">
+                      상세보기
+                    </button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="book-item">
+                  <div class="thumb-box ebook">
+                    <i class="cart-ico"></i>
+                    <i class="favorite-ico"></i>
+                    <a href="./bookStoryView.html">
+                      <img src="./imgs/textbook-list-img.png" alt="교재 이미지"  />
+                    </a>
+                  </div>
+                  <div class="list-exp">
+                    <dl>
+                      <dt>
+                        <a href="./bookStoryView.html">EBS 2026 학년도 수능특강 사용설명서 독서</a>
+                      </dt>
+                      <dd>종이책 판매가 : <em>10,800</em>원</dd>
+                      <dd>eBook 판매가 : <em>9,600</em>원</dd>
+                    </dl>
+                  </div>
+                  <div class="list-btns">
+                    <button class="view-detail-btn" onclick="window.location.href='./bookStoryView.html'">
+                      상세보기
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btns-box">
+            <button class="more-btn">더 보기</button>
+          </div>
+        </div>
+      </div>
+      <div class="bottomSheet">
+        <div class="popup">
+          <div class="title">
+            <h1>보기 방법 선택</h1>
+            <a class="close"></a>
+          </div>
+          <ul>
+            <li class="active">교재보기</li>
+            <li>해설지 보기</li>
+            <li>교재 설명 보기</li>
+          </ul>
+          <div class="btn-box">
+            <button class="cancel">취소</button>
+            <button class="clear">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottomFooter" class="pd0"></div>
+  </div>
+</body>
+</html>

@@ -8,6 +8,20 @@
   },
   {
     "id" : "bookStory",
+    "menuName" : "검색결과",
+    "devUrl" : "bookStory/bookStorySearch.html",
+    "progress" : "완료",
+    "update" : "25.08.14"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "관심교재",
+    "devUrl" : "bookStory/bookStoryIntrst.html",
+    "progress" : "완료",
+    "update" : "25.08.13"
+  },
+  {
+    "id" : "bookStory",
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
     "progress" : "완료",

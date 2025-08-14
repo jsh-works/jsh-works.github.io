@@ -3393,6 +3393,7 @@ input[type="radio"]:checked + label::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 .payment-before-popup .inner .contents .pay-after-btn button {
   width: 330px;
@@ -3402,6 +3403,7 @@ input[type="radio"]:checked + label::after {
   text-align: center;
   padding: 12.5px 0px;
   border-radius: 8px;
+  border: 1px solid #fff;
   background-color: #4165F4;
 }
 .payment-before-popup .inner .contents .pay-after-btn button::after {
@@ -3411,6 +3413,25 @@ input[type="radio"]:checked + label::after {
   height: 20px;
   vertical-align: -3.5px;
   background: url("../imgs/pay-after-ico.png") center center / cover no-repeat;
+}
+.payment-before-popup .inner .contents .pay-after-btn button.coupon-btn {
+  width: 330px;
+  color: #4165F4;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding: 12.5px 0px;
+  border-radius: 8px;
+  border: 1px solid #4165F4;
+  background-color: #fff;
+}
+.payment-before-popup .inner .contents .pay-after-btn button.coupon-btn::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -3.5px;
+  background: url("../imgs/pay-after-ico-blue.png") center center / cover no-repeat;
 }
 
 /* 나의 교재방 css 추가 */
@@ -6024,10 +6045,12 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .mainSection .sec3, #contentsWrap .mainSection .sec2, #contentsWrap .mainSection .sec4 { padding: 80px 40px; }
   #contentsWrap.textbook { margin-top: 60px; }
   #contentsWrap.textbook .sub-cnt-wrap { margin-top: 0; }
-  #contentsWrap.textbook.list .sub-cnt-wrap { margin-top: 60px; }
+  #contentsWrap.textbook.list .sub-cnt-wrap,
+  #contentsWrap.textbook.result .sub-cnt-wrap { margin-top: 60px; }
   #contentsWrap.textbook .list-viewer,
   #contentsWrap.textbook .sub-sort { margin: 0; }
-  #contentsWrap.textbook.list .list-viewer { max-width: 100%; margin: 0 20px; padding-left: 0; }
+  #contentsWrap.textbook.list .list-viewer,
+  #contentsWrap.textbook.result .list-viewer { max-width: 100%; margin: 0 20px; padding-left: 0; }
   #contentsWrap.textbook .sort-wrap,
   #contentsWrap.textbook .list-viewer .viewer-btns .correct-box { display: none; }
   #contentsWrap.textbook .list-viewer .list-viewer-slide { min-height: auto; margin-bottom: 40px; border-radius: 0; }
@@ -6043,14 +6066,17 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     border-radius: 0;
   }
   #contentsWrap.textbook .list-viewer .viewer-btns { width: auto; margin: 0 20px 20px; }
-  #contentsWrap.textbook.list .list-viewer .viewer-btns {margin: 0px 0px 20px 0px; }
+  #contentsWrap.textbook.list .list-viewer .viewer-btns,
+  #contentsWrap.textbook.result .list-viewer .viewer-btns {margin: 0px 0px 20px 0px; }
   #contentsWrap.textbook .textbook-list-box.albumType,
   #contentsWrap.textbook .textbook-list-box.listType {
     max-width: 100%;
     margin: 0 20px 24px;
   }
   #contentsWrap.textbook.list .textbook-list-box.albumType,
-  #contentsWrap.textbook.list .textbook-list-box.listType {
+  #contentsWrap.textbook.list .textbook-list-box.listType,
+  #contentsWrap.textbook.result .textbook-list-box.albumType,
+  #contentsWrap.textbook.result .textbook-list-box.listType {
     margin: 0px 0px 24px;
   }
   
@@ -7194,6 +7220,14 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .payment-before-popup .inner .contents .info-check input[type="checkbox"] + label {
     font-size: 12px;
   }
+  .payment-before-popup .inner .contents .pay-after-btn {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .payment-before-popup .inner .contents .pay-after-btn button,
+  .payment-before-popup .inner .contents .pay-after-btn button.coupon-btn {
+    width: 100%;
+  }
   #contentsWrap .mainSection .sec1 .top-banner img {
     width: 100%;
     height: 100%;
@@ -7785,6 +7819,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dd .img-box {
     width: 100%;
     height: auto;
+  }
+  #contentsWrap.textbook.result .mob-sort-popup.textbook .sort-box ul {
+    white-space: nowrap;
   }
   .list-none img { width: 100%; }
 }

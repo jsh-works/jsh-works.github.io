@@ -4756,6 +4756,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   background: url("../imgs/step-ico.png") center center / cover no-repeat;
   transform: rotate(90deg);
 }
+#contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step3 {
+  order: 3;
+}
+#contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step3::after {
+  content: '';
+  position: absolute;
+  top: 274px;
+  left: -46px;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/step-ico.png") center center / cover no-repeat;
+  transform: rotate(180deg);
+}
+#contentsWrap.use .useSection .tab-con2 section.sec-bot .inner .flex-box dl.step3::after {
+  top: 320px;
+}
 #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dt {
   width: 88px;
   height: 40px;
@@ -5129,6 +5145,58 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap .mainSection .sec4 .sec-inner .faq-box {
     margin: 0 20px;
+  }
+
+  #contentsWrap.use .useSection .tab-con2 section.sec-top,
+  #contentsWrap.use .useSection .tab-con2 section.sec-bot {
+    height: 100%;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0 20px;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl {
+    width: 100%;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dt {
+    width: 80px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 4px 0;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dd .img-box {
+    width: 100%;
+    height: auto;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step3 {
+    order: 0;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step1::after,
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step2::after {
+    content: none;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step1::after,
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step2::after,
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step3::after {
+    content: '';
+    position: absolute;
+    top: auto;
+    bottom: -48px;
+    left: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    background: url("../imgs/step-ico.png") center center / cover no-repeat;
+    transform: rotate(90deg);
+  }
+  #contentsWrap.use .useSection .tab-con2 section.sec-bot .inner .flex-box dl.step3::after {
+    top: auto;
+  }
+  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dd.text {
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -6637,45 +6705,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: 120px;
     border: 4px solid #fff;
   }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    margin: 0 20px;
-  }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dt {
-    width: 80px;
-    height: 32px;
-    font-size: 16px;
-    line-height: 140%;
-    padding: 4px 0;
-  }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dd .img-box {
-    width: 100%;
-    height: auto;
-  }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step1::after,
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step2::after {
-    content: none;
-  }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step1::after,
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step2::after,
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl.step3::after {
-    content: '';
-    position: absolute;
-    top: auto;
-    bottom: -48px;
-    left: calc(50% - 12px);
-    width: 24px;
-    height: 24px;
-    background: url("../imgs/step-ico.png") center center / cover no-repeat;
-    transform: rotate(90deg);
-  }
-  #contentsWrap.use .useSection .tab-con2 section .inner .flex-box dl dd.text {
-    font-size: 18px;
-    font-weight: 500;
-  }
-
   #contentsWrap.use .useSection .tab-con2 section.sec-bot .inner .text-banner h4,
   #contentsWrap.use .useSection .tab-con4 section .inner .text-banner h4 {
     margin: 0 60px;

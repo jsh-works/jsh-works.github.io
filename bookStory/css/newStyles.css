@@ -2614,7 +2614,7 @@ input[type="radio"]:checked + label::after {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 4px;
+  margin-left: 4px;
   background: url("../imgs/correct-tip.png") center center/ cover no-repeat;
 }
 #contentsWrap.textbook .list-viewer .viewer-btns .types select {

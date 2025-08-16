@@ -2680,9 +2680,10 @@ input[type="radio"]:checked + label::after {
 #contentsWrap.textbook .book-item .flag-box {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: 4px;
   width: 100%;
-  min-height: 24px;
+  min-height: 52px;
   margin-bottom: 14px;
 }
 #contentsWrap.textbook .book-item .flag-box span {
@@ -3471,7 +3472,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-bottom: 16px;
   border-bottom: 1px solid #ccc;
 }
@@ -5252,11 +5253,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
   }
 }
-@media all and (max-width: 1134px) {
-  #contentsWrap.textbook .book-item .flag-box {
-    min-height: 52px;
-  }
-}
 
 /* 미디어쿼리 모바일 오리진 css 추가 */
 @media all and (max-width: 1024px) {
@@ -6816,9 +6812,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 100%;
     height: auto;
   }
-  #contentsWrap.textbook .book-item .flag-box {
-    min-height: 24px;
-  }
 
   /* 수정추가 20250805 : 기존 공통 css 변경/추가 */
   #contentsWrap.sub.entire {
@@ -6909,12 +6902,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
 }
 
-@media all and (max-width: 894px) {
-  #contentsWrap.textbook .book-item .flag-box {
-    min-height: 52px;
-  }
-}
-
 /* 구독메인 전용 CSS 추가*/
 @media all and (max-width: 875px) {
   #contentsWrap .mainSection .sec1 {
@@ -6978,9 +6965,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .list-viewer .mybook-list-box ul li {
     width: calc(50% - 10px);
-  }
-  #contentsWrap.textbook .book-item .flag-box {
-    min-height: 24px;
   }
 }
 
@@ -7658,11 +7642,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.textbook .list-viewer .list-viewer-slide img.mob {
     display: block;
   }
-  #contentsWrap.textbook .book-item .flag-box {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 24px;
-  }
   #contentsWrap.textbook .book-item .flag-box span {
     width: auto;
     height: 24px;
@@ -7842,11 +7821,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .list-none img { width: 100%; }
 }
 
-@media all and (max-width: 499px) {
-  #contentsWrap.textbook .book-item .flag-box {
-    min-height: 52px;
-  }
-}
 
 /* keyframes 애니메이션 css 추가 */
 @keyframes rightShow { 0% { right: 26px; opacity: 0; } 100% { right: 16px; opacity: 1; } }

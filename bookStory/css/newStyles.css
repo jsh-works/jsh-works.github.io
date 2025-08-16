@@ -199,51 +199,6 @@ input[type="radio"]:checked + label::after {
   border-radius: 12px;
 }
 
-
-/* ebsebs spinner */
-/* .ebsebs-spinner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-  display: none;
-}
-.ebsebs-spinner .inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0.5);
-}
-.ebsebs-spinner .inner img {
-  width: 100px;
-  height: auto;
-}
-.ebsebs-spinner .inner progress {
-  appearance: none;
-  transition: all 0.35s;
-}
-.ebsebs-spinner .inner progress::-webkit-progress-bar {
-  width: 160px;
-  height: 16px;
-  border-radius: 12px;
-  background-color: #fff;
-  overflow: hidden;
-}
-.ebsebs-spinner .inner progress::-webkit-progress-value {
-  width: 100px;
-  height: 16px;
-  background: #4165F4;
-} */
-
-
 /* 공통 header css 추가 */
 .top-bnr {
   margin-bottom: 20px;
@@ -2630,7 +2585,6 @@ input[type="radio"]:checked + label::after {
   outline: none;
   border-radius: 50%;
   background:#fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
-  transition: all 0.35s;
 }
 #contentsWrap.textbook .sort-wrap {
   padding: 16px 0px 16px 24px;
@@ -3970,21 +3924,40 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .mob-sort-popup.textbook .sort-box.acc h4.active::after {
   transform: rotateZ(0deg);
 }
+.mob-sort-popup.textbook .sort-box.acc ul li {
+  width: calc(33% - 16px);
+  padding-left: 0;
+}
+.mob-sort-popup.textbook .sort-box.acc ul.series li {
+  width: 100%;
+}
+.mob-sort-popup.textbook .sort-box.acc ul li input[type="radio"] + label,
+.mob-sort-popup.textbook .sort-box.acc ul li input[type="checkbox"] + label {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+}
+.mob-sort-popup.textbook .sort-box.acc ul li input[type="radio"]:checked + label::after {
+  content: none;
+}
+
 .mob-sort-popup.textbook .sort-box ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: flex-start;
+  gap: 20px;
   padding-bottom: 24px;
 }
-.mob-sort-popup.textbook .sort-box ul.row {
+.mob-sort-popup.textbook .sort-box.default ul.row {
   justify-content: flex-start;
   column-gap: 25px;
   white-space: nowrap;
 }
-.mob-sort-popup.textbook .sort-box ul.column {
+.mob-sort-popup.textbook .sort-box.default ul.column {
   justify-content: flex-start;
   width: auto;
   height: 100%;
@@ -3994,23 +3967,23 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   border-bottom: 0;
   overflow: auto;
 }
-.mob-sort-popup.textbook .sort-box ul li {
+.mob-sort-popup.textbook .sort-box.default ul li {
   position: relative;
-  width: calc(33% - 16px);
   color: #222;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   padding-left: 30px;
+  white-space: nowrap;
   cursor: pointer;
 }
 .mob-sort-popup.textbook .sort-box ul li.w-auto {
   width: auto;
 }
-.mob-sort-popup.textbook .sort-box ul.column li {
+.mob-sort-popup.textbook .sort-box.default ul.column li {
   width: 100%;
 }
-.mob-sort-popup.textbook .sort-box ul li::before {
+.mob-sort-popup.textbook .sort-box.default ul li::before {
   content: "";
   position: absolute;
   top: calc(50% -12px);
@@ -4020,7 +3993,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   vertical-align: bottom;
   background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
 }
-.mob-sort-popup.textbook .sort-box ul li.active::before {
+.mob-sort-popup.textbook .sort-box.default ul li.active::before {
   content: "";
   background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
 }
@@ -6892,8 +6865,27 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     margin-left: 0;
     margin-bottom: auto;
   }
-
+  .mob-sort-popup.textbook .sort-box ul li input[type="checkbox"] + label:before,
+  .mob-sort-popup.textbook .sort-box ul li input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border: none;
+    outline: none;
+    vertical-align: bottom;
+    background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+  }
+  .mob-sort-popup.textbook .sort-box ul li input[type="checkbox"]:checked + label:before,
+  .mob-sort-popup.textbook .sort-box ul li input[type="radio"]:checked + label:before {
+    content: "";
+    background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
+  }
 }
+
 @media all and (max-width: 979px) {
   .top-bnr img.pc {display: none !important;}
   .top-bnr img.mob {
@@ -7644,7 +7636,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: block;
   }
   #contentsWrap.textbook .book-item .flag-box span {
-    width: auto;
     height: 24px;
   }
   #contentsWrap.textbook .textbook-list-box.albumType .book-item dl dt {

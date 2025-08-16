@@ -378,6 +378,7 @@ input[type="radio"]:checked + label::after {
   border: 1px solid #18BCC4;
 }
 .gnb-mini-sub-dep {
+  display: none;
   padding: 12px 0px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -5349,9 +5350,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.main {
     margin-top: 60px;
   }
-  #contentsWrap.main.eng {
-    margin-top: 0;
-  }
   #contentsWrap.main.subscribe {
     margin-bottom: 32px;
   }
@@ -5549,6 +5547,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     width: 1052px;
   }
   .gnb-sub-dep {
+    display: block;
+  }
+  .gnb-mini-sub-dep {
     display: block;
   }
   .gnb-mini-sub-dep.buy-tab {

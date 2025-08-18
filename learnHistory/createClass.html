@@ -20,9 +20,170 @@
   <script type="text/javascript" src="./js/newScript.js"></script>
 </head>
 <body>
-  <div class="app-wrap">
+  <div class="mngt-wrap">
     <div class="container">
-      컨텐츠영역입니다.
+      <div class="title-box">
+        <h2>신규 학급 생성</h2>
+        <p>신규 학급을 생성하고, 관리할 수 있습니다.</p>
+      </div>
+      <div class="contents">
+        <div class="create-box">
+          <dl class="school">
+            <dt>학교급</dt>
+            <dd>
+              <input type="radio" id="a01" name="school-level" />
+              <label for="a01">초등학교</label>
+            </dd>
+            <dd>
+              <input type="radio" id="a02" name="school-level" />
+              <label for="a02">중학교</label>
+            </dd>
+            <dd>
+              <input type="radio" id="a03" name="school-level" />
+              <label for="a03">고등학교</label>
+            </dd>
+            <dd>
+              <input type="radio" id="a04" name="school-level" />
+              <label for="a04">기타</label>
+            </dd>
+          </dl>
+
+          <dl class="class-name">
+            <dt>학급명</dt>
+            <dd>
+              <input type="text" id="b01" class="w160" />
+              <label for="b01"></label>
+            </dd>
+            <dd>
+              <input type="text" id="b02" class="w60" />
+              <label for="b02"></label>
+              <span>학년</span>
+            </dd>
+            <dd>
+              <input type="text" id="b03" class="w60" />
+              <label for="b03"></label>
+              <span>반</span>
+            </dd>
+          </dl>
+
+          <dl class="class-date">
+            <dt>학급 기한</dt>
+            <dd>
+              <input type="date" id="c01" class="w160 mr48" />
+              <label for="c01"></label>
+              <span>* 등록 시, 지정한 학급 기한 이후에는 해당 학급이 삭제됩니다.</span>
+            </dd>
+          </dl>
+
+          <dl class="textbook">
+            <dt>관리교재 선택</dt>
+            <dd>
+              <div class="textbook-box">
+                <div class="search-form">
+                  <input type="text" placeholder="검색어를 입력해 주세요." id="search" name="search" />
+                </div>
+                <div class="list-form">
+                  <ul>
+                    <li>
+                      <input type="checkbox" id="s01" name="search" />
+                      <label for="s01">만점왕 수학 3-1 (2024년)</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s02" name="search" />
+                      <label for="s02">만점왕 수학 3-1 (2024년)</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s03" name="search" />
+                      <label for="s03">만점왕 국어 3-2 (2024년)</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s04" name="search" />
+                      <label for="s04">만점왕 국어 3-2 (2024년)</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s05" name="search" />
+                      <label for="s05">초등 영어듣기평가 완벽대비 3-1</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s06" name="search" />
+                      <label for="s06">초등 영어듣기평가 완벽대비 3-2</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s07" name="search" />
+                      <label for="s07">초등 영어듣기평가 완벽대비 3-3</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s08" name="search" />
+                      <label for="s08">초등 영어듣기평가 완벽대비 3-4</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s09" name="search" />
+                      <label for="s09">초등 영어듣기평가 완벽대비 3-5</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s10" name="search" />
+                      <label for="s10">초등 영어듣기평가 완벽대비 3-6</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s11" name="search" />
+                      <label for="s11">초등 영어듣기평가 완벽대비 3-6</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="s12" name="search" />
+                      <label for="s12">초등 영어듣기평가 완벽대비 3-6</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </dd>
+          </dl>
+
+          <div class="color-box">
+            <ul>
+              <li class="color-code">
+                <button class="yellow active" title="yellow">yellow</button>
+              </li>
+              <li class="color-code">
+                <button class="cupid" title="cupid">cupid</button>
+              </li>
+              <li class="color-code">
+                <button class="pink" title="pink">pink</button>
+              </li>
+              <li class="color-code">
+                <button class="carrot" title="carrot">carrot</button>
+              </li>
+              <li class="color-code">
+                <button class="cranberry" title="cranberry">cranberry</button>
+              </li>
+              <li class="color-code">
+                <button class="turquoise" title="turquoise">turquoise</button>
+              </li>
+              <li class="color-code">
+                <button class="meadow" title="meadow">meadow</button>
+              </li>
+              <li class="color-code">
+                <button class="mountain" title="mountain">mountain</button>
+              </li>
+              <li class="color-code">
+                <button class="lochmara" title="lochmara">lochmara</button>
+              </li>
+              <li class="color-code">
+                <button class="blue" title="blue">blue</button>
+              </li>
+              <li class="color-code">
+                <button class="waikawa" title="waikawa">waikawa</button>
+              </li>
+              <li class="color-code">
+                <button class="emperor" title="emperor">emperor</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-box">
+          <button class="cancel-btn">취소</button>
+          <button class="save-btn">저장</button>
+        </div>
+      </div>
     </div>
   </div>
 </body>

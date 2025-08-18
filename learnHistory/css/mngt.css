@@ -644,6 +644,9 @@ select {
   font-weight: 400;
   line-height: 160%;
 }
+.mngt-wrap .container .contents {
+  position: relative;
+}
 .mngt-wrap .container .contents table.learn {
   margin-bottom: 40px;
   border-top: 1px solid #666;
@@ -989,6 +992,251 @@ select {
   margin-right: 8px;
 }
 
+/* 신규 학급 생성 */
+.mngt-wrap .container .contents .create-box {
+  position: relative;
+  width: 1094px;
+  padding: 30px 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: #F3F8FF;
+}
+.mngt-wrap .container .contents .create-box dl {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.mngt-wrap .container .contents .create-box dl:not(:last-child) {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #C6D9E9;
+}
+.mngt-wrap .container .contents .create-box dl dt {
+  width: 140px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+.mngt-wrap .container .contents .create-box dl dd {
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+.mngt-wrap .container .contents .create-box dl.school dd {
+  width: 210px;
+}
+.mngt-wrap .container .contents .create-box dl.class-name dd:not(:last-child) {
+  margin-right: 48px;
+}
+.mngt-wrap .container .contents .create-box dl dd input[type="text"],
+.mngt-wrap .container .contents .create-box dl.class-date dd input[type="date"] {
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.mngt-wrap .container .contents .create-box dl dd span {
+  color: #222;
+  font-weight: 400;
+  font-size: 16px;
+}
+.mngt-wrap .container .contents .create-box dl dd input.w160 {
+  width: 160px;
+}
+.mngt-wrap .container .contents .create-box dl dd input.mr48 {
+  margin-right: 48px;
+}
+.mngt-wrap .container .contents .create-box dl dd input.w60 {
+  width: 60px;
+  margin-right: 12px;
+}
+.mngt-wrap .container .contents .create-box dl.class-date dd span {
+  color: #888;
+  font-weight: 400;
+  font-size: 14px;
+}
+.mngt-wrap .container .contents .create-box dl.textbook > dt {
+  min-width: 140px;
+}
+.mngt-wrap .container .contents .create-box dl.textbook > dd {
+  width: 100%;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box {
+  height: 254px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #BBB;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: 0;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form input::placeholder {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: 400;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url("../imgs/search-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form {
+  position: relative;
+  height: 162px;
+  margin-top: 12px;
+  padding-bottom: 12px;
+  overflow-y: auto;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul li {
+  display: flex;
+  width: 320px;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul li input[type="checkbox"] + label {
+  color: #666;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul li input[type="checkbox"] + label:before {
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: #fff url("../imgs/menu-check-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul li input[type="checkbox"]:checked + label:before {
+  font-size: 0;
+  background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
+}
+.mngt-wrap .container .contents .create-box .color-box ul {
+  display: flex;
+  flex-direction: row;
+  gap: 39.82px;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code {
+  position: relative;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  outline: none;
+  font-size: 0;
+  border-radius: 50%;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.yellow {
+  background-color: #FFE401;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.cupid {
+  background-color: #FCC1C7;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.pink {
+  background-color: #FF8B98;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.carrot {
+  background-color: #FF8F3E;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.cranberry {
+  background-color: #DD5A7A;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.turquoise {
+  background-color: #13BFE5;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.meadow {
+  background-color: #1EAD82;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.mountain {
+  background-color: #1EAD4A;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.lochmara {
+  background-color: #0080DE;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.blue {
+  background-color: #0061D3;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.waikawa {
+  background-color: #54678F;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.emperor {
+  background-color: #555555;
+}
+.mngt-wrap .container .contents .create-box .color-box ul li.color-code button.active::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 15px;
+  background: url("../imgs/color-check-ico.png") center center / cover no-repeat;
+  z-index: 10;
+}
+.mngt-wrap .container .contents .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 1094px;
+}
+.mngt-wrap .container .contents .btn-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 56px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid #BBB;
+}
+.mngt-wrap .container .contents .btn-box button.save-btn {
+  color: #4165F4;
+  border: 1px solid #4165F4;
+}
+.mngt-wrap .container .contents .btn-box button.cancel-btn::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url("../imgs/cancel-ico.png") center center / cover no-repeat;
+}
+.mngt-wrap .container .contents .btn-box button.save-btn::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url("../imgs/save-ico.png") center center / cover no-repeat;
+}
 
 @media all and (max-width: 852px) {
   .app-wrap .container .mytextbook-list ul.list li .list-btns {

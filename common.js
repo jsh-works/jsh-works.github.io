@@ -15,6 +15,8 @@ $(function() {
 					html.push('<dd><a href='+ item.devUrl +' class="dev" target="_blank">개발</a></dd>');
 					if(item.progress == '대기') {
 						html.push('<dd style="color:red;">'+ item.progress +'</dd>');
+					} else if(item.progress == '진행') {
+						html.push('<dd style="color:green;">'+ item.progress +'</dd>');
 					} else {
 						html.push('<dd>'+ item.progress +'</dd>');
 					}

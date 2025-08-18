@@ -362,6 +362,33 @@ console.log(`
     },
   });
 
+  // 초중고교 EBS Picks 슬라이드 테스트중
+  // new Swiper ('.list-slider', {
+  //   initialSlide: 0,
+	// 	slidesPerView: 5,
+  //   spaceBetween: 20,
+  //   observer: true,
+  //   observeParents: true,
+  //   loop: false,
+  //   grabCursor: false,
+  //   allowTouchMove: false,
+  //   autoplay:false,
+  //   centeredSlides: false,
+  //   observer: true,
+  //   observeParents: true,
+  //   breakpoints: {
+  //     767: {
+  //       initialSlide: 0,
+  //       slidesPerView: 4,
+  //       spaceBetween: 20,
+  //       observer: true,
+  //       observeParents: true,
+  //       allowTouchMove: true,
+  //       grabCursor: true,
+  //       },
+  //   },
+  // });
+
   // 구독메인 상단 슬라이드 스크립트
   new Swiper ('.coverflow-slide', { // mobile
     loop: true,

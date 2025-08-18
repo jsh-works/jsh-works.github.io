@@ -468,6 +468,10 @@ input[type="radio"]:checked + label::after {
   width: 1200px;
   margin: 0 auto 56px;
   overflow: hidden;
+  opacity: 0; /* 20250818 추가 */
+}
+#contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide.swiper-container-initialized { /* 20250818 추가 */
+  opacity: 1; 
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
   position: relative;
@@ -6792,7 +6796,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap.sub.entire {
     margin-top: 60px;
   }
-  
   #contentsWrap.sub.entire .roadmap-cnt.wide,
   #contentsWrap.sub.entire .tab-cnt.wide {
     background: #fff;
@@ -6839,6 +6842,19 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.sub.entire .sub-cnt-wrap {
     margin: 20px 15px 65px;
+  }
+
+  /* 기존 장바구니 CSS 추가 */
+  #contentsWrap.sub.entire h2.tit-con-list {
+    display: inline-block;
+    font-size: 28px;
+    margin: 40px 0px;
+  }
+  #contentsWrap.sub.entrie .cart-cont-wrap input[type="radio"] + label, input[type="checkbox"] + label {
+    margin: -3px 10px 0 0 !important;
+  }
+  .cart-list .cart-cont-wrap .btn-wrap .btn-pink {
+    min-width: 100% !important;
   }
   
   /* 기존 - 검색 페이지 */
@@ -7605,6 +7621,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: flex;
     flex-direction: column;
   }
+  /*주석예정*/
   #contentsWrap .highSection section.full .sec-inner ul.list-view li {
     width: 120px !important;
   }
@@ -7617,6 +7634,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a span.name,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
     width: 120px;
+    /* width: 100%; */
   }
   #Footer .social-banner .social-box ul {
     display: flex;

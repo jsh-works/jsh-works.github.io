@@ -1782,6 +1782,10 @@ input[type="radio"]:checked + label::after {
   width: 100%;
   padding-top: 40px;
 }
+#contentsWrap.main.eng,
+#contentsWrap.main.eng.n-elt {
+  margin-top:60px;
+}
 #contentsWrap.main.eng .highSection {
   background-color: #f6f7f9;
 }
@@ -5559,9 +5563,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .gnb-sub-dep {
     display: block;
+    z-index: 1000;
   }
   .gnb-mini-sub-dep {
     display: block;
+    z-index: 1000;
   }
   .gnb-mini-sub-dep.buy-tab {
     display: block;

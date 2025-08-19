@@ -170,24 +170,6 @@ console.log(`
     $(".seeAll-ico").css({ display : 'none' });
   });
 
-  new Swiper ('.gnb-mini-sub-dep', {
-    loop: false,
-    speed: 500,
-    pagination: false,
-    effect: 'slide',
-    breakpoints: {
-      1024: {
-        slidesPerView: 7
-      },
-      767: {
-        slidesPerView: 3,
-      },
-      380: {
-        slidesPerView: 3,
-      }
-    }
-  });
-
   new Swiper ('.slide-banner', {
 		speed: 500,
 		delay: 7000,
@@ -334,60 +316,43 @@ console.log(`
     $('.evt-slide-btn-next, .evt-slide-btn-prev').hide();
   }
 
+  
   // 초중고교 EBS Picks 슬라이드
-  new Swiper ('.list-slider', { // mobile
+  var listSlider = new Swiper ('.list-slider', { // mobile 
     initialSlide: 0,
 		slidesPerView:5,
     spaceBetween: 12,
     observer: true,
     observeParents: true,
     loop: false,
-    grabCursor: false,
+    grabCursor: true,
     allowTouchMove: false,
     autoplay:false,
     breakpoints: {
-        550: {
-            initialSlide: 0,
-            slidesPerView: 2.8,
-            spaceBetweenSlides: 12,
-            allowTouchMove: true,
-            grabCursor: true,
-        },
-        768: {
-            initialSlide: 0,
-            slidesPerView: 3.8,
-            allowTouchMove: true,
-            grabCursor: true,
-        }
+      550: {
+          initialSlide: 0,
+          slidesPerView: 2.8,
+          spaceBetweenSlides: 12,
+          allowTouchMove: true,
+          grabCursor: true,
+      },
+      768: {
+          initialSlide: 0,
+          slidesPerView: 3.8,
+          allowTouchMove: true,
+          grabCursor: true,
+      }
     },
   });
 
-  // 초중고교 EBS Picks 슬라이드 테스트중
-  // new Swiper ('.list-slider', {
-  //   initialSlide: 0,
-	// 	slidesPerView: 5,
-  //   spaceBetween: 20,
-  //   observer: true,
-  //   observeParents: true,
-  //   loop: false,
-  //   grabCursor: false,
-  //   allowTouchMove: false,
-  //   autoplay:false,
-  //   centeredSlides: false,
-  //   observer: true,
-  //   observeParents: true,
-  //   breakpoints: {
-  //     767: {
-  //       initialSlide: 0,
-  //       slidesPerView: 4,
-  //       spaceBetween: 20,
-  //       observer: true,
-  //       observeParents: true,
-  //       allowTouchMove: true,
-  //       grabCursor: true,
-  //       },
-  //   },
-  // });
+  // 초중고교 EBS Picks 슬라이드 반응형 초기화
+  $(window).on('resize', function () {
+    if (listSlider) {
+      setTimeout(function () {
+        $('.list-slider .swiper-wrapper').css('transform', 'translate3d(0px, 0px, 0px)');
+      }, 100);
+    }
+  });
 
   // 구독메인 상단 슬라이드 스크립트
   new Swiper ('.coverflow-slide', { // mobile
@@ -977,5 +942,4 @@ console.log(`
     e.preventDefault();
     e.stopPropagation();
   });
-
 });

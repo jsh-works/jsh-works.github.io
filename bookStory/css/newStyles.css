@@ -387,10 +387,12 @@ input[type="radio"]:checked + label::after {
 .gnb-mini-sub-dep ul {
   display: flex;
 }
-.gnb-mini-sub-dep ul li {
+.gnb-mini-sub-dep ul li { /* 20250819 최신화 필요 */
   position: relative;
   display: flex;
   justify-content: center;
+  width: auto;
+  padding: 0 25px;
 }
 .gnb-mini-sub-dep ul li a {
   position: relative;
@@ -2175,7 +2177,7 @@ input[type="radio"]:checked + label::after {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 142px;
+  /* width: 142px; */
   opacity: 0;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li:nth-child(1) {
@@ -2866,7 +2868,10 @@ input[type="radio"]:checked + label::after {
   background: url("../imgs/correct-ico-x2.png") center center / cover no-repeat;
   z-index: 11;
 }
-#contentsWrap.textbook .textbook-list-box.listType .book-item .flag-box {
+#contentsWrap.textbook .textbook-list-box.listType .book-item .flag-box { /* 20250819 최신화 필요 */
+  display: flex;
+  min-height: auto;
+  align-items: flex-start;
   margin-bottom: 4px;
 }
 #contentsWrap.textbook .textbook-list-box.listType .book-item dl dt {
@@ -3452,6 +3457,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .viewer-btns ul li:not(:last-child) {
   border-right: 1px solid #ddd;
 }
+.list-viewer .viewer-btns .mob-sort-popup.textbook ul li:not(:last-child) { /* 20250819 최신화 필요 */
+  border-right: 0;
+}
 .list-viewer .viewer-btns ul li:last-child {
   padding-right: 0;
   margin-right: 0;
@@ -3953,7 +3961,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 20250819 최신화 필요 */
   gap: 20px;
   padding-bottom: 24px;
 }
@@ -7619,10 +7627,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {
     display: flex;
     flex-direction: column;
-  }
-  /*주석예정*/
-  #contentsWrap .highSection section.full .sec-inner ul.list-view li {
-    width: 120px !important;
   }
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor {

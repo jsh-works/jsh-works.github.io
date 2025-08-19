@@ -465,41 +465,68 @@ topHeader.js 퍼블리싱 url 페이징 분기 떄문에 body에 class 넣어뒀
       subList.eq(4).addClass('active');
     }
 
+    // 3뎁스(하위 뎁스) 슬라이더
+    new Swiper ('.gnb-mini-sub-dep.useInfo-tab', {
+      loop: false,
+      speed: 500,
+      pagination: false,
+      slidesPerView: 'auto',
+      breakpoints: {
+      1024: { slidesPerView: 'auto'},
+      767: { slidesPerView: 'auto' },
+      380: { slidesPerView: 'auto' }
+      },
+      observer: true,
+      observeParents: true,
+    });
     new Swiper ('.gnb-mini-sub-dep.buy-tab', {
       loop: false,
       speed: 500,
       pagination: false,
+      slidesPerView: 'auto',
       breakpoints: {
-      1024: { slidesPerView: 7 },
-      767: { slidesPerView: 3 },
-      380: { slidesPerView: 3 }
+      1024: { slidesPerView: 'auto'},
+      767: { slidesPerView: 'auto' },
+      380: { slidesPerView: 'auto' }
       },
-      observer: true, // DOM 변화 감지
-      observeParents: true, // DOM 변화 감지
+      observer: true,
+      observeParents: true,
     });
     new Swiper ('.gnb-mini-sub-dep.scr-tab', {
       loop: false,
       speed: 500,
       pagination: false,
+      slidesPerView: 'auto',
       breakpoints: {
-      1024: { slidesPerView: 7 },
-      767: { slidesPerView: 3 },
-      380: { slidesPerView: 3 }
+      1024: { slidesPerView: 'auto'},
+      767: { slidesPerView: 'auto' },
+      380: { slidesPerView: 'auto' }
       },
-      observer: true, // DOM 변화 감지
-      observeParents: true, // DOM 변화 감지
+      observer: true,
+      observeParents: true,
     });
-    new Swiper ('.gnb-mini-sub-dep.useInfo-tab', {
-      loop: false,
-      speed: 500,
-      pagination: false,
-      breakpoints: {
-      1024: { slidesPerView: 3 },
-      767: { slidesPerView: 2.5 },
-      380: { slidesPerView: 2.5 }
-      },
-      observer: true, // DOM 변화 감지
-      observeParents: true, // DOM 변화 감지
+    
+
+    // 3뎁스(하위 뎁스) 메뉴 포커싱
+    $('.gnb-mini-sub-dep.useInfo-tab .swiper-slide').on('click', function () {
+        var useIdx = $(this).index();
+        var useSwiper = $('.gnb-mini-sub-dep.useInfo-tab')[0].swiper;
+        
+        if (useSwiper) { useSwiper.slideTo(useIdx, 300); }
+    });
+
+    $('.gnb-mini-sub-dep.buy-tab .swiper-slide').on('click', function () {
+        var buyIdx = $(this).index();
+        var buySwiper = $('.gnb-mini-sub-dep.buy-tab')[0].swiper;
+        
+        if (buySwiper) { buySwiper.slideTo(buyIdx, 300); }
+    });
+
+    $('.gnb-mini-sub-dep.scr-tab .swiper-slide').on('click', function () {
+        var scrIdx = $(this).index();
+        var scrSwiper = $('.gnb-mini-sub-dep.scr-tab')[0].swiper;
+        
+        if (scrSwiper) { scrSwiper.slideTo(scrIdx, 300); }
     });
 
     $(".gnb-mini-sub-dep a").on('click', function() {

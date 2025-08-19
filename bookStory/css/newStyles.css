@@ -1319,6 +1319,22 @@ input[type="radio"]:checked + label::after {
 #contentsWrap .container .book-details .thumb-box .thumb-img .favorite-ico.active {
   background-image: url("../imgs/favorite-ico_active.svg");
 }
+#contentsWrap .container .book-details .thumb-box .thumb-img .interest {
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #fff url("../imgs/favorite-ico.svg") center center/24px 24px no-repeat;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  transition: none;
+  cursor: pointer;
+}
+#contentsWrap .container .book-details .thumb-box .thumb-img .interest.active {
+  background-image: url("../imgs/favorite-ico_active.svg");
+}
 #contentsWrap .container .book-details .thumb-box .thumb-img .preview-ico {
   display: flex;
   align-items: center;
@@ -1507,7 +1523,7 @@ input[type="radio"]:checked + label::after {
 #contentsWrap .container .book-details .price-box dl.last-dl dd span.tts {
   cursor: default;
 }
-#contentsWrap .container .book-details .price-box dl dd span:nth-child(1)::before {
+#contentsWrap .container .book-details .price-box dl dd span.ankey::before { /* 20250819 추가 수정 */
   content: "";
   display: inline-block;
   width: 16px;
@@ -1515,7 +1531,7 @@ input[type="radio"]:checked + label::after {
   margin-right: 4px;
   background: url("../imgs/ref-ico_01.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span:nth-child(2)::before {
+#contentsWrap .container .book-details .price-box dl dd span.errata::before { /* 20250819 추가 수정 */
   content: "";
   display: inline-block;
   width: 16px;
@@ -1523,7 +1539,7 @@ input[type="radio"]:checked + label::after {
   margin-right: 4px;
   background: url("../imgs/ref-ico_02.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span:nth-child(3)::before {
+#contentsWrap .container .book-details .price-box dl dd span.mp3::before { /* 20250819 추가 수정 */
   content: "";
   display: inline-block;
   width: 16px;
@@ -1531,7 +1547,7 @@ input[type="radio"]:checked + label::after {
   margin-right: 4px;
   background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span:nth-child(4)::before {
+#contentsWrap .container .book-details .price-box dl dd span.tts::before { /* 20250819 추가 수정 */
   content: "";
   display: inline-block;
   width: 16px;
@@ -1663,6 +1679,18 @@ input[type="radio"]:checked + label::after {
   transition: all 0.35s;
 }
 #contentsWrap button.scribe-btn.active {
+  background: url("../imgs/favorite-ico_active.svg") center center / 32px 32px no-repeat;
+}
+#contentsWrap button.interest {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: url("../imgs/favorite-ico.svg") center center / 32px 32px no-repeat;
+  transition: none;
+}
+#contentsWrap button.interest.active {
   background: url("../imgs/favorite-ico_active.svg") center center / 32px 32px no-repeat;
 }
 #contentsWrap button.cart-btn {
@@ -6139,7 +6167,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     cursor: pointer;
     z-index: 100;
   }
+  #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img button.interest {
+    position: absolute;
+    right: -12px;
+    bottom: 50px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff url("../imgs/favorite-ico.svg") center center/24px 24px no-repeat;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    cursor: pointer;
+    z-index: 100;
+  }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img button.favorite-btn.active {
+    background-image: url("../imgs/favorite-ico_active.svg");
+  }
+  #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img button.interest.active {
     background-image: url("../imgs/favorite-ico_active.svg");
   }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box ul.thumb-btn-box {
@@ -6504,7 +6547,20 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     background: url("../imgs/favorite-ico.svg") center center / 20px 18px no-repeat;
     transition: none;
   }
+  #contentsWrap.viewer button.interest {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    background: url("../imgs/favorite-ico.svg") center center / 20px 18px no-repeat;
+    transition: none;
+  }
   #contentsWrap.viewer button.scribe-btn.active {
+    background: url("../imgs/favorite-ico_active.svg") center center / 20px 18px no-repeat;
+  }
+  #contentsWrap.viewer button.interest.active {
     background: url("../imgs/favorite-ico_active.svg") center center / 20px 18px no-repeat;
   }
   #contentsWrap.viewer button.cart-btn {

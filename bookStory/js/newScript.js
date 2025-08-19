@@ -152,15 +152,6 @@ console.log(`
     }
   });
 
-  // 북스토리 공통상세 - 관심교재 ON/OFF 스크립트
-  $(".scribe-btn").on('click', function() {
-    if($(".scribe-btn").hasClass('active')) {
-      $(".scribe-btn").removeClass('active');
-    } else {
-      $(this).addClass('active');
-    }
-  });
-
   // 북스토리 공통상세 - 썸네일 호버 스크립트
   $(".thumb-img").hover(function(){
     $(".preview-ico").css({ display : 'flex' });
@@ -856,7 +847,7 @@ console.log(`
     }
   });
 
-  // 북스토리 즐겨찾기 기능 스크립트
+// 북스토리 즐겨찾기 기능 스크립트
   $(".favorite-ico").on('click', function(e){
     e.preventDefault();
     if(!$(this).hasClass('active')) {
@@ -872,6 +863,26 @@ console.log(`
     if(!$(this).hasClass('active')) {
       $(this).addClass('active');
     } else {
+      $(this).removeClass('active');
+    }
+  });
+
+  // 북스토리 공통상세 - 관심교재 ON/OFF 스크립트
+  $(".scribe-btn").on('click', function() {
+    if($(".scribe-btn").hasClass('active')) {
+      $(".scribe-btn").removeClass('active');
+    } else {
+      $(this).addClass('active');
+    }
+  });
+
+  //  20250819 추가 수정 :: 북스토리 - 교재상세, 관심교재(즐겨찾기) 클릭시 공통 ON/OFF
+  $(".interest").on('click', function(e) {
+    e.preventDefault();
+    if(!$(this).hasClass('active')) {
+      $(".interest").addClass('active');
+    } else {
+      $(".interest").removeClass('active');
       $(this).removeClass('active');
     }
   });

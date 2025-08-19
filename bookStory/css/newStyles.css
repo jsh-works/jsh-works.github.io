@@ -3111,49 +3111,91 @@ input[type="radio"]:checked + label::after {
 .target-popup .inner .contents .table-caption .result span {
   font-weight: 700;
 }
-.target-popup .inner .contents .table-caption select {
-  width: 112px;
-  height: 36px;
+.target-popup .inner .contents .table-caption .viewer-btns {
+  font-size: 13px;
+}
+.target-popup .inner .contents .table-caption .viewer-btns ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.target-popup .inner .contents .table-caption .viewer-btns ul li.active {
+  color: #4165F4;
+  font-size: 15px;
+  font-weight: 700;
+}
+.target-popup .inner .contents .table-caption .viewer-btns ul li.active::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  margin-right: 6px;
+  background: url("../imgs/check-ico.png") center center / cover no-repeat;
+}
+.target-popup .inner .contents .table-caption .viewer-btns ul li:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+.target-popup .inner .contents .table-caption .viewer-btns ul li {
   color: #222;
+  font-size: 15px;
   font-weight: 400;
-  font-size: 14px;
-  padding: 0 16px;
-  outline: none;
-  border-radius: 6px;
-  border: 1px solid #bbb;
-  box-sizing: border-box;
+  margin-right: 12px;
+  padding-right: 12px;
   cursor: pointer;
 }
 .target-popup .inner .contents .table-list {
   margin-bottom: 20px;
 }
 .target-popup .inner .contents .table-list colgroup col.col1 {
-  width: 9.5%;
+  width: 100px; 
 }
 .target-popup .inner .contents .table-list colgroup col.col2 {
-  width: 9.5%;
+  width: 100px;
 }
 .target-popup .inner .contents .table-list colgroup col.col3 {
-  width: 35%;
+  width: 100px;
 }
 .target-popup .inner .contents .table-list colgroup col.col4 {
+  width: 200px;
+}
+.target-popup .inner .contents .table-list colgroup col.col5 {
   width: auto;
+}
+.target-popup .inner .contents .table-list colgroup col.col6 {
+  width: 120px;
 }
 .target-popup .inner .contents .table-list table {
   border-top: 1px solid #666;
   border-bottom: 1px solid #888;
 }
 .target-popup .inner .contents .table-list table thead tr th {
+  position: relative;
   height: 40px;
   color: #888;
   font-size: 16px;
   font-weight: 400;
-  text-align: center;
-  padding: 12px 0;
+  text-align: left;
+  padding: 12px 16px;
   box-sizing: border-box;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #666; 
   background-color: #F7F7F7;
+}
+.target-popup .inner .contents .table-list table thead tr th.none {
+  text-align: center;
+}
+.target-popup .inner .contents .table-list table thead tr th > i {
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 16px;
+  width: 8px;
+  height: 12px;
+  background: url("../imgs/subscribe/target-sort-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+}
+.target-popup .inner .contents .table-list table thead tr th.none::after {
+  content: none;
 }
 .target-popup .inner .contents .table-list table thead tr th:not(:last-child),
 .target-popup .inner .contents .table-list table tbody tr td:not(:last-child) {
@@ -3170,9 +3212,10 @@ input[type="radio"]:checked + label::after {
 .target-popup .inner .contents .table-list table tbody tr:last-child td {
   border-bottom: 1px solid #BBB;
 }
-.target-popup .inner .contents .table-list table tbody tr td.pdl-16 {
+.target-popup .inner .contents .table-list table tbody tr td.pd-16 {
   text-align: left;
   padding-left: 16px;
+  padding-right: 16px;
 }
 .target-popup .inner .contents .table-list table tbody tr:hover td {
   background-color: #F3F8FF;
@@ -6758,7 +6801,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.use .useSection section .inner .scroll-conts-btn button {
     width: 100%;
-    height: 120px;
+    height: 78px;
     border: 4px solid #fff;
   }
   #contentsWrap.use .useSection .tab-con2 section.sec-bot .inner .text-banner h4,
@@ -7190,9 +7233,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     top: calc(50% - 10px);
     left: calc(50% - 10px);
   }
-  .target-popup .inner .contents .table-caption select {
-    font-size: 13px;
-  }
   .target-popup .inner .contents .table-caption .result {
     font-size: 14px;
   }
@@ -7202,21 +7242,33 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-size: 14px;
   }
   .target-popup .inner .contents .table-list colgroup col.col1 {
-    width: 7.6%;
+    width: 100px; 
   }
   .target-popup .inner .contents .table-list colgroup col.col2 {
-    width: 7.6%;
+    width: 100px;
   }
   .target-popup .inner .contents .table-list colgroup col.col3 {
-    width: 35%;
+    width: 100px;
   }
   .target-popup .inner .contents .table-list colgroup col.col4 {
+    width: 200px;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col5 {
     width: auto;
+  }
+  .target-popup .inner .contents .table-list colgroup col.col6 {
+    width: 120px;
   }
   .target-popup .inner .contents .search-box,
   .target-popup .inner .contents .table-caption {
     width: auto;
     margin-right: 20px;
+  }
+  .target-popup .inner .contents .table-caption {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
   }
   .target-popup .inner .contents .pagination {
     margin-right: 20px;

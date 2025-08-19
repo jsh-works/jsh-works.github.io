@@ -500,114 +500,142 @@
 						<button class="search-btn">검색</button>
 					</div>
 					<div class="table-caption">
+						<div class="viewer-btns"> <!-- 20250819 추가 수정 -->
+							<ul>
+								<li class="active">전체</li>
+								<li class="">고교</li>
+								<li class="">중학</li>
+								<li class="">초등</li>
+							</ul>
+						</div> <!-- // 20250819 추가 수정 -->
 						<div class="result">
 							검색결과: <span>500권</span>
 						</div>
-						<select name="sort" id="sort">
-							<option value="">최신순</option>
-							<option value="">최신순</option>
-							<option value="">최신순</option>
-						</select>
+						
 					</div>
 					<div class="table-list">
-						<table>
+						<table> <!-- 20250819 추가 수정 -->
 							<colgroup>
 								<col class="col1">
 								<col class="col2">
 								<col class="col3">
 								<col class="col4">
+								<col class="col5">
+								<col class="col6">
 							</colgroup>
 							<thead>
 								<tr>
-									<th>과목</th>
-									<th>학년</th>
-									<th>시리즈</th>
-									<th>교재명</th>
+									<th class="none">학교급</th>
+									<th>과목 <i class="sort"></i></th>
+									<th>학년 <i class="sort"></i></th>
+									<th>시리즈 <i class="sort"></i></th>
+									<th>교재명 <i class="sort"></i></th>
+									<th>이용가능일 <i class="sort"></i></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
+									<td>고교</td>
 									<td>국어</td>
 									<td>고2</td>
-									<td class="pdl-16">어휘가 독해다!</td>
-									<td class="pdl-16">
+									<td class="pd-16">어휘가 독해다!</td>
+									<td class="pd-16">
 										<a href="/">어휘가 독해다! 수능 국어 어휘</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>중학</td>
 									<td>수학</td>
 									<td>고3</td>
-									<td class="pdl-16">50일 수학</td>
-									<td class="pdl-16">
+									<td class="pd-16">50일 수학</td>
+									<td class="pd-16">
 										<a href="/">EBS 주혜연의 해석공식 논리 구조편</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>초등</td>
 									<td>국어</td>
 									<td>고1, 고2</td>
-									<td class="pdl-16">주혜현의 해석공식 논리 구조편</td>
-									<td class="pdl-16">
+									<td class="pd-16">주혜현의 해석공식 논리 구조편</td>
+									<td class="pd-16">
 										<a href="/">EBS 주혜연의 해석공식 논리 구조편</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>일반/어학</td>
 									<td>영어</td>
 									<td>고2</td>
-									<td class="pdl-16">정승익의 수능 개념 잡는 대박구문</td>
-									<td class="pdl-16">
+									<td class="pd-16">정승익의 수능 개념 잡는 대박구문</td>
+									<td class="pd-16">
 										<a href="/">정승익의 수능 개념 잡는 대박구문</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>고교</td>
 									<td>수학</td>
 									<td>고2</td>
-									<td class="pdl-16">50일 수학</td>
-									<td class="pdl-16">
+									<td class="pd-16">50일 수학</td>
+									<td class="pd-16">
 										<a href="/">어휘가 독해다! 수능 국어 어휘</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>중학</td>
 									<td>수학</td>
 									<td>고1, 고2</td>
-									<td class="pdl-16">50일 수학 기출 워크북</td>
-									<td class="pdl-16">
+									<td class="pd-16">50일 수학 기출 워크북</td>
+									<td class="pd-16">
 										<a href="/">50일 수학 기출 워크북 상</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>초등</td>
 									<td>수학</td>
 									<td>고2</td>
-									<td class="pdl-16">2026학년도 봉투모의고사</td>
-									<td class="pdl-16">
+									<td class="pd-16">2026학년도 봉투모의고사</td>
+									<td class="pd-16">
 										<a href="/">수능 직전보강 클리어 봉투모의고사 사회탐구영역 생활과 윤리</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>일반/어학</td>
 									<td>국어</td>
 									<td>고2</td>
-									<td class="pdl-16">매쓰 디렉터의 수학 개념 끝내기</td>
-									<td class="pdl-16">
+									<td class="pd-16">매쓰 디렉터의 수학 개념 끝내기</td>
+									<td class="pd-16">
 										<a href="/">매쓰 디렉터의 고1 수학 개념 끝장내기 공통수학1</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
+									<td>초등</td>
 									<td>국어</td>
 									<td>고2</td>
-									<td class="pdl-16">주혜현의 해석공식 논리 구조편</td>
-									<td class="pdl-16">
+									<td class="pd-16">주혜현의 해석공식 논리 구조편</td>
+									<td class="pd-16">
 										<a href="/">EBS 주혜연의 해석공식 논리 구조편</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 								<tr>
 									<td>국어</td>
+									<td>국어</td>
 									<td>고2</td>
-									<td class="pdl-16">어휘가 독해다!</td>
-									<td class="pdl-16">
+									<td class="pd-16">어휘가 독해다!</td>
+									<td class="pd-16">
 										<a href="/">어휘가 독해다! 수능 국어 어휘</a>
 									</td>
+									<td>2025-09-22</td>
 								</tr>
 							</tbody>
-						</table>
+						</table> <!-- // 20250819 추가 수정 -->
 					</div>
 					<div class="con-info">
 						<ul>

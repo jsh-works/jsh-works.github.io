@@ -2624,6 +2624,7 @@ input[type="radio"]:checked + label::after {
   outline: none;
   border-radius: 50%;
   background:#fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
+  transition: all 0.35s;
 }
 #contentsWrap.textbook .sort-wrap {
   padding: 16px 0px 16px 24px;
@@ -3874,7 +3875,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   top: 0;
   left: 20px;
   width: calc(100% - 40px);
+  height: 600px;
   padding: 24px 0;
+  overflow: auto;
   z-index: 1000;
 }
 .mob-sort-popup dl {
@@ -3969,40 +3972,22 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .mob-sort-popup.textbook .sort-box.acc h4.active::after {
   transform: rotateZ(0deg);
 }
-.mob-sort-popup.textbook .sort-box.acc ul li {
-  width: calc(33% - 16px);
-  padding-left: 0;
-}
-.mob-sort-popup.textbook .sort-box.acc ul.series li {
-  width: 100%;
-}
-.mob-sort-popup.textbook .sort-box.acc ul li input[type="radio"] + label,
-.mob-sort-popup.textbook .sort-box.acc ul li input[type="checkbox"] + label {
-  display: block;
-  width: 100%;
-  font-size: 16px;
-  line-height: 24px;
-  padding-left: 30px;
-}
-.mob-sort-popup.textbook .sort-box.acc ul li input[type="radio"]:checked + label::after {
-  content: none;
-}
 
 .mob-sort-popup.textbook .sort-box ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start; /* 20250819 최신화 필요 */
-  gap: 20px;
+  justify-content: space-between;
+  gap: 16px;
   padding-bottom: 24px;
 }
-.mob-sort-popup.textbook .sort-box.default ul.row {
+.mob-sort-popup.textbook .sort-box ul.row {
   justify-content: flex-start;
   column-gap: 25px;
   white-space: nowrap;
 }
-.mob-sort-popup.textbook .sort-box.default ul.column {
+.mob-sort-popup.textbook .sort-box ul.column {
   justify-content: flex-start;
   width: auto;
   height: 100%;
@@ -4012,23 +3997,23 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   border-bottom: 0;
   overflow: auto;
 }
-.mob-sort-popup.textbook .sort-box.default ul li {
+.mob-sort-popup.textbook .sort-box ul li {
   position: relative;
+  width: calc(33% - 16px);
   color: #222;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   padding-left: 30px;
-  white-space: nowrap;
   cursor: pointer;
 }
 .mob-sort-popup.textbook .sort-box ul li.w-auto {
   width: auto;
 }
-.mob-sort-popup.textbook .sort-box.default ul.column li {
+.mob-sort-popup.textbook .sort-box ul.column li {
   width: 100%;
 }
-.mob-sort-popup.textbook .sort-box.default ul li::before {
+.mob-sort-popup.textbook .sort-box ul li::before {
   content: "";
   position: absolute;
   top: calc(50% - 12px);
@@ -4038,7 +4023,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   vertical-align: bottom;
   background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
 }
-.mob-sort-popup.textbook .sort-box.default ul li.active::before {
+.mob-sort-popup.textbook .sort-box ul li.active::before {
   content: "";
   background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
 }
@@ -6951,25 +6936,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     margin-left: 0;
     margin-bottom: auto;
   }
-  .mob-sort-popup.textbook .sort-box ul li input[type="checkbox"] + label:before,
-  .mob-sort-popup.textbook .sort-box ul li input[type="radio"] + label:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    margin: 0;
-    border: none;
-    outline: none;
-    vertical-align: bottom;
-    background: #fff url("../imgs/menu-check-ico.png") center center/cover no-repeat;
-  }
-  .mob-sort-popup.textbook .sort-box ul li input[type="checkbox"]:checked + label:before,
-  .mob-sort-popup.textbook .sort-box ul li input[type="radio"]:checked + label:before {
-    content: "";
-    background: url("../imgs/menu-check-on-ico.png") center center/cover no-repeat;
-  }
 }
 
 @media all and (max-width: 979px) {
@@ -7720,6 +7686,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: block;
   }
   #contentsWrap.textbook .book-item .flag-box span {
+    /* width: auto; */
     height: 24px;
   }
   #contentsWrap.textbook .textbook-list-box.albumType .book-item dl dt {

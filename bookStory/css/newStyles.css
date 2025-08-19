@@ -4594,7 +4594,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 #contentsWrap.use .useSection section .inner .scroll-conts-box .scroll-conts-slide {
   position: relative;
   width: 740px;
-  padding: 20px;
   border-radius: 16px;
   border: 12px solid #000;
   background-color: #fff;
@@ -7797,7 +7796,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.use .useSection section .inner .fade-conts-box .fade-btn-prev,
   #contentsWrap.use .useSection section .inner .fade-conts-box .fade-btn-next {
-    top: calc(50% - 70px);
+    top: calc(50% - 60px);
     width: 30px;
     height: 30px;
   }

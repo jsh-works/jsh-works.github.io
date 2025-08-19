@@ -288,17 +288,9 @@ select {
   height: 48px;
   font-size: 13px;
   font-weight: 700;
+  text-align: center;
   padding: 10px 16px;
   border-radius: 8px;
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-ing,
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-com,
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer,
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer-com,
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.update {
-  color: #4165F4;
-  border: 1px solid #4165F4;
-  background-color: #fff;
 }
 .app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-expir,
 .app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-notsup,
@@ -306,55 +298,38 @@ select {
   color: #bbb;
   border: 1px solid #ddd;
   background-color: #F3F3F3;
+  cursor: default;
 }
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-ing,
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer,
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.update {
+  color: #4165F4;
+  border: 1px solid #4165F4;
+  background-color: #fff;
+}
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-com,
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer-com {
+  color: #222;
+  border: 1px solid #222;
+  background-color: #fff;
+  cursor: default;
+}
+
 .app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn span,
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn span {
   display: inline-block;
-  width: 80%;
+  width: 100%;
   min-width: 112px;
   line-height: 1;
   white-space: nowrap;
 }
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-notsup span,
+.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-ready span {
+  font-size: 12px;
+}
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn span {
   width: 100%;
 }
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn::before,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob .btn::before {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  min-width: 28px;
-  height: 28px;
-  min-height: 28px;
-  background-size: 28px 28px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-expir::before {
-  background-image: url("../imgs/down-expir-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-ing::before {
-  background-image: url("../imgs/down-ing-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.down-com::before {
-  background-image: url("../imgs/down-com-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-notsup::before {
-  background-image: url("../imgs/gnote-notsup-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-ready::before {
-  background-image: url("../imgs/gnote-ready-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer::before {
-  background-image: url("../imgs/gnote-transfer-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.gnote-transfer-com::before {
-  background-image: url("../imgs/gnote-transfer-ico.png");
-}
-.app-wrap .container .mytextbook-list ul.album li .thumb-btns .btn.update::before {
-  background-image: url("../imgs/update-ico.png");
-}
-
 .app-wrap .container .mytextbook-list ul.list {
   display: none;
 }
@@ -525,28 +500,35 @@ select {
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir {
   border: 1px solid #ddd;
   background-color: #fff;
+  cursor: default;
 }
-
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-expir,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup,
-.app-wrap .container .mytextbook-list ul.list li .list-btn-mob button.btn.gnote-notsup,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-notsup,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready,
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-ready {
   border: 1px solid #ddd;
   background-color: #F3F3F3;
+  cursor: default;
 }
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing,
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-ing,
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-com,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer,
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer-com,
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update,
 .app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.update {
   color: #4165F4;
   border: 1px solid #4165F4;
   background-color: #fff;
+}
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-com,
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer-com,
+.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer-com {
+  color: #222;
+  border: 1px solid #222;
+  background-color: #fff;
+  cursor: default;
 }
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn::after {
   content: '';
@@ -563,7 +545,7 @@ select {
   background-image: url("../imgs/flag-expir.png");
 }
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com::after,
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer::after {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer-com::after {
   background-image: url("../imgs/flag-com.png");
 }
 .app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup::after {
@@ -589,33 +571,28 @@ select {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-expir i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-expir i.icon {
   background-image: url("../imgs/list-down-expir-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-ing i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-ing i.icon {
   background-image: url("../imgs/list-down-ing-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.down-com i.icon {
-  background-image: url("../imgs/list-down-com-ico.png");
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.down-com i.icon {
+  background-image: url("../imgs/list-down-com-black-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-notsup i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-notsup i.icon {
   background-image: url("../imgs/list-gnote-notsup-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-ready i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-ready i.icon {
   background-image: url("../imgs/list-gnote-ready-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.gnote-transfer-com i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer i.icon {
   background-image: url("../imgs/list-gnote-transfer-ico.png");
 }
-.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update i.icon,
-.app-wrap .container .mytextbook-list ul.list li .list-btns-mob button.btn.update i.icon {
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.gnote-transfer-com i.icon {
+  background-image: url("../imgs/list-gnote-transfer-black-ico.png");
+}
+.app-wrap .container .mytextbook-list ul.list li .list-btns button.btn.update i.icon {
   background-image: url("../imgs/list-update-ico.png");
 }
 

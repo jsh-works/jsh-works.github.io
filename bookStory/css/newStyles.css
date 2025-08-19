@@ -3880,7 +3880,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .mob-sort-popup dl dd::before {
   content: "";
   position: absolute;
-  top: calc(50% -12px);
+  top: calc(50% - 12px);
   left: 0;
   width: 24px;
   height: 24px;
@@ -4003,7 +4003,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .mob-sort-popup.textbook .sort-box.default ul li::before {
   content: "";
   position: absolute;
-  top: calc(50% -12px);
+  top: calc(50% - 12px);
   left: 0;
   width: 24px;
   height: 24px;
@@ -5563,11 +5563,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .gnb-sub-dep {
     display: block;
-    z-index: 1000;
+    z-index: 100;
   }
   .gnb-mini-sub-dep {
     display: block;
-    z-index: 1000;
+    z-index: 100;
   }
   .gnb-mini-sub-dep.buy-tab {
     display: block;
@@ -5926,7 +5926,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   .bottomSheet .popup ul li::before {
     content: "";
     position: absolute;
-    top: calc(50% -12px);
+    top: calc(50% - 12px);
     left: 0;
     width: 24px;
     height: 24px;

@@ -95,42 +95,42 @@
     "id" : "learnHistory",
     "menuName" : "상세현황",
     "devUrl" : "learnHistory/detailStatus.html",
-    "progress" : "진행",
+    "progress" : "1차완료",
     "update" : "25.08.04"
   },
   {
     "id" : "learnHistory",
     "menuName" : "학급생성 및 현황",
     "devUrl" : "learnHistory/classStatus.html",
-    "progress" : "진행",
+    "progress" : "1차완료",
     "update" : "25.08.04"
   },
   {
     "id" : "learnHistory",
     "menuName" : "신규 학급 생성",
     "devUrl" : "learnHistory/createClass.html",
-    "progress" : "진행",
+    "progress" : "1차완료",
     "update" : "25.08.18"
   },
   {
     "id" : "learnHistory",
     "menuName" : "학생별 학습 이력",
     "devUrl" : "learnHistory/learningHistory.html",
-    "progress" : "진행",
-    "update" : "25.08.18"
+    "progress" : "1차완료",
+    "update" : "25.08.20"
   },
   {
     "id" : "learnHistory",
     "menuName" : "결과지 다운로드",
     "devUrl" : "learnHistory/resultDownload.html",
-    "progress" : "대기",
-    "update" : "-"
+    "progress" : "진행",
+    "update" : "25.08.20"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "동의 팝업",
-    "devUrl" : "learnHistory/popup.html",
-    "progress" : "대기",
-    "update" : "-"
+    "menuName" : "초대하기(동의 팝업)",
+    "devUrl" : "learnHistory/agreePopup.html",
+    "progress" : "1차완료",
+    "update" : "25.08.20"
   }
 ]

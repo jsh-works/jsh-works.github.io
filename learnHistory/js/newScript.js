@@ -1,5 +1,4 @@
 $(function() {
-  // js.....
   $(".types button").on('click', function() {
     if($(this).hasClass('album-type')) {
       $('.album-type').addClass('on');
@@ -28,6 +27,7 @@ $(function() {
     }
   });
 
+  // 상세보기
   $(".goDetails").on('click', function() {
     alert('팝업띄우기 popup');
   });
@@ -49,35 +49,58 @@ $(function() {
     }
   });
 
-  // 나의 학습이력 관리 - 교재열람 progress bar
-  // var currentValue = $(".value .current-val").text(); // 현재 학습페이지
-  // var totalValue = $(".value .total-val").text(); // 전체 페이지
-  // var realScore = (currentValue / totalValue) * 100; // 실제 백분율 값
+  // 학생별/교재별 학습이력 선택
+  $(".tab-con button").on('click', function() {
+    if(!$(this).hasClass('acitve')) {
+      $(".tab-con button").removeClass('active');
+      $(this).addClass('active');
+    }
 
-  // $(".progress").width(totalValue); // 프로그래스바 전체 값
-  // $(".progress .score").width(realScore); // 프로그래스바 현재 값
+    if($(this).hasClass('type-student')) {
+      $(".student-contents").show();
+      $(".textbook-contents").hide();
 
-  // if(realScore == 100) {
-  //   $(".value .current-val").css('color', '#F55149');
-  //   $(".progress .score").css('background-color', '#F55149');
-  // }
+    } else if($(this).hasClass('type-textbook')) {
+      $(".textbook-contents").show();
+      $(".student-contents").hide();
+    }
+  });
 
-  // // 나의 학습이력 관리 - 문제풀이
-  // var currentProblem = $(".problem .current-val").text(); // 현재 학습페이지
-  // var totalProblem = $(".problem .total-val").text(); // 전체 페이지
+  // 학생별 학습이력 - 총 학습 교재 수 open 보기
+  $(".detail-btn").on('click', function() {
+    $(this).toggleClass('active');
 
-  // if(currentProblem === totalProblem) {
-  //   $(".problem .current-val").css({
-  //     'color' : '#444',
-  //     'font-weight' : '400'
-  //   });
-  //   $(".problem-status").text("완료");
-  // } else {
-  //   $(".problem-status").text("진행중");
-  // }
+    if($(this).hasClass('active')) {
+      $(".detail-inner").addClass('open');
+    } else {
+      $(".detail-inner").removeClass('open');
+    }
+  });
 
-  // $(".class-box").on('click', function() {
-  //   location.href='../learnHistory/learningHistory.html';
-  // });
+
+  // 별명 팝업 열기
+  $(".alias-btn").on('click', function() {
+    $(".alias-popup").css('display', 'flex');
+  });
+
+  // 별명 팝업 닫기
+  $(".alias-popup .close").on('click', function() {
+    $(".alias-popup").hide();
+  });
+
+  var text = '금칙어';
+  $(".save-btn").on('click', function() {
+    if(text == '금칙어') {
+      alert("금칙어가 포함되어있습니다.");
+    } else {
+      alert("저장이 완료되었습니다.");
+    }
+  });
+
+  $(".clear-btn").on('click', function() {
+    alert("변경되었습니다.");
+    $(".alias-popup").css('display', 'none');
+  });
+
   
 });

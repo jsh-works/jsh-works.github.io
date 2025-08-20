@@ -23,269 +23,362 @@
   <div class="mngt-wrap">
     <div class="container">
       <div class="title-box">
-        <h2>고양 초등학교 6학년 12반</h2>
+        <h2>
+          고양 초등학교 6학년 12반
+          <span class="c-date">~25.02.28</span>
+        </h2>
         <p>학생/학급별 상세한 학습 이력을 확인할 수 있습니다.</p>
       </div>
-      <div class="contents">
-        <table class="learn">
-          <colgroup>
-            <col style="width: 343px;" />
-            <col style="width: 160px;" />
-            <col style="width: 88px;" />
-            <col style="width: 132px;" />
-            <col style="width: 88px;" />
-            <col style="width: 100px;" />
-            <col style="width: 88px;" />
-            <col style="width: 88px;" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>교재명</th>
-              <th>학습기간</th>
-              <th>학습시간</th>
-              <th class="info">교재열람</th> <!-- class='info' 추가,삭제 조절 -->
-              <th>문제풀이</th>
-              <th>학습결과<br/>보고서</th>
-              <th>선생님</th>
-              <th>학습이력<br/>동의여부</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- newScript.js 19줄 참고. -->
-            <tr>
-              <td class="left">만점왕 덧셈 뺄셈 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>4H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 20px;"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">진행중</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <!-- class='info' 추가,삭제 조절 -->
-                <span class="user-name">이*윤</span>
-              </td>
-              <td class="toggle">
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <div class="toggle-box">
-                  <label for="toggle" class="switch active">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-              </td>
-            </tr>
+      <div class="tab-con">
+        <button class="type-student active">학생별 학습이력</button>
+        <button class="type-textbook">교재별 학습이력</button>
+      </div>
+      <div class="student-contents">
+        <ul class="th">
+          <li class="info">이름</li>
+          <li class="info">아이디/별명</li>
+          <li>학급 참여일</li>
+          <li>최종 학습일</li>
+          <li>학습시간</li>
+          <li>총 학습 교재 수</li>
+        </ul>
+        <ul class="td">
+          <li>이*윤</li>
+          <li><a class="alias-btn">lih****/마스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
+        <ul class="td">
+          <li>오*진</li>
+          <li><a class="alias-btn">jjo****/힙스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
 
-            <tr>
-              <td class="left">만점 수학 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>2H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val" style="color: #F55149;">200</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 200px; background-color: #F55149"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val" style="color: #444; font-weight: 400;">200</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">완료</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                 <!-- class='info' 추가,삭제 조절 -->
-                <span class="user-name info">이*윤</span>
-                <span class="user-name info">김*석</span>
-              </td>
-              <td class="toggle">
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <div class="toggle-box">
-                  <label for="toggle" class="switch active">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-                <div class="toggle-box">
-                  <label for="toggle" class="switch active">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-              </td>
-            </tr>
+        <!-- detail-btn open accordion -->
+        <div class="detail-inner">
+          <ul class="th">
+            <li>교재명</li>
+            <li>학습기간</li>
+            <li>학습시간</li>
+            <li>교재열람</li>
+            <li>문제풀이</li>
+            <li>학습 결과 보고서</li>
+          </ul>
+          <ul class="td">
+            <li>만점왕 수학 3-2(2004)</li>
+            <li>24.03.01 ~ 04.05.21</li>
+            <li>4H 35M</li>
+            <li>
+              <div class="value">
+                <span class="current-val do">20</span>
+                <span class="total-val">200</span>
+              </div>
+              <div class="progress">
+                <span class="score do" style="width: 20px;"></span>
+              </div>
+            </li>
+            <li>
+              <div class="problem">
+                <span class="current-val do">20</span>
+                <span class="total-val">200</span>
+              </div>
+              <span class="problem-status">진행중</span>
+            </li>
+            <li>
+              <button class="goDetails">상세보기</button>
+            </li>
+          </ul>
 
-            <tr>
-              <td class="left">만점 수학 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>8H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val" style="color: #F55149;">200</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 200px; background-color: #F55149"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val" style="color: #444; font-weight: 400;">200</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">완료</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <!-- class='info' 추가,삭제 조절 -->
-                <span class="user-name">이*윤</span>
-              </td>
-              <td class="toggle">
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <div class="toggle-box">
-                  <label for="toggle" class="switch">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-              </td>
-            </tr>
+          <ul class="td">
+            <li>만점왕 수학 3-1(2004)</li>
+            <li>24.03.01 ~ 04.05.21</li>
+            <li>4H 35M</li>
+            <li>
+              <div class="value">
+                <span class="current-val full">200</span>
+                <span class="total-val">200</span>
+              </div>
+              <div class="progress">
+                <span class="score full" style="width: 100%;"></span>
+              </div>
+            </li>
+            <li>
+              <span class="problem-status">-</span>
+            </li>
+            <li>
+              <button class="goDetails">상세보기</button>
+            </li>
+          </ul>
 
-            <tr>
-              <td class="left">만점왕 덧셈 뺄셈 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>4H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 20px;"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">진행중</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                -
-              </td>
-              <td class="toggle">
-                -
-              </td>
-            </tr>
-
-            <tr>
-              <td class="left">만점왕 덧셈 뺄셈 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>4H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 20px;"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">진행중</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <!-- class='info' 추가,삭제 조절 -->
-                <span class="user-name">이*윤</span>
-              </td>
-              <td class="toggle">
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <div class="toggle-box">
-                  <label for="toggle" class="switch">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="left">만점왕 덧셈 뺄셈 3-2(2004)</td>
-              <td>24.03.01 ~ 04.05.21</td>
-              <td>4H 35M</td>
-              <td>
-                <div class="value">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <div class="progress">
-                  <span class="score" style="width: 20px;"></span>
-                </div>
-              </td>
-              <td>
-                <div class="problem">
-                  <span class="current-val">20</span>
-                  <span class="total-val">200</span>
-                </div>
-                <span class="problem-status">진행중</span>
-              </td>
-              <td>
-                <button class="goDetails">상세보기</button>
-              </td>
-              <td>
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <!-- class='info' 추가,삭제 조절 -->
-                <span class="user-name">이*윤</span>
-              </td>
-              <td class="toggle">
-                <!-- 선생님 이름과 toggle는 1세트 씩 같이 묶어야합니다. -->
-                <div class="toggle-box">
-                  <label for="toggle" class="switch active">
-                    <span class="toggle-after"></span>
-                  </label>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="btn-box">
-          <button class="more-btn">더 보기</button>
+          <ul class="td">
+            <li>만점왕 과학 3-2(2004)</li>
+            <li>24.03.01 ~ 04.05.21</li>
+            <li>4H 35M</li>
+            <li>
+              <div class="value">
+                <span class="current-val full">200</span>
+                <span class="total-val">200</span>
+              </div>
+              <div class="progress">
+                <span class="score full" style="width: 100%;"></span>
+              </div>
+            </li>
+            <li>
+              <div class="problem">
+                <span class="current-val">200</span>
+                <span class="total-val">200</span>
+              </div>
+              <span class="problem-status">완료</span>
+            </li>
+            <li>
+              <button class="goDetails">상세보기</button>
+            </li>
+          </ul>
         </div>
+        <ul class="td">
+          <li>오*진</li>
+          <li><a class="alias-btn">jjo****/힙스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
+        <ul class="td">
+          <li>이*나</li>
+          <li><a class="alias-btn">lih****/햄스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
+        <ul class="td">
+          <li>나*창</li>
+          <li><a class="alias-btn">nac****/몬스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
+        <ul class="td">
+          <li>하*상</li>
+          <li><a class="alias-btn">hjs****/갱스터</a></li>
+          <li>24.03.01 ~ 04.05.21</li>
+          <li>04.04.21</li>
+          <li>4H 35M</li>
+          <li class="detail-btn">5권 </li>
+        </ul>
+      </div>
+      <div class="textbook-contents">
+        <div class="btns-box">
+          <div class="types">
+            <select name="textbook" onchange="selBox(this.value)">
+              <option value="none" selected="">교제 전체</option>
+              <option value="tbk1">교제 1</option>
+              <option value="tbk2">교제 2</option>
+              <option value="tbk3">교제 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="contents">
+          <table class="learn">
+            <colgroup>
+              <col style="width: 444px;" />
+              <col style="width: 88px;" />
+              <col style="width: 160px;" />
+              <col style="width: 88px;" />
+              <col style="width: 132px;" />
+              <col style="width: 88px;" />
+              <col style="width: 88px;" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>교재명</th>
+                <th>이름</th>
+                <th>학습기간</th>
+                <th>학습시간</th>
+                <th class="info">교재열람</th> <!-- class='info' 추가,삭제 조절 -->
+                <th>문제풀이</th>
+                <th>학습결과<br/>보고서</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="left" rowspan="3">
+                  EBS 2026학년도 수능완성 국어영역 독서·문학·화법과 작문
+                </td>
+                <td>이*윤</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val do">20</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score do" style="width: 20px;"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="problem">
+                    <span class="current-val do">20</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <span class="problem-status">진행중</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>오*진</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val full">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score full" style="width: 100%;"></span>
+                  </div>
+                </td>
+                <td>
+                  <span class="problem-status">-</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>이*나</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val full">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score full" style="width: 100%;"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="problem">
+                    <span class="current-val">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <span class="problem-status">완료</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
 
-        <div class="helpTip">현재까지 학습 페이지/전체페이지</div>
-        <!-- <div class="helpTip">고양초등학교 3학년 6반</div> -->
+              <tr>
+                <td class="left" rowspan="3">
+                  EBS 2026학년도 만점마무리 봉투모의고사 시즌 1 사회탐구영역 생활과 윤리
+                </td>
+                <td>이*윤</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val do">20</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score do" style="width: 20px;"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="problem">
+                    <span class="current-val do">20</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <span class="problem-status">진행중</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>오*진</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val full">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score full" style="width: 100%;"></span>
+                  </div>
+                </td>
+                <td>
+                  <span class="problem-status">-</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
+              <tr>
+                <td>이*나</td>
+                <td>24.03.01 ~ 04.05.21</td>
+                <td>4H 35M</td>
+                <td>
+                  <div class="value">
+                    <span class="current-val full">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <div class="progress">
+                    <span class="score full" style="width: 100%;"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="problem">
+                    <span class="current-val">200</span>
+                    <span class="total-val">200</span>
+                  </div>
+                  <span class="problem-status">완료</span>
+                </td>
+                <td>
+                  <button class="goDetails">상세보기</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="btn-box">
+        <button class="more-btn">더 보기</button>
+      </div>
+      <div class="helpTip">현재까지 학습 페이지/전체페이지</div>
+
+      <!-- 별명 팝업 -->
+      <div class="alias-popup">
+        <div class="inner">
+          <div class="title">
+            <h2>학생 별명 수정</h2>
+            <span class="close">닫기</span>
+          </div>
+          <div class="con-box">
+            <p>학급 관리용이며, 학생에게는 노출되지 않습니다.</p>
+            <p>별명은 금칙어 및 실명으로 설정이 불가합니다.</p>
+            <div class="input-form">
+              <input type="text" id="1" name="1" placeholder="내용을 입력하세요." />
+              <button class="save-btn">저장</button>
+            </div>
+          </div>
+          <div class="btn-box">
+            <button class="clear-btn">확인</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

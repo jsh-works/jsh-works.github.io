@@ -621,7 +621,7 @@ console.log(`
   
   // 구독메인 - 구독 시작하기 버튼 스크립트
   $(".top-banner, .start-btn").on('click', function() {
-    var target = $(".sec3").offset();
+    var target = $(".btn-items").offset();
     $('html, body').animate({ scrollTop:target.top },500);
   });
 

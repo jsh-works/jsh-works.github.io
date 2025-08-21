@@ -1,4 +1,15 @@
 $(function() {
+
+  // 동의 팝업 - 동의하기
+  $(".invite-popup .agree-btn").on('click', function() {
+    location.href = '../learnHistory/detailStatus.html';
+  });
+
+  // 동의 팝업 - 거절하기
+  $(".invite-popup .close, .invite-popup .cancel-btn").on('click', function() {
+    window.close();
+  });
+
   $(".types button").on('click', function() {
     if($(this).hasClass('album-type')) {
       $('.album-type').addClass('on');
@@ -27,10 +38,19 @@ $(function() {
     }
   });
 
-  // 상세보기
+  // 학습결과 보고서 열기
   $(".goDetails").on('click', function() {
-    alert('팝업띄우기 popup');
+    window.open(
+      "../learnHistory/resultPopup.html",
+      "학습결과 보고서",
+      "width=1100,height=812, left=" + (window.screen.width - 1800) / 2 + ",top=100"
+    );
   });
+
+  // 학습결과 보고서 닫기
+  $(".result-popup .close").on('click', function() {
+    window.close();
+  })
 
   // info 버튼 말풍선 스크립트
   $(".info").on('click', function() {

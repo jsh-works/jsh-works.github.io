@@ -121,9 +121,9 @@
   },
   {
     "id" : "learnHistory",
-    "menuName" : "결과지 다운로드",
-    "devUrl" : "learnHistory/resultDownload.html",
-    "progress" : "진행",
+    "menuName" : "결과지 다운로드 팝업",
+    "devUrl" : "learnHistory/resultPopup.html",
+    "progress" : "1차완료",
     "update" : "25.08.20"
   },
   {

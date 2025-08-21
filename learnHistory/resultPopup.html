@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EBS 북스토리">
+	<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+	<meta property="og:image" content="/images/ebs_bookstory_og.png" />
+	<title>EBS 교재사이트 :: 결과지 다운로드</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="./css/app/app_base.css" />
+  <link rel="stylesheet" href="./css/mngt.css" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js 추가 -->
+  <script type="text/javascript" src="./js/newScript.js"></script>
+</head>
+<script>
+  // doughnut chart js
+  $(document).ready(function () {
+    var ctx1 = $("#doughnutChart1");
+    var doughnutChart1 = new Chart(ctx1, {
+      type: 'doughnut',
+      data: {
+          datasets: [{
+              data: [100],
+              backgroundColor: ['#2BC1EA'],
+              cutout: "80%",
+          }]
+      },
+      options: {
+        responsive: false,
+        radiusBackground: {
+          color: '#d1d1d1'
+        },
+        maintainAspectRatio: false,
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          caretPadding: 10,
+        },
+        legend: {
+          display: false
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        doughnutBackground: {
+          enabled: true,
+          color: 'red',
+        },
+      },
+    });
+
+    var ctx2 = $("#doughnutChart2");
+    var doughnutChart2 = new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+          datasets: [{
+              data: [70],
+              backgroundColor: ['#4165F4'],
+              cutout: "80%",
+          }]
+      },
+      options: {
+        responsive: false,
+        radiusBackground: {
+          color: '#d1d1d1'
+        },
+        maintainAspectRatio: false,
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          caretPadding: 10,
+        },
+        legend: {
+          display: false
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        doughnutBackground: {
+          enabled: true,
+          color: 'red',
+        },
+      },
+    });
+
+    var ctx3 = $("#doughnutChart3");
+    var doughnutChart3 = new Chart(ctx3, {
+      type: 'doughnut',
+      data: {
+          datasets: [{
+              data: [40],
+              backgroundColor: ['#A041F4'],
+              cutout: "80%",
+          }]
+      },
+      options: {
+        responsive: false,
+        radiusBackground: {
+          color: '#d1d1d1'
+        },
+        maintainAspectRatio: false,
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          caretPadding: 10,
+        },
+        legend: {
+          display: false
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        doughnutBackground: {
+          enabled: true,
+          color: 'red',
+        },
+      },
+    });
+  });
+</script>
+<body>
+  <div class="result-popup">
+    <div class="inner">
+      <div class="title">
+        <h3>학습결과 보고서</h3>
+        <span class="close">닫기</span>
+      </div>
+      <div class="content">
+        <p class="user-info">고양 초등학교 6학년 12반/이*윤/ylih****(힙스터)</p>
+        <div class="btns-box">
+          <div class="types">
+            <select name="textbook" onchange="selBox(this.value)" class="st1">
+              <option value="none" selected="">교제 전체</option>
+              <option value="tbk1">만점왕 국어 3-1(2025)</option>
+              <option value="tbk1">만점왕 국어 3-2(2025)</option>
+              <option value="tbk1">만점왕 국어 3-3(2025)</option>
+            </select>
+            <select name="textbook" onchange="selBox(this.value)" class="st2">
+              <option value="final" selected="">최종</option> <!-- 최종 선생님일 경우 -->
+              <option value="first">최초</option> <!-- 최초 선생님일 경우 -->
+            </select>
+
+            <!-- print :: App에서는 비노출, PC에서는 노출 -->
+            <button class="print">인쇄</button>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-table">
+            <table>
+              <caption>(전일 기준)</caption>
+              <colgroup>
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 160px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>총 학습 시간</th>
+                  <th>교재 열람</th>
+                  <th>총 단원(시험)수</th>
+                  <th>풀이완료단원(시험)수</th>
+                  <th>총 문항수</th>
+                  <th>정답수</th> <!-- 최종 선생님일 경우 --> 
+                  <!-- <th>최초 정답수</th> 최초 선생님일 경우  -->
+                  <th>정답률</th> <!-- 최종 선생님일 경우 --> 
+                  <!-- <th>최초 정답률</th> 최초 선생님일 경우 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HH:MM</td>
+                  <td>NN/NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="doughnut-table">
+            <div class="doughnut-box">
+              <span class="legend-text">열람률</span>
+              <canvas id="doughnutChart1" width="180" height="180"></canvas>
+            </div>
+            <div class="doughnut-box">
+              <span class="legend-text">풀이율</span>
+              <canvas id="doughnutChart2" width="180" height="180"></canvas>
+            </div>
+            <div class="doughnut-box">
+              <span class="legend-text">최종 정답률</span> <!-- 최종 선생님일 경우 -->
+              <!--  <span class="legend-text">최초 정답률</span> 최초 선생님일 경우 -->
+              <canvas id="doughnutChart3" width="180" height="180"></canvas>
+            </div>
+          </div>
+          <div class="result-table">
+            <table>
+              <caption>단원(시험별 결과)</caption>
+              <colgroup>
+                <col style="width: 320px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>단원(시험)명</th>
+                  <th>문항수</th>
+                  <th>정답수</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>정답수</th> 최초 선생님일 경우 -->
+                  <th>정답률</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>최초 정답률</th> 최초 선생님일 경우 -->
+                  <th>총점</th>
+                  <th>점수</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>최초 점수</th> 최초 선생님일 경우 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. 다항식의 연산 및 개념1</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>2. 다항식의 연산 및 개념2</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>3. 다항식의 연산 및 개념3</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>4. 다항식의 연산 및 개념4</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>5. 다항식의 연산 및 개념5</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="result-info">
+          <p>각 단원(시험)별 채점하기 버튼을 눌러 채점을 완료한 경우에 반영되며, 마지막 시행한 채점 결과(전일 기준)가 기록됩니다.</p> <!-- 최종 선생님일 경우 -->
+          <!-- <p>각 단원(시험)별 최초 1회 채점하기 버튼을 눌러 채점한 결과(전일 기준)입니다. 여러 번 채점을 해도 내용은 변경되지 않습니다.</p> 최초 선생님일 경우 -->
+          <p>배점이 없는 문항의 점수는 1점입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

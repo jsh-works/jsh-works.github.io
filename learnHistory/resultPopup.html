@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="./css/mngt.css" />
   <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script> <!-- chart.js plugin 추가 -->
+  
+  
   <script type="text/javascript" src="./js/newScript.js"></script>
 </head>
 <script>
@@ -27,40 +30,32 @@
     var doughnutChart1 = new Chart(ctx1, {
       type: 'doughnut',
       data: {
-          datasets: [{
-              data: [100],
-              backgroundColor: ['#2BC1EA'],
-              cutout: "80%",
-          }]
+        datasets: [{
+          data: [100, 0], // 1.(실제값(100)) 2.(최대값(100) - 실제값(100) = 남은값(0))
+          backgroundColor: ['#2BC1EA', '#EEF1F8'],
+          borderColor: ['#2BC1EA', '#EEF1F8'],
+          borderWidth: 1,
+          cutout: "80%",
+        }]
       },
       options: {
+        plugins: {
+          annotation: {
+            annotations: {
+              centerLabel: {
+                type: 'doughnutLabel',
+                content: ({chart}) => [
+                  chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                ],
+                font: { size: 36, weight : 700 }
+              }
+            }
+          }
+        },
         responsive: false,
-        radiusBackground: {
-          color: '#d1d1d1'
-        },
-        maintainAspectRatio: false,
-        tooltips: {
-          backgroundColor: "rgb(255,255,255)",
-          bodyFontColor: "#858796",
-          borderColor: '#dddfeb',
-          borderWidth: 1,
-          xPadding: 15,
-          yPadding: 15,
-          displayColors: false,
-          caretPadding: 10,
-        },
-        legend: {
-          display: false
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        doughnutBackground: {
-          enabled: true,
-          color: 'red',
-        },
+        cutoutPercentage: 80,
+        tooltips: { enabled: false },
+        events: [],
       },
     });
 
@@ -68,40 +63,32 @@
     var doughnutChart2 = new Chart(ctx2, {
       type: 'doughnut',
       data: {
-          datasets: [{
-              data: [70],
-              backgroundColor: ['#4165F4'],
-              cutout: "80%",
-          }]
+        datasets: [{
+          data: [70, 30], // 1.(실제값(70)) 2.(최대값(100) - 실제값(70) = 남은값(30))
+          backgroundColor: ['#4165F4', '#EEF1F8'],
+          borderColor: ['#4165F4', '#EEF1F8'],
+          borderWidth: 1,
+          cutout: "80%",
+        }]
       },
       options: {
+        plugins: {
+          annotation: {
+            annotations: {
+              centerLabel: {
+                type: 'doughnutLabel',
+                content: ({chart}) => [
+                  chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                ],
+                font: { size: 36, weight : 700 }
+              }
+            }
+          }
+        },
         responsive: false,
-        radiusBackground: {
-          color: '#d1d1d1'
-        },
-        maintainAspectRatio: false,
-        tooltips: {
-          backgroundColor: "rgb(255,255,255)",
-          bodyFontColor: "#858796",
-          borderColor: '#dddfeb',
-          borderWidth: 1,
-          xPadding: 15,
-          yPadding: 15,
-          displayColors: false,
-          caretPadding: 10,
-        },
-        legend: {
-          display: false
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        doughnutBackground: {
-          enabled: true,
-          color: 'red',
-        },
+        cutoutPercentage: 80,
+        tooltips: { enabled: false },
+        events: [],
       },
     });
 
@@ -109,42 +96,37 @@
     var doughnutChart3 = new Chart(ctx3, {
       type: 'doughnut',
       data: {
-          datasets: [{
-              data: [40],
-              backgroundColor: ['#A041F4'],
-              cutout: "80%",
-          }]
+        datasets: [{
+          data: [40, 60], // 1.(실제값(40)) 2.(최대값(100) - 실제값(40) = 남은값(60))
+          backgroundColor: ['#A041F4', '#EEF1F8'],
+          borderColor: ['#A041F4', '#EEF1F8'],
+          borderWidth: 1,
+          cutout: "80%",
+        }]
       },
       options: {
+        plugins: {
+          annotation: {
+            annotations: {
+              centerLabel: {
+                type: 'doughnutLabel',
+                content: ({chart}) => [
+                  chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                ],
+                font: { size: 36, weight : 700 }
+              }
+            }
+          }
+        },
         responsive: false,
-        radiusBackground: {
-          color: '#d1d1d1'
-        },
-        maintainAspectRatio: false,
-        tooltips: {
-          backgroundColor: "rgb(255,255,255)",
-          bodyFontColor: "#858796",
-          borderColor: '#dddfeb',
-          borderWidth: 1,
-          xPadding: 15,
-          yPadding: 15,
-          displayColors: false,
-          caretPadding: 10,
-        },
-        legend: {
-          display: false
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        doughnutBackground: {
-          enabled: true,
-          color: 'red',
-        },
+        cutoutPercentage: 80,
+        tooltips: { enabled: false },
+        events: [],
       },
     });
+
+
+
   });
 </script>
 <body>

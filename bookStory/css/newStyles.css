@@ -2049,7 +2049,7 @@ input[type="radio"]:checked + label::after {
   align-items: center;
   justify-content: flex-start;
   height: 52px;
-  padding: 13.7px 20px;
+  padding: 0 20px;
   border-radius: 16px;
   border: 1px solid #eee;
   background-color: #F9F9F9;
@@ -7074,6 +7074,15 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
 }
 
+@media (max-width: 600px) {
+  .target-popup .inner .contents .table-caption {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 /* 미디어쿼리 모바일 */
 @media all and (max-width: 500px) {
   .quick-util:not(.ebook) a .mob{
@@ -7647,7 +7656,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap .highSection section .sec-inner .best-box ul li {
     height: 44px;
-    padding: 12px;
+    padding: 0 12px;
     border-radius: 4px;
   }
   #contentsWrap .highSection section .sec-inner .best-box ul li span.text {

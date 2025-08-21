@@ -4286,6 +4286,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 .list-viewer .mybook-list-box.listType ul li .list-textbook-box .list-exp dl {
   display: flex;

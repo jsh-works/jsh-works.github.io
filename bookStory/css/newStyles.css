@@ -2394,6 +2394,7 @@ input[type="radio"]:checked + label::after {
   width: 404px;
   height: 216px;
   cursor: pointer;
+  border-radius: 12px;
   box-sizing: border-box;
 }
 #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-title {

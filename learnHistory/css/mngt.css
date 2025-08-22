@@ -827,9 +827,13 @@ select {
   position: relative;
   width: 1094px;
   height: 140px;
-  padding: 42.5px 0px;
   border-radius: 12px;
   cursor: pointer;
+}
+.mngt-wrap .container .contents .class-box a {
+  display: block;
+  height: 100%;
+  padding: 42.5px 0px;
 }
 .mngt-wrap .container .contents .class-box.create {
   display: flex;
@@ -938,13 +942,29 @@ select {
   font-weight: 400;
   line-height: 160%;
 }
-.mngt-wrap .container .contents .class-box .class-inner .class-item span.calendar::after {
+.mngt-wrap .container .contents .class-box .class-inner .class-item div.calen-box {
+  display: flex;
+  gap: 10px;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item div.calen-box {
+  display: flex;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input {
+  position: relative;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  background: none;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input::-webkit-calendar-picker-indicator {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 2px;
   vertical-align: -6px;
+  outline: none;
   background: url("../imgs/class-calendar-ico.png") center center / cover no-repeat;
 }
 .mngt-wrap .container .contents .class-box .class-inner .class-item span > b {
@@ -1005,6 +1025,30 @@ select {
 }
 .mngt-wrap .container .contents .create-box dl.class-name dd:not(:last-child) {
   margin-right: 48px;
+}
+.mngt-wrap .container .contents .create-box dl.school dd input[type="radio"] + label {
+  display: flex;
+  align-items: center;
+}
+.mngt-wrap .container .contents .create-box dl.school dd input[type="radio"] + label::before {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  border: 5px solid #4165F4;
+  background-color: #fff;
 }
 .mngt-wrap .container .contents .create-box dl dd input[type="text"],
 .mngt-wrap .container .contents .create-box dl.class-date dd input[type="date"] {
@@ -1492,7 +1536,7 @@ select {
   color: #222;
   font-weight: 700;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 32px;
 }
 .mngt-wrap .container .alias-popup .inner .title span.close {
   position: absolute;
@@ -1741,6 +1785,7 @@ select {
   height: 100%;
   z-index: 999;
   background-color: rgba(0,0,0, 0.4);
+  display: none;
 }
 .result-popup .inner {
   position: relative;

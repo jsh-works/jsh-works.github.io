@@ -107,17 +107,17 @@
   },
   {
     "id" : "learnHistory",
-    "menuName" : "3) 학급생성 및 현황",
+    "menuName" : "3) 학급별 학습이력 관리",
     "devUrl" : "learnHistory/classStatus.html",
-    "progress" : "1차완료",
-    "update" : "25.08.04"
+    "progress" : "완료",
+    "update" : "25.08.22"
   },
   {
     "id" : "learnHistory",
     "menuName" : "4) 신규 학급 생성",
     "devUrl" : "learnHistory/createClass.html",
-    "progress" : "1차완료",
-    "update" : "25.08.18"
+    "progress" : "완료",
+    "update" : "25.08.22"
   },
   {
     "id" : "learnHistory",

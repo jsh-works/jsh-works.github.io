@@ -16,7 +16,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
   <link rel="stylesheet" href="./css/app/app_base.css" />
   <link rel="stylesheet" href="./css/mngt.css" />
-  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+<script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script> <!-- chart.js plugin 추가 -->
   <script type="text/javascript" src="./js/newScript.js"></script>
 </head>
 <body>
@@ -28,69 +30,70 @@
       </div>
       <div class="contents">
         <div class="class-box" style="background-color: #FF8F3E;">
-          <span class="class-delete-ico">학급삭제</span>
-          <div class="class-inner">
-            <div class="class-item">
-              <h2>고양초등학교</h2>
-              <span>6학년 12반 40명</span>
+          <a href="../learnHistory/learningHistory.html">
+            <span class="class-delete-ico">학급삭제</span>
+            <div class="class-inner">
+              <div class="class-item">
+                <h2>고양초등학교</h2>
+                <span>6학년 12반 40명</span>
+              </div>
+              <div class="class-item">
+                <h4>학급 기한</h4>
+                <input type="date" class="calendar" />
+              </div>
+              <div class="class-item">
+                <h4>총 관리 교재 수</h4>
+                <span><b>50</b> 권</span>
+              </div>
+              <div class="class-item">
+                <h4>총 학습 시간</h4>
+                <span><b>400</b> H</span>
+                <span><b>30</b> M</span>
+              </div>
+              <div class="class-item">
+                <button class="create-class-btn">학급 정보 수정</button>
+                <button class="class-invite-btn">초대하기</button>
+                <button class="class-copy-btn">복사하기</button>
+              </div>
             </div>
-            <div class="class-item">
-              <h4>학급 기한</h4>
-              <span class="calendar">24.03.31 ~ 25.01.01</span>
-              <!-- <label for="calendar" id="calendar">
-                <input type="date" / >
-              </label> -->
-            </div>
-            <div class="class-item">
-              <h4>총 관리 교재 수</h4>
-              <span><b>50</b> 권</span>
-            </div>
-            <div class="class-item">
-              <h4>총 학습 시간</h4>
-              <span><b>400</b> H</span>
-              <span><b>30</b> M</span>
-            </div>
-            <div class="class-item">
-              <button>학급 정보 수정</button>
-              <button>초대하기</button>
-              <button>복사하기</button>
-            </div>
-          </div>
+          </a>
         </div>
 
         <div class="class-box" style="background-color: #1EAD4A;">
-          <span class="class-delete-ico">학급삭제</span>
-          <div class="class-inner">
-            <div class="class-item">
-              <h2>고양초등학교</h2>
-              <span>6학년 12반 40명</span>
+          <a href="../learnHistory/learningHistory.html">
+            <span class="class-delete-ico">학급삭제</span>
+            <div class="class-inner">
+              <div class="class-item">
+                <h2>고양초등학교</h2>
+                <span>6학년 12반 40명</span>
+              </div>
+              <div class="class-item">
+                <h4>학급 기한</h4>
+                <input type="date" class="calendar" />
+              </div>
+              <div class="class-item">
+                <h4>총 관리 교재 수</h4>
+                <span><b>50</b> 권</span>
+              </div>
+              <div class="class-item">
+                <h4>총 학습 시간</h4>
+                <span><b>400</b> H</span>
+                <span><b>30</b> M</span>
+              </div>
+              <div class="class-item">
+                <button class="create-class-btn">학급 정보 수정</button>
+                <button class="class-invite-btn">초대하기</button>
+                <button class="class-copy-btn">복사하기</button>
+              </div>
             </div>
-            <div class="class-item">
-              <h4>학급 기한</h4>
-              <span class="calendar">24.03.31 ~ 25.01.01</span>
-            </div>
-            <div class="class-item">
-              <h4>총 관리 교재 수</h4>
-              <span><b>50</b> 권</span>
-            </div>
-            <div class="class-item">
-              <h4>총 학습 시간</h4>
-              <span><b>400</b> H</span>
-              <span><b>30</b> M</span>
-            </div>
-            <div class="class-item">
-              <button>학급 정보 수정</button>
-              <button>초대하기</button>
-              <button>복사하기</button>
-            </div>
-          </div>
+          </a>
         </div>
 
         <div class="class-box create" style="background-color: #F3F8FF;">
           <button class="create-ico">학급생성</button>
           <p>
             * 학급생성은 교사 인증을 받은 선생님만 가능합니다.
-            <span onclick="">교사인증 받기</span>
+            <span class="teacher-cert-btn">교사인증 받기</span>
           </p>
         </div>
 

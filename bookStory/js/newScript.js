@@ -598,30 +598,9 @@ console.log(`
     }
   });
 
-  // 구독메인 스크롤 플로팅 표시
-  if($('#contentsWrap').hasClass('subscribe')) {
-    $(window).scroll(function () {
-      var winPosY = $(document).scrollTop();
-      var offset = $(".btn-items ul").offset();
-      var top = offset.top;
-      // console.log(winPosY, top);
-
-      if(winPosY > top) {
-        $(".floating").css('display','block');
-      } else {
-        $(".floating").css('display','none');
-      }
-    });
-  }
-
-  // 구독메인 - top-banner 스크립트 추가
-  $(".top-banner").on('click', function() {
-      
-  });
-  
   // 구독메인 - 구독 시작하기 버튼 스크립트
   $(".top-banner, .start-btn").on('click', function() {
-    var target = $(".btn-items").offset();
+    var target = $(".sec3").offset();
     $('html, body').animate({ scrollTop:target.top },500);
   });
 

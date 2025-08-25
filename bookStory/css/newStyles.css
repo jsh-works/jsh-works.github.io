@@ -6284,9 +6284,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img .thumb-ico button.preview-btn {
     width: 40%;
+    min-width: 93px;
   }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img .thumb-ico button.seeAll-btn {
     width: 60%;
+    min-width: 136px;
   }
   #contentsWrap.viewer .cnt-wide .cnt-blur-mob-bg .thumb-box .thumb-img .thumb-ico button.preview-btn::before {
     content: '';

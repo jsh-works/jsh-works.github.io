@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_og.png" /> <!-- 수정추가 20250731 -->
+  <title>EBS 교재사이트 :: 나의교재방</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <link rel="stylesheet" href="./css/xeicon.css" />
+  <link rel="stylesheet" href="../learnHistory/css/mngt.css" /> <!-- import learnHistory CSS -->
+
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script> <!-- addition -->
+  <script src="./js/topHeader.js"></script> <!-- origin -->
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script> <!-- chart.js plugin 추가 -->
+  <script src="../learnHistory/js/newScript.js"></script> <!-- import learnHistory JS -->
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+</head>
+<body> <!-- 수정추가 20250731 -->
+  <div id="wrap">
+    <!-- orign header import -->
+    <div id="topHeader"></div>
+
+    <!-- contents -->
+    <div id="contentsWrap" class="sub list learn"> <!-- 수정추가 20250731 -->
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li class="my">
+                <a href="./bookStoryMyPage.html">
+                  <strong class="on">나의 교재</strong>
+                </a>
+                <ul id="" class="type2">
+                  <li onClick="location.href='./bookStoryMyPage.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="">
+                    <label for="class_1">나의 교재</label>
+                  </li>
+                  <li onClick="location.href='./MyLearnMngt.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="">
+                    <label for="class_2">나의 학습이력 관리</label>
+                  </li>
+                  <li onClick="location.href='./MyLearnStatus.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="" checked>
+                    <label for="class_3">학급별 학습이력 관리</label>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <strong class="on">나의 구매 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_1" name="ebk" value="payhist">
+                    <label for="ebk_1">eBook 결제 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_2" name="ebk" value="refund">
+                    <label for="ebk_2">eBook 환불 내역</label>
+                  </li>
+                  <!-- 수정추가 20250805 onClick 링크 추가 -->
+                  <li onClick="location.href='./bookStoryCoupon.html'">
+                    <input class="stdy" type="radio" id="ebk_3" name="ebk" value="coupon">
+                    <label for="ebk_3">쿠폰/구독권 등록</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_4" name="ebk" value="basket">
+                    <label for="ebk_4">장바구니</label>
+                  </li>
+                  <li onClick="location.href='./bookStoryIntrst.html'">
+                    <input class="stdy" type="radio" id="ebk_5" name="ebk" value="intrst">
+                    <label for="ebk_5">관심교재</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong class="on">나의 구독 정보</strong>
+                <ul id="" class="area type2">
+                  <!-- 수정추가 20250731 onClick 링크 추가 -->
+                  <li onClick="location.href='./bookStoryMngt.html'">
+                    <input class="stdy" type="radio" id="sbc_1" name="sbc" value="">
+                    <label for="sbc_1">나의 구독 관리</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_2" name="sbc" value="">
+                    <label for="sbc_2">구독 환불 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_3" name="sbc" value="">
+                    <label for="sbc_3">정기 결제 카드 변경</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- import HTML -->
+        <div class="list-viewer">
+          <div class="mngt-wrap">
+            <div class="container">
+              <div class="title-box">
+                <h2>학급별 학습이력 관리</h2> 
+                <p>관리 학급을 생성하고 학급별 현황을 볼 수 있습니다.</p>
+              </div>
+              <div class="contents">
+                <div class="class-box" style="background-color: #FF8F3E;">
+                  <a href="../bookStory/MyLearnHistory.html">
+                    <span class="class-delete-ico">학급삭제</span>
+                    <div class="class-inner">
+                      <div class="class-item">
+                        <h2>고양초등학교</h2>
+                        <span>6학년 12반 40명</span>
+                      </div>
+                      <div class="class-item">
+                        <h4>학급 기한</h4>
+                        <input type="date" class="calendar" />
+                      </div>
+                      <div class="class-item">
+                        <h4>총 관리 교재 수</h4>
+                        <span><b>50</b> 권</span>
+                      </div>
+                      <div class="class-item">
+                        <h4>총 학습 시간</h4>
+                        <span><b>400</b> H</span>
+                        <span><b>30</b> M</span>
+                      </div>
+                      <div class="class-item">
+                        <button class="create-class-btn">학급 정보 수정</button>
+                        <button class="class-invite-btn">초대하기</button>
+                        <button class="class-copy-btn">복사하기</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="class-box" style="background-color: #1EAD4A;">
+                  <a href="../bookStory/MyLearnHistory.html">
+                    <span class="class-delete-ico">학급삭제</span>
+                    <div class="class-inner">
+                      <div class="class-item">
+                        <h2>고양초등학교</h2>
+                        <span>6학년 12반 40명</span>
+                      </div>
+                      <div class="class-item">
+                        <h4>학급 기한</h4>
+                        <input type="date" class="calendar" />
+                      </div>
+                      <div class="class-item">
+                        <h4>총 관리 교재 수</h4>
+                        <span><b>50</b> 권</span>
+                      </div>
+                      <div class="class-item">
+                        <h4>총 학습 시간</h4>
+                        <span><b>400</b> H</span>
+                        <span><b>30</b> M</span>
+                      </div>
+                      <div class="class-item">
+                        <button class="create-class-btn">학급 정보 수정</button>
+                        <button class="class-invite-btn">초대하기</button>
+                        <button class="class-copy-btn">복사하기</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="class-box create" style="background-color: #F3F8FF;">
+                  <button class="create-ico">학급생성</button>
+                  <p>
+                    * 학급생성은 교사 인증을 받은 선생님만 가능합니다.
+                    <span class="teacher-cert-btn">교사인증 받기</span>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="not-device">
+          <img src="./imgs/mngt-item-none-ico.png" alt="해당 디바이스는 지원하지 않습니다." />
+          <p>
+            해당 디바이스는 지원하지않습니다.<br/>
+            다른 기기로 이용부탁드립니다.
+          </p>
+        </div>
+        <!-- // import HTML -->
+         
+      </div>
+
+      <!-- bottomSheet popup -->
+      <div class="bottomSheet">
+        <div class="popup">
+          <div class="title">
+            <h1>보기 방법 선택</h1>
+            <a class="close"></a>
+          </div>
+          <ul>
+            <li class="active">교재보기</li>
+            <li>해설지 보기</li>
+            <li>교재 설명 보기</li>
+          </ul>
+          <div class="btn-box">
+            <button class="cancel">취소</button>
+            <button class="clear">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //contents -->
+
+    <!-- orign footer import -->
+    <div id="bottomFooter" class="pd0"></div> <!-- 수정추가 20250731 -->
+  </div>
+</body>
+
+</html>

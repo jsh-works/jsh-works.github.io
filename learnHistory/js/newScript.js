@@ -61,6 +61,11 @@ $(function() {
     location.href = '../learnHistory/createClass.html';
   });
 
+  // 학급별 학습이력 관리 - 학급생성 PC
+  $("#contentsWrap.learn .class-box.create").on('click', function() {
+    location.href = '../../bookStory/MyLearnCeateClass.html';
+  });
+
   // 학급별 학습이력 관리 - 학급삭제
   $(".class-delete-ico").on('click', function(e) {
     e.preventDefault();
@@ -84,6 +89,12 @@ $(function() {
     location.href = '../learnHistory/createClass.html';
   });
 
+  // 학급별 학습이력 관리 - 학급 정보 수정 PC
+  $("#contentsWrap.learn .create-class-btn").on('click', function(e) {
+    e.preventDefault();
+    location.href = '../../bookStory/MyLearnCeateClass.html';
+  });
+
   // 학급별 학습이력 관리 - 학급 초대하기 (APP 기능)
   $(".class-invite-btn").on('click', function(e) {
     e.preventDefault();
@@ -96,6 +107,15 @@ $(function() {
     var copyUrl = 'https://jsh-works.github.io/learnHistory/detailStatus.html';
     window.navigator.clipboard.writeText(copyUrl).then(() => {
       alert("링크 URL이 복사 되었습니다.");
+    });
+  });
+  
+  // 학급별 학습이력 관리 - 학급 복사하기 PC
+  $("#contentsWrap.learn .class-copy-btn").on('click', function(e) {
+    e.preventDefault();
+    var copyUrl = 'https://jsh-works.github.io/bookStory/MyLearnMngt.html';
+    window.navigator.clipboard.writeText(copyUrl).then(() => {
+      // alert("링크 URL이 복사 되었습니다.");
     });
   });
 
@@ -119,10 +139,21 @@ $(function() {
     location.href = '../learnHistory/classStatus.html';
   });
 
+  // 신규 학급 생성 - 취소 버튼 PC
+  $("#contentsWrap.learn .class .cancel-btn").on('click', function() {
+    location.href = '../../bookStory/MyLearnStatus.html';
+  });
+
   // 신규 학급 생성 - 저장 버튼
   $(".class .save-btn").on('click', function() {
     alert("저장되었습니다.");
     location.href = '../learnHistory/detailStatus.html';
+  });
+
+  // 신규 학급 생성 - 저장 버튼 PC
+  $("#contentsWrap.learn .class .save-btn").on('click', function() {
+    // alert("저장되었습니다.");
+    location.href = '../../bookStory/MyLearnStatus.html';
   });
 
   // 학생별 학습이력 - 학습이력 탭 선택

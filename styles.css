@@ -106,7 +106,7 @@ h2 {
 	padding-left: 10px;
 }
 #wrap .container dl dt.menu.learn {
-	background-color: rgba(255, 0, 0, 0.61);
+	background-color: #F5FAE1;
 }
 #wrap .container .menuList dl dd a.dev {
 	color: var(--devColor);

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EBS 북스토리">
+  <meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+  <meta property="og:image" content="/images/ebs_bookstory_og.png" /> <!-- 수정추가 20250731 -->
+  <title>EBS 교재사이트 :: 나의교재방</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <link rel="stylesheet" href="./css/xeicon.css" />
+  <link rel="stylesheet" href="../learnHistory/css/mngt.css" /> <!-- import learnHistory CSS -->
+
+  <link rel="stylesheet" href="./css/newStyles.css" />
+  <link id="contextPathHolder" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="./js/newScript.js"></script> <!-- addition -->
+  <script src="./js/topHeader.js"></script> <!-- origin -->
+  <script src="./js/bottomFooter.js"></script> <!-- origin -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart.js 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script> <!-- chart.js plugin 추가 -->
+  <script src="../learnHistory/js/newScript.js"></script> <!-- import learnHistory JS -->
+  <script src="https://book.ebs.co.kr/js/slick.js"></script>
+  <script src="https://book.ebs.co.kr/js/swiper.min.js"></script>
+  <script src="https://book.ebs.co.kr/js/jquery.cookie.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/pre-renewal-common.js?v=0001"></script>
+  <script src="https://book.ebs.co.kr/js/custom.js?v=0001"></script>
+</head>
+<body>
+  <div id="wrap">
+    <!-- orign header import -->
+    <div id="topHeader"></div>
+
+    <!-- contents -->
+    <div id="contentsWrap" class="sub list learn"> <!-- .mngt 추가 -->
+      <div class="sub-cnt-wrap">
+        <div class="sort-wrap pc">
+          <div class="sort type2">
+            <ul>
+              <li class="my">
+                <a href="./bookStoryMyPage.html">
+                  <strong class="on">나의 교재</strong>
+                </a>
+                <ul id="" class="type2">
+                  <li onClick="location.href='./bookStoryMyPage.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="">
+                    <label for="class_1">나의 교재</label>
+                  </li>
+                  <li onClick="location.href='./MyLearnMngt.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="">
+                    <label for="class_2">나의 학습이력 관리</label>
+                  </li>
+                  <li onClick="location.href='./MyLearnStatus.html'">
+                    <input class="stdy" type="radio" id="class_1" name="class" value="" checked>
+                    <label for="class_3">학급별 학습이력 관리</label>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <strong class="on">나의 구매 정보</strong>
+                <ul id="" class="area type2">
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_1" name="ebk" value="payhist">
+                    <label for="ebk_1">eBook 결제 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_2" name="ebk" value="refund">
+                    <label for="ebk_2">eBook 환불 내역</label>
+                  </li>
+                  <!-- 수정추가 20250805 onClick 링크 추가 -->
+                  <li onClick="location.href='./bookStoryCoupon.html'">
+                    <input class="stdy" type="radio" id="ebk_3" name="ebk" value="coupon">
+                    <label for="ebk_3">쿠폰/구독권 등록</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="ebk_4" name="ebk" value="basket">
+                    <label for="ebk_4">장바구니</label>
+                  </li>
+                  <li onClick="location.href='./bookStoryIntrst.html'">
+                    <input class="stdy" type="radio" id="ebk_5" name="ebk" value="intrst">
+                    <label for="ebk_5">관심교재</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong class="on">나의 구독 정보</strong>
+                <ul id="" class="area type2">
+                  <!-- 수정추가 20250731 onClick 링크 추가 -->
+                  <li onClick="location.href='./bookStoryMngt.html'">
+                    <input class="stdy" type="radio" id="sbc_1" name="sbc" value="">
+                    <label for="sbc_1">나의 구독 관리</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_2" name="sbc" value="">
+                    <label for="sbc_2">구독 환불 내역</label>
+                  </li>
+                  <li>
+                    <input class="stdy" type="radio" id="sbc_3" name="sbc" value="">
+                    <label for="sbc_3">정기 결제 카드 변경</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- import HTML -->
+        <div class="list-viewer">
+          <div class="mngt-wrap">
+            <div class="container">
+              <div class="title-box">
+                <h2>신규 학급 생성</h2>
+                <p>신규 학급을 생성하고, 관리할 수 있습니다.</p>
+              </div>
+              <div class="contents">
+                <div class="create-box">
+                  <dl class="school">
+                    <dt>학교급</dt>
+                    <dd>
+                      <input type="radio" id="a01" name="school-level" />
+                      <label for="a01">초등학교</label>
+                    </dd>
+                    <dd>
+                      <input type="radio" id="a02" name="school-level" />
+                      <label for="a02">중학교</label>
+                    </dd>
+                    <dd>
+                      <input type="radio" id="a03" name="school-level" />
+                      <label for="a03">고등학교</label>
+                    </dd>
+                    <dd>
+                      <input type="radio" id="a04" name="school-level" />
+                      <label for="a04">기타</label>
+                    </dd>
+                  </dl>
+
+                  <dl class="class-name">
+                    <dt>학급명</dt>
+                    <dd>
+                      <input type="text" id="b01" class="w160" />
+                      <label for="b01"></label>
+                    </dd>
+                    <dd>
+                      <input type="text" id="b02" class="w60" maxlength="1" />
+                      <label for="b02"></label>
+                      <span>학년</span>
+                    </dd>
+                    <dd>
+                      <input type="text" id="b03" class="w60" maxlength="2" />
+                      <label for="b03"></label>
+                      <span>반</span>
+                    </dd>
+                  </dl>
+
+                  <dl class="class-date">
+                    <dt>학급 기한</dt>
+                    <dd>
+                      <input type="date" id="c01" class="w160 mr48" />
+                      <label for="c01"></label>
+                      <span>* 등록 시, 지정한 학급 기한 이후에는 해당 학급이 삭제됩니다.</span>
+                    </dd>
+                  </dl>
+
+                  <dl class="textbook">
+                    <dt>관리교재 선택</dt>
+                    <dd>
+                      <div class="textbook-box">
+                        <div class="search-form">
+                          <input type="text" placeholder="검색어를 입력해 주세요." id="search" name="search" />
+                        </div>
+                        <div class="list-form">
+                          <ul>
+                            <li>
+                              <input type="checkbox" id="s01" name="search" />
+                              <label for="s01">만점왕 수학 3-1 (2024년)</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s02" name="search" />
+                              <label for="s02">만점왕 수학 3-1 (2024년)</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s03" name="search" />
+                              <label for="s03">만점왕 국어 3-2 (2024년)</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s04" name="search" />
+                              <label for="s04">만점왕 국어 3-2 (2024년)</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s05" name="search" />
+                              <label for="s05">초등 영어듣기평가 완벽대비 3-1</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s06" name="search" />
+                              <label for="s06">초등 영어듣기평가 완벽대비 3-2</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s07" name="search" />
+                              <label for="s07">초등 영어듣기평가 완벽대비 3-3</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s08" name="search" />
+                              <label for="s08">초등 영어듣기평가 완벽대비 3-4</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s09" name="search" />
+                              <label for="s09">초등 영어듣기평가 완벽대비 3-5</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s10" name="search" />
+                              <label for="s10">초등 영어듣기평가 완벽대비 3-6</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s11" name="search" />
+                              <label for="s11">초등 영어듣기평가 완벽대비 3-6</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" id="s12" name="search" />
+                              <label for="s12">초등 영어듣기평가 완벽대비 3-6</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+
+                  <div class="color-box">
+                    <ul>
+                      <li class="color-code">
+                        <button class="yellow active" title="yellow">yellow</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="cupid" title="cupid">cupid</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="pink" title="pink">pink</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="carrot" title="carrot">carrot</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="cranberry" title="cranberry">cranberry</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="turquoise" title="turquoise">turquoise</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="meadow" title="meadow">meadow</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="mountain" title="mountain">mountain</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="lochmara" title="lochmara">lochmara</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="blue" title="blue">blue</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="waikawa" title="waikawa">waikawa</button>
+                      </li>
+                      <li class="color-code">
+                        <button class="emperor" title="emperor">emperor</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-box class">
+                  <button class="cancel-btn">취소</button>
+                  <button class="save-btn">저장</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="not-device">
+          <img src="./imgs/mngt-item-none-ico.png" alt="해당 디바이스는 지원하지 않습니다." />
+          <p>
+            해당 디바이스는 지원하지않습니다.<br/>
+            다른 기기로 이용부탁드립니다.
+          </p>
+        </div>
+        <!-- // import HTML -->
+
+      </div>
+
+      <!-- bottomSheet popup -->
+      <div class="bottomSheet">
+        <div class="popup">
+          <div class="title">
+            <h1>보기 방법 선택</h1>
+            <a class="close"></a>
+          </div>
+          <ul>
+            <li class="active">교재보기</li>
+            <li>해설지 보기</li>
+            <li>교재 설명 보기</li>
+          </ul>
+          <div class="btn-box">
+            <button class="cancel">취소</button>
+            <button class="clear">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //contents -->
+
+    <!-- orign footer import -->
+    <div id="bottomFooter" class="pd0"></div> <!-- 수정추가 20250731 -->
+  </div>
+</body>
+
+</html>

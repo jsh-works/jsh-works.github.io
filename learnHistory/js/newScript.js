@@ -19,10 +19,11 @@ $(function() {
   $(".invite-popup .agree-btn").on('click', function() {
     location.href = '../learnHistory/detailStatus.html';
   });
+ 
 
   // 학급시스템 초대하기 (동의) - 팝업 거절하기 선택
   $(".invite-popup .close, .invite-popup .cancel-btn").on('click', function() {
-    window.close();
+    $(".invite-popup").hide();
   });
 
   // 나의 학습이력 관리 - 학습이력 동의여부

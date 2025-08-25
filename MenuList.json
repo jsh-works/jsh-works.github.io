@@ -132,5 +132,19 @@
     "devUrl" : "learnHistory/resultPopup.html",
     "progress" : "완료",
     "update" : "25.08.21"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "PC) 나의 학습이력 관리",
+    "devUrl" : "bookStory/MyLearnMngt.html",
+    "progress" : "완료",
+    "update" : "25.08.25"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "PC) 학급별 학습이력 관리",
+    "devUrl" : "bookStory/MyLearnStatus.html",
+    "progress" : "완료",
+    "update" : "25.08.25"
   }
 ]

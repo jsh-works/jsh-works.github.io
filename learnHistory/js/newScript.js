@@ -54,9 +54,6 @@ $(function() {
     var rectHeight = $('.tool-tip').outerHeight() / 2; // 가변적 툴팁 높이 50% 값
     var tooltipX = eleLeft - containLeft - rectWidth; // 툴팁 실제 X축 위치 값
     var tooltipY = eleTop - containTop - rectHeight; // 툴팁 실제 Y축 위치 값 
-    // console.log(tooltipX, tooltipY);
-
-    console.log(eleTop, containTop, rectHeight);
     
     if($(this).hasClass('top')) {
       $('.tool-tip').addClass('top');

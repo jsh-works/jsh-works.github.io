@@ -12,6 +12,9 @@ select {
   margin: 0;
   padding: 20px;
 }
+.mngt-wrap .container .contain {
+  position: relative;
+}
 
 /* APP 내려받기 */
 .app-wrap { position: relative; }
@@ -662,6 +665,12 @@ select {
   text-align: left;
   padding-left: 16px;
 }
+.mngt-wrap .container .textbook-contents .contents table.learn tbody tr td.left {
+  text-align: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  word-break: keep-all;
+}
 .mngt-wrap .container .contents table.learn tbody tr td div.value {
   display: inline-block;
   line-height: 160%;
@@ -719,7 +728,7 @@ select {
 .mngt-wrap .container .contents table.learn tbody tr td span.user-name:not(:last-child) {
   margin-bottom: 8px;
 }
-.mngt-wrap .container .contents table.learn .info::after {
+.mngt-wrap .info-ico::after {
   content: '';
   display: inline-block;
   width: 20px;
@@ -729,11 +738,9 @@ select {
   background: url("../imgs/info-ico.png") center center / cover no-repeat;
   cursor: pointer;
 }
-.mngt-wrap .container .helpTip {
+.mngt-wrap .container .tool-tip {
   display: none;
   position: absolute;
-  top: auto;
-  left: auto;
   width: auto;
   color: #fff;
   font-size: 13px;
@@ -744,8 +751,11 @@ select {
   padding: 4px 12px;
   border-radius: 4px;
   background: #484848;
+  opacity: 0.9;
+  z-index: 1000;
+  pointer-events: none;
 }
-.mngt-wrap .container .helpTip::after {
+.mngt-wrap .container .tool-tip::after {
   content: "";
   position: absolute;
   top: -6px;
@@ -755,6 +765,18 @@ select {
   border-right: 10px solid transparent;
   border-bottom: 0px solid transparent;
   transform: rotate(180deg);
+}
+.mngt-wrap .container .tool-tip.top::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: -6px;
+  left: calc(50% - 10px);
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(0deg);
 }
 .mngt-wrap .container .contents .toggle-box {
   position: relative;
@@ -1434,17 +1456,7 @@ select {
 .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(6) {
   width: 120px;
 }
-.mngt-wrap .container .student-contents ul.th li.info::after {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-left: 4px;
-  vertical-align: -5px;
-  background: url("../imgs/info-ico.png") center center / cover no-repeat;
-  cursor: pointer;
-}
-.mngt-wrap .container .student-contents ul.th li.info::after {
+.mngt-wrap .container .student-contents ul.th li.info-ico::after {
   content: '';
   display: inline-block;
   width: 20px;

@@ -17,7 +17,8 @@ $(function() {
 
   // 학급시스템 초대하기 (동의) - 팝업 동의하기 선택
   $(".invite-popup .agree-btn").on('click', function() {
-    location.href = '../learnHistory/detailStatus.html';
+    $(".invite-popup").hide();
+    // location.href = '../learnHistory/detailStatus.html';
   });
  
 
@@ -39,21 +40,42 @@ $(function() {
     }
   });
 
-  // 공통 - info 버튼 말풍선
-  $(".info").on('click', function() {
-    var clickPosition = $(this).offset();
-    var thisLeft = $(this).position().left;
-    if(!$(".info").hasClass('active')) {
-      $(this).addClass('active');
-      $('.helpTip').show();
-      $('.helpTip').css({
-        top: clickPosition.top + $(this).outerHeight(),
-        left : thisLeft - 35
-      })
+  // 공통 - info-ico 툴팁 이벤트 스크립트
+  $('.info-ico').on('click', function(e) {
+    e.stopPropagation(); // 이벤트 전파 방지
+    $('.tool-tip').html($(this).data('text')); // data-text 요소에 따른, 텍스트 변경
+
+    var contain = $(this).parents('.contain'); // 부모 컨텐츠
+    var containTop = contain.offset().top; // 부모 컨텐츠 top 시작점
+    var containLeft = contain.offset().left; // 부모 컨텐츠 left 시작점
+    var eleTop = $(this).offset().top; // 클릭요소 top 값
+    var eleLeft = $(this).offset().left; // 클릭요소 left 값
+    var rectWidth = $('.tool-tip').outerWidth() / 2; // 가변적 툴팁 넓이 50% 값
+    var rectHeight = $('.tool-tip').outerHeight() / 2; // 가변적 툴팁 높이 50% 값
+    var tooltipX = eleLeft - containLeft - rectWidth; // 툴팁 실제 X축 위치 값
+    var tooltipY = eleTop - containTop - rectHeight; // 툴팁 실제 Y축 위치 값 
+    // console.log(tooltipX, tooltipY);
+
+    console.log(eleTop, containTop, rectHeight);
+    
+    if($(this).hasClass('top')) {
+      $('.tool-tip').addClass('top');
+      $('.tool-tip').css({ top : tooltipY - 25, left: tooltipX + 14 }).show();
     } else {
-      $(".info").removeClass('active');
-      $('.helpTip').hide();
+      $('.tool-tip').removeClass('top');
+      $('.tool-tip').css({ top : tooltipY + 50 , left: tooltipX + 14 }).show();
     }
+    
+  });
+
+  // 툴팁 외부 클릭 시 툴팁 숨기기
+  $(document).on('click', function() {
+      $('.tool-tip').hide();
+  });
+
+  // 툴팁 요소 자체의 클릭 이벤트가 툴팁을 숨기지 않도록 방지
+  $('.tool-tip').on('click', function(e) {
+      e.stopPropagation();
   });
 
 

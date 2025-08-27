@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-* { line-height: 1.6; }
 .gnb-dep01 > li .gnb-dep02-div {
   position: relative;
   display: none;
@@ -1405,8 +1404,8 @@ input[type="radio"]:checked + label::after {
   height: 24px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
-  padding: 6px 0px;
+  line-height: 1.6;
+  padding: 2px 0px;
   text-align: center;
   white-space: nowrap;
   border-radius: 4px;
@@ -2058,6 +2057,9 @@ input[type="radio"]:checked + label::after {
   opacity: 0;
   animation: rightFadeIn 0.3s 0.3s forwards;
 }
+#contentsWrap .highSection section .sec-inner .best-box ul li span a {
+  line-height: 1.6;
+}
 #contentsWrap .highSection section .sec-inner .best-box ul li:not(:last-child) {
   margin-bottom: 4px;
 }
@@ -2072,6 +2074,7 @@ input[type="radio"]:checked + label::after {
   color: #fff;
   font-weight: 700;
   font-size: 17px;
+  line-height: 1.6;
   text-align: center;
   margin-right: 8px;
   border-radius: 6px;
@@ -2131,7 +2134,7 @@ input[type="radio"]:checked + label::after {
   color: #2E2F33E0;
   font-size: 17px;
   font-weight: 700;
-  line-height: 142%;
+  line-height: 1.6;
   padding: 16px;
   cursor: pointer;
 }
@@ -2689,10 +2692,10 @@ input[type="radio"]:checked + label::after {
   height: 24px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.6;
   text-align: center;
   white-space: nowrap;
-  padding: 0 8px;
+  padding: 2px 8px;
   border-radius: 4px;
 }
 #contentsWrap.textbook .book-item .flag-box span.flag-pass {
@@ -4856,8 +4859,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   color: #fff;
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.6;
   text-align: center;
-  padding: 7px 0;
+  padding: 6px 0;
   margin-bottom: 12px;
   border-radius: 32px;
 }
@@ -5280,6 +5284,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     gap: 10px;
     width: auto;
     text-align: center;
+  }
+  .quick-navbar {
+    display: none;
   }
 }
 

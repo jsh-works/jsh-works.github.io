@@ -2422,7 +2422,7 @@ input[type="radio"]:checked + label::after {
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  height: 75px;
+  height: 72px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -2689,7 +2689,7 @@ input[type="radio"]:checked + label::after {
 }
 #contentsWrap.textbook .book-item .flag-box span {
   width: 62px;
-  height: 24px;
+  height: 22px;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.6;
@@ -7857,8 +7857,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     display: block;
   }
   #contentsWrap.textbook .book-item .flag-box span {
-    /* width: auto; */
-    height: 24px;
+    height: 22px;
   }
   #contentsWrap.textbook .textbook-list-box.albumType .book-item dl dt {
     font-size: 16px;

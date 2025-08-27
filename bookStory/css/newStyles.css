@@ -2695,7 +2695,7 @@ input[type="radio"]:checked + label::after {
   line-height: 1.6;
   text-align: center;
   white-space: nowrap;
-  padding: 2px 8px;
+  padding: 0px 8px;
   border-radius: 4px;
 }
 #contentsWrap.textbook .book-item .flag-box span.flag-pass {

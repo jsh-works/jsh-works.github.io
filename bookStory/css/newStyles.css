@@ -2695,7 +2695,7 @@ input[type="radio"]:checked + label::after {
   line-height: 1.6;
   text-align: center;
   white-space: nowrap;
-  padding: 0px 8px;
+  padding: 2px 8px;
   border-radius: 4px;
 }
 #contentsWrap.textbook .book-item .flag-box span.flag-pass {
@@ -6503,11 +6503,11 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   #contentsWrap.viewer .sub-cnt-wrap .mob-cnt-book-infos .books-ticket .flag-box span {
     width: 62px;
-    height: 24px;
+    height: 22px;
     font-size: 12px;
     font-weight: 500;
-    line-height: 1;
-    padding: 6px 0px;
+    line-height: 1.6;
+    padding: 2px 0px;
     text-align: center;
     white-space: nowrap;
     border-radius: 4px;
@@ -7808,7 +7808,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     font-size: 18px;
   }
   #contentsWrap .highSection section .sec-inner .full-list-box .flex-items .list-item .item-title p {
-    height: 48px;
+    height: 46px;
     font-size: 14px;
     -webkit-line-clamp: 2;
   }

@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+* { line-height: 1.6; }
 .gnb-dep01 > li .gnb-dep02-div {
   position: relative;
   display: none;

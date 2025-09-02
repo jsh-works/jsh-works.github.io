@@ -1080,6 +1080,7 @@ select {
   padding: 13px 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: #fff; /* 20250901 추가 */
 }
 .mngt-wrap .container .contents .create-box dl dd span {
   color: #222;
@@ -1116,7 +1117,7 @@ select {
 }
 .mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 4px; /* 20250901 변경 */
   border-bottom: 1px solid #BBB;
 }
 .mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form input {

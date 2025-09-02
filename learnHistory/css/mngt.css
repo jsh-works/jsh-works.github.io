@@ -1154,6 +1154,7 @@ select {
   flex-direction: row;
   justify-content: space-between;
   gap: 8px;
+  margin-top: 6px;
 }
 .mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .list-form ul li {
   display: flex;
@@ -1532,6 +1533,7 @@ select {
   width: 100%;
   height: 100%;
   display: none;
+  z-index: 10; /* 20250901 변경 */
 }
 .mngt-wrap .container .alias-popup .inner {
   width: 400px;
@@ -1685,6 +1687,13 @@ select {
   box-sizing: border-box;
   background-color: #fff;
 }
+.invite-popup .inner h5 { /* 20250901 추가 */
+  display: none;
+  color: #222;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+}
 .invite-popup .inner span.close {
   position: absolute;
   top: 20px;
@@ -1801,12 +1810,13 @@ select {
 }
 .result-popup .inner {
   position: relative;
-  width: 1100px;
-  height: 812px;
+  width: 1100px; /* 20250901 변경 */
+  height: calc(100% - 100px); /* 20250901 변경 */
   border-radius: 16px;
   box-sizing: border-box;
   border: 1px solid #fff;
   background-color: #fff;
+  overflow: hidden; /* 20250901 추가 */
 }
 .result-popup .inner .title {
   position: relative;
@@ -1826,6 +1836,7 @@ select {
   font-weight: 700;
   line-height: 140%;
   padding-left: 24px;
+  margin-bottom: 0; /* 20250901 추가 */
 }
 .result-popup .inner .title span.close {
   position: absolute;
@@ -1839,7 +1850,7 @@ select {
 }
 .result-popup .inner .content {
   position: relative;
-  height: 700px;
+  height: calc(100% - 100px); /* 20250901 변경 */
   padding: 0 24px;
   overflow-y: auto;
 }
@@ -2042,13 +2053,88 @@ select {
 }
 
 @media all and (max-width: 650px) {
-  .btns-box {
+  .btns-box { /* 20250901 flexEnd 삭제 */
     display: flex;
-    justify-content: flex-end;
   }
 	.btns-box ul {
     display: none;
   }
+
+  /* 20250901 추가 시작 */
+  .invite-popup .inner,
+  .result-popup .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .invite-popup .inner .popup-header {
+    position: relative;
+    padding: 19.5px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .invite-popup .inner h5 {
+    display: inline-block;
+  }
+  .invite-popup .inner .title p.invite-text {
+    margin: 40px 20px 24px;
+    word-break: keep-all;
+  }
+  .invite-popup .inner .content {
+    margin: 0 20px;
+  }
+  .invite-popup .inner .btn-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    gap: 0;
+  }
+  .invite-popup .inner .btn-box button {
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    border-radius: 0;
+  }
+  .invite-popup .inner .btn-box button.cancel-btn {
+    color: #222;
+    border: 1px solid #bbb;
+  }
+  .result-popup .inner .content {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 20px;
+  }
+  .result-popup .inner .content .chart-container .chart-table,
+  .result-popup .inner .content .chart-container .result-table {
+    position: relative;
+    overflow-x: auto;
+  }
+  .result-popup .inner .content .chart-container .doughnut-table {
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 80px;
+  }
+  .result-popup .inner .content .chart-container .doughnut-table .doughnut-box {
+    padding: 24px 0px;
+  }
+  .result-popup .inner .content .result-info {
+    padding-right: 24px;
+    padding-bottom: 120px;
+  }
+  .result-popup .inner .content .result-info p::before {
+    content: '';
+    min-width: 20px;
+  }
+  .result-popup .inner .content .btns-box .types button.print {
+    display: none;
+  }
+  /* 20250901 추가 끝 */
+  
 }
 
 @media all and (max-width: 400px) {

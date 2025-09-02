@@ -5187,7 +5187,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 /* 학급관리시스템 분기처리 CSS 추가 */
 #contentsWrap.learn .container {
   max-width: 1000px;
-  width: 100%;
+  width: 1000px; /* 20250901 변경 */
 }
 #contentsWrap.learn .not-device {
   display: none;
@@ -5228,39 +5228,29 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   padding-bottom: 0;
   margin-bottom: 0;
 }
+#contentsWrap.learn .container .class-item h2 { /* 20250901 추가 */
+  display: block;
+  color: #fff;
+}
 #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after {
   top: -3px;
 }
+#contentsWrap.learn .result-popup .inner .title h3 { /* 20250901 변경 */
+  margin-bottom: 0;
+}
 
+
+/* 학급관리시스템 분기처리 CSS 추가 */
 @media all and (max-width: 1024px) {
-  #contentsWrap.learn .list-viewer {
-    display: none;
+  #contentsWrap.learn .list-viewer { /* 20250901 변경 */
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    overflow-x: auto;
   }
-  #contentsWrap.learn .not-device {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
+  #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after { /* 20250901 추가 */
+    top: 50%;
   }
-  #contentsWrap.learn .not-device > img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 12px;
-    vertical-align: bottom;
-  }
-  #contentsWrap.learn .not-device > p {
-    color: #222;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 160%;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  .invite-popup {
-    display: none !important;
-  }
+  
 }
 
 

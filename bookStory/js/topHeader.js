@@ -171,10 +171,12 @@ $(function(){
       } else if($(this).data('tab') == '2') {
         $(".gnb-mini-sub-dep.buy-tab").show();
         $(".gnb-mini-sub-dep.scr-tab").hide();
+        $(".gnb-mini-sub-dep.mngt-tab").hide();
         
       } else if($(this).data('tab') == '3') {
         $(".gnb-mini-sub-dep.buy-tab").hide();
         $(".gnb-mini-sub-dep.scr-tab").show();
+        $(".gnb-mini-sub-dep.mngt-tab").hide();
       
       } else if($(this).data('info') === 'scribe') { // 이용안내 3뎁스 닫기
         $(".gnb-mini-sub-dep.useInfo-tab").hide();

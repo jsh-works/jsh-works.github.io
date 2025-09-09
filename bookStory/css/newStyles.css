@@ -19,13 +19,7 @@ input[type="radio"]:checked + label::before {
   content: '';
   border: 1px solid #4165F4;
 }
-input[type="radio"]:checked + label::after { /* 20250909 수정 */
-  content: '';
-  top: 4px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
-  transform: translateY(0);
+input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   background-color: #4165F4;
 }
 .book-info {
@@ -5256,8 +5250,8 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     margin-bottom: 40px;
     overflow-x: auto;
   }
-  #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after { /* 20250901 추가 */
-    top: 50%;
+  #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after { /* 250909 수정 */
+    top: 0;
     border-radius: 100%;
   }
 
@@ -7068,6 +7062,17 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   }
   .cart-list .cart-cont-wrap .btn-wrap .btn-pink {
     min-width: 100% !important;
+  }
+
+  /* 20250909 추가수정 */
+  #contentsWrap.sub.entire .roadmap-cnt input[type="radio"]:checked + label::after {
+    content: '';
+    top: 4px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(0);
+    background-color: #4165F4;
   }
   
   /* 기존 - 검색 페이지 */

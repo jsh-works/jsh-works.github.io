@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="naver-site-verification" content="1e1420488d791f79200b62ae325bcea45fce17fe" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="EBS 북스토리">
+	<meta property="og:description" content="EBS의 모든 교재를 한 번에!">
+	<meta property="og:image" content="/images/ebs_bookstory_og.png" />
+	<title>학습결과 보고서</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.ebs.co.kr/www/favicon/favicon.ico" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/base.css?v=0001" />
+  <link rel="stylesheet" href="https://book.ebs.co.kr/css/pre-renewal-common.css?v=0001" />
+  <script src="https://book.ebs.co.kr/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"></script>
+  <script>
+    $(function() {
+      function initializeChart1() {
+        var newCtx1 = $("#newDoughnut1");
+        var newDoughnut1 = new Chart(newCtx1, {
+          type: 'doughnut',
+          data: {
+            datasets: [{
+              data: [100, 0], // 1.(실제값(100)) 2.(최대값(100) - 실제값(100) = 남은값(0))
+              backgroundColor: ['#2BC1EA', '#EEF1F8'],
+              borderColor: ['#2BC1EA', '#EEF1F8'],
+              borderWidth: 1,
+              cutout: "80%",
+            }]
+          },
+          options: {
+            plugins: {
+              annotation: {
+                annotations: {
+                  centerLabel: {
+                    type: 'doughnutLabel',
+                    content: ({chart}) => [
+                      chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                    ],
+                    font: { size: 36, weight : 700 }
+                  }
+                }
+              }
+            },
+            responsive: false,
+            cutoutPercentage: 80,
+            tooltips: { enabled: false },
+            events: [],
+          },
+        });
+      }
+
+      function initializeChart2() {
+        var newCtx2 = $("#newDoughnut2");
+        var newDoughnut2 = new Chart(newCtx2, {
+          type: 'doughnut',
+          data: {
+            datasets: [{
+              data: [70, 30], // 1.(실제값(70)) 2.(최대값(100) - 실제값(70) = 남은값(30))
+              backgroundColor: ['#4165F4', '#EEF1F8'],
+              borderColor: ['#4165F4', '#EEF1F8'],
+              borderWidth: 1,
+              cutout: "80%",
+            }]
+          },
+          options: {
+            plugins: {
+              annotation: {
+                annotations: {
+                  centerLabel: {
+                    type: 'doughnutLabel',
+                    content: ({chart}) => [
+                      chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                    ],
+                    font: { size: 36, weight : 700 }
+                  }
+                }
+              }
+            },
+            responsive: false,
+            cutoutPercentage: 80,
+            tooltips: { enabled: false },
+            events: [],
+          },
+        });
+      }
+
+      function initializeChart3() {
+        var newCtx3 = $("#newDoughnut3");
+        var newDoughnut3 = new Chart(newCtx3, {
+          type: 'doughnut',
+          data: {
+            datasets: [{
+              data: [40, 68], // 1.(실제값(40)) 2.(최대값(100) - 실제값(40) = 남은값(60))
+              backgroundColor: ['#A041F4', '#EEF1F8'],
+              borderColor: ['#A041F4', '#EEF1F8'],
+              borderWidth: 1,
+              cutout: "80%",
+            }]
+          },
+          options: {
+            plugins: {
+              annotation: {
+                annotations: {
+                  centerLabel: {
+                    type: 'doughnutLabel',
+                    content: ({chart}) => [
+                      chart.data.datasets[0].data[0] + '%' // 현재값 표시
+                    ],
+                    font: { size: 36, weight : 700 }
+                  }
+                }
+              }
+            },
+            responsive: false,
+            cutoutPercentage: 80,
+            tooltips: { enabled: false },
+            events: [],
+          },
+        });
+      }
+      initializeChart1();
+      initializeChart2();
+      initializeChart3();
+    });
+  </script>
+</head>
+<style>
+.result-popup .inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+.result-popup .inner .title {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 71px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ccc;
+}
+.result-popup .inner .title h3 {
+  color: #222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  padding-left: 24px;
+  margin-bottom: 0;
+}
+.result-popup .inner .title span.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  background: url("../imgs/close-ico.png") center center / cover no-repeat;
+  cursor: pointer;
+}
+.result-popup .inner .content {
+  position: relative;
+  padding: 0 24px;
+}
+.result-popup .inner .content p.user-info {
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+  margin-bottom: 16px;
+}
+.result-popup .inner .content .btns-box {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.btns-box .types select {
+  width: 130px;
+  height: 48px;
+  color: #222;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 20px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.result-popup .inner .content .btns-box .types select.st1 {
+  width: 194px;
+}
+.result-popup .inner .content .btns-box .types select.st2 {
+  width: 92px;
+}
+.result-popup .inner .content .chart-container .chart-table {
+  margin-bottom: 24px;
+}
+.result-popup .inner .content .chart-container table {
+  border-top: 1px solid #666;
+}
+.result-popup .inner .content .chart-container table > caption {
+  width: 100%;
+  height: auto;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: right;
+  margin-bottom: 16px;
+  visibility: visible;
+}
+.result-popup .inner .content .chart-container .result-table table > caption {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: left;
+}
+.result-popup .inner .content .chart-container table thead tr {
+  border-bottom: 1px solid #ccc;
+}
+.result-popup .inner .content .chart-container table thead tr th {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  padding: 16px 0px;
+  background-color: #F7F7F7;
+}
+.result-popup .inner .content .chart-container table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.result-popup .inner .content .chart-container table tbody tr td {
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  padding: 16px 0px;
+  background-color: #fff;
+}
+.result-popup .inner .content .chart-container table thead tr th:not(:last-child),
+.result-popup .inner .content .chart-container table tbody tr td:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+.result-popup .inner .content .chart-container .doughnut-table {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  height: 282px;
+  margin-bottom: 32px;
+}
+.result-popup .inner .content .chart-container .doughnut-table .doughnut-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background-color: #fff;
+}
+.result-popup .inner .content .chart-container .doughnut-table .doughnut-box > span.legend-text {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+}
+.result-popup .inner .content .chart-container .result-table {
+  margin-bottom: 16px;
+}
+.result-popup .inner .content .chart-container .result-table {
+  margin-bottom: 16px;
+}
+.result-popup .inner .content .result-info p {
+  display: flex;
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.result-popup .inner .content .result-info p:not(:last-child) {
+  margin-bottom: 4px;
+}
+.result-popup .inner .content .result-info p::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  background: url("../learnHistory/imgs/info-ico.png") center center / cover no-repeat;
+}
+@media all and (max-width: 650px) {
+  .result-popup .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .result-popup .inner .content {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 20px;
+  }
+  .result-popup .inner .content .chart-container .chart-table,
+  .result-popup .inner .content .chart-container .result-table {
+    position: relative;
+    overflow-x: auto;
+  }
+  .result-popup .inner .content .chart-container .doughnut-table {
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 80px;
+  }
+  .result-popup .inner .content .chart-container .doughnut-table .doughnut-box {
+    padding: 24px 0px;
+  }
+  .result-popup .inner .content .result-info {
+    padding-right: 24px;
+    padding-bottom: 120px;
+  }
+  .result-popup .inner .content .result-info p::before {
+    content: '';
+    min-width: 20px;
+  }
+  .result-popup .inner .content .btns-box .types button.print {
+    display: none;
+  }
+}
+</style>
+<body>
+  <div class="result-popup" style="display: flex;">
+    <div class="inner">
+      <div class="title">
+        <h3>학습결과 보고서</h3>
+        <span class="close">닫기</span>
+      </div>
+      <div class="content">
+        <p class="user-info">고양 초등학교 6학년 12반/이*윤/ylih****(힙스터)</p>
+        <div class="btns-box">
+          <div class="types">
+            <select name="textbook" onchange="selBox(this.value)" class="st1">
+              <option value="none" selected="">교제 전체</option>
+              <option value="tbk1">만점왕 국어 3-1(2025)</option>
+              <option value="tbk1">만점왕 국어 3-2(2025)</option>
+              <option value="tbk1">만점왕 국어 3-3(2025)</option>
+            </select>
+            <select name="textbook" onchange="selBox(this.value)" class="st2">
+              <option value="final" selected="">최종</option> <!-- 최종 선생님일 경우 -->
+              <option value="first">최초</option> <!-- 최초 선생님일 경우 -->
+            </select>
+
+            <!-- print :: App에서는 비노출, PC에서는 노출 -->
+            <!-- <button class="print">인쇄</button> -->
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-table">
+            <table>
+              <caption>(전일 기준)</caption>
+              <colgroup>
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 160px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+                <col style="width: 147.67px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>총 학습 시간</th>
+                  <th>교재 열람</th>
+                  <th>총 단원(시험)수</th>
+                  <th>풀이완료단원(시험)수</th>
+                  <th>총 문항수</th>
+                  <th>정답수</th> <!-- 최종 선생님일 경우 --> 
+                  <!-- <th>최초 정답수</th> 최초 선생님일 경우  -->
+                  <th>정답률</th> <!-- 최종 선생님일 경우 --> 
+                  <!-- <th>최초 정답률</th> 최초 선생님일 경우 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HH:MM</td>
+                  <td>NN/NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="doughnut-table">
+            <div class="doughnut-box">
+              <span class="legend-text">열람률</span>
+              <canvas id="newDoughnut1" width="180" height="180"></canvas>
+            </div>
+            <div class="doughnut-box">
+              <span class="legend-text">풀이율</span>
+              <canvas id="newDoughnut2" width="180" height="180"></canvas>
+            </div>
+            <div class="doughnut-box">
+              <span class="legend-text">최종 정답률</span> <!-- 최종 선생님일 경우 -->
+              <!--  <span class="legend-text">최초 정답률</span> 최초 선생님일 경우 -->
+              <canvas id="newDoughnut3" width="180" height="180"></canvas>
+            </div>
+          </div>
+          <div class="result-table">
+            <table>
+              <caption>단원(시험별 결과)</caption>
+              <colgroup>
+                <col style="width: 320px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+                <col style="width: 145.4px;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>단원(시험)명</th>
+                  <th>문항수</th>
+                  <th>정답수</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>정답수</th> 최초 선생님일 경우 -->
+                  <th>정답률</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>최초 정답률</th> 최초 선생님일 경우 -->
+                  <th>총점</th>
+                  <th>점수</th> <!-- 최종 선생님일 경우 -->
+                  <!-- <th>최초 점수</th> 최초 선생님일 경우 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. 다항식의 연산 및 개념1</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>2. 다항식의 연산 및 개념2</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>3. 다항식의 연산 및 개념3</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>4. 다항식의 연산 및 개념4</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+                <tr>
+                  <td>5. 다항식의 연산 및 개념5</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                  <td>NN%</td>
+                  <td>NN</td>
+                  <td>NN</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="result-info">
+          <p>각 단원(시험)별 채점하기 버튼을 눌러 채점을 완료한 경우에 반영되며, 마지막 시행한 채점 결과(전일 기준)가 기록됩니다.</p> <!-- 최종 선생님일 경우 -->
+          <!-- <p>각 단원(시험)별 최초 1회 채점하기 버튼을 눌러 채점한 결과(전일 기준)입니다. 여러 번 채점을 해도 내용은 변경되지 않습니다.</p> 최초 선생님일 경우 -->
+          <p>배점이 없는 문항의 점수는 1점입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

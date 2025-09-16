@@ -941,4 +941,17 @@ console.log(`
       $(".series.type2.chk").siblings().addClass('on').next().slideDown(100);
     }
   });
+
+
+  // 프린트
+  $(".print").on('click', function () {
+    var win = window.open('/bookStory/MyLearnResultPage.html', 'PrintWindow');
+
+    setTimeout(function () {
+      win.document.close();
+      win.focus();
+      win.print();
+      win.close(); 
+    }, 500);
+  })
 });

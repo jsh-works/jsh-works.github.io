@@ -946,11 +946,15 @@ select {
 .mngt-wrap .container .contents .class-box .class-inner .class-item {
   text-align: center;
 }
-.mngt-wrap .container .contents .class-box .class-inner .class-item h2 {
+.mngt-wrap .container .contents .class-box .class-inner .class-item h2 { /* 20250918 css 추가 */
+  width: 200px;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   line-height: 140%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .mngt-wrap .container .contents .class-box .class-inner .class-item h4 {
   color: #fff;

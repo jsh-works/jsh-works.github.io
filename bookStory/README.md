@@ -43,5 +43,5 @@ update.20250917
 ```
 - newStyles.css : bookStory 전 페이지의 공통된 CSS 파일입니다.
 - topHeader.js : 공통의 header를 퍼블리싱 단계에서 보여주기 위함의 js 입니다. (실제는 header.html 있습니다.)
-bottomFooter.js : 공통의 footer를 퍼블리싱 단계에서 보여주기 위함의 js 입니다. (실제는 footer.html 있습니다.)
+- bottomFooter.js : 공통의 footer를 퍼블리싱 단계에서 보여주기 위함의 js 입니다. (실제는 footer.html 있습니다.)
 ```

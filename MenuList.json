@@ -1,88 +1,101 @@
 [
   {
     "id" : "bookStory",
-    "menuName" : "구독 소개/상품 페이지 (구독메인)",
+    "menuName" : "eBook 구독 메인",
     "devUrl" : "bookStory/bookStoryIndex.html",
     "progress" : "완료",
-    "update" : "25.07.03"
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
-    "menuName" : "검색결과",
-    "devUrl" : "bookStory/bookStorySearch.html",
+    "menuName" : "eBook 이용 안내",
+    "devUrl" : "bookStory/bookStoryUseinfo.html",
     "progress" : "완료",
-    "update" : "25.08.14"
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
-    "menuName" : "관심교재",
-    "devUrl" : "bookStory/bookStoryIntrst.html",
+    "menuName" : "고교 메인",
+    "devUrl" : "bookStory/bookStoryHighMain.html",
     "progress" : "완료",
-    "update" : "25.08.13"
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "중학 메인",
+    "devUrl" : "bookStory/bookStoryMidMain.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "초등 메인",
+    "devUrl" : "bookStory/bookStoryEleMain.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "ELT 메인",
+    "devUrl" : "bookStory/bookStoryEnglish.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "교재 목록",
+    "devUrl" : "bookStory/bookStoryList.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "교재 상세",
+    "devUrl" : "bookStory/bookStoryView.html",
+    "progress" : "완료",
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
     "menuName" : "나의 교재방",
     "devUrl" : "bookStory/bookStoryMyPage.html",
     "progress" : "완료",
-    "update" : "25.06.27"
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
-    "menuName" : "나의 구독 관리",
+    "menuName" : "나의 학습이력 관리",
+    "devUrl" : "bookStory/MyLearnMngt.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "학급별 학습이력 관리",
+    "devUrl" : "bookStory/MyLearnStatus.html",
+    "progress" : "완료",
+    "update" : "2025.09"
+  },
+  {
+    "id" : "bookStory",
+    "menuName" : "나의 구독 정보",
     "devUrl" : "bookStory/bookStoryMngt.html",
     "progress" : "완료",
-    "update" : "25.07.28"
-  },
-  
-  {
-    "id" : "bookStory",
-    "menuName" : "고교 메인 페이지",
-    "devUrl" : "bookStory/bookStoryHighMain.html",
-    "progress" : "완료",
-    "update" : "25.07.09"
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
-    "menuName" : "중학 메인 페이지",
-    "devUrl" : "bookStory/bookStoryMidMain.html",
+    "menuName" : "관심교재",
+    "devUrl" : "bookStory/bookStoryIntrst.html",
     "progress" : "완료",
-    "update" : "25.07.09"
+    "update" : "2025.09"
   },
   {
     "id" : "bookStory",
-    "menuName" : "초등 메인 페이지",
-    "devUrl" : "bookStory/bookStoryEleMain.html",
+    "menuName" : "검색결과",
+    "devUrl" : "bookStory/bookStorySearch.html",
     "progress" : "완료",
-    "update" : "25.07.09"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "ELT (유초등영어) 페이지",
-    "devUrl" : "bookStory/bookStoryEnglish.html",
-    "progress" : "완료",
-    "update" : "25.07.09"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "교재 리스트",
-    "devUrl" : "bookStory/bookStoryList.html",
-    "progress" : "완료",
-    "update" : "25.07.18"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "교재상세",
-    "devUrl" : "bookStory/bookStoryView.html",
-    "progress" : "완료",
-    "update" : "25.07.22"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "이용안내",
-    "devUrl" : "bookStory/bookStoryUseinfo.html",
-    "progress" : "완료",
-    "update" : "25.08.07"
+    "update" : "2025.09"
   },
   {
     "id" : "learnHistory",
@@ -93,58 +106,45 @@
   },
   {
     "id" : "learnHistory",
-    "menuName" : "1) 초대하기(동의 팝업)",
+    "menuName" : "학급 - 초대하기/동의하기",
     "devUrl" : "learnHistory/agreePopup.html",
     "progress" : "완료",
     "update" : "25.08.21"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "2) 상세현황",
+    "menuName" : "학급 - 상세현황",
     "devUrl" : "learnHistory/detailStatus.html",
     "progress" : "완료",
     "update" : "25.08.21"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "3) 학급별 학습이력 관리",
+    "menuName" : "학급 - 학급별 학습이력 관리",
     "devUrl" : "learnHistory/classStatus.html",
     "progress" : "완료",
     "update" : "25.08.22"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "4) 신규 학급 생성",
+    "menuName" : "학급 - 신규 학급 생성",
     "devUrl" : "learnHistory/createClass.html",
     "progress" : "완료",
     "update" : "25.08.22"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "5)학생별 학습 이력",
+    "menuName" : "학급 - 학생별 학습 이력",
     "devUrl" : "learnHistory/learningHistory.html",
     "progress" : "완료",
     "update" : "25.08.21"
   },
   {
     "id" : "learnHistory",
-    "menuName" : "6) 결과지 다운로드 팝업",
+    "menuName" : "학급 - 결과지 다운로드",
     "devUrl" : "learnHistory/resultPopup.html",
     "progress" : "완료",
     "update" : "25.08.21"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "PC) 나의 학습이력 관리",
-    "devUrl" : "bookStory/MyLearnMngt.html",
-    "progress" : "완료",
-    "update" : "25.08.25"
-  },
-  {
-    "id" : "bookStory",
-    "menuName" : "PC) 학급별 학습이력 관리",
-    "devUrl" : "bookStory/MyLearnStatus.html",
-    "progress" : "완료",
-    "update" : "25.08.25"
   }
+  
 ]

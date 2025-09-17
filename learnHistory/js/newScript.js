@@ -356,5 +356,6 @@ $(function() {
   // 학습결과 보고서 (결과지 다운로드) - 팝업 닫기
   $(".result-popup .close").on('click', function() {
     $(".result-popup").hide();
-  })
+  });
+  
 });

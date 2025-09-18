@@ -3515,6 +3515,13 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   min-height: 600px;
   padding-left: 280px;
 }
+#contentsWrap.learn .list-viewer { /* 20250918 수정추가 */
+  padding-left: 0;
+  padding-bottom: 40px;
+  margin-left: 280px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
 .list-viewer h2 {
   color: #222;
   font-size: 24px;
@@ -5245,10 +5252,9 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 
 /* 학급관리시스템 분기처리 CSS 추가 */
 @media all and (max-width: 1024px) {
-  #contentsWrap.learn .list-viewer { /* 20250901 변경 */
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    overflow-x: auto;
+  #contentsWrap.learn .list-viewer { /* 20250918 수정추가 */
+    padding-left: 0;
+    margin-left: 20px;
   }
   #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after { /* 250909 수정 */
     top: 0;

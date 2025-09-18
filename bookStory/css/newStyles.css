@@ -5249,6 +5249,26 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   margin-bottom: 0;
 }
 
+/* 20250918 수정추가 */
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(1) {
+  width: 411px;
+}
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(2) {
+  width: 160px;
+}
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(3) {
+  width: 88px;
+}
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(4) {
+  width: 132px;
+}
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(5) {
+  width: 88px;
+}
+#contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(6) {
+  width: 120px;
+}
+
 
 /* 학급관리시스템 분기처리 CSS 추가 */
 @media all and (max-width: 1024px) {

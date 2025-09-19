@@ -1302,7 +1302,7 @@
       fnPromiseAjaxHtml('/mypage/bskt/add', data).then(function (jsonData) {
         var json_rst = JSON.parse(jsonData)
         var rst_code = json_rst.rst_code;
-        console.log('장바구니 코드 =' + rst_code);
+        // console.log('장바구니 코드 =' + rst_code);
         switch (rst_code) {
           case "001":
             if (cart == "buy") {

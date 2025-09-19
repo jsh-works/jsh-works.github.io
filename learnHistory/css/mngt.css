@@ -1084,7 +1084,7 @@ select {
   padding: 13px 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  background-color: #fff; /* 20250901 추가 */
+  background-color: #fff;
 }
 .mngt-wrap .container .contents .create-box dl dd span {
   color: #222;
@@ -1121,7 +1121,7 @@ select {
 }
 .mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form {
   position: relative;
-  padding-bottom: 4px; /* 20250901 변경 */
+  padding-bottom: 4px;
   border-bottom: 1px solid #BBB;
 }
 .mngt-wrap .container .contents .create-box dl.textbook dd div.textbook-box .search-form input {
@@ -1538,7 +1538,7 @@ select {
   width: 100%;
   height: 100%;
   display: none;
-  z-index: 10; /* 20250901 변경 */
+  z-index: 10;
 }
 .mngt-wrap .container .alias-popup .inner {
   width: 400px;
@@ -1692,7 +1692,7 @@ select {
   box-sizing: border-box;
   background-color: #fff;
 }
-.invite-popup .inner h5 { /* 20250901 추가 */
+.invite-popup .inner h5 {
   display: none;
   color: #222;
   font-weight: 700;
@@ -1815,13 +1815,13 @@ select {
 }
 .result-popup .inner {
   position: relative;
-  width: 1100px; /* 20250901 변경 */
-  height: calc(100% - 100px); /* 20250901 변경 */
+  width: 1100px;
+  height: calc(100% - 100px);
   border-radius: 16px;
   box-sizing: border-box;
   border: 1px solid #fff;
   background-color: #fff;
-  overflow: hidden; /* 20250901 추가 */
+  overflow: hidden;
 }
 .result-popup .inner .title {
   position: relative;
@@ -1841,7 +1841,7 @@ select {
   font-weight: 700;
   line-height: 140%;
   padding-left: 24px;
-  margin-bottom: 0; /* 20250901 추가 */
+  margin-bottom: 0;
 }
 .result-popup .inner .title span.close {
   position: absolute;
@@ -1855,7 +1855,7 @@ select {
 }
 .result-popup .inner .content {
   position: relative;
-  height: calc(100% - 100px); /* 20250901 변경 */
+  height: calc(100% - 100px);
   padding: 0 24px;
   overflow-y: auto;
 }
@@ -2058,14 +2058,13 @@ select {
 }
 
 @media all and (max-width: 650px) {
-  .btns-box { /* 20250901 flexEnd 삭제 */
+  .btns-box {
     display: flex;
   }
 	.btns-box ul {
     display: none;
   }
 
-  /* 20250901 추가 시작 */
   .invite-popup .inner,
   .result-popup .inner {
     position: relative;
@@ -2138,8 +2137,6 @@ select {
   .result-popup .inner .content .btns-box .types button.print {
     display: none;
   }
-  /* 20250901 추가 끝 */
-  
 }
 
 @media all and (max-width: 400px) {

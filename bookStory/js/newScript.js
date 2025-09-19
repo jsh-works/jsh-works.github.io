@@ -891,7 +891,7 @@ console.log(`
     e.stopPropagation();
   });
 
-  /* 20250909 교제리스트 - 스크롤에 따른 카테고리 수정 */
+  /* 교제리스트 - 스크롤에 따른 카테고리 수정 */
   $(window).scroll(function(e) {
     if( $(window).scrollTop() > 1000 ) {
       $(".series.type2.chk").siblings().removeClass('on').next().slideUp(100);

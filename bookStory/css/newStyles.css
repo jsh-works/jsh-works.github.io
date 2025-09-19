@@ -19,7 +19,7 @@ input[type="radio"]:checked + label::before {
   content: '';
   border: 1px solid #4165F4;
 }
-input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
+input[type="radio"]:checked + label::after {
   background-color: #4165F4;
 }
 .book-info {
@@ -77,7 +77,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
 .quick-navbar {
   position: fixed;
   top: 0;
-  left: -80px; /* 20250909 수정 */
+  left: -80px;
   width: 80px;
   height: 100vh;
   background-color: #fff;
@@ -96,7 +96,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   cursor: pointer;
 }
 .quick-navbar.open {
-  left: 0; /* 20250909 추가 */
+  left: 0;
   width: 240px;
   transition: all 0.2s;
 }
@@ -381,7 +381,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
 }
 .gnb-mini-sub-dep {
   display: none;
-  max-height: 38px; /* 20250901 추가 */
+  max-height: 38px;
   padding: 12px 0px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -390,7 +390,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
 .gnb-mini-sub-dep ul {
   display: flex;
 }
-.gnb-mini-sub-dep ul li { /* 20250819 최신화 필요 */
+.gnb-mini-sub-dep ul li {
   position: relative;
   display: flex;
   justify-content: center;
@@ -473,9 +473,9 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   width: 1200px;
   margin: 0 auto 56px;
   overflow: hidden;
-  opacity: 0; /* 20250818 추가 */
+  opacity: 0;
 }
-#contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide.swiper-container-initialized { /* 20250818 추가 */
+#contentsWrap .mainSection .sec1 .sec-inner .slide-banner .coverflow-slide.swiper-container-initialized {
   opacity: 1; 
 }
 #contentsWrap .mainSection .sec1 .sec-inner .slide-banner .swiper-wrapper {
@@ -1138,7 +1138,6 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   z-index: 9999;
   opacity: 0;
   animation: bounceUp 1s 0.3s forwards;
-  /* display: none; */
 }
 #contentsWrap .floating .float-inner {
   position: relative;
@@ -1526,7 +1525,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
 #contentsWrap .container .book-details .price-box dl.last-dl dd span.tts {
   cursor: default;
 }
-#contentsWrap .container .book-details .price-box dl dd span.ankey::before { /* 20250819 추가 수정 */
+#contentsWrap .container .book-details .price-box dl dd span.ankey::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -1534,7 +1533,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   margin-right: 4px;
   background: url("../imgs/ref-ico_01.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span.errata::before { /* 20250819 추가 수정 */
+#contentsWrap .container .book-details .price-box dl dd span.errata::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -1542,7 +1541,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   margin-right: 4px;
   background: url("../imgs/ref-ico_02.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span.mp3::before { /* 20250819 추가 수정 */
+#contentsWrap .container .book-details .price-box dl dd span.mp3::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -1550,7 +1549,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   margin-right: 4px;
   background: url("../imgs/ref-ico_03.png") center center/cover no-repeat;
 }
-#contentsWrap .container .book-details .price-box dl dd span.tts::before { /* 20250819 추가 수정 */
+#contentsWrap .container .book-details .price-box dl dd span.tts::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -2218,7 +2217,6 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   position: relative;
   display: flex;
   flex-direction: column;
-  /* width: 142px; */
   opacity: 0;
 }
 #contentsWrap .highSection section.full .sec-inner ul.list-view li:nth-child(1) {
@@ -2646,7 +2644,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   width: 100%;
 }
 #contentsWrap.textbook .sort-wrap.fixed {
-  top: 0; /* 20250909 수정 */
+  top: 0;
 }
 #contentsWrap.textbook .sort ul.chk li input[type="checkbox"]:checked + label:before {
   font-size: 0;
@@ -2911,7 +2909,7 @@ input[type="radio"]:checked + label::after { /* 20250909 수정 2 */
   background: url("../imgs/correct-ico-x2.png") center center / cover no-repeat;
   z-index: 11;
 }
-#contentsWrap.textbook .textbook-list-box.listType .book-item .flag-box { /* 20250819 최신화 필요 */
+#contentsWrap.textbook .textbook-list-box.listType .book-item .flag-box {
   display: flex;
   min-height: auto;
   align-items: flex-start;
@@ -3555,7 +3553,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 .list-viewer .viewer-btns ul li:not(:last-child) {
   border-right: 1px solid #ddd;
 }
-.list-viewer .viewer-btns .mob-sort-popup.textbook ul li:not(:last-child) { /* 20250819 최신화 필요 */
+.list-viewer .viewer-btns .mob-sort-popup.textbook ul li:not(:last-child) {
   border-right: 0;
 }
 .list-viewer .viewer-btns ul li:last-child {
@@ -5197,7 +5195,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 /* 학급관리시스템 분기처리 CSS 추가 */
 #contentsWrap.learn .container {
   max-width: 1000px;
-  width: 1000px; /* 20250901 변경 */
+  width: 1000px;
 }
 #contentsWrap.learn .not-device {
   display: none;
@@ -5238,14 +5236,14 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   padding-bottom: 0;
   margin-bottom: 0;
 }
-#contentsWrap.learn .container .class-item h2 { /* 20250901 추가 */
+#contentsWrap.learn .container .class-item h2 {
   display: block;
   color: #fff;
 }
 #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after {
   top: -3px;
 }
-#contentsWrap.learn .result-popup .inner .title h3 { /* 20250901 변경 */
+#contentsWrap.learn .result-popup .inner .title h3 {
   margin-bottom: 0;
 }
 
@@ -5276,12 +5274,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     padding-left: 0;
     margin-left: 20px;
   }
-  #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after { /* 250909 수정 */
+  #contentsWrap.learn .mngt-wrap .container .contents .create-box dl.school dd input[type="radio"]:checked + label::after {
     top: 0;
     border-radius: 100%;
   }
-
-  /* 20250909 추가 */
   .sort li input[type="checkbox"] + label, .sort li input[type="radio"] + label {
     margin-right: 0;
   }
@@ -5292,7 +5288,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 
 
 @media all and (max-width: 1600px) {
-  #contentsWrap.textbook .sort-wrap.fixed { top: 0; } /* 20250909 수정 */
+  #contentsWrap.textbook .sort-wrap.fixed { top: 0; }
   #contentsWrap.textbook .book-item .thumb-box { width: auto; }
   #contentsWrap.textbook .book-item .thumb-box i.subscribe-ico { top: 30px; left: 8px; }
   #contentsWrap .mainSection .sec1 .sec-inner .btn-items { margin: 0 20px; }
@@ -5523,7 +5519,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     position: relative;
     margin-bottom: 24px !important;
   }
-  #contentsWrap.eng section.eng-sec h2 { /* 20250909 변경 */
+  #contentsWrap.eng section.eng-sec h2 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7020,7 +7016,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     height: auto;
   }
 
-  /* 수정추가 20250805 : 기존 공통 css 변경/추가 */
   #contentsWrap.sub.entire {
     margin-top: 60px;
   }
@@ -7062,7 +7057,7 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     padding-left: 10px;
     margin: 14px 0;
   }
-  #contentsWrap.sub.entire .sort.w100 > ul > li > ul > li { /* 20250909 추가 */
+  #contentsWrap.sub.entire .sort.w100 > ul > li > ul > li {
     display: inline-block;
     width: 100%;
     margin: 8px 0;
@@ -7090,7 +7085,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
     min-width: 100% !important;
   }
 
-  /* 20250909 추가수정 */
   #contentsWrap.sub.entire .roadmap-cnt input[type="radio"]:checked + label::after {
     content: '';
     top: 4px;
@@ -7876,7 +7870,6 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a span.name,
   #contentsWrap .highSection section.full .sec-inner ul.list-view li a.ebook-anchor span.name {
     width: 120px;
-    /* width: 100%; */
   }
   #Footer .social-banner .social-box ul {
     display: flex;

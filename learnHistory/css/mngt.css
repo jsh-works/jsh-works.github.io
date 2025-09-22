@@ -661,9 +661,11 @@ select {
 .mngt-wrap .container .contents table.learn tbody tr td:not(:last-child) {
   border-right: 1px solid #eee;
 }
-.mngt-wrap .container .contents table.learn tbody tr td.left {
+.mngt-wrap .container .contents table.learn tbody tr td.left { /* 20250922 추가 */
   text-align: left;
   padding-left: 16px;
+  padding-right: 16px;
+  word-break: keep-all;
 }
 .mngt-wrap .container .textbook-contents .contents table.learn tbody tr td.left {
   text-align: left;
@@ -1246,12 +1248,12 @@ select {
   background: url("../imgs/color-check-ico.png") center center / cover no-repeat;
   z-index: 10;
 }
-.mngt-wrap .container .btn-box {
+.mngt-wrap .container .btn-box { /* 20250922 width 값 삭제 */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 1094px;
+  /* width: 1094px; */
 }
 .mngt-wrap .container .contents .btn-box button {
   display: flex;
@@ -1439,8 +1441,10 @@ select {
   border-bottom: 1px solid #eee;
   background-color: #fff;
 }
-.mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(1) {
+.mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(1) { /* 20250922 추가 */
   width: 501px;
+  padding: 0 16px;
+  text-align: center;
   border-right: 1px solid #eee;
 }
 .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(2) {

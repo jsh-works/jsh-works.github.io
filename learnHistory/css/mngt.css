@@ -601,12 +601,12 @@ select {
 
 /* 학습관리시스템 CSS 추가 */
 .mngt-wrap { position: relative; }
-.mngt-wrap .container {
+.mngt-wrap .container { /* 20250922 padding 수정추가 */
   position: relative;
   width: 100%;
   max-width: 1094px;
   line-height: 1;
-  padding: 0;
+  padding: 2.5rem 0px;
   margin: 0 auto;
 }
 .mngt-wrap .container .title-box {

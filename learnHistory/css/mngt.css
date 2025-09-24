@@ -977,11 +977,13 @@ select {
 .mngt-wrap .container .contents .class-box .class-inner .class-item div.calen-box {
   display: flex;
 }
+
+/* 캘20250924 린더 css 수정 */
 .mngt-wrap .container .contents .class-box .class-inner .class-item input {
   position: relative;
   outline: none;
   border: none;
-  color: #fff;
+  color: transparent;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
@@ -995,6 +997,24 @@ select {
   outline: none;
   background: url("../imgs/class-calendar-ico.png") center center / cover no-repeat;
 }
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type='date']:valid {
+  color: #fff;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type='date']::before {
+  content: attr(placeholder); 
+  color: #fff;
+  position: absolute;
+  left: 0;
+  width: 80%;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type='date']:valid::before {
+  display: none;
+}
+
+
+
+
+
 .mngt-wrap .container .contents .class-box .class-inner .class-item span > b {
   color: #fff;
   font-size: 18px;

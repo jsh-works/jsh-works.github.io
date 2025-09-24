@@ -5420,10 +5420,10 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 }
 
 /* 미디어쿼리 모바일 오리진 css 추가 */
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1024px) { /* 20250924 수정추가 */
   #contentsWrap.eng .sub-cnt-wrap.mb-band {
     min-height: calc(100vh - 450px) !important;
-    margin: 20px 15px 65px;
+    margin: 60px 15px 65px;
   }
   .quick-util:not(.ebook), .quick-sns {
     display: flex;

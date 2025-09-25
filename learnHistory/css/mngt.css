@@ -977,23 +977,47 @@ select {
 .mngt-wrap .container .contents .class-box .class-inner .class-item div.calen-box {
   display: flex;
 }
+.mngt-wrap .container .contents .class-box .class-inner .class-item .date-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .mngt-wrap .container .contents .class-box .class-inner .class-item input {
   position: relative;
   outline: none;
   border: none;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input::-webkit-calendar-picker-indicator {
+  display: inline-block;
+  opacity: 1;
+  font-size: 0;
+  vertical-align: -6px;
+  outline: none;
+  width: 24.5px;
+  height: 24.5px;
+  background: url("../imgs/class-calendar-ico.png") 93% center / 24px no-repeat;
+  z-index: 2;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item span.real-date {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
   text-align: center;
+}
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type="date"]:disabled {
   background: none;
 }
-.mngt-wrap .container .contents .class-box .class-inner .class-item input::-webkit-calendar-picker-indicator {
-  content: '';
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type='date'].calendar_date_icon {
   display: inline-block;
+  opacity: 1;
+  font-size: 0;
   vertical-align: -6px;
   outline: none;
-  background: url("../imgs/class-calendar-ico.png") center center / cover no-repeat;
+  width: 24.5px;
+  height: 24.5px;
+  background: url("../imgs/class-calendar-ico.png") 93% center / 24px no-repeat;
+  z-index: 2;
 }
 .mngt-wrap .container .contents .class-box .class-inner .class-item span > b {
   color: #fff;

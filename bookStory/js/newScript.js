@@ -910,5 +910,11 @@ console.log(`
       win.print();
       win.close(); 
     }, 500);
-  })
+  });
+
+
+  // 이벤트 버블링 막기
+  $(".date-label .real-date").on('click', function(e) {
+    e.preventDefault();
+  });
 });

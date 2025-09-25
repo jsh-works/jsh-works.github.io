@@ -126,7 +126,7 @@
               </div>
               <div class="contents">
                 <div class="class-box" style="background-color: #FF8F3E;">
-                  <a onclick="location.href='../bookStory/MyLearnHistory.html'"></a>
+                  <a href="../bookStory/MyLearnHistory.html">
                     <span class="class-delete-ico">학급삭제</span>
                     <div class="class-inner">
                       <div class="class-item">
@@ -135,10 +135,10 @@
                       </div>
                       <div class="class-item">
                         <h4>학급 기한</h4>
-                        <div class="date-label">
+                        <label class="date-label" for="calendar-group1">
                           <span class="real-date">연도. 월. 일</span>
-                          <input type="date" class="calendar_date_icon" />
-                        </div>
+                          <input type="date" id="calendar-group1" class="calendar_date_icon" onclick="preventDefaultFunc(e)" />
+                        </label>
                       </div>
                       <div class="class-item">
                         <h4>총 관리 교재 수</h4>
@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="class-box" style="background-color: #1EAD4A;">
-                  <a onclick="location.href='../bookStory/MyLearnHistory.html'">
+                  <a href="../bookStory/MyLearnHistory.html">
                     <span class="class-delete-ico">학급삭제</span>
                     <div class="class-inner">
                       <div class="class-item">
@@ -168,10 +168,10 @@
                       </div>
                       <div class="class-item">
                         <h4>학급 기한</h4>
-                        <div class="date-label">
+                        <label class="date-label" for="calendar-group2">
                           <span class="real-date">연도. 월. 일</span>
-                          <input type="date" class="calendar_date_icon" />
-                        </div>
+                          <input type="date" id="calendar-group2" class="calendar_date_icon" />
+                        </label>
                       </div>
                       <div class="class-item">
                         <h4>총 관리 교재 수</h4>

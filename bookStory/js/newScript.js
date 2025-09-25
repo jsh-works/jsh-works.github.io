@@ -913,8 +913,11 @@ console.log(`
   });
 
 
-  // 이벤트 버블링 막기
-  $(".date-label > span").on('click', function(e) {
+  // 이벤트 버블링 막기 20250925
+  $(".date-label .calendar_date_icon").on('click', function(e) {
+    e.stopPropagation();
+  });
+  $(".date-label .real-date").on('click', function(e) {
     e.preventDefault();
   });
 });

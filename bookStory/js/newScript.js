@@ -913,10 +913,21 @@ console.log(`
   });
 
 
-  // 이벤트 버블링 막기 20250925
-  $(".date-label .calendar_date_icon").on('click', function(e) {
-    e.stopPropagation();
+  // 20250925  학급관리시스템 - 이벤트 버블링 막기 PC, 사이즈 체크 후 함수실행
+  $(window).resize(function() {
+    var ww = $(window).width();
+    // console.log(ww);
+    if(ww < 1024) {
+      $(".date-label .calendar_date_icon").on('click', function(e) {
+        e.preventDefault();
+      });
+    } else {
+      $(".date-label .calendar_date_icon").on('click', function(e) {
+        e.stopPropagation();
+      }); 
+    }
   });
+
   $(".date-label .real-date").on('click', function(e) {
     e.preventDefault();
   });

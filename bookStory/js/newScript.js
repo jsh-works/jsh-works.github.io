@@ -914,7 +914,7 @@ console.log(`
 
 
   // 이벤트 버블링 막기
-  $(".date-label .real-date").on('click', function(e) {
-    e.preventDefault();
+  $(".date-label").on('click', function(e) {
+    e.stopPropagation();
   });
 });

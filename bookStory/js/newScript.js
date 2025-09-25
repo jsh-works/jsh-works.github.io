@@ -914,12 +914,7 @@ console.log(`
 
 
   // 이벤트 버블링 막기
-  // $(".date-label").on('click', function(e) {
-  //   e.stopPropagation();
-  // });
-  const inputDate = $('input[type="date"]');
-
-  inputDate.addEventListener('change', function(event) {
-    event.stopPropagation();
+  $(".date-label, .date-label > span").on('click', function(e) {
+    e.stopPropagation();
   });
 });

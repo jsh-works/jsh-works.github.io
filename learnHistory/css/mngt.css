@@ -977,17 +977,17 @@ select {
 .mngt-wrap .container .contents .class-box .class-inner .class-item div.calen-box {
   display: flex;
 }
-.mngt-wrap .container .contents .class-box .class-inner .class-item > label { /* 20250925 추가 */
+.mngt-wrap .container .contents .class-box .class-inner .class-item > label { /* 20250926 추가 */
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.mngt-wrap .container .contents .class-box .class-inner .class-item input {
+.mngt-wrap .container .contents .class-box .class-inner .class-item input { /* 20250926 추가 */
   position: relative;
   outline: none;
   border: none;
 }
-/* 20250925 수정 */
+/* 20250926 수정 */
 .mngt-wrap .container .contents .class-box .class-inner .class-item input::-webkit-calendar-picker-indicator {
   display: inline-block;
   opacity: 1;
@@ -1000,7 +1000,7 @@ select {
   z-index: 2;
 }
 
-/* 20250925 추가 */
+/* 20250926 추가 */
 .mngt-wrap .container .contents .class-box .class-inner .class-item span.real-date {
   color: #fff;
   font-size: 16px;
@@ -1009,12 +1009,12 @@ select {
   text-align: center;
 }
 
-/* 20250925 추가 */
+/* 20250926 추가 */
 .mngt-wrap .container .contents .class-box .class-inner .class-item input[type="date"]:disabled {
   background: none;
 }
 
-/* 20250925 추가 */
+/* 20250926 추가 */
 .mngt-wrap .container .contents .class-box .class-inner .class-item input[type='date'].calendar_date_icon {
   display: inline-block;
   opacity: 1;
@@ -1109,8 +1109,7 @@ select {
   border: 5px solid #4165F4;
   background-color: #fff;
 }
-.mngt-wrap .container .contents .create-box dl dd input[type="text"],
-.mngt-wrap .container .contents .create-box dl.class-date dd input[type="date"] {
+.mngt-wrap .container .contents .create-box dl dd input[type="text"] {
   color: #222;
   font-size: 14px;
   font-weight: 400;
@@ -1118,6 +1117,60 @@ select {
   border-radius: 8px;
   border: 1px solid #ccc;
   background-color: #fff;
+}
+.mngt-wrap .container .contents .create-box dl.class-date dd label.date-label { /* 20250926 변경 */
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 160px;
+  height: 50px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 13px 20px;
+  margin-right: 48px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.mngt-wrap .container .contents .create-box dl.class-date dd input { /* 20250926 추가 */
+  position: relative;
+  outline: none;
+  border: none;
+}
+/* 20250926 추가 */
+.mngt-wrap .container .contents .create-box dl.class-date dd input::-webkit-calendar-picker-indicator {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  font-size: 0;
+  vertical-align: -6px;
+  border: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/create-calendar-ico.png") 93% center / 24px no-repeat;
+  z-index: 2;
+}
+/* 20250926 추가 */
+.mngt-wrap .container .contents .class-box .class-inner .class-item input[type="date"]:disabled {
+  background: none;
+}
+/* 20250926 추가 */
+.mngt-wrap .container .contents .create-box dl.class-date dd label input[type='date'].calendar_date_icon {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  font-size: 0;
+  vertical-align: -6px;
+  border: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  background: url("../imgs/create-calendar-ico.png") 93% center / 24px no-repeat;
+  z-index: 2;
 }
 .mngt-wrap .container .contents .create-box dl dd span {
   color: #222;

@@ -913,10 +913,9 @@ console.log(`
   });
 
 
-  // 20250925  학급관리시스템 - 이벤트 버블링 막기 PC, 사이즈 체크 후 함수실행
+  // 20250926 학급관리시스템 - 이벤트 버블링 막기 PC, 사이즈 체크 후 함수실행
   $(window).resize(function() {
     var ww = $(window).width();
-    // console.log(ww);
     if(ww < 1024) {
       $(".date-label .calendar_date_icon").on('click', function(e) {
         e.preventDefault();
@@ -927,7 +926,6 @@ console.log(`
       }); 
     }
   });
-
   $(".date-label .real-date").on('click', function(e) {
     e.preventDefault();
   });

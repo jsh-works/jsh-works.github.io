@@ -2598,6 +2598,7 @@ input[type="radio"]:checked + label::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   color: #666;
   font-size: 15px;
   font-weight: 400;
@@ -5268,6 +5269,50 @@ input[type="radio"] + label, input[type="checkbox"] + label {margin: 0;}
 }
 #contentsWrap.learn .mngt-wrap .container .student-contents div.detail-inner ul li:nth-child(6) {
   width: 120px;
+}
+
+/* 20250926 오대리님의 요청에 의한 툴팁 추가 */
+#contentsWrap .sub-cnt-wrap .tool-tip {
+  display: none;
+  position: absolute;
+  right: -42px;
+  bottom: 42px;
+  width: auto;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px;
+  white-space: nowrap;
+  text-align: center;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #484848;
+  opacity: 0.9;
+  z-index: 1000;
+  pointer-events: none;
+}
+#contentsWrap .sub-cnt-wrap .tool-tip::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: calc(50% - 10px);
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(180deg);
+}
+#contentsWrap .sub-cnt-wrap .tool-tip::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: -6px;
+  left: calc(50% - 10px);
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(0deg);
 }
 
 

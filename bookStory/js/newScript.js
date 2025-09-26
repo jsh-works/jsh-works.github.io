@@ -929,4 +929,10 @@ console.log(`
   $(".date-label .real-date").on('click', function(e) {
     e.preventDefault();
   });
+
+  // 정오답 채점 tool-tip 추가 20250926
+  $('.viewer-btns .tip.chk-tip').on('click', function(e) {
+    e.stopPropagation(); // 이벤트 전파 방지
+    $('.tool-tip').toggle();
+  });
 });
